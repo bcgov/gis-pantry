@@ -220,7 +220,9 @@ The set up process may take a while but once done it does not need much work.
     1.	Do not change the legend, it is set to automatically populate based on the tool.
     2.	Add text elements for all fields that are in the “InputRoadTitleFields” and ‘InputBlockTitleFields’
         1.	Ensure that the element names are the same name as the fields in the above field.
+        
         ![element](./images/elementName.png?raw=true)
+
         2.	If you would like any text to preface the information in the ‘Title Field’ Add it to the text of the element.
         3.	If Road and Block labels need to occur in the same location on the map, overlap the elements. The tool will turn them ‘on or off’ depending on if its “roads” or “blocks” being run.
 
