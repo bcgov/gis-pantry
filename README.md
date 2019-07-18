@@ -1,6 +1,6 @@
 # BC elevation stats
 
-Quickly report on max, min and average elevation for features (points, lines, polygons) in BC. For areas in BC, the script uses the (non-public) BC 25m DEM. For features spanning the BC border, (currently supported for as far south as 48°S), the script uses [Mapzen Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) hosted on AWS. See [tilezen documentation](https://github.com/tilezen/joerd/tree/master/docs) for more info about these tiles.
+Quickly report on elevation stats (max, min, mean, median, etc) for features (points, lines, polygons) in BC. For areas in BC, the script uses the (non-public) BC 25m DEM. For features spanning the BC border, (currently supported for as far south as 48°S), the script uses [Mapzen Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) hosted on AWS. See [tilezen documentation](https://github.com/tilezen/joerd/tree/master/docs) for more info about these tiles.
 
 ## Requirements
 
