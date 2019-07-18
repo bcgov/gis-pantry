@@ -11,7 +11,7 @@ A local copy of the BC 25m DEM, in an open format (ie, not file geodatabase rast
 
 Clone the script repo:
 
-    git bcelev.git
+    git clone https://github.com/smnorris/bcelev.git
     cd bcelev
 
 For easy setup in an isolated environment, use `conda`:

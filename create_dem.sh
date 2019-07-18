@@ -7,7 +7,7 @@
 # (with slight overlap into Canada to cover any gaps)
 # https://registry.opendata.aws/terrain-tiles/
 # ----------------
-python get_srtm.py
+python get_terraintiles.py
 
 # merge downloaded tiles
 # ----------------
