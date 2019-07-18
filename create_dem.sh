@@ -1,6 +1,6 @@
 # ----------------
 # Create a 25m trans-border DEM
-# (upsampling SRTM data from 30m to 25m)
+# (upsampling mapzen data from 30m to 25m)
 # ----------------
 
 # Batch download 1 degree Mapzen terrain tiles along 49th parallel
@@ -11,11 +11,11 @@ python get_terraintiles.py
 
 # merge downloaded tiles
 # ----------------
-gdalbuildvrt tmp/srtm.vrt tmp/*tif
+gdalbuildvrt tmp/mapzen.vrt tmp/*tif
 
 gdalwarp \
-  tmp/srtm.vrt \
-  tmp/srtm.tif \
+  tmp/mapzen.vrt \
+  tmp/mapzen.tif \
   -t_srs EPSG:3005 \
   -r cubic \
   -tr 25 25 \
@@ -41,7 +41,7 @@ gdal_edit.py \
 # ----------------
 gdalbuildvrt \
   tmp/transborder.vrt \
-  tmp/srtm.tif \
+  tmp/mapzen.tif \
   tmp/bc_dem_0null.tif
 
 gdal_translate \
