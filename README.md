@@ -54,3 +54,7 @@ The people behind these open source tools deserve all the credit:
 - [rasterstats](https://github.com/perrygeo/python-rasterstats)
 
 jq usage is plagiarized from [here](https://gist.github.com/david-murr/9d17e4b7267ab3290833)
+
+## See also
+
+[elevatr](https://github.com/jhollist/elevatr) and [intro to elevatr](https://cran.r-project.org/web/packages/elevatr/vignettes/introduction_to_elevatr.html)
