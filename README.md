@@ -1,18 +1,20 @@
 # BC elevation stats
 
-Quickly report on elevation stats (max, min, mean, median, etc) for features (points, lines, polygons) in BC. For areas in BC, the script uses the (non-public) BC 25m DEM. For features spanning the BC border, (currently supported for as far south as 48°S), the script uses [Mapzen Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) hosted on AWS. See [tilezen documentation](https://github.com/tilezen/joerd/tree/master/docs) for more info about these tiles.
+A recipe for quickly reporting on elevation stats (max, min, mean, median, etc) for features (points, lines, polygons) in BC and adjacent jurisdictions.
+
+For features spanning the 49th parallel BC/USA border, (currently supported for as far south as 48°S), the script uses [Mapzen Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) hosted on AWS. See [tilezen documentation](https://github.com/tilezen/joerd/tree/master/docs) for more info about these tiles.
+
+The supplied script currently only downloads DEM tiles along the 49th parallel but could easily be expanded to download tiles in AB/YT/AK/NWT.
+
 
 ## Requirements
 
-A local copy of the BC 25m DEM, in an open format (ie, not file geodatabase raster).
+1. bash (the scripts will not currently run on Windows)
+2. A local copy of the BC 25m DEM, in an open format (ie, not file geodatabase
+raster)
 
 
 ## Setup
-
-Clone the script repo:
-
-    git clone https://github.com/smnorris/bcelev.git
-    cd bcelev
 
 For easy setup in an isolated environment, use `conda`:
 
@@ -24,9 +26,9 @@ Alternatively, manually manage your environment by installing all requirements n
 
 ## Usage
 
-1. Create a trans-boundary DEM. If necessary, edit the script to point to the path of the BC 25m DEM on your system:
+1. Create a trans-boundary DEM, supplying the script with the path to your copy of the BC 25m DEM:
 
-        ./create_dem.sh
+        ./create_dem.sh <path/to/bc_dem.tif>
 
 
 2. Overlay input features with the DEM using a command something like this (replacing `station` with your unique identifier):
@@ -44,9 +46,7 @@ Alternatively, manually manage your environment by installing all requirements n
 
 See the [`rasterstats` documentation](https://pythonhosted.org/rasterstats/cli.html) for more info on usage and stats that can be extracted. For point features, you may want to use `rio pointquery` rather than `rio zonalstats`.
 
-## Credits
-
-The people behind these open source tools deserve all the credit:
+## Credits / resources
 
 - [gdal](https://gdal.org/)
 - [fiona](https://github.com/Toblerity/Fiona)

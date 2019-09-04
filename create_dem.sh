@@ -32,7 +32,7 @@ gdalwarp \
 # (We don't want to do this to the source file because there are valid 0 cells
 # that would require some tidying to identify)
 # ----------------
-cp ~/Data/BC/raster/dem/bc_dem.tif tmp/bc_dem_0null.tif
+cp $1 tmp/bc_dem_0null.tif
 gdal_edit.py \
   tmp/bc_dem_0null.tif \
   -a_nodata 0
