@@ -1,5 +1,5 @@
 # Intro to QGIS for BCGOV
-![QGIS](https://github.com/qgis/QGIS/blob/master/images/icons/qgis-icon-60x60.png) [https://qgis.org/en/site/](https://qgis.org/en/site/)
+![QGIS](https://github.com/qgis/QGIS/blob/master/images/icons/qgis-icon-60x60.png) [Link to QGIS](https://qgis.org/en/site/)
 
 This is a set of documents to help experienced GIS users with best practices, tips/tricks and quick reference information for implementing QGIS within the BC government. To reduce redundancy, linkage to existing material will be provided when possible and custom content will be used to expand on topics that can improve your experience in using QGIS with corporate datasources inside the enterprise environment. This is a living document and is intended to be user maintained. Please add content and make corrections where needed
 
@@ -15,7 +15,6 @@ This is a set of documents to help experienced GIS users with best practices, ti
 9. [Processing data](./doc/processing.md)
 10. [Advanced processing and plugin devlopement](./doc/advanced.md)
 
-![QGIS](https://github.com/qgis/QGIS/blob/master/images/icons/qgis-icon-60x60.png)
 
 
 
