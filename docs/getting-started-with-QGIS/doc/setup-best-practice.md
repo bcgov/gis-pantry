@@ -6,7 +6,9 @@ The default projection QGIS CRS is WGS 84 (4326).  BC Government geographic stan
 
 ## Set your attribute table to show only Selected records
 Some datasets are very large.  Changing your default from loading all records in the attribute talbe will help avoid waiting a very long time to load all 5.1 M records from a table. QGIS will not just load the first 1500.
-![Set QGIS attribute table behaviour](../images/set_attribute_table_behaviour.gif "Set QGIS attribute table behaviour")
+
+![Set QGIS attribute table behaviour](../images/set_attribute_table_behaviour_sm.gif "Set QGIS attribute table behaviour")
+
 
 ## Adding basemaps from the web
 This is a handy script.  
