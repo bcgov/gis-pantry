@@ -1,4 +1,5 @@
 # Working with data in QGIS
+
 QGIS supports many types of data.  The native format for QGIS is the Geopackage(.gpkg).  A Geopackage is just a SQLite database container with a standard schema governed by the OGC [Specification](http://docs.opengeospatial.org/is/18-000/18-000.html).  QGIS also provides excellent support of the Shapefile format.
 
 Supported [Vector](https://gdal.org/drivers/vector/index.html) and [Raster](https://gdal.org/drivers/raster/index.html) Formats
@@ -82,3 +83,4 @@ Select by location tool isn't found with the other selction tools. You can find 
 ## Create grids and samples
 You can find grid and sample creation tools in the Vector menu under Research Tools.
 ![Create Grid](../images/create_grid.gif "Create Grid ...")
+

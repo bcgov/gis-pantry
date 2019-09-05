@@ -1,0 +1,10 @@
+name: elev-env
+dependencies:
+- gdal
+- fiona
+- rasterio
+- rasterstats
+- csvkit
+- nodejs
+- parallel
+- jq
