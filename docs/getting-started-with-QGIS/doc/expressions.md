@@ -1,5 +1,5 @@
 # Expressions and Filter Queries
-[home](../readme.md)
+[home](../README.md)
 
 ## Definition Query / Filter
 

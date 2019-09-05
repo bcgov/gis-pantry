@@ -1,6 +1,6 @@
 # Editing in QGIS
 
-[home](../readme.md)
+[home](../README.md)
 
 [QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
 

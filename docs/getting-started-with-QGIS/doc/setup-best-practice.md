@@ -1,5 +1,5 @@
 # Setup and Best Practice
-[home](../readme.md)
+[home](../README.md)
 
 ## Set your default CRS to 3005
 The default projection QGIS CRS is WGS 84 (4326).  BC Government geographic standard crs is BC Government Albers (3005)
