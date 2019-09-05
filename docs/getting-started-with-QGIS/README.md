@@ -18,11 +18,6 @@ This is a set of documents to help experienced GIS users with best practices, ti
 10. [Advanced processing and plugin devlopement](./doc/advanced.md)
 
 
-![QGIS](https://github.com/qgis/QGIS/blob/master/images/icons/qgis-icon-60x60.png)
-
-
-
-
 ## Contributing
 We encourage contributions. Please see our [CONTRIBUTING](https://github.com/bcgov/gis-pantry/blob/master/CONTRIBUTING.md) guidelines. BC Government employees should also ensure they review [BC Open Source Development Employee Guide](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/README.md) 
 * Contribute tools and plugins into tools, standalone scripts and modules to scripts, and small snips and script examples to recipes.

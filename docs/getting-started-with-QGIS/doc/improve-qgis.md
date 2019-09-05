@@ -1,4 +1,5 @@
 # Improving the QGIS Project
+[home](../readme.md)
 
 Hey this is a community project afterall.  If you find issues help resolve them.
 

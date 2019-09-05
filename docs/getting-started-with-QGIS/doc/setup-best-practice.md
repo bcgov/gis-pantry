@@ -1,4 +1,5 @@
 # Setup and Best Practice
+[home](../readme.md)
 
 ## Set your default CRS to 3005
 The default projection QGIS CRS is WGS 84 (4326).  BC Government geographic standard crs is BC Government Albers (3005)
@@ -16,7 +17,7 @@ GitHub - Klakar [qgis_basemaps.py](https://github.com/klakar/QGIS_resources/blob
 
 ### You can append the bcgov basemap services by adding these lines...
 
-```
+```python
 sources.append(["connections-xyz","BC Roads BC Albers","","","","http://maps.gov.bc.ca/arcserver/rest/services/province/roads/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D","","23","0"])
 sources.append(["connections-xyz","BC Roads Web Mercator","","","","http://maps.gov.bc.ca/arcserver/rest/services/province/roads_wm/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D","","23","0"])
 sources.append(["connections-xyz","BC Basemap BC Albers","","","","http://maps.gov.bc.ca/arcserver/rest/services/province/albers_cache/MapServer/tile/%7Bz%7D/%7By%7D/%7Bx%7D","","17","0"])
