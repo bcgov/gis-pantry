@@ -5,6 +5,7 @@
 
 ## Where to go to get help with QGIS
 * [QGIS Poject Documentation](https://docs.qgis.org/testing/en/docs/index.html)
+* [QGIS Tutorials and Tips](https://www.qgistutorials.com/en/index.html)
 * [Stackexchange](https://gis.stackexchange.com/questions/tagged/qgis)
 * Local GIS Community
 * [QGIS Mailing List](https://www.qgis.org/en/site/getinvolved/mailinglists.html)
