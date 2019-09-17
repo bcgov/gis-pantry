@@ -21,6 +21,12 @@ Index
 QGIS supports multiple ways to add data to your map.  Most file based formats you can drag n'drop onto the map.  Otherwise you can use:
 * [Browser panel](https://docs.qgis.org/testing/en/docs/user_manual/managing_data_source/opening_data.html#the-browser-panel)
 
+You can add data from ArcGIS online feature service.  BC MapHub feature services can be accessed with this URL https://maps.gov.bc.ca/arcserver/rest/services/mpcm/bcgwpub/MapServer/
+
+In the browser panel right click on the Add ESRI Feature service and create new
+
+![Add Feature Service](../images/add_arcgisonline_feature_server_data.gif "Wow!")
+
 
 ## Adding data from layer library
 The BCGOV QGIS layer library provides standardized style and data definitions for corporate datasets. Add the location of the QGIS Layer Library to your favorites, navigate through the folder categories, right click the layer and choose *Add selected layer(s) to project*
