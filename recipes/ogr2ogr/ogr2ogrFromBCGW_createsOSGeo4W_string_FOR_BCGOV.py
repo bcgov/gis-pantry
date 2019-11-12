@@ -43,23 +43,20 @@ def ogr2ogrFromBCGW(outType, outPath, outName, user, pword, sqlQuery, outCRS = 3
     return str(fullString)
 
 
-# Usage example - create an ogr2ogr string to output a JSON file for all TSAs in RKB
+# Usage example - create an ogr2ogr string to output a file for all TSAs in RKB
 
 tDict = {'Arrow TSA':1, 'Boundary TSA':2, 'Cranbrook TSA':5, 'Golden TSA':7, 'Invermere TSA':9, 'Kootenay Lake TSA':13, 'Revelstoke TSA':27 } # for reference
 
 outPath = r"T:\testFolder"
-outName = r"RKB_TSAs55"
+outName = r"RKB_TSAs_01"
 sqlQuery = r"select * from WHSE_ADMIN_BOUNDARIES.FADM_TSA where TSB_NUMBER is null AND RETIREMENT_DATE IS NULL AND TSA_NUMBER IN (1,2,5,7,9,13,27)"
-# sqlQuery = r"select * from WHSE_ADMIN_BOUNDARIES.FADM_TSA where TSB_NUMBER is null AND RETIREMENT_DATE IS NULL AND TSA_NUMBER IN (9)"
-# user = "USERNAME"
-# pWord = "BCGW_PASSWORD"
-user = "GAMOS"
-pWord = "Oracle9999"
+user = "USERNAME"
+pWord = "BCGW_PASSWORD"
 
-# ogrLine = ogr2ogrFromBCGW("GPKG", outPath, outName, user, pWord, sqlQuery)   # creates a GeoPackage file (QGIS native format) in BC Albers
-# ogrLine = ogr2ogrFromBCGW("GeoJSON", outPath, outName, user, pWord, sqlQuery)  # creates a JSON file in BC Albers
+# ogrLine = ogr2ogrFromBCGW("GPKG", outPath, outName, user, pWord, sqlQuery)            # creates a GeoPackage file (QGIS native format) in BC Albers
+# ogrLine = ogr2ogrFromBCGW("GeoJSON", outPath, outName, user, pWord, sqlQuery)         # creates a JSON file in BC Albers
+# ogrLine = ogr2ogrFromBCGW("ESRI Shapefile", outPath, outName, user, pWord, sqlQuery)      # creates a Shapefile in BC Albers
 # ogrLine = ogr2ogrFromBCGW("GeoJSON", outPath, outName, user, pWord, sqlQuery,outCRS = 4326)  # creates a JSON file in WGS 84
-# ogrLine = ogr2ogrFromBCGW("ESRI Shapefile", outPath, outName, user, pWord, sqlQuery) # creates a Shapefile in BC Albers
-ogrLine = ogr2ogrFromBCGW("KML", outPath, outName, user, pWord, sqlQuery) # creates a KML in WGS 84 (KML driver allows only WGS 84 as an output CRS)
+ogrLine = ogr2ogrFromBCGW("KML", outPath, outName, user, pWord, sqlQuery)       # creates a KML in WGS 84 (KML driver allows only WGS 84 as an output CRS)
 
 print(ogrLine)
