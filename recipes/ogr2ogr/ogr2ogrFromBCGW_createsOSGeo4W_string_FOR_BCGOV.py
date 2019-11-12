@@ -13,22 +13,34 @@ def ogr2ogrFromBCGW(outType, outPath, outName, user, pword, sqlQuery, outCRS = 3
     fullString = message + "\n" + "-"*len(message) + "\n"
     fullString += 'ogr2ogr -a_srs epsg:{} -f "{}" {}\{}{} {} -sql "{}" -progress'.format(outCRS, outType, outPath, outName, extDict[outType], ociString, sqlQuery)
 
+    # Set GeoJSON specific options
     if outType == "GeoJSON":
         fullString += " -lco WRITE_NAME=NO" # prevents the JSON layer from assuming the entire sqlQuery as its name 
-        if outCRS != 4326: # 4326 = WGS84 = decimal degrees, which needs as many decimal places as possible 
-            lcoPrec = "-lco COORDINATE_PRECISION={}".format(coordPrec)
-        else:
-            lcoPrec = ""
-        fullString += " " + lcoPrec   
-    
+
+    # Set GPKG specific options    
     if outType == "GPKG":
          fullString += " -lco IDENTIFIER='layer1' -lco DESCRIPTION='layer1'" # ensures layer name = "layer1" in the GPKG file. 
-    
+
+    # Set KML specific options    
+    if outType == "KML":
+        # fullString += " -dsco NameField= '{}'".format(outName) # prevents the KML layer from assuming the entire sqlQuery as its name 
+        fullString += " -nln '{}'".format(outName) # prevents the KML layer from assuming the entire sqlQuery as its name 
+
+    # If outCRS is WGS 84, set high coordinate precision (13 decinmal places)
+    if any([outCRS != 4326, outType == "KML"]): # 4326 = WGS84 = decimal degrees, which needs as many decimal places as possible . KML driver ourCRS is always 4326
+        coordPrec = 13
+        lcoPrec = "-lco COORDINATE_PRECISION={}".format(coordPrec) 
+    else:
+        lcoPrec = ""
+    fullString += " " + lcoPrec
+
     if outCRS in epsgDict:
-        fullString += "\n\nResultant spatial file will have CRS:{} ({})".format(outCRS, epsgDict[outCRS])
+        if outType != "KML":
+            fullString += "\n\nResultant spatial file will have CRS:{} ({})".format(outCRS, epsgDict[outCRS])
+        else:
+            fullString += "\n\nResultant spatial file (KML) always has CRS:{} ({})".format(4326, epsgDict[4326])
 
     return str(fullString)
-
 
 
 # Usage example - create an ogr2ogr string to output a JSON file for all TSAs in RKB
@@ -36,14 +48,18 @@ def ogr2ogrFromBCGW(outType, outPath, outName, user, pword, sqlQuery, outCRS = 3
 tDict = {'Arrow TSA':1, 'Boundary TSA':2, 'Cranbrook TSA':5, 'Golden TSA':7, 'Invermere TSA':9, 'Kootenay Lake TSA':13, 'Revelstoke TSA':27 } # for reference
 
 outPath = r"T:\testFolder"
-outName = r"RKB_TSAs"
+outName = r"RKB_TSAs55"
 sqlQuery = r"select * from WHSE_ADMIN_BOUNDARIES.FADM_TSA where TSB_NUMBER is null AND RETIREMENT_DATE IS NULL AND TSA_NUMBER IN (1,2,5,7,9,13,27)"
 # sqlQuery = r"select * from WHSE_ADMIN_BOUNDARIES.FADM_TSA where TSB_NUMBER is null AND RETIREMENT_DATE IS NULL AND TSA_NUMBER IN (9)"
-user = "USERNAME"
-pWord = "BCGWPASSWORD"
+# user = "USERNAME"
+# pWord = "BCGW_PASSWORD"
+user = "GAMOS"
+pWord = "Oracle9999"
 
-# ogrLine = ogr2ogrFromBCGW("GPKG", outPath, outName, user, pWord, sqlQuery)   
-
-# ogrLine = ogr2ogrFromBCGW("GeoJSON", outPath, outName, user, pWord, sqlQuery)
+# ogrLine = ogr2ogrFromBCGW("GPKG", outPath, outName, user, pWord, sqlQuery)   # creates a GeoPackage file (QGIS native format) in BC Albers
+# ogrLine = ogr2ogrFromBCGW("GeoJSON", outPath, outName, user, pWord, sqlQuery)  # creates a JSON file in BC Albers
+# ogrLine = ogr2ogrFromBCGW("GeoJSON", outPath, outName, user, pWord, sqlQuery,outCRS = 4326)  # creates a JSON file in WGS 84
+# ogrLine = ogr2ogrFromBCGW("ESRI Shapefile", outPath, outName, user, pWord, sqlQuery) # creates a Shapefile in BC Albers
+ogrLine = ogr2ogrFromBCGW("KML", outPath, outName, user, pWord, sqlQuery) # creates a KML in WGS 84 (KML driver allows only WGS 84 as an output CRS)
 
 print(ogrLine)
