@@ -1,5 +1,5 @@
 # ogrFromBCGW_execute_BCGOV_version.py
-# gamos 14/06/2019 (DD/MM/YY format)
+# gamos 14/11/2019 (DD/MM/YY format)
 # Gregory.Amos@gov.bc.ca
 # GIS Technician (auxiliary) / Kootenay Boundary Region / Ministry of Forests, Lands and Natural Resource Operations and Rural Development
 
@@ -8,13 +8,15 @@
 
 # CHECK THESE THINGS BEFORE RUNNING SCRIPT:
 # 1. Make sure "outPath" exists 
-# 2. Fill in your BCGW credentials for user, pWord (Line 14)
+# 2. Fill in your BCGW credentials for user, pWord (Line 21)
 
 # Most BCGW datasets are in BC Albers; default output is in BC Albers projection with coordinates to nearest 0.1 metres
 
 # Output data types this script allows: GeoJSON, KML, ESRI Shapefile, and GeoPackage (QGIS' native format)
 
-import os, sys, subprocess
+import os
+import sys
+import subprocess
 
 user, pWord = "USERNAME", "BCGW_PASSWORD"
 
