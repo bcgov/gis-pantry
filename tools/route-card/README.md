@@ -130,11 +130,8 @@ The following fields are included in the table:
 Contains any variable calls that the script uses, this field is NOT TO BE EDITED. If changed in the slightest the tool will crash and not continue to work.
 	
 **OutputLocation**: The path to the output folder that all outputs will be saved to.
-<<<<<<< HEAD
+
     ie: `<path-to-folder>\Planning Route Card\SpatialRouteCard`
-=======
-    ie: `\\olive\s63030\BCTS\Planning\!!Operational Planning\Planning Route Card\SpatialRouteCard`
->>>>>>> upstream/master
 
 **InputBlockFeatureClass**: The feature class that will be used to select blocks as it appears in the Table of Contents.
     ie: `Selectable Blocks`
