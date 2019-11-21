@@ -1,48 +1,55 @@
-# ogrFromBCGW_execute_BCGOV_version.py
-# gamos 18/11/2019 (DD/MM/YY format)
+# ogrFromBCGW_BCGOV_FINAL.py
+# gamos 19/11/2019 (DD/MM/YY format)
 # Gregory.Amos@gov.bc.ca
 # GIS Technician (auxiliary) / Kootenay Boundary Region / Ministry of Forests, Lands and Natural Resource Operations and Rural Development
 
 # Script to create and execute an ogr2ogr CLI string - i.e translate a BCGW subset into one of several geospatial formats
 
-# CHECK THESE THINGS BEFORE RUNNING SCRIPT:
-# 1. Fill in your BCGW credentials for user, pWord (Line 21)
+"""CHECK/BE AWARE OF THESE THINGS BEFORE RUNNING SCRIPT:
+1. Fill in your BCGW credentials for user, pWord (Line 30 or so)
+2. It's safe to disregard the 'ERROR 1: ORA-04043: object no_Table does not exist' message that will print to the console - that's just a way of preventing 
+    ogr2ogr from scanning all tables in the BCGW once it connects...
+3. Most BCGW datasets are in BC Albers; default output is in BC Albers projection with coordinates to nearest 0.1 metres
+4. Output data types this script allows: GeoJSON, KML, ESRI Shapefile, and GeoPackage (QGIS' native format). More will be added..
+5. If outputting an ESRI Shapefile, it's normal to see 'Warning 6: Normalized/laundered field name:' This makes fields 10 characters long.
+"""
 
-# UPDATE_LOG 18/11/2019
+# UPDATE_LOG 19/11/2019
 # =====================
 # 1. Updated paths for OSGeo4W and bin/ogr2ogr.exe - script now works in all DTS desktops
 # 2. No more arcpy import
 # 3. Better SQL string handling - SQL strings are written to .sql files in T:\tempQueryFolder, then read back in as an ogr2ogr parameter - works much better.
-
-# Most BCGW datasets are in BC Albers; default output is in BC Albers projection with coordinates to nearest 0.1 metres
-
-# Output data types this script allows: GeoJSON, KML, ESRI Shapefile, and GeoPackage (QGIS' native format)
+# 4. Added SQL string scrubber to ensure the SQL dialect translates well to ogr2ogr (scrubs any comments)
 
 import os
 import sys
 import subprocess
 
 # user, pWord = input("Enter your BCGW username:"), input("Enter your BCGW password:")
-user, pWord = "GAMOS", "Oracle9999"
+# user, pWord = "USER", "PASSWORD"
 
-outPath, outName, outType = r"T:\testFolder", r"DSE_since_Nov.2018_harv_status", "ESRI Shapefile"
-sqlQuery = """select count(*)
-from WHSE_FOREST_TENURE.FTEN_CUT_BLOCK_POLY_SVW
-where BLOCK_STATUS_DATE > '01-NOV-18' --
-and LIFE_CYCLE_STATUS_CODE IN ('ACTIVE','PENDING')
-and GEOGRAPHIC_DISTRICT_CODE IN ('DSE')"""
+# Usage example 1 - create an ESRI Shapefile all wildfires in Southeast zone in 2018, preserve all attributes, write it to T: folder
+outPath, outName, outType = r"T:\testFolder", r"fires_2015+", "ESRI Shapefile"
+sqlQuery = r"""select * from WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP where FIRE_YEAR > 2015 and FIRE_NUMBER like 'N%'"""
 
-# # Usage example 2 - create an ESRI Shapefile all wildfires in Southeast zone in 2018, preserve all attributes, write it to T: folder
-# outPath, outName, outType = r"T:\testFolder", r"fires_2015+", "ESRI Shapefile"
-# sqlQuery = r"select * from WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP where FIRE_YEAR > 2015 and FIRE_NUMBER like 'N%'"
-
-# # Usage example 3 - look at all salvage logging in RKB since 2015, preserve all attributes, write KML to T: folder
+# # Usage example 2 - look at all salvage logging in RKB since 2015, preserve all attributes, write KML to T: folder
 # outPath, outName, outType = r"T:\testFolder", r"salvage_logs", "KML"
 # sqlQuery = r"""select * from WHSE_FOREST_TENURE.FTEN_CUT_BLOCK_POLY_SVW
 # where BLOCK_STATUS_DATE > '01-JAN-15'
 # and LIFE_CYCLE_STATUS_CODE IN ('ACTIVE','PENDING')
 # and GEOGRAPHIC_DISTRICT_CODE IN ('DSE','DRM')
 # and (UPPER(CUT_BLOCK_DESCRIPTION) like '%SALV%' or UPPER(BLOCK_STATUS_CODE) like '%SALV%')"""
+
+# # # Usage example 3 - look at all salvage logging in RKB since 2015, preserve all attributes, write KML to T: folder
+# # Clean up SQL for string copied from SQL Developer (including comments)
+# outPath, outName, outType = r"T:\testFolder", r"DSE_app_cutblock_since_Nov.2018", "KML"
+# sqlQuery = """select *
+# from WHSE_FOREST_TENURE.FTEN_CUT_BLOCK_POLY_SVW
+# where BLOCK_STATUS_DATE > '01-NOV-18' --comment here
+# and LIFE_CYCLE_STATUS_CODE IN ('ACTIVE','PENDING') --another comment here
+# and GEOGRAPHIC_DISTRICT_CODE IN ('DSE')
+# --and (UPPER(CUT_BLOCK_DESCRIPTION) like '%SALV%' or UPPER(BLOCK_STATUS_CODE) like '%SALV%')
+# """
 
 # # Usage example 4 - create a GeoPackage file for a TSA in the Kootenay Boundary Region; write it to folder on GeoBC FTP site
 # tDict = {'Arrow TSA':1, 'Boundary TSA':2, 'Cranbrook TSA':5, 'Golden TSA':7, 'Invermere TSA':9, 'Kootenay Lake TSA':13, 'Revelstoke TSA':27 } # for reference
@@ -56,7 +63,7 @@ and GEOGRAPHIC_DISTRICT_CODE IN ('DSE')"""
 # outPath, outName, outType = r"T:\testFolder", r"rest_stops_GC", "GeoJSON"
 # sqlQuery = "select * from WHSE_IMAGERY_AND_BASE_MAPS.MOT_REST_AREAS_SP"
 
-# # Usage example 5 - create an ESRI Shapefile for several TSAs in Kootenay Boundary Region, write it to a project folder
+# # Usage example 6 - create an ESRI Shapefile for several TSAs in Kootenay Boundary Region, write it to a project folder
 # tDict = {'Arrow TSA':r'01', 'Boundary TSA':r'02',  'Kootenay Lake TSA':r'13'} # for reference
 # outPath = r"W:\FOR\RSI\DKL\General_User_Data\gamos\Projects\2019\OGR_tests"
 # outName, outType = r"zRKB_TSAs_01", "ESRI Shapefile"
@@ -122,9 +129,18 @@ def ogrFromBCGW(outType, outPath, outName, user, pword, sqlQuery, outCRS = 3005,
 
     specifySRS, srs_def = '-a_srs','epsg:{}'.format(outCRS)
     f, formatName, fileName = '-f', outType, os.path.join(outPath, outName) + extDict[outType]
-    ds = "OCI:{}/{}@IDWPROD1:junk".format(user,pword)
+    ds = "OCI:{}/{}@IDWPROD1:no_Table".format(user,pword)
   
-    # Safely handle SQL query - write it to a temporary .sql file first, then read it from the external file (ensures UTF-8 compliance)
+    # SQL handling part 1 - scrub any comments from end of line
+    if "--" in sqlQuery: # this is the comment syntax in Oracle SQL Developer
+        listo = sqlQuery.split("\n")
+        sqlQuery = ""
+        for line in listo:
+            line = line.split("--")[0]
+            sqlQuery+= line + "\n"
+    print("Corrected SQL query is:\n{}".format(sqlQuery))
+    
+    # SQL handling part 2 - write the SQL to a temporary .sql file first, then read it from the external file (ensures UTF-8 compliance)
     make_wrkSpc(r"T:\tempQueryFolder")
     sqlFile = os.path.join(r"T:\tempQueryFolder","query.sql")  # query.sql will overwrite if running the script repeatedly
     with open(sqlFile, 'w') as thing:
@@ -133,7 +149,7 @@ def ogrFromBCGW(outType, outPath, outName, user, pword, sqlQuery, outCRS = 3005,
     progress = '-progress'
     sql = '-sql'
     sqlQ = r"@{}".format(sqlFile)
-    
+
     for x in [osgeo_bat, ogr_exe, specifySRS, srs_def, f, formatName, fileName, ds, progress, sql, sqlQ]:
         ogrList.append(x)
     # OLD: fullString = r'ogr2ogr -a_srs epsg:{} -f "{}" {}\{}{} {} -sql "{}" -progress'.format(outCRS, outType, outPath, outName, extDict[outType], ociString, sqlQuery)
@@ -212,7 +228,10 @@ print("\nArguments used:")
 for arg in ogrList:
     print("\t{}".format(arg))
     if ogrList.index(arg) > 0:
-        newString += arg + " "
+        if ogrList.index(arg) == 5: # the driver argument
+            newString += '"{}" '.format(arg)
+        else:
+            newString += '{} '.format(arg)
 print("\nogr2ogr string here (you can copy and paste this to the OSGeo4W shell and run it there if you want):\n{}\n\n".format(newString))
 
  
