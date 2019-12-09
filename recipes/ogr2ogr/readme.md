@@ -1,16 +1,20 @@
 
-<!-- Syntax:placing an image from a website    ![myimg](link) -->
-<!-- Syntax:placing two separate website images, separated by &nbsp spaces:  ![img1](link1)&nbsp;&nbsp;&nbsp;&nbsp; ![img2](link2) -->
-<!-- Syntax:making coloured text (uses HTML):  <span style="color:blue">some *blue* text</span>  -->
+<!-- 
+Examples of markdown here: https://www.markdownguide.org/basic-syntax/
+Syntax:placing an image from a website    ![myimg](link)
+Syntax:placing two separate website images, separated by &nbsp spaces:  ![img1](link1)&nbsp;&nbsp;&nbsp;&nbsp; ![img2](link2)
+Syntax:making coloured text (uses HTML):  <span style="color:blue">some *blue* text</span>
+-->
 
 ![GDAL](https://www.osgeo.org/wp-content/themes/roots/assets/img/logo-osgeo.svg "GDAL")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![OGR](https://gdal.org/_static/gdalicon.png "OGR")
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![OGR](https://gdal.org/_static/gdalicon.png "OGR")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![BCGOV](https://catalogue.data.gov.bc.ca/assets/gov/images/gov3_bc_logo.png "BCGOV")
 
 # ogr from BCGW
 This is a script that allows you to grab a dataset or filtered subset from the BC data Catalogue (BCGW) and translate it to one of several geospatial formats:
 
-* GeoPackage - QGIS' native format, similar to a geodatabase. Works in QGIS and ArcGIS
-* GeoJSON - very lightweight, easy-to-read format
+* GeoPackage - QGIS' native format, similar to a geodatabase. Works in QGIS and ArcGIS 10.3, 10.6 and ArcPro
+* GeoJSON - very lightweight, easy-to-read format. Can drag-and-drop into QGIS
 * KML - Google Earth layers
 * ESRI Shapefile - ESRI Shapefile
 * More will be added..
