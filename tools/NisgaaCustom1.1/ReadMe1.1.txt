@@ -3,7 +3,7 @@ README.txt
 #-------------------------------------------------------------------------------
 # Name:                       Advanced Geospatial Analysis
 #                            CUSTOM -- Import--Clip--Append
-#                                    version 1.2
+#                                    version 1.1
 #
 # Author:      James Burton|Government of British Columbia
 #              Geospatial Analyst: Sitkine-Skeena District
@@ -28,7 +28,7 @@ README.txt
 #
 # Specifics:   In order for this tool to preform optimally, please consider the
 #              following items:
-#                  1. This tool is for use with FGDB polygon shapefiles.
+#                  1. This tool is for use with FGDB shapefiles.
 #                  2. Please ensure shapefiles are named 'Noun_HabitatType_etc'.
 #                       For example: "Plants_Freshwater" or "Steelhead_Marine"
 #                  3.
@@ -94,14 +94,9 @@ README.txt
 #-------------------------------------------------------------------------------
 # Edit History:
 #
-# Date: Dec 27, 2019
-# Author: James Burton
-# Modification Notes: Implemented hard stop at 5 attempts for all user inputs.
-# Amalgamated Get Study Area and Check Study Area function, moved below polygon
-# extraction. Implemented user input for report name. Removed xlwt module
-#
 # Date:
 # Author:
 # Modification Notes:
+#
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
