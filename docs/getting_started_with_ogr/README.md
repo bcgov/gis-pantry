@@ -1,32 +1,19 @@
-# Intro to ogr (in Python) for BCGOV
-
-<!-- 
-Examples of markdown here: https://www.markdownguide.org/basic-syntax/
-Syntax:placing an image from a website    ![myimg](link)
-Syntax:placing two separate website images, separated by &nbsp spaces:  ![img1](link1)&nbsp;&nbsp;&nbsp;&nbsp; ![img2](link2)
-Syntax:making coloured text (uses HTML):  <span style="color:blue">some *blue* text</span>
--->
+# Intro to ogr for BCGOV
 
 ![GDAL](https://www.osgeo.org/wp-content/themes/roots/assets/img/logo-osgeo.svg "GDAL")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![OGR](https://gdal.org/_static/gdalicon.png "OGR")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![BCGOV](https://catalogue.data.gov.bc.ca/assets/gov/images/gov3_bc_logo.png "BCGOV")
 
 
-This is a set of documents to help experienced GIS 
+__ogr__ is an open-source Python package and command line interface (CLI) for geospatial data. It's used to easily transform data between 90+ different geospatial formats, and can be used pull Oracle queries off the BCGW and transform datasets into almost any type of spatial file.
 
-users with best practices, tips/tricks and quick reference information for implementing QGIS within the BC government. To reduce redundancy, linkage to existing material will be provided when possible and custom content will be used to expand on topics that can improve your experience in using QGIS with corporate datasources inside the enterprise environment. This is a living document and is intended to be user maintained. Please add content and make corrections where needed
 
-1. [Where to go for help](./doc/getting-help.md)
-2. [What can you do to improve the project](./doc/improve-qgis.md)
-3. [Getting around the GIS](./doc/getting-around.md)
-4. [Setup and best practice](./doc/setup-best-practice.md)
-4. [Adding and working with data](./doc/data.md)
-5. [Editing vector data](./doc/editing.md)
-6. [Making a map](./doc/making-maps.md)
-7. [Plugins](./doc/plugins.md)
-8. [Expressions and Calculations](./doc/expressions.md)
-9. [Processing data](./doc/processing.md)
-10. [Advanced processing and plugin devlopement](./doc/advanced.md)
+ogr is part of the GDAL package, and is easiest to use in a command line environment. On the DTS Geospatial Desktop, the OSGeo4W shell sets up the correct environments to try out ogr commands. It can be found easily using the Windows 10 start menu:
+ 
+<img src=./Images/osgeo4wshell_where2.jpg width="300" height="80" />
+
+
+1. [Getting started in command line: ogr2ogr](./doc/ogr2ogr_start.md)
 
 
 ## Contributing

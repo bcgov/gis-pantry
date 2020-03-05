@@ -88,14 +88,6 @@ It's easy to apply some formatting to the .csv file to make the columns wider an
 
 <img src=./Images/widen_csv_columns.gif width="800" />
 
-<!--SYNTAX: insert image via HTML -->
-<!-- <img src="https://path/here/image.gif" width="80" height="80" /> -->
-
-<!--SYNTAX: pure markdown insert image -->
-<!-- ![Alt Text](weblink_to_image_or_gif_noQuotes =WIDTHxHEIGHT "optional descriptive text") -->
-<!-- Note: THe =WIDTHxHEIGHT only works in some Markdown implementations. If you ned to resixe, HTML always works -->
-<!-- https://stackoverflow.com/questions/14675913/changing-image-size-in-markdown -->
-
 
 #### 0. Each row in ogrParams.csv is a set of values you are feeding into the ogrFromBCGW_csv_FINAL.py script.
 Each column header becomes a key name in the dictionary generated from each row, and row values become the dictionary values.
@@ -219,3 +211,20 @@ Be mindful of forward slashes vs. backslashes.
 
 }
 ```
+
+
+
+## License
+    Copyright 2019 BC Provincial Government
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
