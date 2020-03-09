@@ -352,4 +352,4 @@ for arg in ogrList:
             newString += '{} '.format(arg)
 print("\nogr2ogr string here (you can copy and paste this to the OSGeo4W shell and run it there if you want):\n{}\n\n".format(newString))
 
- 
+os.rmdir(r"T:\tempQueryFolder")
