@@ -1,4 +1,4 @@
-fbgdfs
+
 # Getting started in command line: ogr2ogr
 
 
