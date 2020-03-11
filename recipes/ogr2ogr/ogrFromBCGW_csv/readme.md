@@ -3,12 +3,12 @@
 
 <img src=https://www.osgeo.org/wp-content/themes/roots/assets/img/logo-osgeo.svg width="150" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=https://gdal.org/_static/gdalicon.png width="75" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=./Images/sqlDeveloper.jpg width="150" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=./images/sqlDeveloper.JPG  width="200" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;![BCGOV](https://catalogue.data.gov.bc.ca/assets/gov/images/gov3_bc_logo.png "BCGOV") 
 
 # How to run ogrFromBCGW_csv
-*Last updated: March 2nd, 2020*
+*Last updated: March 9th, 2020*
 
 Welcome to the ogrFromBCGW tool! This is a fully open-source script tool (no arcpy, no ESRI) that uses GDAL/OGR to
 grab any data subset from BCGW and save it in a variety of spatial formats. It runs on the BC Government DTS, on either the Geospatial Desktop or the ArcGIS 10-6 Desktop.
@@ -86,7 +86,7 @@ As you update values in the .csv, make sure you keep any date strings expressed 
 
 It's easy to apply some formatting to the .csv file to make the columns wider and the headers more readable:
 
-<img src=./Images/widen_csv_columns.gif width="800" />
+<img src=./images/widen_csv_columns.gif width="800" />
 
 
 #### 0. Each row in ogrParams.csv is a set of values you are feeding into the ogrFromBCGW_csv_FINAL.py script.
@@ -94,7 +94,7 @@ Each column header becomes a key name in the dictionary generated from each row,
 
 #### 1. The following are REQUIRED columns for ogrFromBCGW (must have values):
 #### paramName, outPath, outName, outType, sqlQuery, ogrReadTheseColumns
-<img src=./Images/required_param_columns.jpg width="800" />
+<img src=./images/required_param_columns.JPG width="800" />
 
 #### paramName - a simple name for the set of values found in each row
 
@@ -117,7 +117,7 @@ If using format placeholders, must use key0, key1 etc. within the {}* placeholde
 #### sqlQuery - a query to draw the result from the BCGW. IMPORTANT - TEST IT BEFORE USING IN THIS SCRIPT!
 Make sure the entire SQL query string is copied into a single cell. (You don't need to surround the SQL string in triple quotes.)
 
-<img src=./Images/sqlDeveloper.jpg width="150" />    &nbsp;&nbsp;&nbsp;__Oracle's 'SQL Developer' app on the 10-6 and Kamloops Geospatial Desktop is a good place to test an SQL query. The power of ogr2ogr is realized through good queries, which can create BCGW subsets very quickly, especially when using Oracle spatial data operator (SDO) statements .__
+<img src=./images/sqlDeveloper.JPG width="150" />    &nbsp;&nbsp;&nbsp;__Oracle's 'SQL Developer' app on the 10-6 and Kamloops Geospatial Desktop is a good place to test an SQL query. The power of ogr2ogr is realized through good queries, which can create BCGW subsets very quickly, especially when using Oracle spatial data operator (SDO) statements .__
 
 -----
 *Query Example 1:* 
@@ -161,7 +161,7 @@ Any remaining columns are there to help easily adjust the SQL statement (i.e. ha
 
 The order of the columns does not matter, as long as the right values are under the right heading.
 
-<img src=./Images/optional_param_columns.jpg width="800" />
+<img src=./images/optional_param_columns.JPG width="800" />
 
 #### 2. The following are OPTIONAL columns for ogrFromBCGW: Column H and everything to the right
    Column H and anything to the right are optional. These columns are for custom variables that the script might need to create customized file names, or to easily modify an sqlQuery. ( Columns *'harvestSinceWhen', 'fireYear' and 'curDate'* in the default ogrParams.csv are examples of optional columns.) Other optional columns may be used to chain this script's output into another Python script (ex. dsDict, dataSources, etc.)..
