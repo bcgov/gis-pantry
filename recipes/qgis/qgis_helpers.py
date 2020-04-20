@@ -22,6 +22,9 @@ def create_oracle_layer(layer_name,user_name,user_pass,db_table,geom_column_name
             else:
                 table = f"(select * from {db_table} WHERE {sql} )"
                 uri.setDataSource("", table, geom_column_name,"",key)
+    else:
+        uri.setDataSource(schema, table, geom_column_name,key)
+    
     uri.setSrid('EPSG:3005')
     
     uri.setUseEstimatedMetadata(True)
