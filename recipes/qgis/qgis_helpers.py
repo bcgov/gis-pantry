@@ -38,7 +38,7 @@ def create_oracle_layer(layer_name,user_name,user_pass,db_table,geom_column_name
         uri.setWkbType(QgsWkbTypes.LineString)
     elif geom_type == 'MultiPolygon':
         uri.setWkbType(QgsWkbTypes.MultiPolygon)
-    elif geom_type == 'MultiLine':
+    elif geom_type == 'MultiLineString':
         uri.setWkbType(QgsWkbTypes.MultiLineString)
     elif geom_type == 'MulitPoint':
         uri.setWkbType(QgsWkbTypes.MulitPoint)
