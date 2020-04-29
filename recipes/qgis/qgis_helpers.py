@@ -84,7 +84,7 @@ def get_bcgw_table_geomtype(db_table,geom_column_name,user_name,user_pass):
     elif type_num ==5:
         geom_t = 'MulitPoint'
     elif type_num ==6:
-        geom_t = 'MultiLineString '
+        geom_t = 'MultiLineString'
     else:
         db.close()
         raise TypeError
