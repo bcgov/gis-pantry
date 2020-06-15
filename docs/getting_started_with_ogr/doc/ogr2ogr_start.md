@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+fbgdfs
+=======
 
+>>>>>>> 914a8a9b9673b25c5a9409bff5fa61639b9103da
 # Getting started in command line: ogr2ogr
 
 
@@ -54,4 +58,8 @@ Here's how the command above works:
     ogr2ogr -a_srs epsg:3005 -f "GPKG" T:\aGeoPackage.gpkg OCI:BCGWusername/BCGWpassword@IDWPROD1:noTable -sql "select * from WHSE_FOREST_VEGETATION.RSLT_OPENING_SVW  where OPENING_ID = '-228240000'" -progress
 
 #### Create a GeoJSON (readable in QGIS):
+<<<<<<< HEAD
     ogr2ogr -a_srs epsg:3005 -f "GeoJSON" T:\aJSON.json OCI:BCGWusername/BCGWpassword@IDWPROD1:noTable -sql "select * from WHSE_FOREST_VEGETATION.RSLT_OPENING_SVW  where OPENING_ID = '-228240000'" -progress
+=======
+    ogr2ogr -a_srs epsg:3005 -f "GeoJSON" T:\aJSON.json OCI:BCGWusername/BCGWpassword@IDWPROD1:noTable -sql "select * from WHSE_FOREST_VEGETATION.RSLT_OPENING_SVW  where OPENING_ID = '-228240000'" -progress
+>>>>>>> 914a8a9b9673b25c5a9409bff5fa61639b9103da
