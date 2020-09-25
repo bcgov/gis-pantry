@@ -1,5 +1,6 @@
 # Getting help with QGIS
-[home](../README.md)
+
+[home](../readme.md)
 
 
 
