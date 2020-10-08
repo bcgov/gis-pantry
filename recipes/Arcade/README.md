@@ -10,14 +10,23 @@ ESRI Arcade expressions on GitHub (https://github.com/Esri/arcade-expressions)
 * [Setup](#setup)
 * [License](#setup)
 
-### Recipe Format
+### Recipe Format Template for .md file
 
-1. Code Pre-Text
-2. Code (With)
-3. Comments or link to where it was used
+1. Code Name and Description
+2. Use Cases
+3. Workflow in how to use
+4. Expression Template
+5. Example Output
 
+Link to sample template ./SampleTemplate.md
+* [Sample Template](./SampleTemplate.md)
 
-## Arcade Recipes
+## Arcade Recipe folders
+* [Calculation](./Calculation/Calculation.md)
+* [Labeling](./Calculation/Calculation.md)
+* [Calculation](./Calculation/Calculation.md)
+* [Calculation](./Calculation/Calculation.md)
+* [Calculation](./Calculation/Calculation.md)
 
 #### 
 
