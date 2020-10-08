@@ -1,16 +1,19 @@
-# Arcade Recipes as you discover them Please add to this List through GitHub and the Markdown
+# Arcade Recipes as you discover them please add to this list through GitHub and the Markdown
 
-A quick recipe area to add Arcade
+A quick recipe area to add Arcade Expressions within the BC government
 
 ESRI Arcade expressions on GitHub (https://github.com/Esri/arcade-expressions)
 
-## Table of contents
-* [Format](#format)
-* [Arcade Recipes](#arcade-recipes)
-* [Setup](#setup)
-* [License](#setup)
 
-### Recipe Format Template for .md file
+## Arcade Recipe folders
+* [Calculation](./Calculation/Calculation.md)
+* [Labeling](./Labeling/Labeling.md)
+* [Popup](./Popup/Popup.md)
+* [Visualization](./Visualization/Visualization.md)
+* [Miscellaneous](./Miscellaneous/Miscellaneous.md)
+
+
+## Recipe Format Template for .md file
 
 1. Code Name and Description
 2. Use Cases
@@ -18,17 +21,14 @@ ESRI Arcade expressions on GitHub (https://github.com/Esri/arcade-expressions)
 4. Expression Template
 5. Example Output
 
-Link to sample template ./SampleTemplate.md
+Link to sample template
 * [Sample Template](./SampleTemplate.md)
 
-## Arcade Recipe folders
-* [Calculation](./Calculation/Calculation.md)
-* [Labeling](./Calculation/Calculation.md)
-* [Calculation](./Calculation/Calculation.md)
-* [Calculation](./Calculation/Calculation.md)
-* [Calculation](./Calculation/Calculation.md)
-
-#### 
+To share code create a seperate mark down file for each example. Use the following steps
+1. Take a copy of an existing Code markdown file
+2. Place the mark down file in the appropriate folder
+3. Edit the file appropriately, then add a reference to it in the root markdown so users can quick link to it.
+4. Place any images in the image folder to reference them in your markdown
 
 
 

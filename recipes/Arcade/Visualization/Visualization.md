@@ -1,26 +1,7 @@
-# Descriptive Code Name
+# Arcade Calculations
+Sample Arcade expressions that perform modified visualization within AGOL
 
-A description of what the code does
-
-## Use Case
-
-A description on how to use
-
-
-## Workflow
-
-How to use the code
-
-
-## Expression Template
-
-Place the actual code here
-
-
-## Example Output
-
-- Image of example output
-- Link to website that uses
+## Examples
 
 
 

@@ -1,26 +1,8 @@
-# Descriptive Code Name
-
-A description of what the code does
-
-## Use Case
-
-A description on how to use
+# Arcade Popups
+Sample Arcade expressions that show how to do modified popups in AGOL
 
 
-## Workflow
-
-How to use the code
-
-
-## Expression Template
-
-Place the actual code here
-
-
-## Example Output
-
-- Image of example output
-- Link to website that uses
+## Examples
 
 
 
