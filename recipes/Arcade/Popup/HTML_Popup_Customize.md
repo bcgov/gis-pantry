@@ -46,8 +46,8 @@ In this example use the created HTML and place it in configure a customized attr
 </tbody></table>
 ```
 
-## Example Output ..\images\
-![HTML_Image](..\Images\HTML_Popup_Customization.gif)
+## Example Output
+![HTML_Image](../Images/HTML_Popup_Customization.gif)
 
 
 
