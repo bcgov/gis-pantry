@@ -47,7 +47,7 @@ In this example use the created HTML and place it in configure a customized attr
 ```
 
 ## Example Output
-![HTML_Image](..\Images\HTML_Popup_Customization.gif)
+![HTML_Image](https://github.com/GrahamMacGregorBCGov/gis-pantry/blob/master/recipes/Arcade/Images/HTML_Popup_Customization.gif)
 
 
 
