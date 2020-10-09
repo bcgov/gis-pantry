@@ -22,13 +22,13 @@ ESRI Arcade expressions on GitHub (https://github.com/Esri/arcade-expressions)
 5. Example Output
 
 Link to sample template
-* [Sample Template](./SampleTemplate.md)
+* [Sample Template](./Popup/HTML_Popup_Customize.md)
 
 To share code create a seperate mark down file for each example. Use the following steps
 1. Take a copy of an existing Code markdown file
-2. Place the mark down file in the appropriate folder
-3. Edit the file appropriately, then add a reference to it in the root markdown so users can quick link to it.
-4. Place any images in the image folder to reference them in your markdown
+2. Place the mark down file in the appropriate folder category
+3. Edit the file appropriately, then add a reference to it in the root markdown so users can have quick link to it.
+4. Place any images/gifs in the image folder to reference them in your markdown
 
 
 
