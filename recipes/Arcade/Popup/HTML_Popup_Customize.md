@@ -46,8 +46,8 @@ In this example use the created HTML and place it in configure a customized attr
 </tbody></table>
 ```
 
-## Example Output
-![HTML_Image](https://github.com/bcgov/gis-pantry/tree/master/recipes/Arcade/Images/HTML_Popup_Customization.gif)
+## Example Output ..\images\
+![HTML_Image](..\Images\HTML_Popup_Customization.gif)
 
 
 
