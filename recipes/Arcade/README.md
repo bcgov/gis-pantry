@@ -21,8 +21,8 @@ ESRI Arcade expressions on GitHub (https://github.com/Esri/arcade-expressions)
 4. Expression Template
 5. Example Output
 
-Link to sample template
-* [Sample Template](./Popup/HTML_Popup_Customize.md)
+Link to sample markdown example
+* [Sample Template HTML Popup](./Popup/HTML_Popup_Customize.md)
 
 To share code create a seperate mark down file for each example. Use the following steps
 1. Take a copy of an existing Code markdown file
