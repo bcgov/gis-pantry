@@ -1,0 +1,99 @@
+paramName,paramDescription,outPath,outName,outType,sqlQuery,ogrReadTheseColumns,harvestSinceWhen,fireYear,curDate,dsDict,dataSources,data_OG_dict,oldGrowthLayerNames
+harvestParams,Harvest authorizations in DSE since the 'harvestSinceWhen' date,T:\_test_GPKG,"DSE_auth_harv_since_{key0}_as_of_{key1}.format(harvestSinceWhen , curDate)",GPKG,"""""""select b.CUT_BLOCK_FOREST_FILE_ID, b.CUT_BLOCK_ID, b.HARVEST_AUTH_CUTTING_PERMIT_ID, c.DESCRIPTION,
+b.FEATURE_CLASS_SKEY, fc.NAME, b.BLOCK_STATUS_DATE, b.PLANNED_HARVEST_DATE,
+b.DISTURBANCE_START_DATE, b.DISTURBANCE_END_DATE, b.GEOMETRY 
+from WHSE_FOREST_TENURE.FTEN_CUT_BLOCK_POLY_SVW b
+join WHSE_FOREST_TENURE.FTEN_BLOCK_STATUS_CODE c 
+on  b.BLOCK_STATUS_CODE = c.BLOCK_STATUS_CODE
+join WHSE_CORP.CORP_FEATURE_CLASSES fc
+on b.FEATURE_CLASS_SKEY = fc.FEATURE_CLASS_SKEY
+where b.BLOCK_STATUS_DATE >= to_date({key0}, 'DD-MON-YY')
+and c.BLOCK_STATUS_CODE IN ('HB')--maybe include 'S' too
+and b.LIFE_CYCLE_STATUS_CODE IN ('ACTIVE')
+and b.GEOGRAPHIC_DISTRICT_CODE IN ('DSE')
+order by BLOCK_STATUS_DATE asc"""""".format(harvestSinceWhen)","outPath, outName, curDate, sqlQuery, outType,harvestSinceWhen",'01-JUL-18',,"time.strftime(""%Y_%m_%d"")","{'arrow_ds':r""\\spatialfiles.bcgov\work\srm\nel\Workarea\arcgis\es\OGMA_Standard\data\HLPO_OGMA_Results\SGRC_CFLB\v11_BEC\Arrow\Jan17_2020\ARR_SGRC_BGC11_200117.gdb|layername=hlpo_resultant"",
+'boundary_ds':
+r""\\spatialfiles.bcgov\work\srm\nel\Workarea\arcgis\es\OGMA_Standard\data\HLPO_OGMA_Results\SGRC_CFLB\v11_BEC\Boundary\Nov12_2019\fix_b11_DBO_beoupdate.gdb|layername=hlpo_resultant"",
+'kootLake_ds':r""\\spatialfiles.bcgov\work\srm\nel\Workarea\arcgis\es\OGMA_Standard\data\HLPO_OGMA_Results\SGRC_CFLB\v11_BEC\KootenayLk\KLK_SGRC_BECv11_190904.gdb|layername=hlpo_resultant"",
+'golden_ds':r""\\spatialfiles.bcgov\work\srm\nel\Workarea\arcgis\es\OGMA_Standard\data\HLPO_OGMA_Results\PeterLewis_CFLB\V11_BEC\Golden\Sept11_2019\Sept11_2019\GLD_PLCFLB_BEC11_190910.gdb|layername=hlpo_resultant"",
+'revy_ds':r""\\spatialfiles.bcgov\work\srm\nel\Workarea\arcgis\es\OGMA_Standard\data\HLPO_OGMA_Results\PeterLewis_CFLB\V11_BEC\Revelstoke\REV_PLCFLB_BEC11_190911.gdb|layername=hlpo_resultant"",
+'cranbrook_ds':r""\\spatialfiles.bcgov\work\srm\nel\Workarea\arcgis\es\OGMA_Standard\data\HLPO_OGMA_Results\CanforCFLB_RM\v11_BEC\Cranbrook\Jan20_2020\CBK.gdb|layername=hlpo_resultant"",
+'invermere_ds':r""\\spatialfiles.bcgov\work\srm\nel\Workarea\arcgis\es\OGMA_Standard\data\HLPO_OGMA_Results\CanforCFLB_RM\v11_BEC\Invermere\Sept5\INV_Canfor_BECv11_190905.gdb|layername=hlpo_resultant"" }","[dsDict['arrow_ds'], dsDict['boundary_ds'] ]","{arrow_ds:""Arrow_OG_"" , boundary_ds:""Boundary_OG_"", kootLake_ds:""KootLake_OG_"", golden_ds:""Golden_OG_"", revy_ds:""Revelstoke_OG_"", cranbrook_ds:""Cranbrook_OG_"", invermere_ds:""Invermere_OG_""}",list(data_OG_dict[d] for d in dataSources)
+wildfireParams,Wildfires in a district since a specific fire year ,T:\_test_KMLs,"DSE_wildfires_{key0}_onwards_as_of_{key1}.format(fireYear , curDate)",KML,"select FIRE_NUMBER, shape, FIRE_YEAR, FIRE_DATE
+from WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP fires
+where FIRE_YEAR >= {key0}
+and FIRE_NUMBER like 'N%'
+and SDO_ANYINTERACT (fires.shape,
+  (select dist.SHAPE from WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SP dist where dist.ORG_UNIT IN( 'DSE' ) )) = 'TRUE'
+.format(fireYear)","outPath,     fireYear,   outName,curDate,sqlQuery,outType",,2015,"time.strftime(""%Y_%m_%d"")",,,,
+miningTenures_params,Get mining tenures in a few selected landscape units,T:\_test_JSONs,miningTenures,GeoJSON,"select owner_name, client_number_id, title_type_description, issue_date, good_to_date, geometry
+from WHSE_MINERAL_TENURE.MTA_ACQUIRED_TENURE_SVW ten
+where tenure_type_code in ('M', 'P')  --M for mineral, P for placer
+and tenure_sub_type_code = 'C' --C for claim
+and SDO_ANYINTERACT (ten.GEOMETRY, 
+  (select lu.GEOMETRY from WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW lu
+  where lu.LANDSCAPE_UNIT_NAME in
+  ('Bobbie Burns')
+  )) = 'TRUE'
+UNION ALL 
+select owner_name, client_number_id, title_type_description, issue_date, good_to_date, geometry
+from WHSE_MINERAL_TENURE.MTA_ACQUIRED_TENURE_SVW ten
+where tenure_type_code  in ('M', 'P')  --M for mineral, P for placer
+and tenure_sub_type_code = 'C' --C for claim
+and SDO_ANYINTERACT (ten.GEOMETRY, 
+  (select lu.GEOMETRY from WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW lu
+  where lu.LANDSCAPE_UNIT_ID = 2074
+  )) = 'TRUE'
+UNION ALL
+select owner_name, client_number_id, title_type_description, issue_date, good_to_date, geometry
+from WHSE_MINERAL_TENURE.MTA_ACQUIRED_TENURE_SVW ten
+where tenure_type_code in ('M', 'P')  --M for mineral, P for placer
+and tenure_sub_type_code = 'C' --C for claim
+and SDO_ANYINTERACT (ten.GEOMETRY, 
+  (select lu.GEOMETRY from WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW lu
+  where lu.LANDSCAPE_UNIT_ID = 2075
+  )) = 'TRUE'
+UNION ALL
+select owner_name, client_number_id, title_type_description, issue_date, good_to_date, geometry
+from WHSE_MINERAL_TENURE.MTA_ACQUIRED_TENURE_SVW ten
+where tenure_type_code in ('M', 'P')  --M for mineral, P for placer
+and tenure_sub_type_code = 'C' --C for claim
+and SDO_ANYINTERACT (ten.GEOMETRY, 
+  (select lu.GEOMETRY from WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW lu
+  where lu.LANDSCAPE_UNIT_ID = 2076
+  )) = 'TRUE'
+UNION ALL
+select owner_name, client_number_id, title_type_description, issue_date, good_to_date, geometry
+from WHSE_MINERAL_TENURE.MTA_ACQUIRED_TENURE_SVW ten
+where tenure_type_code in ('M', 'P')  --M for mineral, P for placer
+and tenure_sub_type_code = 'C' --C for claim
+and SDO_ANYINTERACT (ten.GEOMETRY, 
+  (select lu.GEOMETRY from WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW lu
+  where lu.LANDSCAPE_UNIT_NAME in
+  ('East Creek')
+  )) = 'TRUE'
+UNION ALL 
+select owner_name, client_number_id, title_type_description, issue_date, good_to_date, geometry
+from WHSE_MINERAL_TENURE.MTA_ACQUIRED_TENURE_SVW ten
+where tenure_type_code = 'M'  --M for mineral
+and tenure_sub_type_code = 'C' --C for claim
+and SDO_ANYINTERACT (ten.GEOMETRY, 
+  (select lu.GEOMETRY from WHSE_LAND_USE_PLANNING.RMP_LANDSCAPE_UNIT_SVW lu
+  where lu.LANDSCAPE_UNIT_NAME in
+  ('Bugaboo'))) = 'TRUE'
+order by OWNER_NAME","outPath,outName,sqlQuery            , outType",,,,,,,
+singleFireParams,"Creates a KML for a single wildfire, with  FIRE_NUMBER as only attribute, write it to a T: folder",T:\_test_KMLs,fireKML_{key0}.format(curDate),KML,"select FIRE_NUMBER, SHAPE from WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP where FIRE_NUMBER ='N40101'","outPath,   outName, outType, curDate,sqlQuery",,,"time.strftime(""%Y_%m_%d"")",,,,
+firesSE2018_Params,"Create an ESRI Shapefile all wildfires in Southeast zone in 2018, preserve all attributes, write it to T: folder",T:\_test_shapefiles,fires_2015+,ESRI Shapefile,select * from WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP where FIRE_YEAR > 2015 and FIRE_NUMBER like 'N%',"outPath,outName,sqlQuery, outType",,,,,,,
+,"
+",,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
