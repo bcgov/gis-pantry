@@ -1,9 +1,9 @@
-# Arcade Popups
-Sample Arcade expressions that show how to do modified popups in AGOL
+# Arcade Calculations
+Sample Arcade expressions that perform calculations within and application
 
 
 ## Examples
-* [HTML Popup Customization](HTML_Popup_Customization.md)
+
 
 
 
