@@ -5,24 +5,20 @@
 QGIS supports many of the same symbology types as its competitors. It also supports more advanced symbology through the [geometry generator and vector graphics](https://docs.qgis.org/2.18/tr/docs/user_manual/working_with_vector/style_library.html).
 
 Index
-* [Adding data to QGIS](#adding-data-to-qgis)
-* [Adding data from layer library](#adding-data-from-layer-library)
-* [Adding Oracle data via browser panel](#adding-oracle-data-via-browser-panel)
-* [Adding Oracle Data via DB Manager](#adding-oracle-data-via-db-manager)
-* [Create New Vector Layers](#create-new-vector-layers)
-* [Select by location](#select-by-location)
-* [Create grids and samples](#create-grids-and-samples)
+* [Getting Started](#getting-started)
+* [The Centroid Function](#the-centroid-function)
+* [The Area Function](#the-area-function)
+* [The Scale Function](#the-scale-function)
 
 
 
-## Using the Geometry Generator
+## Getting Started
 
 QGIS allows feature data types to be changed without creating a new layer through the geometry generator.
 
 [The following examples use the layers below:](#adding-data-from-layer-library)
 * [WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP](https://catalogue.data.gov.bc.ca/dataset/fire-perimeters-historical#edc-pow)
 * [WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SP](https://catalogue.data.gov.bc.ca/dataset/natural-resource-nr-district#edc-pow)
-but any layers that cover British Columbia should work.
 
 Query the Historical Fire layer to only show fires from 2017.
 ```sql
@@ -33,16 +29,18 @@ Make sure the fire layer is displayed above the NR District layer.
 ![Filter the Fire Layer](../images/filterFireLayer.gif "Wow!")
 
 ## The Centroid Function
+The Centroid function is used to convert polygons to points based on the centroid coordinates of the polygon. It is used for data conversion purposes.
+
 Double click the Historical Fire layer to enter its layer properties and navigate to the symbology tab. Change the symbology from Simple fill to Geometry generator and set the Geometry type to Point / MultiPoint.
 
-Click the Epsilon button beside the code block to open the Expression Dialog window if it doesn't automatically appear. You can take some time at this point to explore different expressions that are displayed in the centre of window.
+Click the Epsilon button beside the code block to open the Expression Dialog window if it doesn't automatically appear. You can take some time at this point to explore different expressions that are displayed in the centre block of the dialog.
 
 In the code block, enter the following code:
 ```python
 Centroid($geometry)
 ```
 
-Click Apply.
+Click Apply and OK to exit the window.
 
 Now every fire on the map is displayed as a point and you should be able to see some fires that weren't visible before.
 
@@ -52,7 +50,7 @@ Now every fire on the map is displayed as a point and you should be able to see 
 ## The Area Function
 The $area function is used to give the area of a polygon feature as a real number. It has lots of uses but, when using it in the Geometry Generator, it is generally reserved for conditional statements.
 
-Open the properties of the fire layer and create a Geometry generator symbol with the Geometry type Point / MultiPoint if this does not already exist. Add the following code to the code block:
+Open the properties of the Historical Fire layer and create a Geometry generator symbol with the Geometry type Point / MultiPoint if this does not already exist. Add the following code to the code block:
 
 ```sql
 if(
@@ -78,7 +76,7 @@ This will make all the polygons larger than or equal to 1,000 hectares appear as
 
 ![Using the Area function in Geometry Generator](../images/geometryGeneratorArea.gif "Wow!")
 
-## Scale Dependent Styling
+## The Scale Function
 
 The Geometry Generator can also support scale dependent geometry with the @map_scale function. @map_scale returns the numerical scale of the current map and can be used for conditionals that change how layers are displayed when you zoom in or out of a map.
 
