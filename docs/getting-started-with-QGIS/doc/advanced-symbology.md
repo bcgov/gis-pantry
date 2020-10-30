@@ -6,10 +6,6 @@
 Index
 * [Getting Started](#getting-started)
 * [Symbolizing the Road Layer](#symbolizing-the-road-layer)
-* [The Area Function](#the-area-function)
-* [The Scale Function](#the-scale-function)
-
-
 
 ## Getting Started
 
@@ -50,3 +46,17 @@ Click Apply and then navigate to the Symbology tab in the properties menu.
 Change the Symbol type to Categorized and the Column to ROAD_CLASS. Click Classify.
 
 ![Categorize the Line Layer](../images/categorize_line_layer.gif "Wow!")
+
+With the layer categorized you can start changing the line symbols. Double click the highway symbol to open its Symbol selector. Click the green + button to add a new line. Make the top line size 0.8 and yellow. Make the lower line size 1.0 and black. Click OK to exit the Symbol selector and OK to exit the Layer properties.
+
+![Change the Highway Symbology](../images/highway-symbology.gif "Wow!")
+
+You'll notice that the line caps still show up at each section of the highway line. You can remove these in the Advanced section of the layer symbology properties by turning on Symbol levels.
+
+![Turn on Symbol Levels](../images/turn-on-symbol-levels.gif "Wow!")
+
+Make the yield roads the same as highways but slightly thinner with the yellow line as 0.5 and the black line as 0.7. Make Collector roads solid black 0.4 and arterial roads solid black 0.3. Make local roads medium grey 0.3.
+
+Unclassified roads on this map are trails. So you'll want to make their symbol smaller and less eye catching than the roads and with some indication that they are trails. To do this open the symbol properties for this layer and create two lines using the + button. Change the Symbol layer type of both lines to Marker line. Change the interval of the upper line to 30 and then make it an SVG marker and make the SVG the image of the person hiking and increase the size to 3.0. Make the second marker line a brown dashed line with size 1.0. Turn off rotation in the hiking person marker line.
+
+![Turn on Symbol Levels](../images/marker-line.gif "Wow!")
