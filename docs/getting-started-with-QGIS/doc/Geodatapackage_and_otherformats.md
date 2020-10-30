@@ -38,17 +38,17 @@ When you receive a geodatapackge or create one there are a number of ways you ca
    To use a Geodatapackage you need to connect QGIS to the database first. Then start adding data contained within the Geodatapackage.
    
    Browser-> Right click (Geodatapackage)-> New Connection (Select the .gpkg)
-![Connect Geodatapackage](../images\Geodatapackage_connection.gif)
+![Connect Geodatapackage](../images/Geodatapackage_connection.gif)
 
    ### 2. Saving a Vector layer to a Geodatapackage
    Right click Layer-> Properties -> Save Feature As -> Select Geodatapackage
-![Style Geodatapackage](../images\Save_Layer_To_Geopackage.gif)
+![Style Geodatapackage](../images/Save_Layer_To_Geopackage.gif)
 
    ### 3. Save style file in GeodataPackage
    Style files can be saved to a Geodatapackage representing how a layer is themed. When you load a layer with a style file embedded in the Geodatapackage the layer will reflect the style when added to QGIS.
 
 Right click Layer (Properties) -> Style Button-> Save Style to GeoDataPackage
-![Style Geodatapackage](../images\Save_style_Geodatapackage.gif)
+![Style Geodatapackage](../images/Save_style_Geodatapackage.gif)
 
 
 ## Other Important Data Formats QGIS can use
@@ -58,7 +58,7 @@ Right click Layer (Properties) -> Style Button-> Save Style to GeoDataPackage
 A spatial lite file is very similar to a Geodatapackage and can also be used in QGIS. While both are good, a Geodatapackage is more transportable and SpatialLite can be used as more of a database management system. QGIS has been focusing more on GeoDatapackage standards and integration with the software. Some plugins (Extensions) may work better using SpatialLite depending on your analysis situation. 
 Layer -> Create Layer -> New SpatialLite Layer
 
-![Spatiallite](../images\Create_new_spatiallite_layer.gif)
+![Spatiallite](../images/Create_new_spatiallite_layer.gif)
 
 ### 2. Shapefiles
 
@@ -67,13 +67,13 @@ The long time data format (Shapefile) is compatible with QGIS. Shapefiles can be
 2. Click on New Shapefile in the Data Source Toolbar
 3. Layer -> Create Layer -> New Shapefile Layer
 
-![Shapefile](../images\Create_new_Shapefile.gif)
+![Shapefile](../images/Create_new_Shapefile.gif)
 
 ### 3. Scratch Layer
 
 QGIS can create scratch layers which are temporary working data layers that are not saved on disk. After working on or editing a scratch layer it will be deleted if you close your QGIS session or you can export it to a Geodatapackage or Shapefile format.  
 
-![Create Scratch](../images\Create_new_Scratch_layer.gif)
+![Create Scratch](../images/Create_new_Scratch_layer.gif)
 
 ### 4. Virtual Layer
 
@@ -88,7 +88,7 @@ QGIS can create scratch layers which are temporary working data layers that are 
  *use st_union to get the layers geometry
 
 
-![Create Virtual](../images\Create_new_Virtual_layer.gif)
+![Create Virtual](../images/Create_new_Virtual_layer.gif)
 
 ### License
     Copyright 2019 BC Provincial Government
