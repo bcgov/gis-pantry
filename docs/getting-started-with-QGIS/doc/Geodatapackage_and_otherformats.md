@@ -27,8 +27,8 @@ A Geodatapackage is an opensource and free way to store multpile GIS layers in a
 
  This will open a window where you set the database location, Name, Geometery type and Projection. When using this tool you need to create at least 1 layer when making a new Geodatapackage.
 
- ![New Geodatapackage1](../images\Layer_New_Geodata_Package.JPG)
- ![New Geodatapackage2](../images\Layer_New_Geodata_Package2.JPG)
+ ![New Geodatapackage1](../images/Layer_New_Geodata_Package.JPG)
+ ![New Geodatapackage2](../images/Layer_New_Geodata_Package2.JPG)
 
 ## How use a Geodatapackage
 
