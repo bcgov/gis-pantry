@@ -1,6 +1,6 @@
 # GeoDataPackage's in QGIS and other data formats
 
-Within QGIS there are many ways to access creation of data and different formats. This section will just focus on the creation of local data formats.
+Within QGIS there are many ways to access data creation in a variety of different formats. This section will just focus on the creation of local data formats like geodatapackages or shapefiles.
 
 ## Index
 * [What is a GeodataPackage](#What-is-a-GeodataPackage)
@@ -18,7 +18,7 @@ Within QGIS there are many ways to access creation of data and different formats
 
 ## What is a GeodataPackage
 
-A Geodatapackage is an opensource and free way to store multpile GIS layers in a single database. The database repository is flexible in being used by many different applications including mobile applications, as well as its ability to store different data types like tables, raster and vector GIS layers. When created the file will have .gpkg extension.
+A Geodatapackage is an opensource and free way to store multpile GIS layers in a single database. The database repository is flexible in being used in many different ways, including mobile applications, as well as its ability to store different data types like tables, raster and vector GIS layers. When created the file will have .gpkg extension. The equivalent to this datatype in the ArcGIS environment is a FileGeoDatabase.
 
 
 ## How To Create a new GeodataPackage in QGIS
@@ -41,13 +41,13 @@ When you receive a geodatapackge or create one there are a number of ways you ca
 ![Connect Geodatapackage](../images/Geodatapackage_connection.gif)
 
    ### 2. Saving a Vector layer to a Geodatapackage
-   Right click Layer-> Properties -> Save Feature As -> Select Geodatapackage
-![Style Geodatapackage](../images/Save_Layer_To_Geopackage.gif)
+   Right click Layer-> Export -> Save Feature As -> Select Geodatapackage (Set other Variables)
+![Save Vector](../images/Save_Layer_To_Geopackage.gif)
 
    ### 3. Save style file in GeodataPackage
    Style files can be saved to a Geodatapackage representing how a layer is themed. When you load a layer with a style file embedded in the Geodatapackage the layer will reflect the style when added to QGIS.
 
-Right click Layer (Properties) -> Style Button-> Save Style to GeoDataPackage
+Right click Layer (Properties) -> Style Button (Lower Left Button)-> Save Style to GeoDataPackage
 ![Style Geodatapackage](../images/Save_style_Geodatapackage.gif)
 
 
@@ -62,7 +62,7 @@ Layer -> Create Layer -> New SpatialLite Layer
 
 ### 2. Shapefiles
 
-The long time data format (Shapefile) is compatible with QGIS. Shapefiles can be created in QGIS or exported to as a data format. There are numerous ways to create a shapefile.
+The long standing data format (Shapefile) is compatible with QGIS. Shapefiles can be created in QGIS or exported to as a data format. There are numerous ways to create a shapefile.
 1. Right click on drive in Browser -> New -> Shapefile
 2. Click on New Shapefile in the Data Source Toolbar
 3. Layer -> Create Layer -> New Shapefile Layer
@@ -77,7 +77,7 @@ QGIS can create scratch layers which are temporary working data layers that are 
 
 ### 4. Virtual Layer
 
- Rather than add another instance of a layer you can create a virtual layer based on a layer already in the layers list. Virtual layers are map specific and used to represent areas graphically. Virtual layers limits the amount of times you need to add the same layer to QGIS or assist in making maps by allowing graphical control of layers.
+ Rather than add another instance of a layer you can create a virtual layer based on a layer already in the QGIS layers list. Virtual layers are map specific and used to represent areas graphically. Virtual layers limits the amount of times you need to add the same layer to QGIS or assist in making maps by allowing graphical control of layers.
 
  Layer -> Create Layer -> Create Virtual Layer
 
