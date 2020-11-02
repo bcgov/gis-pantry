@@ -11,7 +11,9 @@ Plugins in QGIS add useful features to the software. Plugins are written by QGIS
 Core plugins are already part of the standard QGIS installation. To use these, you just need to enable them.
 
   1. Open QGIS. Click on Plugins ‣ Manage and Install Plugins.... to open the Plugin Manager dialog.
-  ![](https://www.qgistutorials.com/en/_images/1195.png)
+ 
+ 
+ ![](https://www.qgistutorials.com/en/_images/1195.png)
   
   2. Even if this is your first time using QGIS, you will see a lot of plugins listed under the Installed tab. This is because they are Core Plugins and were installed during QGIS installation.
 ![](https://www.qgistutorials.com/en/_images/2151.png)
@@ -30,12 +32,18 @@ Core plugins are already part of the standard QGIS installation. To use these, y
   ![](https://www.qgistutorials.com/en/_images/660.png)
   
   3. For this tutorial, let’s find and install a plugin called ‘QuickQKT’. As you start typing qui in the search box, you will see the search results below. Click on the QuickWKT. Next, click on Install plugin button to install it.
-  ![](https://www.qgistutorials.com/en/_images/759.png)
+ 
+ 
+ ![](https://www.qgistutorials.com/en/_images/759.png)
   
   4. Once the plugin is downloaded and installed, you will see a confirmation dialog.
+  
+  
   ![](https://www.qgistutorials.com/en/_images/857.png)
   
   5. If you noticed, there was no mention of the plugin category in the description. That makes it hard to determine how to access the newly installed plugin. Most external plugins are installed under the Plugins menu itself in QGIS. Click on Plugins ‣ QuickWKT and you will see the newly installed plugin. Usually, external plugins also install a button in the Plugins toolbar also. You may also use that button to access the plugin.
+  
+  
   ![](https://www.qgistutorials.com/en/_images/956.png)
   
   
