@@ -1,8 +1,7 @@
-# Editing in QGIS !!!!
+# Editing in QGIS
 
 [home](../readme.md)
 
-!!!
 [QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
 
 1. Enable editing on the desired layer
