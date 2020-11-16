@@ -4,7 +4,7 @@ Within QGIS there are many ways to access data. This sections focus is on access
 
 ## Index
 * [Web Mapping in QGIS](#What-is-a-GeodataPackage)
-   * [1. BC Government Web Mapping](1.What-is-a-GeodataPackage)
+   * [BC Government Web Mapping](1.What-is-a-GeodataPackage)
 * [Web Mapping Services WMS](#Web-Mapping-Service-WMS)
 * [Web Coverage Service WCS](#Web-Coverage=Service-WCS)
 * [Web Feature Service WFS](#Web-Feature-Service-WFS)
@@ -37,13 +37,13 @@ In QGIS data can be accessed either through local data sources on your computer 
      ![BCDC WMS](../images/BC_data_catalogue_WMS.JPG)
 
 ## Web Mapping Services WMS
-WMS is the dominant web mapping service in the BC Government.
+WMS is the dominant web mapping service used in the BC Government.
 
 The WMS link to use to set up up the BC government mapping service in QGIS is. http://openmaps.gov.bc.ca/geo/ows?
 
-Right Click WMS/WMTS-> New Connection-> Enter the above link in URL and give the connection a name of your choice. The connection will display under WMS in the Browser. Click on arrows to expand out the data tree you just named, then select a feature to drag into layers.
+Right Click WMS/WMTS-> New Connection-> Enter the above link in URL and give the connection a name of your choice. The connection will display under WMS in the Browser. Click on arrows to expand out the data tree you just named, then select a feature to drag into layers. Individual layers can also be added as a connection if you are able to find the WMS link in the data catalogue.
 
- ![New Geodatapackage2](../images/Add_WMS_Service.gif)
+ ![Add WMS Service](../images/Add_WMS_Service.gif)
 
 Many organizations have data available for use through WMS. Some require passwrods while other do not.
 (Free and no Passwords)
@@ -58,57 +58,22 @@ Another form of online data is a web coverage service. This type of service is v
 
 Many examples of WCS can be found at a US government site. NOAA (National Oceanic and Atmoshperic Administration) https://data.noaa.gov/dataset/
 
-https://eccc-msc.github.io/open-data/msc-geomet/readme_en/
+NASA also has examples of WCS services that can be added.
+https://earthdata.nasa.gov/learn/pathfinders/gis-pathfinder/geospatial-services
 
-https://catalog.data.gov/organization/4ae51f6c-467a-4f9d-b40a-2c52e83c326a?publisher=U.S.+Forest+Service
+The following link will create a large WCS data connection to NASA data. https://webmap.ornl.gov/ogcbroker/wcs?
 
+![Add WCS Service](../images/Add_WCS_Service.gif)
 
-## Web Feature Service
+## Web Feature Service WFS
+A web feature service WFS is also similar to a WMS with the difference being that a WFS can provide users the ability to update and edit data if those permissions are given.
 
-Another form of online data is a web coverage service. This type of service is very similar to WMS. The difference is that WCS provides access to the raw data which can be queried and used differently than a WMS.
+The Government of Canada Open Government portal provides good examples of Web Feature Services.
+https://open.canada.ca/data/en/dataset?collection=fgp&res_format=WFS
 
-Many examples of WCS can be found at a US government site. NOAA (National Oceanic and Atmoshperic Administration) https://data.noaa.gov/dataset/
+THE USGS United State Geological survey has many examples of WFS layers. https://mrdata.usgs.gov/wfs.html
 
-
-
-## Other Important Data Formats QGIS can use
-
-### 1. SpatialLite
-
-A spatial lite file is very similar to a Geodatapackage and can also be used in QGIS. While both are good, a Geodatapackage is more transportable and SpatialLite can be used as more of a database management system. QGIS has been focusing more on GeoDatapackage standards and integration with the software. Some plugins (Extensions) may work better using SpatialLite depending on your analysis situation. 
-Layer -> Create Layer -> New SpatialLite Layer
-
-![Spatiallite](../images/Create_new_spatiallite_layer.gif)
-
-### 2. Shapefiles
-
-The long standing data format (Shapefile) is compatible with QGIS. Shapefiles can be created in QGIS or exported to as a data format. There are numerous ways to create a shapefile.
-1. Right click on drive in Browser -> New -> Shapefile
-2. Click on New Shapefile in the Data Source Toolbar
-3. Layer -> Create Layer -> New Shapefile Layer
-
-![Shapefile](../images/Create_new_Shapefile.gif)
-
-### 3. Scratch Layer
-
-QGIS can create scratch layers which are temporary working data layers that are not saved on disk. After working on or editing a scratch layer it will be deleted if you close your QGIS session or you can export it to a Geodatapackage or Shapefile format.  
-
-![Create Scratch](../images/Create_new_Scratch_layer.gif)
-
-### 4. Virtual Layer
-
- Rather than add another instance of a layer you can create a virtual layer based on a layer already in the QGIS layers list. Virtual layers are map specific and used to represent areas graphically. Virtual layers limits the amount of times you need to add the same layer to QGIS or assist in making maps by allowing graphical control of layers.
-
- Layer -> Create Layer -> Create Virtual Layer
-
- Enter the name of layer to create, then create an SQL select statement
-
- example:  select st_union(geometry) from NTS_BC_RIV_LAKE_WET_POLYS_125M where FCODE = 'GB15300000'
-
- *use st_union to get the layers geometry
-
-
-![Create Virtual](../images/Create_new_Virtual_layer.gif)
+![Add WCS Service](../images/Add_WFS_Service.gif)
 
 ### License
     Copyright 2019 BC Provincial Government
