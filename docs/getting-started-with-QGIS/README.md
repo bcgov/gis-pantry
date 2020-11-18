@@ -16,6 +16,7 @@ This is a set of documents to help experienced GIS users with best practices, ti
 8. [Expressions and Calculations](./doc/expressions.md)
 9. [Processing data](./doc/processing.md)
 10. [Advanced processing and plugin devlopement](./doc/advanced.md)
+11. [PostGIS mulit-user editing with versioning plugin](./doc/postgis-database.md)
 
 
 ## Contributing
