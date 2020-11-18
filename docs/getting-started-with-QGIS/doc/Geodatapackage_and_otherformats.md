@@ -67,13 +67,13 @@ The long standing data format (Shapefile) is compatible with QGIS. Shapefiles ca
 2. Click on New Shapefile in the Data Source Toolbar
 3. Layer -> Create Layer -> New Shapefile Layer
 
-![Shapefile](../images/Create_new_Shapefile.gif)
+![Shapefile](../images/Create_new_shapefile.gif)
 
 ### 3. Scratch Layer
 
 QGIS can create scratch layers which are temporary working data layers that are not saved on disk. After working on or editing a scratch layer it will be deleted if you close your QGIS session or you can export it to a Geodatapackage or Shapefile format.  
 
-![Create Scratch](../images/Create_new_Scratch_layer.gif)
+![Create Scratch](../images/Create_new_Scratch_Layer.gif)
 
 ### 4. Virtual Layer
 
@@ -88,7 +88,7 @@ QGIS can create scratch layers which are temporary working data layers that are 
  *use st_union to get the layers geometry
 
 
-![Create Virtual](../images/Create_new_Virtual_layer.gif)
+![Create Virtual](../images/Create_new_virtual_layer.gif)
 
 ### License
     Copyright 2019 BC Provincial Government
