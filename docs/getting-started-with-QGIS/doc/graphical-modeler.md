@@ -7,6 +7,8 @@ Index
 
 The QGIS graphical modeler can be used to chain a number processing tools together in to automate repetative analysis and document a workflow.
 
+[QGIS docs](https://docs.qgis.org/3.16/en/docs/user_manual/processing/modeler.html)
+
 ## Start Up
 The graphical modeler can be started from the processing menu or by clicking the graphical modeler icon ![graphical-modeler-icon](../images/graphical-modeler-icon.png) at the top of the processing panel and selecting "Create New Model...".
 ![graphical-modeler-startup](../images/graphical-modeler-startup.gif)
