@@ -1,6 +1,6 @@
 # About QGIS Plugins
 
-[home](../readme.md)
+[home](../README.md)
 
 [QGIS Plugin repository](https://plugins.qgis.org/)
 

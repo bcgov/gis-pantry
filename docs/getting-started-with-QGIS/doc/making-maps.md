@@ -1,6 +1,6 @@
 # Making Maps with QGIS
 
-[home](readme.md)
+[home](../README.md)
 
  - Symbolizing your layers
  - [Advanced Symbolization](advanced-symbology.md)

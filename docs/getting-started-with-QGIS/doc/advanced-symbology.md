@@ -1,6 +1,6 @@
 # Advanced symbology in QGIS
 
-[home](readme.md)
+[home](../README.md)
 
 Index
 * [Getting Started](#getting-started)
