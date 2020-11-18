@@ -9,13 +9,14 @@ This is a set of documents to help experienced GIS users with best practices, ti
 2. [What can you do to improve the project](./doc/improve-qgis.md)
 3. [Getting around the GIS](./doc/getting-around.md)
 4. [Setup and best practice](./doc/setup-best-practice.md)
-4. [Adding and working with data](./doc/data.md)
-5. [Editing vector data](./doc/editing.md)
-6. [Making a map](./doc/making-maps.md)
-7. [Plugins](./doc/plugins.md)
-8. [Expressions and Calculations](./doc/expressions.md)
-9. [Processing data](./doc/processing.md)
-10. [Advanced processing and plugin devlopement](./doc/advanced.md)
+5. [Adding and working with data](./doc/data.md)
+6. [Editing vector data](./doc/editing.md)
+7. [Making a map](./doc/making-maps.md)
+8. [Plugins](./doc/plugins.md)
+9. [Expressions and Calculations](./doc/expressions.md)
+10. [Processing data](./doc/processing.md)
+11. [Processing with Graphical Modeler](./doc/graphical-modeler.md)
+12. [Advanced processing and plugin devlopement](./doc/advanced.md)
 
 
 ## Contributing
