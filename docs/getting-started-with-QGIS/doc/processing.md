@@ -1,13 +1,20 @@
 # GIS Processing
 [home](readme.md)
 
+Index
+* [Vector Menu](#vector-menu)
+* [Raster Menu](#raster-menu)
+* [Processing Panel](#processing-panel)
+
+QGIS provides many processing tools to help you analyze your GIS data. All the standard tools you would expect a GIS to provide are accessible to all users running QGIS. If the tool you need is more specialized it may be only accessible from the included GRASS GIS plugin or specific plugins you may need to install yourself. 
+This document will discuss the standard tools available from QGIS. Access to processing tools from within QGIS is presented to users in three locations; Vector Menu, Raster Menu, and Processing Panel.
+
+### Related QGIS Documentation
 
 [QGIS docs - algorithm guide](https://docs.qgis.org/testing/en/docs/user_manual/processing_algs/index.html)
 
 [QGIS Processing Guide]( https://docs.qgis.org/testing/en/docs/training_manual/processing/index.html)
 
-QGIS provides many processing tools to help you analyze your GIS data. All the standard tools you would expect a GIS to provide are accessible to all users running QGIS. If the tool you need is more specialized it may be only accessible from the included GRASS GIS plugin or specific plugins you may need to install yourself. 
-This document will discuss the standard tools available from QGIS. Access to processing tools from within QGIS is presented to users in three locations; Vector Menu, Raster Menu, and Processing Panel.
 ## Vector Menu
 The Vector menu provides access to many standard tools for interacting with vectors.  This menu is a convenient way to find common vector tools that have been organized categories: Geoprocessing, Geometry, Research, Analysis, and Data Management Tools.
 Vector Menu Category|Examples
