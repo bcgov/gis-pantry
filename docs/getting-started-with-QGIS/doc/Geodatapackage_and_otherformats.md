@@ -42,7 +42,7 @@ When you receive a geodatapackge or create one there are a number of ways you ca
 
    ### 2. Saving a Vector layer to a Geodatapackage
    Right click Layer-> Export -> Save Feature As -> Select Geodatapackage (Set other Variables)
-![Save Vector](../images/Save_Layer_To_Geopackage.gif)
+![Save Vector](../images/Save_Layer_to_Geopackage.gif)
 
    ### 3. Save style file in GeodataPackage
    Style files can be saved to a Geodatapackage representing how a layer is themed. When you load a layer with a style file embedded in the Geodatapackage the layer will reflect the style when added to QGIS.
