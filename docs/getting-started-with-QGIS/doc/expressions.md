@@ -1,8 +1,61 @@
 # Expressions and Filter Queries
 
-[home](../README.md)
+[home](../readme.md)
 
 ## Definition Query / Filter
+
+Definition Queries are strings that can make data layers more readable by telling the layer to exclude certain data based on attributes. For example you may only want to see data for parks of a certain size or exclude roads that aren't highways from a dataset.
+
+Here, I will provide a few examples of how to filter data based on attributes using the IN, LIKE, =, <>, AND, and OR operators. For more information on all operators available in QGIS see the [QGIS documentation](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=query%20builder#query-builder)
+
+* Open QGIS and add the [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees)
+* Double click the layer in the layer tree to open its properties menu
+* Click the Query Builder button to open the box to create a new query
+
+![Using the Area function in Geometry Generator](../images/exp_IN.gif "Wow!")
+
+* Enter the following Query:
+```sql
+"SPECIES" IN ('apple','arborvitae')
+```
+You'll notice that the number of points on the map is dramatically reduced. This is because the data set now only shows apple and arborvitae trees and excludes everything else.
+
+* Navigate back to the query and change it to:
+
+```sql
+"SPECIES" NOT IN ('apple','arborvitae')
+```
+
+Now every tree that is not an apple or arborvitae tree is shown on the map. The IN function allows you to provide a list of attributes to include, or exclude, from a data set by typing them inside parenthesis. Text field values should be surrounded by single quotes while number fields should not have quotes.
+
+If you want to have queries on multiple fields you can do this using the AND or OR operators.
+
+* Navigate back to the query and change it to:
+
+```sql
+"SPECIES" IN ('apple','arborvitae') AND "SPREAD" > 2
+```
+
+Notice that the spread attribute does not have quotes because it is a number field.
+This query returns all of the apple and arborvitae trees that have a spread that is greater than 2. If you replace AND with OR it will return all the apple and arborvitae trees as well as all the trees with a spread greater than 2 regardless of their species.
+
+* Navigate back to the query and change it to:
+
+```sql
+"SPECIES" IN ('apple','arborvitae') AND "SPREAD" = 2
+```
+
+The = operator returns numbers or text that are exactly equal to the number or text provided. For text fields, it is generally accepted that the LIKE operator should be used in place of = but both work, however, only the LIKE operator allows the use of wildcards. Replacing = with <> or != changes it to not equal to which finds all the values not equal to the number or text provided. NOT LIKE does the same thing but only with text fields.
+
+* Navigate back to the query and change it to:
+
+```sql
+"SPECIES" LIKE 'a%'
+```
+
+This query filters the layer to only show species of trees that start with the letter a. The % wildcard tells the layer to look for any number of letters or numbers. Adding the letter a before % says look for strings starting with a and then containing anything after that regardless of the length of the string or whether it has letters, numbers, or both.
+
+Other wildcard operators include _ (any character)
 
 ## Select by attribute query
 
@@ -15,8 +68,6 @@ Index
 * [The Centroid Function](#the-centroid-function)
 * [The Area Function](#the-area-function)
 * [The Scale Function](#the-scale-function)
-
-
 
 ## Getting Started
 
@@ -117,3 +168,164 @@ if(
 ```
 
 Press Apply and OK to exit the Layer Properties. Now into and out of the map. Notice how the points turn to polygons when you zoom in beyond 1:250,000 in scale.
+
+## Label Expressions
+
+Label expressions are sets of code that are written directly in labels in QGIS map layouts. They range from simple expressions that automatically update the date when a map is opened to complex expressions that read and alter values stored in a layer's attribute table and/or geometry.
+
+To start you'll need to open a blank map and create a print layout. If you aren't familiar with creating print layouts please see the [making maps](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/making-maps.md) section of this guide.
+
+###### Adding a dynamic date variable
+* Create a blank map layout
+* Add a label by selecting Add Label from the Add Item dropdown list
+* Select the label and then click the Insert an Expression... button in the label properties
+* for the expression, enter the following text:
+```sql
+format_date(now(),'MMMM dd, yyyy')
+```
+* Click OK
+
+You should see that the textbox automatically prints todays date as Month day, year (November 19, 2020). The reason it prints this way is because MMMM tells the system to print the month as text. dd prints the day as a two digit day and yyyy prints the year as a four digit year. For more information on formatting dates see the [QGIS documentation section 14.3.7.6](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/functions_list.html#date-and-time-functions).
+
+To break this date code down further it uses two functions: format_date and now().
+
+The format_date function is simple. It is written as format_date(datetime,format*,language*) with language being an optional variable for languages other than your QGIS installation language. The datetime variable can be set as an actual date such as '2020-11-01' or can use a function such as now(). The format is written as an expression as listed in the QGIS documentation linked above or by searching format_date in the QGIS Expression window.
+
+###### Adding an attribute from a layer
+Adding attributes from a layer is only slightly more difficult that adding a date because you have to reference a layer and a field and sometimes an aggregate function.
+
+To follow along with this section you will need the [FTEN road section lines dataset](https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-section-lines#edc-pow).
+
+* Load the road section lines data set into the map
+* Add a definition query to the layer:
+
+if using the shapefile downloaded from the BC government data directory:
+```sql
+"FFID" LIKE 'R23206'
+```
+
+if using the Oracle database layer:
+```sql
+"FOREST_FILE_ID" LIKE 'R23206'
+```
+
+* Add a new label to the print layout
+* Select the label and then click the Insert an Expression... button in the label properties
+* Enter the following expression:
+
+if using the shapefile downloaded from the BC government data directory:
+```sql
+aggregate('layer_name','max',"FFID")
+```
+
+if using the Oracle database layer:
+```sql
+aggregate('layer_name','max',"FOREST_FILE_ID")
+```
+
+replace layer_name with your layer's name which can be found in the Map Layers menu as shown below.
+
+![Aggregate layer name](../images/exp_aggregate1.gif "Wow!")
+
+* Click OK and look at your label. It should now show the road's code - R23206
+
+To break this expression down. You are creating a label that shows a text attribute from a layer that has a definition query limiting it to one road code but multiple sections. The aggregate function tells QGIS that there is more than one section - it still works with just one section - and that you only want to return a single label. The max aggregate was used but min would return the same thing in this situation as we know there is only one ID.
+
+This is a false aggregate. You know you want to return a single label and that each line of this attribute is the same so you can just use the min or max functions to return the label you want. But, sometimes, you want to return an aggregate from a field with different values.
+
+###### Aggregating the length of multiple road sections
+In this example you will use the same road sections but rather than printing the road ID you will print the sum, min, and max length of the sections.
+
+* Add a new label anywhere on the print layout
+* Enter the Insert Label Expression... window
+* Enter the following code:
+
+if using the shapefile downloaded from the BC government data directory:
+```sql
+'Max: '
++
+to_string(
+	aggregate('layer_name'
+,'max'
+,"FEAT_LEN"))
++
+'\nMin: '
++
+to_string(
+	aggregate('layer_name'
+,'min'
+,"FEAT_LEN"))
++
+'\nSum: '
++
+to_string(
+	aggregate('layer_name'
+,'sum'
+,"FEAT_LEN"))
+```
+
+if using the Oracle database layer:
+```sql
+'Max: '
++
+to_string(
+	aggregate('layer_name'
+,'max'
+,"FEATURE_LENGTH_M"))
++
+'\nMin: '
++
+to_string(
+	aggregate('layer_name'
+,'min'
+,"FEATURE_LENGTH_M"))
++
+'\nSum: '
++
+to_string(
+	aggregate('layer_name'
+,'sum'
+,"FEATURE_LENGTH_M"))
+```
+
+Again, replace layer_name with your layer's name.
+
+This code looks more intimidating than the previous example but it is actually mostly the same. The main difference is that it has multiple code sections and text sections separated with the + symbol which tells QGIS to join the sections as text. Also, the to_string() function tells the system to print the result as a string.
+
+The result you should see in the label is a list of numbers similar to:
+
+Max: 5997.0419
+Min: 461.0144
+Sum: 10222.712800000001
+
+You'll notice the significant digits for the sum are very long. You can fix this by changing the code to:
+
+if using the shapefile downloaded from the BC government data directory:
+```sql
+'\nSum: '
++
+to_string(
+	round(
+		aggregate(
+			'FTEN_RS_LN_line_229d83ad_5760_451c_b997_b7205739a282'
+			,'sum'
+			,"FEAT_LEN"
+		),2
+	)
+)
+```
+
+if using the Oracle database layer:
+```sql
+'\nSum: '
++
+to_string(
+	round(
+		aggregate(
+			'FTEN_RS_LN_line_229d83ad_5760_451c_b997_b7205739a282'
+			,'sum'
+			,"FEATURE_LENGTH_M"
+		),2
+	)
+)
+```
