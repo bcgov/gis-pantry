@@ -17,7 +17,9 @@ This is a set of documents to help experienced GIS users with best practices, ti
 10. [Plugins](./doc/plugins.md)
 11. [Expressions and Calculations](./doc/expressions.md)
 12. [Processing data](./doc/processing.md)
-13. [Advanced processing and plugin devlopement](./doc/advanced.md)
+13. [Processing with Graphical Modeler](./doc/graphical-modeler.md)
+14. [Advanced processing and plugin devlopement](./doc/advanced.md)
+
 
 
 ## Contributing
