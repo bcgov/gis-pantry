@@ -1,4 +1,4 @@
-# Style Guide
+# Change this heading -- Style Guide
 The page title is a level one heading. Keep it close to the same as the filename. Following the title there should be a short description of what the page is about.
 
 ## Subheadings should be a level 2 heading
