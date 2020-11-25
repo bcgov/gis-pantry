@@ -27,9 +27,9 @@
 2. "historize: tables and field created
 3. Back to PG Admin to show new tables and fields
 4. 
-![](../images/)
+![](../images/create_grid.gif)
 ### How to tell if a table is historized already
-1. 
+1. c
 2. 
 ![](../images/)
 ## Creating a verison and doing edits
