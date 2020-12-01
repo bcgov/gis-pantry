@@ -1,6 +1,6 @@
 # Getting started with QGIS
 
-[home](../readme.md)
+[home](../README.md)
 
 This is the overview of the QGIS GUI.  [Link](https://docs.qgis.org/testing/en/docs/user_manual/introduction/qgis_gui.html)
 
