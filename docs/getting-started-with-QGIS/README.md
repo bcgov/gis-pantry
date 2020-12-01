@@ -19,7 +19,7 @@ This is a set of documents to help experienced GIS users with best practices, ti
 12. [Processing data](./doc/processing.md)
 13. [Processing with Graphical Modeler](./doc/graphical-modeler.md)
 14. [Advanced processing and plugin devlopement](./doc/advanced.md)
-15. [Multi-user editing using PostGIS](./doc/multi_user_dditing.md)
+15. [Multi-user editing using PostGIS](./doc/multi-user-editing.md)
 
 
 
