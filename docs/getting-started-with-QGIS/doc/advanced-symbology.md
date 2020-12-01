@@ -5,6 +5,8 @@
 Index
 * [Getting Started](#getting-started)
 * [Symbolizing the Road Layer](#symbolizing-the-road-layer)
+* [Symbolizing the Parks Layer](#symbolizing-the-parks-layer)
+* [Symbolizing the Trees Layer](#symbolizing-the-trees-layer)
 
 ## Getting Started
 
@@ -34,139 +36,126 @@ Load the three layers listed above to a blank map and ensure the Coordinate Syst
 Once you’ve loaded the layers you will want to zoom in to an area in Kamloops with some parks. I chose the area surrounding of Valleyview Nature Park in Kamloops but any area in Kamloops will work.
 
 ## Symbolizing the Road Layer
-When you first load the DRA you will notice that all the lines look more or less the same. The highways are recognizable because they have double lines but, other than that, every road type is symbolized identically.
-Right click the road layer and go to its Properties and in the Properties box navigate to its Source. Open the Query Builder and add the Definition Query:
+When you first load the Digital Road Atlas you will notice that all the lines look more or less the same. The highways are recognizable because they have double lines but, other than that, every road type is symbolized identically.
+
+* Right click the road layer and enter its Properties menu
+* navigate to the Source tab
+* Open the Query Builder and add the following Definition Query:
 
 ```sql
 "ROAD_CLASS" IN ('arterial','collector','highway','local','unclassified','yield')
 ```
 
-Click Apply and then navigate to the Symbology tab in the properties menu.
-Change the Symbol type to Categorized and the Column to ROAD_CLASS. Click Classify.
+* Click Apply
+* navigate to the Symbology tab
+* Change the Symbol type to Categorized and the Column to ROAD_CLASS
+* Click Classify to get a list of all possible values
 
 ![Categorize the Line Layer](../images/categorize_line_layer.gif "Wow!")
 
-With the layer categorized you can start changing the line symbols. Double click the highway symbol to open its Symbol selector. Click the green + button to add a new line. Make the top line size 0.8 and yellow. Make the lower line size 1.0 and black. Click OK to exit the Symbol selector and OK to exit the Layer properties.
+With the layer categorized you can start changing the line symbols.
+* Double click the highway symbol to open its Symbol selector
+* Click the green + button to add a new line
+* Make the top line size 0.8 and yellow
+* Make the lower line size 1.0 and black
+* Click OK to exit the Symbol selector and OK to exit the Layer properties
 
 ![Change the Highway Symbology](../images/highway-symbology.gif "Wow!")
 
 You'll notice that the line caps still show up at each section of the highway line. You can remove these in the Advanced section of the layer symbology properties by turning on Symbol levels.
 
+* Click the Advanced button at the bottom right of the symbology window and from the drop down select Symbol levels...
+* Ensure the Enable Symbol Levels checkbox is checked to turn enforce symbol levels for the layer
+* Click OK in the box to leave everything as default
+
 ![Turn on Symbol Levels](../images/turn-on-symbol-levels.gif "Wow!")
 
-Make the yield roads the same as highways but slightly thinner with the yellow line as 0.5 and the black line as 0.7. Make Collector roads solid black 0.4 and arterial roads solid black 0.3. Make local roads medium grey 0.3.
+* Make the yield roads the same as highways but slightly thinner with the yellow line as 0.5 and the black line as 0.7
+* Make Collector roads solid black 0.4 and arterial roads solid black 0.3. Make local roads medium grey 0.3.
 
-Unclassified roads on this map are trails. So you'll want to make their symbol smaller and less eye catching than the roads and with some indication that they are trails. To do this open the symbol properties for this layer and create two lines using the + button. Change the Symbol layer type of both lines to Marker line. Change the interval of the upper line to 30 and then make it an SVG marker and make the SVG the image of the person hiking and increase the size to 3.0. Make the second marker line a brown dashed line with size 1.0. Turn off rotation in the hiking person marker line.
+Unclassified roads on this map are trails. So you'll want to make their symbol smaller and less eye catching than the roads and with some indication that they are trails.
+* Open the symbol properties for Unclassified roads and create two lines using the + button
+* Set the Symbol layer type property to Marker line for both lines
+* Set the interval of the upper line to 30
+* In the lowest, third, symbol in the symbology tree, set the Symbol layer type to SVG marker
+* Set the SVG as an image of a person hiking and increase the size to 3.0
+* Set the second marker line as a brown dashed line with size 1.0
+* Turn off rotation in the hiking person marker line
 
-![Turn on Symbol Levels](../images/marker-line.gif "Wow!")
-=======
-QGIS supports many of the same symbology types as its competitors. It also supports more advanced symbology through the [geometry generator and vector graphics](https://docs.qgis.org/2.18/tr/docs/user_manual/working_with_vector/style_library.html).
+![Marker Lines](../images/marker-line.gif "Wow!")
 
-Index
-* [Getting Started](#getting-started)
-* [The Centroid Function](#the-centroid-function)
-* [The Area Function](#the-area-function)
-* [The Scale Function](#the-scale-function)
+## Symbolizing the Parks Layer
+The parks layer contains polygons that show the locations and areas of parks within BC. The default symbology is a basic solid fill that doesn't have any indication of what the layer is symbolizing.
 
+* Open the layer properties for the parks layer and navigate to the symbology tab
+* Set the Fill type to Shapeburst Fill
+* Set the first colour as dark green
+* Set the second colour as a lighter green
+* Change the Shading type from Whole shape to Set distance and make it 50 Meters at scale
 
+![Shapeburst Fill](../images/adv_sym_shapeburstFill.gif "Wow!")
 
-## Getting Started
+Now you can tell by the layer's symbology that it is likely a park but you can't see any information about the park. So, let's add a label with the park name.
+* Open the layer's properties and navigate to the Labels tab
+* Turn on Single Labels
+* Set the Value as PARK_NAME
+* Select a font you like and set the size to between 7 and 9 points
+* Set the font colour to the same light green used for the area fill
+* Navigate to the Buffer tab and add a dark green buffer around the text (size: 0.7 mm)
+* Ensure Draw text buffer is checked in the buffer tab
+* Navigate to the Formatting tab and set Wrap lines to 7 characters
+* Navigate to the Rendering tab and at the bottom of the menu check Only draw labels which fit completely within the feature
+* Navigate to the placement tab and set the Mode to Free (Angled)
 
-QGIS allows feature data types to be changed without creating a new layer through the geometry generator.
+![Turn on Labels](../images/adv_sym_labels.gif "Wow!")
 
-[The following examples use the layers below:](#adding-data-from-layer-library)
-* [WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP](https://catalogue.data.gov.bc.ca/dataset/fire-perimeters-historical#edc-pow)
-* [WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SP](https://catalogue.data.gov.bc.ca/dataset/natural-resource-nr-district#edc-pow)
+## Symbolizing the Trees Layer
+The trees layer is points that show the location of trees within Kamloops. QGIS offers several ways to display points that can be useful.
 
-Query the Historical Fire layer to only show fires from 2017.
-```sql
-"FIRE_YEAR" = 2017
-```
-Make sure the fire layer is displayed above the NR District layer.
+###### Single Symbol symbology
+The first type of symbology we will analyze is the default style, Single Symbol, where one symbol shows all of the layers. This symbology is pretty basic but deserves some discussion.
+Enter the layer properties for the Trees layer and try changing the Simple Marker drop down to SVG symbol, Vector symbol, and Font Marker and play with the colours and sizes. You'll notice that you can generally find a symbol that works well for large clusters of points while still working for individual points. Here, I will use an Simple marker of a dot to show each point and reduce it's size to .80 points.
 
-![Filter the Fire Layer](../images/filterFireLayer.gif "Wow!")
+![Turn on Labels](../images/adv_sym_simpleMarker.gif "Wow!")
 
-## The Centroid Function
-The Centroid function is used to convert polygons to points based on the centroid coordinates of the polygon. It is used for data conversion purposes.
+You can also change the stroke width (the size of the outline around the point), x (left-right) and y (up-down) offset of the point, and stroke style of point. You can experiment with these settings throughout this guide as you see fit but, like colouring, they are very subjective and thus will not explicitly be covered. However, it is important that you know these settings exist.
 
-Double click the Historical Fire layer to enter its layer properties and navigate to the symbology tab. Change the symbology from Simple fill to Geometry generator and set the Geometry type to Point / MultiPoint.
+###### Categorized symbology
+Another useful symbol style for points is Categorized. This allows you to display different symbols for different categories of points and you will probably find that you use this more often than most others. Here we will symbolize the trees based on their TYPE field.
 
-Click the Epsilon button beside the code block to open the Expression Dialog window if it doesn't automatically appear. You can take some time at this point to explore different expressions that are displayed in the centre block of the dialog.
+* Open the Properties dialog for the Trees layer and change the top dropdown to Categorized.
+* Set the value to TYPE and then click classify.
+* Adjust the symbology for each type of tree as you see fit.
+* Click Apply or OK to see your changes.
 
-In the code block, enter the following code:
-```python
-Centroid($geometry)
-```
+![Turn on Labels](../images/adv_sym_categorized.gif "Wow!")
 
-Click Apply and OK to exit the window.
+###### Graduated symbology
+The graduated symbology style is very useful when you want to display points based on a meaningful numeric attribute such as buffer size, area, or height. In this case we know the spread of the tree from the SPREAD field and can use this as our graduated attribute.
 
-Now every fire on the map is displayed as a point and you should be able to see some fires that weren't visible before.
+* Enter the properties menu and change the top menu to Graduated.
+* Change the value to SPREAD and the Method to Size.
+* You can adjust the Symbol and Size from and To values as you see fit.
+* You can adjust the classification Mode and change the number of classes to fit the data when appropriate.
+* Click Apply or OK to view the symbols.
 
-![Using the Centroid function in Geometry Generator](../images/geometryGeneratorPolyToPoint.gif "Wow!")
+![Turn on Labels](../images/adv_sym_graduated.gif "Wow!")
 
+###### Rule-based symbology
+The last type of symbology in QGIS to be discussed in this section is Rule-Based. This is similar to Categorized except you can define your own categories using SQL code. This is the most advanced and most powerful classification technique.
 
-## The Area Function
-The $area function is used to give the area of a polygon feature as a real number. It has lots of uses but, when using it in the Geometry Generator, it is generally reserved for conditional statements.
+* Enter the properties menu and change the top menu to Rule Based.
+* Click the + button to add a rule.
+* Label the rule as "Coniferous Trees > 7"
+* Enter the expression:  "TYPE" LIKE  'CONIFEROUS' AND  "SPREAD" > 7
+* Enter "Coniferous trees with greater than 7m spread" in the description
+* Click OK
+* Add another rule but this time label it as "Deciduous Trees > 1"
+* Enter the expression:  "TYPE" LIKE  'DECIDUOUS' AND  "SPREAD" > 1
+* Enter "Deciduous trees with greater than 1m spread in the description"
+* Click OK
+* Add another rule but this time select Else rather than entering an expression
+* Label it as "other"
+* Click OK
 
-Open the properties of the Historical Fire layer and create a Geometry generator symbol with the Geometry type Point / MultiPoint if this does not already exist. Add the following code to the code block:
-
-```sql
-if(
-	$area / 10000 < 1000,
-	centroid($geometry),
-	Null
-)
-```
-
-This will make fires smaller than 1,000 hectares display as points on the map but not display the fires larger than 1,000 hectares.
-
-Add another Geometry generator below the Point / MultiPoint symbol. Leave the settings as default and enter the Expression Dialog. Enter the following expression:
-
-```sql
-if(
-	$area/10000 >= 1000,
-	$geometry,
-	Null
-)
-```
-
-This will make all the polygons larger than or equal to 1,000 hectares appear as polygons on the map.
-
-![Using the Area function in Geometry Generator](../images/geometryGeneratorArea.gif "Wow!")
-
-## The Scale Function
-
-The Geometry Generator can also support scale dependent geometry with the @map_scale function. @map_scale returns the numerical scale of the current map and can be used for conditionals that change how layers are displayed when you zoom in or out of a map.
-
-If you haven't already, create two geometry generators in the Historical Fire layer. Make one have the Geometry type Point / MultiPoint and the other Polygon / MultiPolygon.
-
-Enter the following code into the Expression Dialog for the Point / MultiPoint layer:
-
-```sql
-if(
-	@map_scale > 250000,
-	if(
-		$area/10000 < 1000,
-		centroid($geometry),
-		Null
-	),
-	Null
-)
-```
-
-Now enter the following code into the Expression Dialog for the Polygon / MultipPolygon layer:
-
-```sql
-if(
-	@map_scale > 250000,
-	if(
-		$area/10000 >= 1000,
-		$geometry,
-		Null
-	),
-	$geometry
-)
-```
-
-Press Apply and OK to exit the Layer Properties. Now into and out of the map. Notice how the points turn to polygons when you zoom in beyond 1:250,000 in scale.
-
+![Turn on Labels](../images/adv_sym_ruleBased.gif "Wow!")

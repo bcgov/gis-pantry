@@ -1,5 +1,38 @@
 # Editing in QGIS
 
+[home](../README.md)
+
+
+[QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
+
+## Creating new features
+1. Enable editing on the desired layer
+
+![](../images/Toggle_Editing1.gif)
+
+2. Select the create feature tool and click on the map to start drawing features. When finished, right click to stop drawing.
+
+![](../images/Add_Feature.gif)
+
+## Attribution
+1. When creating a new feature in a layer with attributes, a pop up will apread asking you to fill in the new features attributes.
+![](../images/Add_Feature_with_Attributes.gif)
+2. To edit attributes on existing feature, open the attribute table, make sure editing is enabled and click into the attribute field to edit the value. (Depending on your settings, you may need to select the features for them to appear in the attribute table).
+![](../images/Edit_Attributes.gif)
+## Add a field to a layer's attributes
+1. Open the attribute table
+2. Make sure editing is enabled
+3. Click add field
+4. Fill in the field details
+![](../images/Add_Field.gif)
+## Delete Features
+1. In the attributes toolbar, enable to select tool.
+2. Select features to be deleted and click the delete features button in the toolbar.
+![](../images/Delete_Feature.gif)
+## Moving and adding vertices
+1. Turn editing on for the desired layer
+2. Select the vertex tool from the editing toolbar# Editing in QGIS
+
 [home](../readme.md)
 
 [QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
