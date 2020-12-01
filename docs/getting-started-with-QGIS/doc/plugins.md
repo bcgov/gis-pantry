@@ -1,4 +1,4 @@
-# About QGIS Plugins
+
 
 [home](../readme.md)
 
@@ -48,3 +48,4 @@ Now there a new folder created in the plugins folder and it contains all the mai
 3. Activate and reload plugin inside QGIS.
 
 And you are ready to start using your custom made plugin.
+
