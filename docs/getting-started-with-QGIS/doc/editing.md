@@ -15,7 +15,6 @@
 * [Snapping](#Snapping)
 * [Topological editing](#Topological-editing)
 
-
 ## Creating new features
 1. Enable editing on the desired layer
 ![](../images/Toggle_Editing1.gif)
