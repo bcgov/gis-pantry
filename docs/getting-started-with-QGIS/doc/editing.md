@@ -9,7 +9,7 @@
 ## Index
 * [Creating new features](#Creating-new-features)
 * [Attribution](#Attribution)
-* [Add a field to a layer's attributes](#Add-a-field-to-a-layer's-attributes)
+* [Add a field to a layer's attributes](#Add-a-field-to-layer-attributes)
 * [Delete Features](#Delete-Features)
 * [Moving and adding vertices](#Moving-and-adding-vertices)
 * [Snapping](#Snapping)
@@ -26,7 +26,7 @@
 ![](../images/Add_Feature_with_Attributes.gif)
 2. To edit attributes on existing feature, open the attribute table, make sure editing is enabled and click into the attribute field to edit the value. (Depending on your settings, you may need to select the features for them to appear in the attribute table).
 ![](../images/Edit_Attributes.gif)
-## Add a field to a layer's attributes
+## Add a field to layer attributes
 1. Open the attribute table
 2. Make sure editing is enabled
 3. Click add field
