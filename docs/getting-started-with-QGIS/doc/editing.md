@@ -5,6 +5,17 @@
 
 [QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
 
+
+## Index
+* [Creating new features](#Creating-new-features)
+* [Attribution](#Attribution)
+* [Add a field to a layer's attributes](#Add-a-field-to-a-layer's-attributes)
+* [Delete Features](#Delete-Features)
+* [Moving and adding vertices](#Moving-and-adding-vertices)
+* [Snapping](#Snapping)
+* [Topological editing](#Topological-editing)
+
+
 ## Creating new features
 1. Enable editing on the desired layer
 ![](../images/Toggle_Editing1.gif)
