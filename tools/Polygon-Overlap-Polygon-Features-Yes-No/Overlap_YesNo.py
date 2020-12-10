@@ -21,13 +21,6 @@ input = arcpy.GetParameterAsText(1)
 #FN field name
 field_name= arcpy.GetParameterAsText(2)
 
-'''
-#Test
-fcName = r"V:\srm\smt\Workarea\ArcProj\P17_Skeena_ESI\Data\Values\Wetlands\T1\Wetland_T1\Skeena_ESI_T1_Wetland_20191219_Neil_Info.gdb\Skeena_ESI_T1_Wetland_20200116_AUindicators_LUs_WatershedGroups_TCU"
-input = r"V:\srm\smt\Workarea\ArcProj\P17_Skeena_ESI\Data\ESI_Data.gdb\FN_Assessment_Boundaries\ESI_PIP_plusWitset_200115"
-quer_field_name= "BOUNDARY_NAME"
-'''
-
 
 #create a def quer for the FN layer
 arcpy.MakeFeatureLayer_management(input, "lyr_Overlap")
@@ -133,22 +126,7 @@ with arcpy.da.UpdateCursor(lyr_Overlap, [field_name]) as cursor:
 			num = num+1
 			
 						
-			''' Old Clunky Code
-			with arcpy.da.UpdateCursor(lyr_union, [fn_field, prop_field]) as blah:
-				for boring in blah:
-					
-					#print boring[0]
-					#print test[0]
-					
-					if boring[0] == matcher:
-						boring[1] = "Yes"
-						blah.updateRow(boring)
-						
-					else:
-						boring[1] = "No"
-						blah.updateRow(boring)
-			'''
-			
+		
 		else:
 			output_union = fcName + "_" + div
 			arcpy.SpatialJoin_analysis(fcName, lyr_Overlap, output_union)

@@ -24,13 +24,6 @@ input = arcpy.GetParameterAsText(1)
 #field name of interest
 field_name= arcpy.GetParameterAsText(2)
 
-'''
-#Test
-fcName = r"V:\srm\smt\Workarea\ArcProj\P17_Skeena_ESI\Data\Values\Wetlands\T1\Wetland_T1\Skeena_ESI_T1_Wetland_20191219_Neil_Info.gdb\Skeena_ESI_T1_Wetland_20200116_AUindicators_LUs_WatershedGroups_TCU"
-input = r"V:\srm\smt\Workarea\ArcProj\P17_Skeena_ESI\Data\ESI_Data.gdb\FN_Assessment_Boundaries\ESI_PIP_plusWitset_200115"
-quer_field_name= "BOUNDARY_NAME"
-'''
-
 
 #create a def quer for the FN layer
 arcpy.MakeFeatureLayer_management(input, "lyr_Overlap")
