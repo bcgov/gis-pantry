@@ -1,4 +1,3 @@
-T:\exporting_data.md
 
 # Exporting data in QGIS
 
