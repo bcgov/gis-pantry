@@ -20,7 +20,7 @@ Here is a Geopackage (GeoDataPackage) (the native QGIS format) being exported to
 ![exportGif_2](https://github.com/gecko2019/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/exportGif_2.gif "Wheeeee!!")
 
 Similar to ArcMap and ArcGIS Pro, one can also export selected features only:
-![exportGif_3](https://github.com/gecko2019/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/exportGif_3.gif "Oh yeahhhh!!")
+![exportSelectedOnly](https://github.com/gecko2019/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/exportSelectedOnly.gif "Just these polygons..")
 
 GeoPackage can be read like a file geodatabase in ArcMap or ArcGIS Pro, but using dashes in the file name or layer names (i.e. roads-non-status) make one unreadable in ArcGIS.
 
