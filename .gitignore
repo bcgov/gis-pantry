@@ -122,3 +122,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Geopackage and lock files
+*.gpkg
+*.gpkg-shm
+*.gpkg-wal

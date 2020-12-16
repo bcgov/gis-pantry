@@ -1,3 +1,5 @@
+[![img](https://img.shields.io/badge/Lifecycle-Maturing-007EC6)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
+
 # gis-pantry
 The gis-pantry is a repository for GIS related scripts, tools and recipes. The intent of this repository is to aid BC Government employees in sharing and continual improvement of tools, stand-alone scripts, and recipes (script snippets). Contribute to the bin you think best matches your code.
 * Tools are developed to do a specific job and often come with a user-interface and documentation that non-scripting users might be able to figure out enough to use.
