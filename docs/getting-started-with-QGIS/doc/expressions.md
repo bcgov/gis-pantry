@@ -2,23 +2,39 @@
 
 [home](../readme.md)
 
+## Index
+* [Definition Query / Filter](#Definition-Query-/-Filter)
+  * [Basic queries](#basic-queries)
+  * [Queries on multiple columns with AND](queries-on-multiple-columns-with-and)
+  * [Queries on multiple columns with OR](queries-on-multiple-columns-with-or)
+* [Select by attribute query](#Select-By-Attribute-Query)
+* [Geometry Expressions](#geometry-expressions)
+* [Geometry Generator (Layer Style)](#geometry-generator-(layer-style))
+   *  [Getting Started](#getting-started)
+   *  [The Centroid Function](#the-centroid-function)
+   *  [The Area Function](#the-area-function)
+   *  [The Scale Function](#the-scale-function)
+* [Label Expressions](#label-expressions)
+   *  [Adding a dynamic date variable](adding-a-dynamic-date-variable)
+   *  [Adding an attribute from a layer](adding-an-attribute-from-a-layer)
+   *  [Aggregating the length of multiple road sections](aggregating-the-length-of-multiple-road-sections)
+   *  [Iterators and Multiple Rows of data](iterators-and-multiple-rows-of-data)
+   *  [Start and End Points and Coordinate System Transformations](start-and-end-points-and-coordinate-system-transformations)
+
 ## Definition Query / Filter
 
-Definition Queries are strings that can make data layers more readable by telling the layer to exclude certain data based on attributes. For example you may only want to see data for parks of a certain size or exclude roads that aren't highways from a dataset.
+## Basic queries
 
-Here, I will provide a few examples of how to filter data based on attributes using the IN, LIKE, =, <>, AND, and OR operators. For more information on all operators available in QGIS see the [QGIS documentation](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=query%20builder#query-builder)
+* open QGIS and add the [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees)
+* double click the layer in the layer tree to open its properties menu
+* click the **Query Builder** button to open the menu to add a new query
+* enter the following Query:
 
-* Open QGIS and add the [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees)
-* Double click the layer in the layer tree to open its properties menu
-* Click the Query Builder button to open the box to create a new query
-
-![Using the Area function in Geometry Generator](../images/exp_IN.gif "Wow!")
-
-* Enter the following Query:
 ```sql
 "SPECIES" IN ('apple','arborvitae')
 ```
-You'll notice that the number of points on the map is dramatically reduced. This is because the data set now only shows apple and arborvitae trees and excludes everything else.
+
+![accessing the definition query menu](../images/exp_IN.gif "Wow!")
 
 * Navigate back to the query and change it to:
 
@@ -26,9 +42,7 @@ You'll notice that the number of points on the map is dramatically reduced. This
 "SPECIES" NOT IN ('apple','arborvitae')
 ```
 
-Now every tree that is not an apple or arborvitae tree is shown on the map. The IN function allows you to provide a list of attributes to include, or exclude, from a data set by typing them inside parenthesis. Text field values should be surrounded by single quotes while number fields should not have quotes.
-
-If you want to have queries on multiple fields you can do this using the AND or OR operators.
+## Queries on multiple columns with AND
 
 * Navigate back to the query and change it to:
 
@@ -36,16 +50,30 @@ If you want to have queries on multiple fields you can do this using the AND or 
 "SPECIES" IN ('apple','arborvitae') AND "SPREAD" > 2
 ```
 
-Notice that the spread attribute does not have quotes because it is a number field.
-This query returns all of the apple and arborvitae trees that have a spread that is greater than 2. If you replace AND with OR it will return all the apple and arborvitae trees as well as all the trees with a spread greater than 2 regardless of their species.
+## Queries on multiple columns with OR
 
 * Navigate back to the query and change it to:
 
 ```sql
-"SPECIES" IN ('apple','arborvitae') AND "SPREAD" = 2
+"SPECIES" IN ('apple','arborvitae') OR "SPREAD" = 2
 ```
 
-The = operator returns numbers or text that are exactly equal to the number or text provided. For text fields, it is generally accepted that the LIKE operator should be used in place of = but both work, however, only the LIKE operator allows the use of wildcards. Replacing = with <> or != changes it to not equal to which finds all the values not equal to the number or text provided. NOT LIKE does the same thing but only with text fields.
+Some common query operators are:
+
+* =       *Field value is exactly equal to the specified value*
+* <>      *Field value is not equal to the specified value*
+* !=      *Field value is not equal to the specified value*
+* LIKE    *Field text value is equal or partially equal (using fuzzy logic) to the specified value*
+* AND     *Allows adding multiple queries that must all be met*
+* OR      *Allows adding multiple queries where one or more must be met*
+
+Wildcards can be used to substitute any other characters in a string using the LIKE operator. Some common operators are:
+
+* %       *Replaces an unlimited number of characters or no characters - characters can be numbers or letters*
+* _       *Replaces a single character in a string*
+* [list]  *Matches characters in a list*
+* [^list] *Matches characters not specified in a list*
+* [!list] *Matches characters not specified in a list*
 
 * Navigate back to the query and change it to:
 
@@ -53,21 +81,13 @@ The = operator returns numbers or text that are exactly equal to the number or t
 "SPECIES" LIKE 'a%'
 ```
 
-This query filters the layer to only show species of trees that start with the letter a. The % wildcard tells the layer to look for any number of letters or numbers. Adding the letter a before % says look for strings starting with a and then containing anything after that regardless of the length of the string or whether it has letters, numbers, or both.
-
-Other wildcard operators include _ (any character)
+For more information on all operators available in QGIS see the [QGIS documentation](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=query%20builder#query-builder)
 
 ## Select by attribute query
 
 ## Geometry Expressions
 
 ## Geometry Generator (Layer Style)
-
-Index
-* [Getting Started](#getting-started)
-* [The Centroid Function](#the-centroid-function)
-* [The Area Function](#the-area-function)
-* [The Scale Function](#the-scale-function)
 
 ## Getting Started
 
@@ -175,7 +195,7 @@ Label expressions are sets of code that are written directly in labels in QGIS m
 
 To start you'll need to open a blank map and create a print layout. If you aren't familiar with creating print layouts please see the [making maps](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/making-maps.md) section of this guide.
 
-###### Adding a dynamic date variable
+## Adding a dynamic date variable
 * Create a blank map layout
 * Add a label by selecting Add Label from the Add Item dropdown list
 * Select the label and then click the Insert an Expression... button in the label properties
@@ -191,7 +211,7 @@ To break this date code down further it uses two functions: format_date and now(
 
 The format_date function is simple. It is written as format_date(datetime,format*,language*) with language being an optional variable for languages other than your QGIS installation language. The datetime variable can be set as an actual date such as '2020-11-01' or can use a function such as now(). The format is written as an expression as listed in the QGIS documentation linked above or by searching format_date in the QGIS Expression window.
 
-###### Adding an attribute from a layer
+## Adding an attribute from a layer
 Adding attributes from a layer is only slightly more difficult that adding a date because you have to reference a layer and a field and sometimes an aggregate function.
 
 To follow along with this section you will need the [FTEN road section lines dataset](https://catalogue.data.gov.bc.ca/dataset/forest-tenure-road-section-lines#edc-pow).
@@ -233,7 +253,7 @@ To break this expression down. You are creating a label that shows a text attrib
 
 This is a false aggregate. You know you want to return a single label and that each line of this attribute is the same so you can just use the min or max functions to return the label you want. But, sometimes, you want to return an aggregate from a field with different values.
 
-###### Aggregating the length of multiple road sections
+## Aggregating the length of multiple road sections
 In this example you will use the same road sections but rather than printing the road ID you will print the sum, min, and max length of the sections.
 
 * Add a new label anywhere on the print layout
@@ -329,3 +349,154 @@ to_string(
 	)
 )
 ```
+
+## Iterators and Multiple Rows of data
+
+Sometimes, rather than aggregating all the rows of data, you will need to show information from each individual row. This can be accomplished by using an iterator (function that reads and writes data from each row) rather than an aggregate. In QGIS, iterators are stored as aggregates with the concatenate attribute. They are written as:
+
+```sql
+aggregate(
+	layer:='your_layer',
+	aggregate:='concatenate',
+	expression:=[your_expression]
+)
+```
+
+where [your_expression] is an sql expression without the brackets.
+
+Using our road layer, you could write a simple expression to show the length of each segment of road and its section label using the following code:
+
+if using the shapefile downloaded from the BC government data directory:
+```sql
+aggregate(
+	layer:='FTEN_RS_LN_line_229d83ad_5760_451c_b997_b7205739a282'
+	,aggregate:='concatenate'
+	,expression:="RD_SECT_ID" + ' ( Length: ' + to_string ("FEAT_LEN" / 1000) + 'Km )\n'
+)
+```
+
+if using the Oracle database layer:
+```sql
+aggregate(
+	layer:='FTEN_RS_LN_line_229d83ad_5760_451c_b997_b7205739a282'
+	,aggregate:='concatenate'
+	,expression:="ROAD_SECTION_ID" + ' ( Length: ' + to_string ("FEATURE_LENGTH" / 1000) + 'Km )\n'
+)
+```
+
+A couple of things to note with this expression are: (1) all numbers need to be converted to strings to be displayed as text; (2) The layer name has a code generated after it that is unique to your map - always get your layer name from the Map Layers list in your expression dialogue box.
+
+## Start and End Points and Coordinate System Transformations
+
+The previous example is a simple starting point but it gets more complicated when you want to show start and end points of a line in a different coordinate system than the data is stored in. Luckily, QGIS allows you to perform data transformations within your label expression so you don't have to make copies of your data in separate files.
+
+Lets edit our previous expression to do this:
+
+if using the shapefile downloaded from the BC government data directory:
+```sql
+aggregate(
+	layer:='FTEN_RS_LN_line_229d83ad_5760_451c_b997_b7205739a282'
+	,aggregate:='concatenate'
+	,expression:="RD_SECT_ID"
+	+
+	' ( Length: '
+	+
+	to_string(
+		"FEAT_LEN" / 1000
+	)
+	+
+	'Km )'
+	+
+	'PofC UTM10'
+	+
+	to_string(
+		to_int(
+			x(
+				transform(
+					point_n(
+						$geometry, 1
+					),
+					'EPSG:3005', 'EPSG:26910'
+				)
+			)
+		)
+	)
+	+
+	'PofT UTM10'
+	+
+	to_string(
+		to_int(
+			x(
+				transform(
+					point_n(
+						$geometry, -1
+					),
+					'EPSG:3005', 'EPSG:26910'
+				)
+			)
+		)
+	)
+	+
+	'\n'
+)
+```
+
+if using the Oracle database layer:
+```sql
+aggregate(
+	layer:='FTEN_RS_LN_line_229d83ad_5760_451c_b997_b7205739a282'
+	,aggregate:='concatenate'
+	,expression:="ROAD_SECTION_ID"
+	+
+	' ( Length: '
+	+
+	to_string(
+		"FEATURE_LENGTH" / 1000
+	)
+	+
+	'Km )'
+	+
+	'PofC UTM10'
+	+
+	to_string(
+		to_int(
+			x(
+				transform(
+					point_n(
+						$geometry, 1
+					),
+					'EPSG:3005', 'EPSG:26910'
+				)
+			)
+		)
+	)
+	+
+	'PofT UTM10'
+	+
+	to_string(
+		to_int(
+			x(
+				transform(
+					point_n(
+						$geometry, -1
+					),
+					'EPSG:3005', 'EPSG:26910'
+				)
+			)
+		)
+	)
+	+
+	'\n'
+)
+```
+This code looks complicated but it is fairly easy once you begin to understand the functions. to_string and to_int are conversions: to_int converts the data to a integer rather than a decimal number; to_string converts the integer to a string that can be printed in the label.
+
+x [x(geom)] tells the system that we want the x coordinate of the object.
+
+transform [transform(geom,source_auth_id,dest_auth_id)] is a conversion that changes the coordinate system. In this case, the line 'EPSG:3005', 'EPSG:26910' tells the system that we are converting the data from EPSG:3005 (BC Albers) to EPSG:26910 (UTM 10N).
+
+point_n [point_n(geometry,index)] returns a specific node from a geometry - in this case a road section line - and the index is the point on the line you want to print. The index can be any node along the line and 1 always represents the start point while -1 always represents the end point.
+
+$geometry [$geometry] returns the geometry of the current feature that is used as the layer in the aggregate function and is used for processing in the other functions.
+
+In this case we only printed the x coordinates but by replacing x with y in this code we could print the y coordinates instead.
