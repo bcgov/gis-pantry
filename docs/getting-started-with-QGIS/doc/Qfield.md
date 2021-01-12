@@ -50,7 +50,7 @@ Choices include:
 3. Action: (Offline Editing) Allow user to edit data in QField
 4. Action: (Remove) Do not Package data for use in QField
 5. Action: (Keep Existent) If data is already in a previous QField package then keep the existing data.
-![QField Configure](../images/QField_Configure.jpg)
+![QField Configure](../images/QField_Configure.JPG)
 6. Base Map. An image basemap can be created from an image layer. **This may require the image to be in the same projection as the data or it may not work.
 7. Offline editing. Only copy features in the Map Area of Interest Window.
 
@@ -61,12 +61,12 @@ Where you can set your default import and export directories
 
 1. Select export directory
 2. Select Extent by zooming in view window the area of data you would like to export to QField.
-![QField Configure](../images/QField_Package.jpg)
+![QField Configure](../images/QField_Package.JPG)
 
 ### Syncronize from QField
 1. Open the Original QGIS project then select folder where import data from the field was placed. 
 2. Then Syncronize and original QGIS data will be updated with data from field.
-![QField Syncronize](../images/QField_Syncronize.jpg)
+![QField Syncronize](../images/QField_Syncronize.JPG)
 
 
 # Making a QGIS project for QField

@@ -1,5 +1,5 @@
-# Arcade Calculations
-Sample Arcade expressions that perform calculations within and application
+# Arcade Miscelleneous
+Sample Arcade expressions that perform Miscelleneous roles within an application
 
 
 ## Examples
