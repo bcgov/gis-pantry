@@ -21,7 +21,8 @@ Currently Qfield is only built for Android operating systems, though Apple IOS i
 
 ## Qfield and GeodataPackages
 
-## Basic steps from QGIS to QFIELD
+
+## Basic steps from QGIS to QFIELD and Back
  For new users to QGIS or QField, the basic steps for using QField is as follows.
  1. Create a new QGIS project in a project folder
  2. Add features from data sources into QGIS and theme appropriately
@@ -32,20 +33,43 @@ Currently Qfield is only built for Android operating systems, though Apple IOS i
  7. Collect field work, copy Qfield package from feild device to computer
 
 ## Qfield Best Practices
+QField is an effective mobile mapping solution, however there are some best practices to make the application work effectively and minimize .
 
-QField is an effective mobile mapping solution, however there are some best practices to make the application work effectively and minize .
-
-1. Set your QGIS project to relative paths
+1. Set your QGIS project to relative paths.
 2. Use Geodatapackages. Other formats can be used, though reliability has not been tested
-3. Projections
+3. Projections: QGIS and QField can use different projection sources in the data, though if issues arise a common projection of data may be beneficial.
 
 
-## Quick Mapservices Plugin
+## QField Sync Plugin
+
+### Configure Current Project (QField Sync Project Properties)
+Allows the user to control how data will be used when packaged for QField
+Choices include:
+1. Lock Geometry for data copied to Qfield
+2. Action: (Copy) data for use in QField
+3. Action: (Offline Editing) Allow user to edit data in QField
+4. Action: (Remove) Do not Package data for use in QField
+5. Action: (Keep Existent) If data is already in a previous QField package then keep the existing data.
+![QField Configure](../images/QField_Configure.jpg)
+6. Base Map. An image basemap can be created from an image layer. **This may require the image to be in the same projection as the data or it may not work.
+7. Offline editing. Only copy features in the Map Area of Interest Window.
+
+### Preferences
+Where you can set your default import and export directories
+
+### Package For QField
+
+1. Select export directory
+2. Select Extent by zooming in view window the area of data you would like to export to QField.
+![QField Configure](../images/QField_Package.jpg)
+
+### Syncronize from QField
+1. Open the Original QGIS project then select folder where import data from the field was placed. 
+2. Then Syncronize and original QGIS data will be updated with data from field.
+![QField Syncronize](../images/QField_Syncronize.jpg)
 
 
-
-Browser-Right Click XYS Tiles(New Connection)-> Add Name of Service and the URL.-> Load data into Layers
-![Add XYZ Tiles](../images/Add_XYZ_Tiles.gif)
+# Making a QGIS project for QField
 
 ### License
     Copyright 2019 BC Provincial Government
