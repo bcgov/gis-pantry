@@ -36,7 +36,7 @@ The BCGOV QGIS layer library provides standardized style and data definitions fo
 
 
 ## Adding Oracle data via browser panel
-With the Browser panel open right-click the ![Oracle Icon](../images/oracle-browser-icon.png "Oracle Browser Icon") and click *New Connection....*
+With the Browser panel open right-click the ![Oracle Icon](../images/oracle-browser-icon.PNG "Oracle Browser Icon") and click *New Connection....*
 
 
 ![New Connection Animation](../images/new_oracle_connection_sm.gif "New Oracle Connection ...")
@@ -44,7 +44,7 @@ With the Browser panel open right-click the ![Oracle Icon](../images/oracle-brow
 Find your new connection and expand the contents so you can choose the table you want to add to your map.
 
 ## Adding Oracle Data via DB Manager
-Once you have established your oracle connection you can start DB Manager from the Database menu.  Select and connect to your Oracle database from the ![Oracle](../images/oracle-browser-icon.png) provider section. When you are connected you can expand the table list and right-click and choose *Add to project...*
+Once you have established your oracle connection you can start DB Manager from the Database menu.  Select and connect to your Oracle database from the ![Oracle](../images/oracle-browser-icon.PNG) provider section. When you are connected you can expand the table list and right-click and choose *Add to project...*
 
 >**Some of bcgov oracle datasets perform poorly in QGIS**.  These seem to be those with both many records and large geometry objects.  Some examples are digital road atlas, parcel fabric, and forest vegetation polygons. **To avoid having to wait 15 hours for QGIS to unfreeze try creating a virtual SQL layer using DB Manager and a bounding box or other refining query** [QGIS Link](https://docs.qgis.org/testing/en/docs/user_manual/plugins/core_plugins/plugins_db_manager.html).
 
