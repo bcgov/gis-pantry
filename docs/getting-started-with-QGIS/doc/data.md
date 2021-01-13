@@ -50,7 +50,7 @@ Once you have established your oracle connection you can start DB Manager from t
 
 To make an SQL layer from your oracle connection connect to your Oracle connnection as above, then click the ![SQL ICON](../images/db-manager-sql-window-icon.png) to edit your SQL.  Using a bounding box method shown below is one way to reduce the number of records and geometries and will significantly improve your oracle experience with QGIS.
 
-![Virtual Oracle SQL Layer](../images/virtual_sql_layer.png "Virtual SQL Layer from DB Manager")
+![Virtual Oracle SQL Layer](../images/virtual_sql_layer.PNG "Virtual SQL Layer from DB Manager")
 
 
 Below is an example for subseting VRI table using a bounding box.  This can easly be modified to do more by modifying the select, where clause, or adding joins.  This is a powerful tool. Use it.
