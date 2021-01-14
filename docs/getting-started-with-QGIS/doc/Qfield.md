@@ -4,7 +4,7 @@
 ## Index
 * [What is QFIELD](#What-is-QFIELD)
 * [Basic steps from QGIS to QFIELD](#What-is-QFIELD)
-* [QFIELD and Geodatpackages](#Quick-Mapservices-Plugin)
+* [QField and Geodatpackages](#Quick-Mapservices-Plugin)
 * [Qfield Best Practices](#Qfield-Best-Practices)
 * [QField Sync Plugin](#QField-Sync-Plugin)
    * [Project Configuration](#Project-Configuration)
@@ -19,8 +19,6 @@ QField is a mobile application built on QGIS open source software platform. The 
 
 Currently Qfield is only built for Android operating systems, though Apple IOS is currently in development.
 
-## Qfield and GeodataPackages
-
 
 ## Basic steps from QGIS to QFIELD and Back
  For new users to QGIS or QField, the basic steps for using QField is as follows.
@@ -31,6 +29,8 @@ Currently Qfield is only built for Android operating systems, though Apple IOS i
  5. Take the new package folder and move it to your mobile device
  6. Open Qfield on your tablet and open the .qgs file in the package folder
  7. Collect field work, copy Qfield package from feild device to computer
+
+## Qfield and GeodataPackages new
 
 ## Qfield Best Practices
 QField is an effective mobile mapping solution, however there are some best practices to make the application work effectively and minimize .
@@ -66,6 +66,7 @@ Where you can set your default import and export directories
 ### Syncronize from QField
 1. Open the Original QGIS project then select folder where import data from the field was placed. 
 2. Then Syncronize and original QGIS data will be updated with data from field.
+
 ![QField Syncronize](../images/QField_Syncronize.JPG)
 
 
