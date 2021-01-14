@@ -1,5 +1,5 @@
-# Arcade Calculations
-Sample Arcade expressions that perform calculations within and application
+# Arcade Labeling
+Sample Arcade expressions that perform Labeling within an application
 
 
 ## Examples

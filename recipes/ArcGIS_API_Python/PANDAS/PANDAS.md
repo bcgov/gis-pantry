@@ -1,11 +1,23 @@
-# Arcade Visualisation
-Sample Arcade expressions that perform modified visualization within AGOL
+# ArcGIS API Python (PANDAS programming of AGOL content)
 
-## Examples
-
+A quick recipe area to add ArcGIS API Python expressions within the BC government
 
 
+## Recipe Format Template for .md file
 
+1. Code Name and Description
+2. Use Cases
+3. Workflow in how to use
+4. Expression Template
+5. Example Output
+
+Link to sample markdown or Jupyter Notebooks
+
+<!-- *Remarked out sample of how to provide a link to programming folders or markdown
+
+* [HTML Popup Customization](HTML_Popup_Customization.md)
+
+-->
 
 ### License
     Copyright 2019 BC Provincial Government
