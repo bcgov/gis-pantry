@@ -24,13 +24,19 @@ Research Tools|Create Grid, Select by Location, Create Random Points, Create Reg
 Analysis Tools| Mean Coordinates, Field Statistics, Count points in polygon
 Data Management Tools | Merge Layers, Split Layers, Join attributes by Location
 ## Raster Menu
-The Raster menu provides access to many standard tools for interacting with raster data. This menu is a convenient way to access Raster Calculator, Align Rasters tool and other common raster tools that have been organized categories: Analysis, Projections, Miscellaneous, Extraction, Conversion. It should be noted that the Raster Calculator accessed in this menu is slightly different than the raster calculator accessed in the processing panel.
-Raster Menu Category|Examples
-Analysis|Aspect, Slope, Hillshade
-Projections|Assign Projection, Extract Projection,Warp(reproject)
-Miscellaneous|Merge, Build Virtual Raster, Tile index
-Extraction|Clip Raster, Create contours
-Conversion|Raster to Vector, Vector to Raster, Translate (conversion)
+The Raster menu provides access to many standard tools for interacting with raster data. This menu is a convenient way to access Raster Calculator, Align Rasters tool and other common raster tools that have been organized categories: Analysis, Projections, Miscellaneous, Extraction, Conversion. It should be noted that the Raster Calculator accessed in this menu is slightly different than the raster calculator accessed in the processing panel ([more on raster calculator](raster-calculator.md)).
+Raster Menu Category|Examples:
+
+1. Analysis
+    - Aspect, Slope, Hillshade
+2. Projections
+    - Assign Projection, Extract Projection,Warp(reproject)
+3. Miscellaneous
+    - Merge, Build Virtual Raster, Tile index
+4. Extraction
+    - Clip Raster, Create contours
+5. Conversion
+    - Raster to Vector, Vector to Raster, Translate (conversion)
 ## Processing Panel
 The Processing Panel can be activated by using the Processing menu and clicking “Toolbox” or pressing <ctr+Alt+T>. This will start the processing toolbox panel. The contents can be searched using the Search dialog or by browsing the processing providers by category. 
 
