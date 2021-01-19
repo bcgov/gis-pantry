@@ -12,7 +12,10 @@
    * [Package for QField](#Package-for-QField)
    * [Syncronize from QField](#Syncronize-from-QField)
 * [Making a QGIS project for QField](#Making-a-QGIS-project-for-QField)
-
+   * [Add Data to QGIS](#Project-Configuration)
+   * [Theme Data](#Preferences)
+   * [Package for QField](#Package-for-QField)
+   * [Syncronize from QField](#Syncronize-from-QField)
 ## What is QFIELD
 
 QField is a mobile application built on QGIS open source software platform. The user makes a mapping project in QGIS then converts it to a QFIELD mobile project. The user can then assess or collect data in the field and then syncronize it back to the master QGIS data sources that the mapping project was created from. The Qfield interface is simple to use as most of the set up is completed in the QGIS project before exporting to a QField project.
@@ -28,12 +31,14 @@ Currently Qfield is only built for Android operating systems, though Apple IOS i
  4. Run the Package for Qfield. Selecting how you want layers to be used as offline or editable. Export the package to a new folder
  5. Take the new package folder and move it to your mobile device
  6. Open Qfield on your tablet and open the .qgs file in the package folder
- 7. Collect field work, copy Qfield package from feild device to computer
+ 7. Collect field work on device using QField
+ 8. Copy Qfield package from device to computer and Sync back to the master dataset
 
-## Qfield and GeodataPackages new
+## Qfield and GeodataPackages
+QField claims that many data types can be used in the data sources. These include Geodatapackages, Shapefiles, SpatialLite, PostGIS. For now it is reccomended to use Geodatapackages as they provide a consolidated data package that QGIS works will with. Shapefiles can also be used in QGIS, but it will create many more files in your QField package. 
 
 ## Qfield Best Practices
-QField is an effective mobile mapping solution, however there are some best practices to make the application work effectively and minimize .
+QField is an effective mobile mapping solution, however there are some best practices to make the application work effectively and minimize potential bugs/issues.
 
 1. Set your QGIS project to relative paths.
 2. Use Geodatapackages. Other formats can be used, though reliability has not been tested
@@ -43,16 +48,17 @@ QField is an effective mobile mapping solution, however there are some best prac
 ## QField Sync Plugin
 
 ### Configure Current Project (QField Sync Project Properties)
-Allows the user to control how data will be used when packaged for QField
-Choices include:
-1. Lock Geometry for data copied to Qfield
-2. Action: (Copy) data for use in QField
-3. Action: (Offline Editing) Allow user to edit data in QField
-4. Action: (Remove) Do not Package data for use in QField
+Allows the user to control how data will be used when packaged from QGIS to a QField package
+
+### Choices include:
+1. Lock Geometry for data copied to Qfield package
+2. Action: (Copy) data for use in QField package
+3. Action: (Offline Editing) Allow user to edit data in QField package
+4. Action: (Remove) Do not Package data for use in QField package
 5. Action: (Keep Existent) If data is already in a previous QField package then keep the existing data.
 ![QField Configure](../images/QField_Configure.JPG)
 6. Base Map. An image basemap can be created from an image layer. **This may require the image to be in the same projection as the data or it may not work.
-7. Offline editing. Only copy features in the Map Area of Interest Window.
+7. Offline editing. Only copy features in the QGIS Map Area of Interest Window.
 
 ### Preferences
 Where you can set your default import and export directories
@@ -64,7 +70,7 @@ Where you can set your default import and export directories
 ![QField Configure](../images/QField_Package.JPG)
 
 ### Syncronize from QField
-1. Open the Original QGIS project then select folder where import data from the field was placed. 
+1. Open the Original QGIS project .qgs then select folder where the Qfield package data collected in the field was placed
 2. Then Syncronize and original QGIS data will be updated with data from field.
 
 ![QField Syncronize](../images/QField_Syncronize.JPG)
