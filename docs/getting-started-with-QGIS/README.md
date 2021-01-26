@@ -20,7 +20,7 @@ This is a set of documents to help experienced GIS users with best practices, ti
 13. [Processing data](./doc/processing.md)
 14. [Processing with Graphical Modeler](./doc/graphical-modeler.md)
 15. [Raster calculator](./doc/raster-calculator.md)
-15. [Advanced processing and plugin devlopement](./doc/advanced=processing.md)
+15. [Advanced processing and plugin devlopement](./doc/advanced-processing.md)
 16. [Multi-user editing using PostGIS](./doc/multi-user-editing.md)
 
 
