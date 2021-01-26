@@ -5,6 +5,7 @@ Index
 * [Vector Menu](#vector-menu)
 * [Raster Menu](#raster-menu)
 * [Processing Panel](#processing-panel)
+* [Advanced processing topics](#advanced-topics)
 
 QGIS provides many processing tools to help you analyze your GIS data. All the standard tools you would expect a GIS to provide are accessible to all users running QGIS. If the tool you need is more specialized it may be only accessible from the included GRASS GIS plugin or specific plugins you may need to install yourself. 
 This document will discuss the standard tools available from QGIS. Access to processing tools from within QGIS is presented to users in three locations; Vector Menu, Raster Menu, and Processing Panel.
@@ -58,4 +59,10 @@ Some processing tools can be used in conjunction with layer editing to modify fe
 - smooth
 - multipart to sigleparts
 
+## Advanced topics
+[Graphical Modeler](graphical-modeler.md)  
+[Processing with python](advanced-processing.md)
 
+
+---
+[Back to top](#gis-processing)
