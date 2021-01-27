@@ -15,7 +15,7 @@ Index <br>
 * [Plugin developement](#plugin-developement)
 
 # QGIS Python Console
-The QGIS Python Console can be accessed from the Plugins Menu --> Python Console or from the Python Console launch icon in the plugins toolbar using this icon  ![python-console-icon](..\images\python-console-icon.png)<br>
+The QGIS Python Console can be accessed from the Plugins Menu --> Python Console or from the Python Console launch icon in the plugins toolbar using this icon  ![python-console-icon](../images/python-console-icon.png)<br>
 Below is an example of adding a shapefile to your project taken directly from the [PyQGIS Cookbook](https://docs.qgis.org/testing/en/docs/pyqgis_developer_cookbook/loadlayer.html#id1)
 
 ```
