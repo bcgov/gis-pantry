@@ -2,7 +2,8 @@
 
 [home](../README.md)
 
- - Symbolizing your layers
+ - [Basic styling](styling.md)
+ - [Labels](labels.md)
  - [Advanced Symbolization](advanced-symbology.md)
  - [Map Series with Atlas](atlas.md)
  - [Create a Map Layout](create-layout.md)
