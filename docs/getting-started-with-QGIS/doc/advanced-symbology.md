@@ -4,6 +4,9 @@
 
 Index
 * [Getting Started](#getting-started)
+* [Accessing Symbology Options](#accessing-symbology-options)
+  * [The Properties Menu](#the-properties-menu)
+  * [The Layer Styling Panel](#the-layer-styling-panel)
 * [Symbolizing the Road Layer](#symbolizing-the-road-layer)
 * [Symbolizing the Parks Layer](#symbolizing-the-parks-layer)
 * [Symbolizing the Trees Layer](#symbolizing-the-trees-layer)
@@ -11,6 +14,9 @@ Index
   * [Categorized symbology](#categorized-symbology)
   * [Graduated symbology](#graduated_symbology)
   * [Rule-Based symbology](#rule-based-symbology)
+* [Opacity](#opacity)
+  * [Layer Opacity](#layer-opacity)
+  * [Layer Part Opacity](#layer-part-opacity)
 * [Symbolizing a DEM](#symbolizing-a-dem)
 * [Overlaying a DEM over a Hillshade](#overlaying-a-dem-over-a-hillshade)
 
@@ -25,6 +31,41 @@ For this exercise you will need three layers:
 Download the three layers and follow the steps in [Working with Data in QGIS](data.md) to add the data to a blank map.
 
 Once you’ve loaded the layers you will want to zoom in to an area in Kamloops with some parks. I chose the area surrounding of Valleyview Nature Park in Kamloops but any area in Kamloops will work.
+
+## Accessing Symbology Options
+
+There are two main ways to access symbology options for a layer. These options are listed in the section below.
+
+## The Properties Menu
+
+* highlight the layer in the layer tree
+* right-click and select **Properties** from the popup menu
+* navigate to the **Symbology** tab in the *Layer Properties* box
+
+or
+
+* double click the layer in the layer tree
+* navigate to the **Symbology** tab in the *Layer Properties* box
+
+## The Layer Styling Panel
+
+There are several ways to access the layer styling panel:
+
+* highlight the layer in the layer tree
+* press F7 on your keyboard
+
+or
+
+* highlight the layer in the layer tree
+* press the **Open the Layer Styling panel** button at the top left of the layer tree
+
+![layer styling panel2](../images/layerStylingPanel2.png "layer styling panel2")
+
+or
+
+* turn on **Layer Styling** in *View* -> *Panels*
+
+![layer styling panel](../images/layerStylingPanel.png "layer styling panel")
 
 ## Symbolizing the Road Layer
 
@@ -163,6 +204,26 @@ The trees layer is points that show the location of trees within Kamloops. QGIS 
 * save your changes and exit the properties menu
 
 ![Turn on Labels](../images/adv_sym_ruleBased.gif "Wow!")
+
+## Opacity
+
+Opacity of a layer (how transparent it is) can be set on the layer itself or on a particular symbol of a layer.
+
+## Layer Opacity
+
+* navigate to the **Symbology** tab of the layer
+* in the main section set the **Opacity** value either numerically in the text box or using the slider
+
+## Layer Part Opacity
+
+If you want to change the opacity of part of a layer (e.g. the fill of a polygon but not the stroke or one symbol layer in the symbol tree) you can follow the steps below:
+
+* navigate to the **Symbology** tab of the layer
+* highlight the layer item you want to change the opacity of
+* double click the **Fill color**
+* set the **Opacity** using the slider or the text box
+
+![layer part opacity](../images/layerPartOpacity.png "layer part opacity!")
 
 ## Symbolizing a DEM
 
