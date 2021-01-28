@@ -11,9 +11,9 @@ Index <br>
 
 ## Accessing Labels
 Labels can be enabled and configured from two locations: 
-1. The label dialog in the styling window 
+1. The label dialog in the styling window <br>
 ![label-options-styling-panel-gif](../images/label-options-styling-panel.gif)
-2. The Layer Properties Labels tab
+2. The Layer Properties Labels tab <br>
 ![label-options-layer-properties-dialog-gif](../images/label-options-layer-properties-dialog.gif)
 
 In both configuration dialogs the options for labeling are identical.
