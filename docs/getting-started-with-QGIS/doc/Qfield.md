@@ -78,6 +78,25 @@ Where you can set your default import and export directories
 
 # Making a QGIS project for QField
 
+### 1. Start a QGIS project, Settings and Project Folders
+#### a. Open a new QGIS project and save to a location where you will be placing your QField data.
+
+
+### 2. Adding data and Theming
+
+### 3. Adding imagery
+#### Offline Imagery: When in the field many areas may not have data so data can be loaded to the device with the project. Though it is advised to keep imagery areas small as it can quickly use up device memory.
+
+
+#### Online Imagery: This can be added as a datasource and will load in QField if your field device has data. The benefits of this method mean that large imagery datasets do not have to be added to the device which can quickly use up memory
+![Add XYZ Tiles](../images/Add_XYZ_Tiles.gif)
+
+
+### 4.
+
+### 5.
+
+
 ### License
     Copyright 2019 BC Provincial Government
 
