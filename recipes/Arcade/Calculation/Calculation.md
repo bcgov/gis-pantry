@@ -1,5 +1,5 @@
 # Arcade Calculations
-Sample Arcade expressions that perform calculations within and application
+Sample Arcade expressions that perform calculations within an application
 
 
 ## Examples
