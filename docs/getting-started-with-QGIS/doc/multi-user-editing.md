@@ -27,8 +27,13 @@ These are some extra links to browse through for those interested in learning mo
 ![](../images/)
 
 ## Connecting to a PostgreSQL Database
-1. 
-![](../images/)
+1. Right click PostGIS in your Browser panel and add a New Connection.
+2. Enter the parameters of the existing PostGIS database. You may enter your credentials here or choose to enter them later.
+3. Test the connection, a ribbon will appear to let you know if it was successful.
+4. You may also want to see tables without geometry, if so, select the box next to "Also list tables with no geometry".
+5. Select OK. You will now be able to add data layers from within the schemas of your PostGIS to the project.
+
+![](../images/ConnectingToAPostGISDB.gif)
 
 ## Versioning Plugin
 1. Add a link to Jing's plugins page for more info..
