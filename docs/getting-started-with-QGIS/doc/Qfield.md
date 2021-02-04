@@ -4,7 +4,7 @@
 ## Index
 * [What is QFIELD](#What-is-QFIELD)
 * [Basic steps from QGIS to QFIELD](#What-is-QFIELD)
-* [QField and Geodatpackages](#Quick-Mapservices-Plugin)
+* [QFIELD and Geodatpackages](#Quick-Mapservices-Plugin)
 * [Qfield Best Practices](#Qfield-Best-Practices)
 * [QField Sync Plugin](#QField-Sync-Plugin)
    * [Project Configuration](#Project-Configuration)
@@ -12,15 +12,14 @@
    * [Package for QField](#Package-for-QField)
    * [Syncronize from QField](#Syncronize-from-QField)
 * [Making a QGIS project for QField](#Making-a-QGIS-project-for-QField)
-   * [Add Data to QGIS](#Project-Configuration)
-   * [Theme Data](#Preferences)
-   * [Package for QField](#Package-for-QField)
-   * [Syncronize from QField](#Syncronize-from-QField)
+
 ## What is QFIELD
 
 QField is a mobile application built on QGIS open source software platform. The user makes a mapping project in QGIS then converts it to a QFIELD mobile project. The user can then assess or collect data in the field and then syncronize it back to the master QGIS data sources that the mapping project was created from. The Qfield interface is simple to use as most of the set up is completed in the QGIS project before exporting to a QField project.
 
 Currently Qfield is only built for Android operating systems, though Apple IOS is currently in development.
+
+## Qfield and GeodataPackages
 
 
 ## Basic steps from QGIS to QFIELD and Back
@@ -31,14 +30,10 @@ Currently Qfield is only built for Android operating systems, though Apple IOS i
  4. Run the Package for Qfield. Selecting how you want layers to be used as offline or editable. Export the package to a new folder
  5. Take the new package folder and move it to your mobile device
  6. Open Qfield on your tablet and open the .qgs file in the package folder
- 7. Collect field work on device using QField
- 8. Copy Qfield package from device to computer and Sync back to the master dataset
-
-## Qfield and GeodataPackages
-QField claims that many data types can be used in the data sources. These include Geodatapackages, Shapefiles, SpatialLite, PostGIS. For now it is reccomended to use Geodatapackages as they provide a consolidated data package that QGIS works will with. Shapefiles can also be used in QGIS, but it will create many more files in your QField package. 
+ 7. Collect field work, copy Qfield package from feild device to computer
 
 ## Qfield Best Practices
-QField is an effective mobile mapping solution, however there are some best practices to make the application work effectively and minimize potential bugs/issues.
+QField is an effective mobile mapping solution, however there are some best practices to make the application work effectively and minimize .
 
 1. Set your QGIS project to relative paths.
 2. Use Geodatapackages. Other formats can be used, though reliability has not been tested
@@ -48,17 +43,16 @@ QField is an effective mobile mapping solution, however there are some best prac
 ## QField Sync Plugin
 
 ### Configure Current Project (QField Sync Project Properties)
-Allows the user to control how data will be used when packaged from QGIS to a QField package
-
-### Choices include:
-1. Lock Geometry for data copied to Qfield package
-2. Action: (Copy) data for use in QField package
-3. Action: (Offline Editing) Allow user to edit data in QField package
-4. Action: (Remove) Do not Package data for use in QField package
+Allows the user to control how data will be used when packaged for QField
+Choices include:
+1. Lock Geometry for data copied to Qfield
+2. Action: (Copy) data for use in QField
+3. Action: (Offline Editing) Allow user to edit data in QField
+4. Action: (Remove) Do not Package data for use in QField
 5. Action: (Keep Existent) If data is already in a previous QField package then keep the existing data.
 ![QField Configure](../images/QField_Configure.JPG)
 6. Base Map. An image basemap can be created from an image layer. **This may require the image to be in the same projection as the data or it may not work.
-7. Offline editing. Only copy features in the QGIS Map Area of Interest Window.
+7. Offline editing. Only copy features in the Map Area of Interest Window.
 
 ### Preferences
 Where you can set your default import and export directories
@@ -70,31 +64,52 @@ Where you can set your default import and export directories
 ![QField Configure](../images/QField_Package.JPG)
 
 ### Syncronize from QField
-1. Open the Original QGIS project .qgs then select folder where the Qfield package data collected in the field was placed
+1. Open the Original QGIS project then select folder where import data from the field was placed. 
 2. Then Syncronize and original QGIS data will be updated with data from field.
-
 ![QField Syncronize](../images/QField_Syncronize.JPG)
 
 
 # Making a QGIS project for QField
+### For this example data has been placed in a GeoDataPackage. "new_geodatapackage.gpkg". Also QField is currently only available for Android devices
+- Local city data (Property, Street) EPSG:3157 - NAD83(CSRS) / UTM zone 10N - Projected
+- Province of BC Data (Wells or(WLS...), Crown_Polygon, FWA_Streams) EPSG:4326 - WGS 84 - Geographic
+- New Layers to collect field data. (Field_Lines, Field_Polygons, Field_Points)
 
-### 1. Start a QGIS project, Settings and Project Folders
-#### a. Open a new QGIS project and save to a location where you will be placing your QField data.
+### 1. Make a QGIS project, project folders and QGIS parameters
 
-
-### 2. Adding data and Theming
-
-### 3. Adding imagery
-#### Offline Imagery: When in the field many areas may not have data so data can be loaded to the device with the project. Though it is advised to keep imagery areas small as it can quickly use up device memory.
-
-
-#### Online Imagery: This can be added as a datasource and will load in QField if your field device has data. The benefits of this method mean that large imagery datasets do not have to be added to the device which can quickly use up memory
-![Add XYZ Tiles](../images/Add_XYZ_Tiles.gif)
+a. Make Folder location to place file geodatabase. e.g. QField_Main_Project.  
+b. Create and set QGIS project to desired projection. (Default is EPSG: 4326 WGS84).  
+c. Set key parameters like Save Paths = Relative
 
 
-### 4.
+### 2. Copy the data you need to the project folder with the QGIS project.  
 
-### 5.
+### 3. Add copied data to your project folder. (Geodatapackage, Shapefile)
+
+### 4. Theme Data in QGIS project
+
+### 5. Setting up Imagery
+
+- Online imagery: This can be added as a datasource imagery in your QGIS project and will load in QField if your field device has data/WIFI availability. The benefits of this method means that large imagery datasets do not have to be added to the device using much less data space.  
+- Offline Imagery: It is reccomended that when using offilne imagery to only use small image areas. Images like GEOTIFF or Geo JPEG can be used or MBtiles layer can be created to tile web imagery into an offline Spatiallite dataformats. The following example shows how to create image tiles of online imagery with a min zoom of 3 and max of 18. If you go above 18 it will likely create a huge file size that is not useable.  
+
+![QField XYZ Tiles](../images/Gen_XYZ_Tiles.gif)
+
+### 6. Create data features for capturing data in the field with QField
+
+### 7. Set up data features to capture photos linked to collected data
+
+### 8. QField Sync and prepare data for QField  
+
+# Using QField on your Mobile device
+
+### 1. Add QField package to your device
+
+### 2. Load QField App on your device
+
+### 3. The QField App interface
+
+# Getting Data from QField project and back into the original data source.
 
 
 ### License
