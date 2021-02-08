@@ -9,15 +9,22 @@ This cross reference glossary has been created as a way for users to quickly ref
  *Listed in alphabetical order
 
 **Add-in Manager** in ArcGIS *IS LIKE* the **Plugins** in QGIS
+![](../images/pluginIntro.gif)
 
 **Animation Toolbar** in ArcGIS *IS LIKE* the **Time Manager Plugin** in QGIS
+![](../images/TimeManagerPluginInstall.gif)
 
 **ArcToolbox** in ArcGIS *IS LIKE* the **Processing Toolbox** in QGIS
+![](../images/ProcessingToolbox.gif)
+![](../images/processing-toolbox.png)
 
 **Catalog** in ArcGIS *IS LIKE* the **Browser Panel** in QGIS. 
 * The Browser can also be open in two panels at the same time. View > Panels 
+![](../images/BrowserPanel.gif)
 
 **Data Driven Pages** in ArcGIS *IS LIKE* the **QGIS Atlas** in QGIS
+![](../images/QGISAtlas.gif)
+* Reference material: https://www.qgistutorials.com/en/docs/3/automating_map_creation.html
 
 **Find** in ArcGIS *IS LIKE* the **OSM Place Search Plugin** in QGIS
 
