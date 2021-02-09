@@ -52,7 +52,8 @@ The Processing Panel can be activated by using the Processing menu and clicking 
 ![Processing Toolbox](../images/processing-toolbox.png)
 
 The QGIS Processing tools all follow a common layout that contains Parameters/log tabs on the left and a collapsable information dialog screen on the right. Input data layers can be selected from a drop down of suitable existing map layers drawn from the table of contents or select a file using the ![select-file-icon](../images/select-file-icon.png) select file dialog.
-If the tool produces output datasets the same dialog button can be clicked in the output section to designate an output. ![processing-tool-output](../images/processing-toolbox-output.png)
+If the tool produces output datasets the same dialog button can be clicked in the output section to designate an output. <br>
+![processing-tool-output](../images/processing-toolbox-output.png)
 
 If desired most tools allow for the output to remain blank and a temorary layer will be created and added to your map. 
 
