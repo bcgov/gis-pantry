@@ -53,6 +53,7 @@ The label bar contains several tools to help you edit your labels. From left to 
 - Layer Labeling Options: Opens the layer styling panel
 - Layer Diagram Options: Opens a dialog allowing the user to add diagrams as labels
 - Highlight Pinned Labels and Diagrams: Highlights labels that fixed in place due to manual placement
+- Toggle Display of Unplaced Labels: Turns on/off unplaced labels
 - Pin / Unpin Label or Diagram: Pins a label or diagram label in place on click (or unpins with shift + mouse click)
 - Show / Hide Labels or Diagrams: Allows turning on and off labels for currently active features
 - Move Label: Allows moving of labels and diagrams
