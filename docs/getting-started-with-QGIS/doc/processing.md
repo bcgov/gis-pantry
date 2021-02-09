@@ -7,7 +7,7 @@ Index
 * [Processing Panel](#processing-panel)
 * [Advanced processing topics](#advanced-topics)
 
-QGIS provides many processing tools to help you analyze your GIS data. All the standard tools you would expect a GIS to provide are accessible to all users running QGIS. If the tool you need is more specialized it may be only accessible from the included GRASS GIS plugin or specific plugins you may need to install yourself. 
+QGIS provides many processing tools to help you analyze your GIS data. All the standard tools you would expect a GIS to provide are accessible to all users running QGIS. If the tool you need is more specialized it may be only accessible from the included GRASS GIS plugin or specific plugins you may need to install yourself.<br> 
 This document will discuss the standard tools available from QGIS. Access to processing tools from within QGIS is presented to users in three locations; Vector Menu, Raster Menu, and Processing Panel.
 
 ### Related QGIS Documentation
@@ -17,15 +17,22 @@ This document will discuss the standard tools available from QGIS. Access to pro
 [QGIS Processing Guide]( https://docs.qgis.org/testing/en/docs/training_manual/processing/index.html)
 
 ## Vector Menu
-The Vector menu provides access to many standard tools for interacting with vectors.  This menu is a convenient way to find common vector tools that have been organized categories: Geoprocessing, Geometry, Research, Analysis, and Data Management Tools.
-Vector Menu Category|Examples
-Geoprocessing Tools|Buffer, Clip,Intersection, Union
-Geometry Tools|Calculate Centroids, Validate Geometry, Mulitpart to Singlepart
-Research Tools|Create Grid, Select by Location, Create Random Points, Create Regular Points
-Analysis Tools| Mean Coordinates, Field Statistics, Count points in polygon
-Data Management Tools | Merge Layers, Split Layers, Join attributes by Location
+The Vector menu provides access to many standard tools for interacting with vectors.  This menu is a convenient way to find common vector tools that have been organized into categories: Geoprocessing, Geometry, Research, Analysis, and Data Management Tools.<br>
+Vector Menu Category|Examples:
+
+1. Geoprocessing Tools
+    - Buffer, Clip,Intersection, Union
+2. Geometry Tools
+    - Calculate Centroids, Validate Geometry, Mulitpart to Singlepart
+3. Research Tools
+    - Create Grid, Select by Location, Create Random Points, Create Regular Points
+4. Analysis Tools
+    - Mean Coordinates, Field Statistics, Count points in polygon
+5. Data Management Tools
+    - Merge Layers, Split Layers, Join attributes by Location
+
 ## Raster Menu
-The Raster menu provides access to many standard tools for interacting with raster data. This menu is a convenient way to access Raster Calculator, Align Rasters tool and other common raster tools that have been organized categories: Analysis, Projections, Miscellaneous, Extraction, Conversion. It should be noted that the Raster Calculator accessed in this menu is slightly different than the raster calculator accessed in the processing panel ([more on raster calculator](raster-calculator.md)).
+The Raster menu provides access to many standard tools for interacting with raster data. This menu is a convenient way to access Raster Calculator, Align Rasters tool and other common raster tools that have been organized into categories: Analysis, Projections, Miscellaneous, Extraction, and Conversion. It should be noted that the Raster Calculator accessed in this menu is slightly different than the raster calculator accessed in the processing panel ([more on raster calculator](raster-calculator.md)).<br>
 Raster Menu Category|Examples:
 
 1. Analysis
@@ -38,12 +45,13 @@ Raster Menu Category|Examples:
     - Clip Raster, Create contours
 5. Conversion
     - Raster to Vector, Vector to Raster, Translate (conversion)
+
 ## Processing Panel
 The Processing Panel can be activated by using the Processing menu and clicking “Toolbox” or pressing <ctr+Alt+T>. This will start the processing toolbox panel. The contents can be searched using the Search dialog or by browsing the processing providers by category. 
 
 ![Processing Toolbox](../images/processing-toolbox.png)
 
-The layout of QGIS Processing tools all follow a common layout that contains Parameters/log tabs on the left and a collapsable information dialog screen on the right. Input data layers can be selected from a drop down of suitable existing map layers drawn from the table of contents or select a file using the ![select-file-icon](../images/select-file-icon.png) select file dialog.
+The QGIS Processing tools all follow a common layout that contains Parameters/log tabs on the left and a collapsable information dialog screen on the right. Input data layers can be selected from a drop down of suitable existing map layers drawn from the table of contents or select a file using the ![select-file-icon](../images/select-file-icon.png) select file dialog.
 If the tool produces output datasets the same dialog button can be clicked in the output section to designate an output. ![processing-tool-output](../images/processing-toolbox-output.png)
 
 If desired most tools allow for the output to remain blank and a temorary layer will be created and added to your map. 
