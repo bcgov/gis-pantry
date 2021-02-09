@@ -19,10 +19,10 @@ Labels can be enabled and configured from two locations:
 In both configuration dialogs the options for labeling are identical.
 
 ## Label Text
-Label text is controled by the value setting which can be set using a field or by using an expression. Fields can be set using the drop down dialog or a expression can be built using the expression editor.
+Label text is controlled by the value setting which can be set using a field or by using an expression. Fields can be set using the drop down dialog or an expression can be built using the expression editor.
 ![label-value-expression-gif](../images/label-value-expression.gif)
 
-In the expression dialog fields and values can be coerced into the desired output value. A 'output preview' of the result can be seen in the bottom left of the dialog.<br>
+In the expression dialog, fields and values can be coerced into the desired output value. An 'output preview' of the result can be seen in the bottom left of the dialog.<br>
 Expression examples: <br>
 1. Concatenate two fields
     ```
@@ -34,15 +34,15 @@ Expression examples: <br>
     ```
 
 ## Label Options
-Label options can be set using dropdown selections or radio buttons. Most options can also be set using fields or expressions. For example the size of a polygon lable can be set to be dependent on the geometry area.
+Label options can be set using dropdown selections or radio buttons. Most options can also be set using fields or expressions. For example the size of a polygon label can be set to be dependent on the geometry area.
 
 The options are broken down into groups:
-- Text Options (Font, Style, Size,Colour,Opacity)
-- Formating (Type Case, Spacing, Orientaiton, Blending, Line wrapping,numerical formatting)
+- Text Options (font, style, size, colour, opacity)
+- Formating (type case, spacing, orientaiton, blending, line wrapping, numerical formatting)
 - Buffer(Control buffer mask size, colour, opacity, etc)
-- Background (Create and control a background for your label)
+- Background (create and control a background for your label)
 - Shadow (drop shadow effect control)
 - Callouts (draw and control line style between feature to label)
-- Placement (Placement relative to feature, repeating and overun controls, geometry generation, datad defined locations, label priority)
+- Placement (placement relative to feature, repeating and overun controls, geometry generation, data defined locations, label priority)
 - Rendering (mulitpart control, duplication reduction, feature label limits, feature priority)
 
