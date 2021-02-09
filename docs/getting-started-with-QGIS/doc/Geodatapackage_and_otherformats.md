@@ -4,7 +4,7 @@ Within QGIS there are many ways to access data creation in a variety of differen
 
 ## Index
 * [What is a GeodataPackage](#What-is-a-GeodataPackage)
-* [How To Create a new GeodataPackage in QGIS](#How-To-Create-a-GeodataPackage)
+* [How To Create a new GeodataPackage in QGIS](#How-To-Create-a-new-GeodataPackage-in-qgis)
 * [How use a Geodatapackage](#How-use-a-Geodatapackage)
    *  [1. Connnecting to a GeodataPackage](#1.-Connecting-a-Geodatapackage-to-add-data)
    *  [2. Saving Vector Layer to Geodata Package](#2.-Saving-a-Vector-layer-to-a-Geodatapackage)
