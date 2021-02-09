@@ -6,6 +6,7 @@ Index <br>
 * [Accessing Labels](#accessing-labels)
 * [Label Text](#label-text)
 * [Label Options](#label-options)
+* [Label Bar](#label-bar)
 
 [QGIS Labeling Documentation](https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/vector_properties.html#labels-properties)
 
@@ -46,3 +47,14 @@ The options are broken down into groups:
 - Placement (placement relative to feature, repeating and overun controls, geometry generation, data defined locations, label priority)
 - Rendering (mulitpart control, duplication reduction, feature label limits, feature priority)
 
+## Label Bar 
+![label-bar-image](../images/labelBar.png)
+The label bar contains several tools to help you edit your labels. From left to right these tools are:
+- Layer Labeling Options: Opens the layer styling panel
+- Layer Diagram Options: Opens a dialog allowing the user to add diagrams as labels
+- Highlight Pinned Labels and Diagrams: Highlights labels that fixed in place due to manual placement
+- Pin / Unpin Label or Diagram: Pins a label or diagram label in place on click (or unpins with shift + mouse click)
+- Show / Hide Labels or Diagrams: Allows turning on and off labels for currently active features
+- Move Label: Allows moving of labels and diagrams
+- Rotate Label: Rotate label or diagram
+- Change Label Properties: Change the properties (font weight, buffer, font size, etc) of individual labels on a map
