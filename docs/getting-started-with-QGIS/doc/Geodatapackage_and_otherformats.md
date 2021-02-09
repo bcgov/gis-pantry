@@ -4,21 +4,21 @@ Within QGIS there are many ways to access data creation in a variety of differen
 
 ## Index
 * [What is a GeodataPackage](#What-is-a-GeodataPackage)
-* [How To Create a new GeodataPackage in QGIS](#How-To-Create-a-GeodataPackage)
+* [How To Create a new GeodataPackage in QGIS](#How-To-Create-a-new-GeodataPackage-in-qgis)
 * [How use a Geodatapackage](#How-use-a-Geodatapackage)
-   *  [1. Connnecting to a GeodataPackage](#1.-Connecting-a-Geodatapackage-to-add-data)
-   *  [2. Saving Vector Layer to Geodata Package](#2.-Saving-a-Vector-layer-to-a-Geodatapackage)
-   *  [3. Save style file in GeodataPackage](#3.-Save-style-file-in-GeodataPackage)
+   *  [1. Connnecting to a GeodataPackage](#1-Connecting-a-Geodatapackage-to-add-data)
+   *  [2. Saving Vector Layer to Geodata Package](#2-Saving-a-Vector-layer-to-a-Geodatapackage)
+   *  [3. Save style file in GeodataPackage](#3-Save-style-file-in-GeodataPackage)
 * [Other Important Data Formats QGIS can use](#Other-Important-Data-Formats-QGIS-can-use)
-   *  [1. SpatialLite](#1.-SpatialLite)
-   *  [2. Shapefiles](#2.-Shapefiles)
-   *  [3. Scratch Layer](#3.-Scratch-Layer)
-   *  [4. Virtual Layer](#4.-Virtual-Layer)
+   *  [1. SpatialLite](#1-SpatialLite)
+   *  [2. Shapefiles](#2-Shapefiles)
+   *  [3. Scratch Layer](#3-Scratch-Layer)
+   *  [4. Virtual Layer](#4-Virtual-Layer)
 
 
 ## What is a GeodataPackage
 
-A Geodatapackage is an opensource and free way to store multpile GIS layers in a single database. The database repository is flexible in being used in many different ways, including mobile applications, as well as its ability to store different data types like tables, raster and vector GIS layers. When created the file will have .gpkg extension. The equivalent to this datatype in the ArcGIS environment is a FileGeoDatabase.
+A Geodatapackage is an open source and free way to store multiple GIS layers in a single database. The database repository is flexible in being used in many different ways, including mobile applications, as well as its ability to store different data types like tables, raster and vector GIS layers. When created the file will have .gpkg extension. The equivalent to this datatype in the ArcGIS environment is a FileGeoDatabase.
 
 
 ## How To Create a new GeodataPackage in QGIS
@@ -26,7 +26,7 @@ A Geodatapackage is an opensource and free way to store multpile GIS layers in a
  Layer -> Create Layer -> New GeoDataPackage Layer or
  Find GeoPackage in the Browser -> Right Click -> Create Database
 
- This will open a window where you set the database location, Name, Geometery type and Projection. When using this tool you need to create at least 1 layer when making a new Geodatapackage.
+ This will open a window where you set the database location, Name, Geometery type and Projection. You need to create at least 1 layer when making a new Geodatapackage.
 
  ![New Geodatapackage1](../images/Layer_New_Geodata_Package.JPG)
  ![New Geodatapackage2](../images/Layer_New_Geodata_Package2.JPG)
@@ -74,7 +74,7 @@ The long standing data format (Shapefile) is compatible with QGIS. Shapefiles ca
 
 ### 3. Scratch Layer
 
-QGIS can create scratch layers which are temporary working data layers that are not saved on disk. After working on or editing a scratch layer it will be deleted if you close your QGIS session or you can export it to a Geodatapackage or Shapefile format.  
+QGIS can create scratch layers which are temporary working data layers that are not saved to the disk. After working on or editing a scratch layer it will be deleted if you close your QGIS session or you can export it to a Geodatapackage or Shapefile format.  
 
 ![Create Scratch](../images/Create_new_Scratch_Layer.gif)
 
