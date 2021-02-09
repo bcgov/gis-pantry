@@ -6,14 +6,14 @@ Within QGIS there are many ways to access data creation in a variety of differen
 * [What is a GeodataPackage](#What-is-a-GeodataPackage)
 * [How To Create a new GeodataPackage in QGIS](#How-To-Create-a-new-GeodataPackage-in-qgis)
 * [How use a Geodatapackage](#How-use-a-Geodatapackage)
-   *  [1. Connnecting to a GeodataPackage](#1.-Connecting-a-Geodatapackage-to-add-data)
-   *  [2. Saving Vector Layer to Geodata Package](#2.-Saving-a-Vector-layer-to-a-Geodatapackage)
-   *  [3. Save style file in GeodataPackage](#3.-Save-style-file-in-GeodataPackage)
+   *  [1. Connnecting to a GeodataPackage](#1-Connecting-a-Geodatapackage-to-add-data)
+   *  [2. Saving Vector Layer to Geodata Package](#2-Saving-a-Vector-layer-to-a-Geodatapackage)
+   *  [3. Save style file in GeodataPackage](#3-Save-style-file-in-GeodataPackage)
 * [Other Important Data Formats QGIS can use](#Other-Important-Data-Formats-QGIS-can-use)
-   *  [1. SpatialLite](#1.-SpatialLite)
-   *  [2. Shapefiles](#2.-Shapefiles)
-   *  [3. Scratch Layer](#3.-Scratch-Layer)
-   *  [4. Virtual Layer](#4.-Virtual-Layer)
+   *  [1. SpatialLite](#1-SpatialLite)
+   *  [2. Shapefiles](#2-Shapefiles)
+   *  [3. Scratch Layer](#3-Scratch-Layer)
+   *  [4. Virtual Layer](#4-Virtual-Layer)
 
 
 ## What is a GeodataPackage
