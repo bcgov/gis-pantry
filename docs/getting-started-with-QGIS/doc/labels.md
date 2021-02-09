@@ -48,7 +48,7 @@ The options are broken down into groups:
 - Rendering (mulitpart control, duplication reduction, feature label limits, feature priority)
 
 ## Label Bar 
-![label-bar-image](../images/labelBar.png)
+![label-bar-image](../images/labelBar.png)<br>
 The label bar contains several tools to help you edit your labels. From left to right these tools are:
 - Layer Labeling Options: Opens the layer styling panel
 - Layer Diagram Options: Opens a dialog allowing the user to add diagrams as labels
