@@ -12,6 +12,7 @@ This cross reference glossary has been created as a way for users to quickly ref
  * Listed in alphabetical order
 
 **Add-in Manager** in ArcGIS *IS LIKE* the **Plugins** in QGIS
+
  * See [Plugins Documentation](#https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/plugins.md)
 
 ![](../images/pluginIntro.gif)
@@ -33,6 +34,7 @@ This cross reference glossary has been created as a way for users to quickly ref
 ![](../images/BrowserPanel.gif)
 
 **Data Driven Pages** in ArcGIS *IS LIKE* the **QGIS Atlas** in QGIS
+
  * See  [QGIS Atlas Documentation](#https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/atlas.md)
  * More reference material: https://www.qgistutorials.com/en/docs/3/automating_map_creation.html
 
@@ -40,7 +42,6 @@ This cross reference glossary has been created as a way for users to quickly ref
 
 **Field Maps** in ArcGIS *IS LIKE* **QField** in QGIS
  * See [QField Documentation](#https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/Qfield.md)
-
 
 **Find** in ArcGIS *IS LIKE* the **OSM Place Search Plugin** in QGIS
 
