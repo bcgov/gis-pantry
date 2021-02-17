@@ -20,6 +20,7 @@ This cross reference glossary has been created as a way for users to quickly ref
   * [Table of Contents | Layers Panel](#Table-Of-Contents)
 * [Additional Resources](#Additional-Resources)
 
+
 ## Glossary 
  * Listed in alphabetical order
 
@@ -46,7 +47,6 @@ This cross reference glossary has been created as a way for users to quickly ref
 ![](../images/BrowserPanel.gif)
 
 **Data Driven Pages** in ArcGIS *IS LIKE* the **QGIS Atlas** in QGIS
-
  * See  [QGIS Atlas Documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/atlas.md)
  * More reference material: https://www.qgistutorials.com/en/docs/3/automating_map_creation.html
 

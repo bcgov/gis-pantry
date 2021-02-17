@@ -16,6 +16,7 @@
 * [Committing edits to the master](#Committing-edits-to-the-master)
 * [View historical changes and reverting](#View-historical-changes-and-reverting)
 
+
 ## What is PostgreSQL / PostGIS and why do you need it?
 PostgreSQL (pronounced "postgres" by these authors) is an open source object-relational database system that came out of the University of California, Berkeley in the 1980's (https://www.postgresql.org/about/).
 
@@ -60,6 +61,7 @@ The extensions on your PostGIS database should be set up prior to starting your 
 In PGAdmin, load the following extensions to your database by right-clicking on *Extensions > Create > Extension...* Search the extension name in the dropdown and click Save.
 
 ![](../images/PostGISExtensions.gif)
+
 
 ## Start versioning a dataset
 1. Add the layers within your database schema that will need to be historised and later versioned to your project.
