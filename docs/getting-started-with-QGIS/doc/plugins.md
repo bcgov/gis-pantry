@@ -5,47 +5,67 @@
 [QGIS Plugin repository](https://plugins.qgis.org/)
 
 # Introduction
-To enhance a software’s capabilities, the add-on functions need to be activated or downloaded. We call it plugins. As other GIS software, QGIS also have many plugins at your disposal. There are a list of plugins ready to be installed. 
+To enhance a software's capabilities, there are usually add-ons that can be activated or downloaded. We call these plugins. As with other GIS software, QGIS also has many plugins at your disposal. There is an extensive list of plugins ready to be installed should you choose to do so. 
 
 # Installation 
-TO install some of plugins, all you need to do are going into plugin menu option and select “Manage and Install Plugins…” and then search for the plugin that you need for your tasks. The installation is just a button away.
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginInstall.gif)
+To install plugins, select **Manage and Install Plugins…** from the **Plugins** menu. Search for the plugin that you need for your tasks and from there the installation is just a button away. Depending on the type of plugin, it could appear within a toolbar with the existing tools loaded into your QGIS session, or it may fall under one of the Menu Bar menus.
+
+![](../images/pluginInstall.gif)
 
 # Uninstallation
-Uninstallation is also easy, beside “install” button, there is a button called “Uninstall Plugin”.
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginunInstall.gif)
+Uninstallation of a plugin you've installed is also easy, simply click **Uninstall Plugin** in the plugin page in the Plugins Window.
+
+![](../images/pluginunInstall.gif)
 
 # Other Options
-On the left of the plugin window, you can see different options to filter the plugin list, such as “Installed” or “Not installed”. In another case if you have a plugin that is not published and not listed in the all plugin list, you are also able to install plugin from a .zip files. Last but not least, you can update the plugin settings under the "Settings" section. For example to to allow more functionality, such as allow experimental plugins to show on the plugin list. 
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginIntro.gif)
+On the left of the Plugins Window, you can see different options to filter the plugin list, such as **Installed** or **Not Installed**. 
+
+In some cases you may have a plugin that is not published and not listed in the **All** plugins list. If so, you are able to install the plugin from a .zip file. 
+
+Last but not least, you can update the plugin settings under the **Settings** section. This is where you can tell the Plugins Window to also show any experimental plugins available that may allow for more functionality within QGIS, for example.
+
+![](../images/pluginIntro.gif)
 
 # Build Your Own Plugins 
-If you are more advanced in QGIS and would like to build your own plugins. There is one way you can achieve that. Under Plugins>>Settings, check the box of “Show also experimental plugins”. And then go back to “All”, search for Plugin Builder 3, install this plugin. 
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginbuilder.gif)
+If you are more advanced in QGIS and would like to build your own plugins there is one way you can achieve that. 
 
-After we have Plugin Builder 3 activated, you can see it under “Plugins” from the main menu. From here you can follow the steps and create your own plugins.
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginbuilderopen.gif)
+1. Under **Plugins** > **Settings**, check the box for **Show also experimental plugins**. And then go back to **All**, search for **Plugin Builder 3** and install this plugin.
 
-For the first and sceond page inside Plugin Builder dialog, some information need to be entered. Here is an example.
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginbuilder1.png)
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginbuilder2.png)
+![](../images/pluginbuilder.gif)
 
-On the thrid page, you have the options to choose the style of your widgets. You can choose accroding to your needs.
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginbuilderopendialogoption.gif)
+2. After you have the **Plugin Builder 3** tool installed, you can see it under **Plugins** from the Main menu. From here you can follow the steps and create your own plugins.
 
-Then keep the fourth and fifth page as it is or update the information as you need. The next part we need to point the tool to the correct plugin folder on your computer. Sometime you are not able to AppData folder, it is hidden as defult. You can turn it on in file explorer
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginbuilder5.png)
+![](../images/pluginbuilderopen.gif)
 
-After clicking on the "Generate" button, a new folder will appearing inside your plugin folder you pointed to earilier.  
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginbuilderopendialogcreation.gif)
+3. For the first and second page inside the **Plugin Builder** dialog, some information needs to be entered. Here is an example.
 
-Inside the new plugin folder, there will be already established file structures.
-![](https://github.com/bcgovjz/gis-pantry/blob/master/docs/getting-started-with-QGIS/images/pluginfolder.PNG)
+![](../images/pluginbuilder1.png)
 
-Now there a new folder created in the plugins folder and it contains all the main elements of a plugin need. Next steps its to add functionality to the new plugin. Here are the steps to add functionalities to your plugins.
-1. Open the .ui file inside Qt Designer. Create a interface layout that will work for your plugin. 
-2. Add python codes with functionality inside xxxx_dialog.py
-3. Activate and reload plugin inside QGIS.
+![](../images/pluginbuilder2.png)
 
-And you are ready to start using your custom made plugin.
+4. On the third page, you have the option to choose the style of your widgets. You can choose these according to your needs.
+
+![](../images/pluginbuilderopendialogoption.gif)
+
+5. Then keep the defaults on the fourth and fifth page as is or update the information as you need. Next you'll need to point the tool to the correct plugin folder on your computer. 
+
+* Note: You might not automatically see the **AppData** folder as it is hidden by default. You'll have to turn it on yourself in the File Explorer.
+
+![](../images/pluginbuilder5.png)
+
+6. After clicking on the **Generate** button, a new folder will appear inside the plugin folder you pointed to earlier. 
+
+![](../images/pluginbuilderopendialogcreation.gif)
+
+* Note: There will be a pre-established file structure with the new plugin folder.
+
+![](../images/pluginfolder.PNG)
+
+7. These new folders contain all the main components that a new plugin needs to help you get started. To add functionality into your plugins follow these steps:
+* Open the .ui file inside Qt Designer. 
+* Create an interface layout that will work for your plugin. 
+* Add python codes with functionality inside xxxx_dialog.py
+* Activate and reload plugin inside QGIS.
+
+8. With this you are now ready to start using your custom-made plugin within QGIS.
 

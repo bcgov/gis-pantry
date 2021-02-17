@@ -8,7 +8,14 @@
 * [What is the Versioning Plugin](#What-is-the-Versioning-Plugin)
 * [Installing the Versioning Plugin](#Installing-the-Versioning-Plugin)
 * [Connecting to a PostgreSQL Database](#Connecting-to-a-PostgreSQL-Database)
-* [](#)
+* [Extensions needed](#Extensions-needed-on-your-PostGIS-database-before-versioning)
+* [Start versioning a dataset](#Start-versioning-a-dataset)
+* [How to tell if a table is historized already](#How-to-tell-if-a-table-is-historized-already)
+* [Creating a version and doing edits](#Creating-a-version-and-doing-edits)
+* [Branching](#Branching)
+* [Committing edits to the master](#Committing-edits-to-the-master)
+* [View historical changes and reverting](#View-historical-changes-and-reverting)
+
 
 ## What is PostgreSQL / PostGIS and why do you need it?
 PostgreSQL (pronounced "postgres" by these authors) is an open source object-relational database system that came out of the University of California, Berkeley in the 1980's (https://www.postgresql.org/about/).
@@ -55,7 +62,8 @@ In PGAdmin, load the following extensions to your database by right-clicking on 
 
 ![](../images/PostGISExtensions.gif)
 
-## Start versioning a data set
+
+## Start versioning a dataset
 1. Add the layers within your database schema that will need to be historised and later versioned to your project.
 2. Group these layers. 
 3. Click the Historize icon in the plugin and accept the warning pop-up notifying you that 4 new coloumns will be added to the tables in the schema. 
