@@ -133,7 +133,7 @@ The latter example would more commonly be accomplished using the *Select by loca
 
 ## Geometry Expressions
 
-Examples of geometry expressions can be found in the [Select by geometry query](#Select-By-geometry-Query) and [Geometry Generator (Layer Style)](#geometry-generator-(layer-style)) sections.
+Examples of geometry expressions can be found in the [Select by geometry query](#Select-By-geometry-Query) and [Geometry Generator (Layer Style)](#geometry-generator-layer-style) sections.
 
 More information on these can be found in the [QGIS documentation](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/expression.html#geometry-functions).
 
