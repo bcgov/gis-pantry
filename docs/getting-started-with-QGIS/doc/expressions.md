@@ -5,8 +5,8 @@
 ## Index
 * [Definition Query / Filter](#Definition-Query-Filter)
   * [Basic queries](#basic-queries)
-  * [Queries on multiple columns with AND](queries-on-multiple-columns-with-and)
-  * [Queries on multiple columns with OR](queries-on-multiple-columns-with-or)
+  * [Queries on multiple columns with AND](#queries-on-multiple-columns-with-and)
+  * [Queries on multiple columns with OR](#queries-on-multiple-columns-with-or)
 * [Select by attribute query](#Select-By-Attribute-Query)
 * [Select by geometry query](#Select-By-geometry-Query)
 * [Geometry Expressions](#geometry-expressions)
@@ -16,12 +16,12 @@
    *  [The Area Function](#the-area-function)
    *  [The Scale Function](#the-scale-function)
 * [Label Expressions](#label-expressions)
-   *  [Accessing the label expression dialogue](Accessing-the-label-expression-dialogue)
-   *  [Adding a dynamic date variable](adding-a-dynamic-date-variable)
-   *  [Adding an attribute from a layer](adding-an-attribute-from-a-layer)
-   *  [Aggregating the length of multiple road sections](aggregating-the-length-of-multiple-road-sections)
-   *  [Iterators and Multiple Rows of data](iterators-and-multiple-rows-of-data)
-   *  [Start and End Points and Coordinate System Transformations](start-and-end-points-and-coordinate-system-transformations)
+   *  [Accessing the label expression dialogue](#Accessing-the-label-expression-dialogue)
+   *  [Adding a dynamic date variable](#adding-a-dynamic-date-variable)
+   *  [Adding an attribute from a layer](#adding-an-attribute-from-a-layer)
+   *  [Aggregating the length of multiple road sections](#aggregating-the-length-of-multiple-road-sections)
+   *  [Iterators and Multiple Rows of data](#iterators-and-multiple-rows-of-data)
+   *  [Start and End Points and Coordinate System Transformations](#start-and-end-points-and-coordinate-system-transformations)
 
 ## Definition Query / Filter
 
