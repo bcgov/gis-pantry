@@ -3,11 +3,12 @@
 [home](../readme.md)
 
 ## Index
-* [Definition Query / Filter](#Definition-Query-/-Filter)
+* [Definition Query / Filter](#Definition-Query-Filter)
   * [Basic queries](#basic-queries)
   * [Queries on multiple columns with AND](queries-on-multiple-columns-with-and)
   * [Queries on multiple columns with OR](queries-on-multiple-columns-with-or)
 * [Select by attribute query](#Select-By-Attribute-Query)
+* [Select by geometry query](#Select-By-geometry-Query)
 * [Geometry Expressions](#geometry-expressions)
 * [Geometry Generator (Layer Style)](#geometry-generator-(layer-style))
    *  [Getting Started](#getting-started)
@@ -24,7 +25,7 @@
 
 ## Definition Query / Filter
 
-## Basic queries
+### Basic queries
 
 * open QGIS and add the [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees)
 * double click the layer in the layer tree to open its properties menu
@@ -43,7 +44,7 @@
 "SPECIES" NOT IN ('apple','arborvitae')
 ```
 
-## Queries on multiple columns with AND
+### Queries on multiple columns with AND
 
 * Navigate back to the query and change it to:
 
@@ -51,7 +52,7 @@
 "SPECIES" IN ('apple','arborvitae') AND "SPREAD" > 2
 ```
 
-## Queries on multiple columns with OR
+### Queries on multiple columns with OR
 
 * Navigate back to the query and change it to:
 
@@ -86,11 +87,59 @@ For more information on all operators available in QGIS see the [QGIS documentat
 
 ## Select by attribute query
 
+Selecting features by an attribute can be accessed through the layer's attribute table by clicking the *Select features using an expression* button in the top bar of the attribute table. This uses standard SQL syntax and can be written like a WHERE statement.
+
+For example, using the BC_MAJOR_CITIES_POINTS_500M layer you could use the following expressions:
+
+```sql
+ -- Select 100 Mile House point
+ "NAME" LIKE  '100 Mile House' 
+```
+
+```sql
+-- Select cities with populations over 10,000 people
+ "POP_2000" > 10000
+```
+
+
+## Select by geometry query
+
+Selecting features by an geometry can be accessed through the layer's attribute table by clicking the *Select features using an expression* button in the top bar of the attribute table. This uses standard SQL syntax and can be written like a WHERE statement.
+
+For example, using the BC_MAJOR_WATERSHEDS layer you could use the following expression:
+
+```sql
+ -- Select watersheds that are larger than 1 million hectares
+ $area/10000 > 1000000 
+```
+
+Or, if you want to find an intersect between two layers:
+
+```sql
+--Select watersheds that intersect the 100 Mile House NRD
+intersects(
+	$geometry , 
+	geometry(
+		get_feature(
+			'ADM_NR_DISTRICTS_SP_7a02069b_c6a1_49f9_af61_760c2576bcf1', 
+			'DISTRICT_NAME', 
+			'100 Mile House Natural Resource District'
+		)
+	)
+)
+```
+
+The latter example would more commonly be accomplished using the *Select by location* tool but it is worth noting that everything that can be done using the *Select by location* tool can be done with a text expression as well and a single text expression can contain multiple queries using the AND and OR operators.
+
 ## Geometry Expressions
+
+Examples of geometry expressions can be found in the [Select by geometry query](#Select-By-geometry-Query) and [Geometry Generator (Layer Style)](#geometry-generator-(layer-style)) sections.
+
+More information on these can be found in the [QGIS documentation](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/expression.html#geometry-functions).
 
 ## Geometry Generator (Layer Style)
 
-## Getting Started
+### Getting Started
 
 QGIS allows feature data types to be changed without creating a new layer through the geometry generator.
 
@@ -108,7 +157,7 @@ QGIS allows feature data types to be changed without creating a new layer throug
 
 ![Filter the Fire Layer](../images/filterFireLayer.gif "Wow!")
 
-## The Centroid Function
+### The Centroid Function
 The Centroid function is used to convert polygons to points using the x,y coordinates of the centre of the polygon. It is used for data conversion purposes.
 
 * double click the historical fire layer and enter its layer properties
@@ -129,7 +178,7 @@ Now every fire on the map is displayed as a point and you should be able to see 
 ![Using the Centroid function in Geometry Generator](../images/geometryGeneratorPolyToPoint.gif "Wow!")
 
 
-## The Area Function
+### The Area Function
 The $area function returns the area of a polygon feature as a real number. 
 
 * open the properties of the Historical Fire layer 
@@ -167,7 +216,7 @@ This will make all the polygons larger than or equal to 1,000 hectares appear as
 
 ![Using the Area function in Geometry Generator](../images/geometryGeneratorArea.gif "Wow!")
 
-## The Scale Function
+### The Scale Function
 
 The Geometry Generator can also support scale dependent geometry with the @map_scale function. 
 @map_scale returns the numerical scale of the current map.
@@ -213,12 +262,12 @@ Below are some examples of label expressions.
 To start you'll need to open a blank map and create a print layout. 
 If you aren't familiar with creating print layouts please see the [making maps](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/making-maps.md) section of this guide.
 
-## Accessing the label expression dialogue
+### Accessing the label expression dialogue
 * create a blank map layout
 * add a label by selecting **Add Label** from the *Add Item* dropdown list
 * Select the label and then click the **Insert an Expression...** button in the label properties
 
-## Adding a dynamic date variable
+### Adding a dynamic date variable
 * the following code adds today's daty as text formatted as Month day, year:
 
 ```sql
@@ -229,7 +278,7 @@ format_date(now(),'MMMM dd, yyyy')
 
 For more information on formatting dates see the [QGIS documentation section 14.3.7.6](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/functions_list.html#date-and-time-functions).
 
-## Adding an attribute from a layer
+### Adding an attribute from a layer
 
 Adding attributes from a layer is only slightly more difficult than adding a date because you have to reference a layer and a field and sometimes use an aggregate function.
 
@@ -272,7 +321,7 @@ replace layer_name with your layer's name which can be found in the Map Layers m
 
 Your label should now show the road's FFID - R23206
 
-## Aggregating the length of multiple road sections
+### Aggregating the length of multiple road sections
 
 In this example you will use the same road sections but rather than printing the road ID you will print the sum, min, and max length of the sections.
 
@@ -374,7 +423,7 @@ to_string(
 )
 ```
 
-## Iterators and Multiple Rows of data
+### Iterators and Multiple Rows of data
 
 Sometimes, rather than aggregating all the rows of data, you will need to show information from each individual row of data. 
 In QGIS, this can be done by aggregating the data with the concatenate attribute.
@@ -412,7 +461,7 @@ aggregate(
 )
 ```
 
-## Start and End Points and Coordinate System Transformations
+### Start and End Points and Coordinate System Transformations
 
 The previous example is a simple starting point but it gets more complicated when you want to show start and end points of a line in a different coordinate system than the data is stored in. Luckily, QGIS allows you to perform data transformations within your label expression so you don't have to make copies of your data in separate files.
 
