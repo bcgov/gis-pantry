@@ -3,14 +3,14 @@
 [home](../readme.md)
 
 ## Index
-* [Definition Query / Filter](#Definition-Query-Filter)
+* [Definition Query / Filter](#Definition-Query--Filter)
   * [Basic queries](#basic-queries)
   * [Queries on multiple columns with AND](#queries-on-multiple-columns-with-and)
   * [Queries on multiple columns with OR](#queries-on-multiple-columns-with-or)
 * [Select by attribute query](#Select-By-Attribute-Query)
 * [Select by geometry query](#Select-By-geometry-Query)
 * [Geometry Expressions](#geometry-expressions)
-* [Geometry Generator (Layer Style)](#geometry-generator-(layer-style))
+* [Geometry Generator (Layer Style)](#geometry-generator-layer-style)
    *  [Getting Started](#getting-started)
    *  [The Centroid Function](#the-centroid-function)
    *  [The Area Function](#the-area-function)
