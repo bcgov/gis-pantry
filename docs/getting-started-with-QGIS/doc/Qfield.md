@@ -40,7 +40,7 @@ QField is an effective mobile mapping solution, however there are some best prac
 3. Projections: QGIS and QField can use different projection sources in the data, though if issues arise a common projection of data may be beneficial.
 
 
-## QField Sync Plugin
+# QField Sync Plugin
 
 ### Configure Current Project (QField Sync Project Properties)
 Allows the user to control how data will be used when packaged for QField
@@ -73,44 +73,105 @@ Where you can set your default import and export directories
 ### For this example data has been placed in a GeoDataPackage. "new_geodatapackage.gpkg". Also QField is currently only available for Android devices
 - Local city data (Property, Street) EPSG:3157 - NAD83(CSRS) / UTM zone 10N - Projected
 - Province of BC Data (Wells or(WLS...), Crown_Polygon, FWA_Streams) EPSG:4326 - WGS 84 - Geographic
-- New Layers to collect field data. (Field_Lines, Field_Polygons, Field_Points)
+- New Empty Layers to collect field data. (Field_Lines, Field_Polygons, Field_Points)
 
-### 1. Make a QGIS project, project folders and QGIS parameters
+### 1. Start a QGIS project, Settings and Project Folders  
+a. Create new empty folder to store data and your project  
+b. Open a new QGIS project and save to the folder  
+c. Set QGIS project to projection and relative path setting
 
-a. Make Folder location to place file geodatabase. e.g. QField_Main_Project.  
-b. Create and set QGIS project to desired projection. (Default is EPSG: 4326 WGS84).  
-c. Set key parameters like Save Paths = Relative
+### 2. Select and export data Geodatapackage
+a. Select the data you want to use in QField and export it to the Geodatapackage
+b. Add the data to your QGIS project, theme layers and save to the QField Project folder
 
+### 3. Adding imagery
+a. Offline Imagery: It is reccomended that when using offilne imagery to only use small image areas. Images like GEOTIFF or Geo JPEG can be used or MBtiles layer can be created to tile web imagery into an offline Spatiallite dataformats. The following example shows how to create image tiles of online imagery with a min zoom of 3 and max of 18. If you go above 18 it will likely create a huge file size that is not useable.  
+![Add XYZ Tiles](../images/Add_XYZ_Tiles.gif)
 
-### 2. Copy the data you need to the project folder with the QGIS project.  
+b. Online imagery: This can be added as a datasource imagery in your QGIS project and will load in QField if your field device has data/WIFI availability. The benefits of this method means that large imagery datasets do not have to be added to the device using much less data space.  See web mapping and other remote data section for adding online imagery.  
 
-### 3. Add copied data to your project folder. (Geodatapackage, Shapefile)
+### 4. Create data features for capturing data in the field.
+e.g. Field_Points, Field_Lines, Field_Polygons  
+Layer -> Create Layer -> New Geodatapackage Layer
 
-### 4. Theme Data in QGIS project
+### 5. Controlling Data entry.   
+### Data entry in QField can be controlled and managed in QGIS Layer Properties.
+a. Relation Reference: Creates a relation reference to a table and values can be added or deleted from the reference table.  
+b. Value Relation: Values to control data entry are based on a related table within the QGIS Project.  
+c. Attachment: Attachments can be tagged to a field such as PDF or photos.  
+d. Value Map: Values are set based on a value table developed in QGIS.  
+e. Constraints: Data entry is constrained to the values that have to be entered. Ranges or not null.  
+f: Default Values: If a feature is created in QField a default value will be entered.  e.g. Forced date entry
 
-### 5. Setting up Imagery
-
-- Online imagery: This can be added as a datasource imagery in your QGIS project and will load in QField if your field device has data/WIFI availability. The benefits of this method means that large imagery datasets do not have to be added to the device using much less data space.  
-- Offline Imagery: It is reccomended that when using offilne imagery to only use small image areas. Images like GEOTIFF or Geo JPEG can be used or MBtiles layer can be created to tile web imagery into an offline Spatiallite dataformats. The following example shows how to create image tiles of online imagery with a min zoom of 3 and max of 18. If you go above 18 it will likely create a huge file size that is not useable.  
-
-![QField XYZ Tiles](../images/Gen_XYZ_Tiles.gif)
-
-### 6. Create data features for capturing data in the field with QField
+An example of setting up data controls for 1 layer in QGIS. (Valuemap,Constraints, Attachment)
+![QField Control Data](../images/Qfield_Control_Data_Entry.gif)
 
 ### 7. Set up data features to capture photos linked to collected data
 
+Two methods can be set up to capture photos in QField
+1. One photo for each feature collected in the field. One to One
+- Add a (String) field to layer that photo will be attach to. e.g. Photo
+- Set Widget Type for field to "Attachment" and Path to "Relative Paths"
+- Under Actions add an item to the Action List. Type = Open and Action = [%"Photo"%]
+![QField Picture One to One](../images/Qfield_Picture_One_To_One.gif)
+
+2. Many Photos for each feature collected in the field. One to Many
+- Add a (String) field to layer that photo will be related to. e.g. Photo_Link
+- Create a seperate reference table with fields (Point Picture_ID = String) and (Photo_Path = String, Widget Type = Attachement and Path Relative)
+- Create a Data relation between the feature layer and relate photo table. Create Relation Between UUID field in layer and Point Picture_ID in table.  
+https://qfield.org/docs/prepare/add-1-n-pictures.html
+
 ### 8. QField Sync and prepare data for QField  
+
+When you feel your QGIS project has all the data , theme, property controls and imagery added, you can now export it to a QField package.
+- Make an empty folder which to export the QFIELD package. e.g. QField_Project_Out
+- Start the QField sync plugin and configure current project. Select which data you want for offline editing, data you just want to copy to QField or remove data to not be added to the QField project. 
+![QField_Configure_Project](../images/QField_Configure_Project.gif) 
+- Next in the Qsync Plugin. Package for QField and Export the project. If you open the exported .qgs file it will have (offline) in the name header as well as the data layers set to offline. Your project can now be transfered to your android device.
+![QField_Configure_Project](../images/QField_Package_Project.gif) 
 
 # Using QField on your Mobile device
 
-### 1. Add QField package to your device
-
-### 2. Load QField App on your device
+### 1. Add QField package and app to your device
+- QField app can be added to your device from the Google play store and hopefully the Apple store in the future.
+- Copy the exported folder to a location on your device you are familiar with and can access.
+![QField_Open_Project](../images/QField_Open_Project.gif)
 
 ### 3. The QField App interface
+Upper Left (Three Dashes) Map Legend
+- Highlight Layer and hold to access. Show on map layer, Zoom to extent, Show feature List and start tracking.
+-For Tracking. Set interval you want data collected. Enter attributes for new feature, then start walking. When done walking go back to feature and stop tracking. Feature Collected!
+- Start Editing Pencil. which will allow editing of the highlighted layer. Notice the Green add button in lower right when you switch to editing. The green button allows you to add features
+![QField_Legend_Functionality](../images/QField_Legend_Functionality.gif)
+
+Lower right and Middle right buttons. 
+- Zoom in + and Zoom out -
+- Zoom to current GPS location
+- Lock or unlock cursor to GPS position
+- Green add feature. Button will only go green if feature is offline editable. Highlight feature in legend. Find on map or zoom to GPS location, then use Green add button to add feature and attributes.
+![QField_Edit_Add_Data](../images/QField_Edit_Add_Data.gif)
+
+Click on Map features to look at attribute tables.
+- All features at that point will open a table window
+- Left and right Arrow through records
+- A (Pencil) edits attributes
+- Line (Pencil) edits geometry
+![QField_Search_Features](../images/QField_Search_Features.gif)
+
+Upper Right Search button.
+- The search Button in the upper right can be used to query all the layers for a Specific names or attributes
+-The example searches for a creek of a specific name, then select and zoom to it.
+
+![QField_Search_Data](../images/QField_Search_Data.gif)
+
+Digitizing and data creation/editing
+https://qfield.org/docs/fieldwork/digitize.html
 
 # Getting Data from QField project and back into the original data source.
-
+- Copy the data package folder from the device to a new empty folder. e.g. QField_Project_in
+- Then using the original .qgs project use QField plugin-> Syncronize from QField
+- All data from the field will be copied into the original data source.
+![QField_Syncronize](../images/QField_Syncronize.gif)
 
 ### License
     Copyright 2019 BC Provincial Government
