@@ -18,7 +18,7 @@ Link to sample markdown or Jupyter Notebooks
 * [GeoBC_DSS_AGO_Group_Creation_Updated](GeoBC_DSS_AGO_Group_Creation_Updated.md)
 
 -->
-* [GeoBC_DSS_AGO_Group_Creation_Updated](GeoBC_DSS_AGO_Group_Creation_Updated.ipynb)  
+* [GeoBC Example for AGO Group Creation](GeoBC_DSS_AGO_Group_Creation_Updated.ipynb)  
 * 
 ### License
     Copyright 2019 BC Provincial Government
