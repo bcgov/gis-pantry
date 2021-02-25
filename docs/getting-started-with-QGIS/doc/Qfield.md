@@ -120,7 +120,7 @@ e. Constraints: Data entry is constrained to the values that have to be entered.
 f: Default Values: If a feature is created in QField a default value will be entered. e.g. Force a date entry when new feature created.  
 
 An example of setting up data controls for 1 layer in QGIS. (Valuemap, Constraints, Attachment)  
-![QField Control Data_Entry](../images/Qfield_Control_Data_Entry.gif)  
+![QField Control Data_Entry](../images/QField_Control_Data_Entry.gif)  
 
 ### Set up data layers to capture photos linked to collected data
 
@@ -129,7 +129,7 @@ Two methods can be set up to capture photos in QField
 - Add a (String) field to layer that photo will be attach to. e.g. Photo
 - Set Widget Type for field to "Attachment" and Path to "Relative Paths"
 - Under Actions add an item to the Action List. Type = Open and Action = [%"Photo"%]  
-![QField_Picture_One_to_One](../images/Qfield_Picture_One_To_One.gif)  
+![QField_Picture_One_to_One](../images/QField_Picture_One_To_One.gif)  
 
 2. Many Photos for each feature collected in the field. One to Many
 - Add a (String) field to layer that photo will be related to. e.g. Photo_Link
