@@ -1,4 +1,4 @@
-#  Multi-user editing in QGIS
+#  Multi-user editing in QGIS:
 #  Using PostGIS and the Versioning Plugin
 
 ## Index
@@ -20,12 +20,12 @@
 ## What is PostgreSQL / PostGIS and why do you need it?
 PostgreSQL (pronounced "postgres" by these authors) is an open source object-relational database system that came out of the University of California, Berkeley in the 1980's (https://www.postgresql.org/about/).
 
-PostGIS is an add on for PostgreSQL that spatially enables the database (https://postgis.net/). Think of it as a Github for your spatial data.
+PostGIS is an add-on for PostgreSQL that spatially enables the database (https://postgis.net/). Think of it as almost a Github for your spatial data.
 
 
 ## What is the Versioning Plugin
 
-Our team has dived into using PostGIS on the recommendation from our architecture specialists as an open-source solution to allow for multiple users to access, edit, and save changes concurently without the risk of locked datasets and lost changes. A plugin has been developed for QGIS by Oslandia for versioning PostGIS databases (https://github.com/Oslandia/qgis-versioning). (Our architecture specialists are busy setting up our database and testing is commencing now, so this project is still in it's infancy).  
+Our team has dived into using PostGIS on the recommendation from our architecture specialists as an open-source solution to allow for multiple users to access, edit, and save changes concurently without the risk of locked datasets and lost changes. A plugin has been developed for QGIS by Oslandia for versioning PostGIS databases (https://github.com/Oslandia/qgis-versioning). *(Our architecture specialists are busy setting up our database and testing is commencing now, so this project is still in it's infancy)*.  
 
 These are some extra links to browse through for those interested in learning more about PostGIS and the Versioning plugin:
   * https://oslandia.com/en/2013/07/13/qgis-versioning-plugin/
@@ -35,7 +35,7 @@ These are some extra links to browse through for those interested in learning mo
   * https://readthedocs.org/projects/qgis-versioning/downloads/pdf/latest/
  
 
-See our documentation on plugins for more information: https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/plugins.md
+See our documentation on plugins for more information too: https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/plugins.md
 
 ## Installing the Versioning Plugin
 How to load the Versioining Plugin into QGIS:
@@ -111,4 +111,5 @@ Branching is an option in the Versioning process where a branch can be made of t
 ![](../images/PostGISViewCommits.gif)
 
 
-![](../images/)
+---
+[Back to top](#Multi-user-editing-in-QGIS:)
