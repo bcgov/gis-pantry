@@ -171,7 +171,7 @@ When you feel your QGIS project has all the data , theme, property controls and 
    - To turn off editing just toggle the browse mode button beside the pencil.  
 ![QField_Legend_Functionality](../images/QField_Legend_Functionality.gif)  
 
-Lower right and Middle right buttons. 
+#### Lower right and Middle right buttons. 
 - Zoom in + and - Zoom out.  
 - Zoom to current GPS location (Circle with solid dot).  
 - Lock or unlock cursor to GPS position (Circle with Plus sign).  
@@ -179,7 +179,7 @@ Lower right and Middle right buttons.
    - To Edit. Highlight feature in legend. Find on map (Cursor Crosshairs) or zoom to GPS location, then use add button to add feature and attributes.  
 ![QField_Edit_Add_Data](../images/QField_Edit_Add_Data.gif)  
 
-Click on Map features in main window to look at attribute tables.
+#### Click on Map features in main window to look at attribute tables.
 - All features identified at that point will display in pop up window.  
 - Left and Right Arrow through records.  
 - A (Pencil) ewill allow editing of attributes.  
@@ -187,14 +187,14 @@ Click on Map features in main window to look at attribute tables.
 - Geometry will not be editable if specified in initial QGIS set up.  
 ![QField_Search_Features](../images/QField_Search_Features.gif)  
 
-Upper Right Search button.
+#### Upper Right Search button.
 - The search button in the upper right can be used to query all the layers for specific names or attributes.  
 - The example below searches for a creek of a specific name, then selects and zooms to it.  
 - Search ability can be controled in QGIS setup. (Project Properties-> Data Sources)  
 
 ![QField_Search_Data](../images/QField_Search_Data.gif)  
 
-Digitizing and data creation/editing
+#### Digitizing and data creation/editing
 - Please see the following location for more methods for digitizing and modifying data in QField.  
 https://qfield.org/docs/fieldwork/digitize.html
 
