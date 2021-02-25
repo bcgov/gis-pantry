@@ -82,6 +82,8 @@ The **Labelling Toolbar** in ArcGIS *IS LIKE* the **Label Toolbar** in QGIS
 
 ## Menu Bar
 **Menu Bar**
+* See further information on the [Menu Bar and QGIS GUI](https://docs.qgis.org/testing/en/docs/user_manual/introduction/qgis_gui.html#menu-bar) 
+
 * QGIS:
 ![](../images/QGISMenuBar.gif)
 
@@ -106,5 +108,5 @@ The **Labelling Toolbar** in ArcGIS *IS LIKE* the **Label Toolbar** in QGIS
 # Additional Resources:
 * 27 Differences Between ArcGIS and QGIS: https://gisgeography.com/qgis-arcgis-differences/
 
-
+[Back to top](#ArcGIS-to-QGIS-Cross-Reference-Glossary)
 
