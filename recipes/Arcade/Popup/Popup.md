@@ -3,7 +3,7 @@ Sample Arcade expressions that show how to do modified popups in AGOL
 
 
 ## Examples
-* [HTML Popup Customization](../Popup.md)
+* [HTML Popup Customization](HTML Popup Customization.md)
 
 
 
