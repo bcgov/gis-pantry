@@ -72,14 +72,14 @@ Where you can set your default import and export directories
 
 ### Package For QField
 
-1. Select export directory
-2. Select Extent by zooming in view window the area of data you would like to export to QField.
-![QField Configure](../images/QField_Package.JPG)
+1. Select export directory.  
+2. Select Extent by zooming in view window the area of data you would like to export to QField.  
+![QField Configure](../images/QField_Package.JPG)  
 
 ### Syncronize from QField
-1. Open the Original QGIS project then select folder where import data from the field was placed. 
+1. Open the Original QGIS project then select folder where import data from the field was placed.  
 2. Then Syncronize QGIS data, which will update source QGIS data with data collected from QField.  
-![QField Syncronize](../images/QField_Syncronize.JPG)
+![QField Syncronize](../images/QField_Syncronize.JPG)  
 
 
 # Making a QGIS project for QField
@@ -120,7 +120,7 @@ e. Constraints: Data entry is constrained to the values that have to be entered.
 f: Default Values: If a feature is created in QField a default value will be entered. e.g. Force a date entry when new feature created.  
 
 An example of setting up data controls for 1 layer in QGIS. (Valuemap, Constraints, Attachment)
-![QField Control Data](../images/Qfield_Control_Data_Entry.gif)
+![QField Control Data_Entry](../images/Qfield_Control_Data_Entry.gif)  
 
 ### Set up data layers to capture photos linked to collected data
 
@@ -129,7 +129,7 @@ Two methods can be set up to capture photos in QField
 - Add a (String) field to layer that photo will be attach to. e.g. Photo
 - Set Widget Type for field to "Attachment" and Path to "Relative Paths"
 - Under Actions add an item to the Action List. Type = Open and Action = [%"Photo"%]
-![QField Picture One to One](../images/Qfield_Picture_One_To_One.gif)
+![QField_Picture_One_to_One](../images/Qfield_Picture_One_To_One.gif)  
 
 2. Many Photos for each feature collected in the field. One to Many
 - Add a (String) field to layer that photo will be related to. e.g. Photo_Link
