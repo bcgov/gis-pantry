@@ -22,7 +22,7 @@ This is a set of documents to help experienced GIS users with best practices, ti
 15. [Raster calculator](./doc/raster-calculator.md)
 16. [Advanced processing and plugin devlopement](./doc/advanced-processing.md)
 17. [Multi-user editing using PostGIS](./doc/multi-user-editing.md)
-18. [QGIS and mobile field application QField](./doc/QField.md)
+18. [QGIS and mobile field application QField](./doc/Qfield.md)
 
 
 
