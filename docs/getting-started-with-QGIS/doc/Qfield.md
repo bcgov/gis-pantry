@@ -100,7 +100,7 @@ Where you can set your default import and export directories
 ### Adding imagery
 a. Offline Imagery: It is reccomended that when using offilne imagery to only use small image areas. Images like GEOTIFF or Geo JPEG can be used or MBtiles layer can be created to tile web imagery into an offline Spatial lite data format. The following example shows how to create image tiles of online imagery with a min zoom of 3 and max of 18. If you go above 18 it will likely create a huge file size that is not useable on your device.  
 MBTiles creation for offline imagery
-![QField MBTiles](../images/QField_MBtiles.jpg)
+![QField_MBtiles](../images/QField_MBtiles.JPG)
 
 b. Online imagery: This can be added as datasource imagery in your QGIS project and will load in QField if your field device has data/WIFI availability. The benefits of this method means that large imagery datasets do not have to be added to the device using much less data space.  See web mapping and other remote data section for adding online imagery to a QGIS project.    
 ![Add XYZ Tiles](../images/Add_XYZ_Tiles.gif)
@@ -108,7 +108,7 @@ b. Online imagery: This can be added as datasource imagery in your QGIS project 
 ### Create layers for capturing data in the field.
 e.g. Field_Points, Field_Lines, Field_Polygons  
 Layer -> Create Layer -> New Geodatapackage Layer
-![QField NewGeodatapackage](../images/QField_NewGeodatapackage.jpg)
+![QField_NewGeodatapackage](../images/QField_NewGeodatapackage.JPG)
 
 ### Controlling Data entry.   
 #### Data entry in QField can be controlled and managed in QGIS Layer Properties.
@@ -169,30 +169,30 @@ When you feel your QGIS project has all the data , theme, property controls and 
    - This will initiate the layer that was highlighted to go into editing mode. Notice the Green add button in lower right when you switch to editing. The green button allows you to add features.  
 - Browse Mode (Paper Button Beside Pencil)
    - To turn off editing just toggle the browse mode button beside the pencil.  
-![QField_Legend_Functionality](../images/QField_Legend_Functionality.gif)
+![QField_Legend_Functionality](../images/QField_Legend_Functionality.gif)  
 
 Lower right and Middle right buttons. 
-- Zoom in + and - Zoom out.
-- Zoom to current GPS location (Circle with solid dot)
-- Lock or unlock cursor to GPS position (Circle with Plus sign)
-- Add feature. (Circle with Plus on bottom) Button will be Green sometimes and other times Grey.
+- Zoom in + and - Zoom out.  
+- Zoom to current GPS location (Circle with solid dot).  
+- Lock or unlock cursor to GPS position (Circle with Plus sign).  
+- Add feature. (Circle with Plus on bottom) Button will be Green sometimes and other times Grey.  
    - To Edit. Highlight feature in legend. Find on map (Cursor Crosshairs) or zoom to GPS location, then use add button to add feature and attributes.  
-![QField_Edit_Add_Data](../images/QField_Edit_Add_Data.gif)
+![QField_Edit_Add_Data](../images/QField_Edit_Add_Data.gif)  
 
 Click on Map features in main window to look at attribute tables.
 - All features identified at that point will display in pop up window.  
-- Left and Right Arrow through records
-- A (Pencil) ewill allow editing of attributes
-- Line (Pencil) edits geometry ofthe feature identified
-- Geometry will not be editable if specified in initial QGIS set up.
-![QField_Search_Features](../images/QField_Search_Features.gif)
+- Left and Right Arrow through records.  
+- A (Pencil) ewill allow editing of attributes.  
+- Line (Pencil) edits geometry ofthe feature identified.  
+- Geometry will not be editable if specified in initial QGIS set up.  
+![QField_Search_Features](../images/QField_Search_Features.gif)  
 
 Upper Right Search button.
 - The search button in the upper right can be used to query all the layers for specific names or attributes.  
-- The example below searches for a creek of a specific name, then selects and zooms to it.
+- The example below searches for a creek of a specific name, then selects and zooms to it.  
 - Search ability can be controled in QGIS setup. (Project Properties-> Data Sources)  
 
-![QField_Search_Data](../images/QField_Search_Data.gif)
+![QField_Search_Data](../images/QField_Search_Data.gif)  
 
 Digitizing and data creation/editing
 - Please see the following location for more methods for digitizing and modifying data in QField.  
