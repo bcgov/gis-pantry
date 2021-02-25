@@ -18,41 +18,43 @@ This document will discuss the standard tools available from QGIS. Access to pro
 [QGIS Processing Guide]( https://docs.qgis.org/testing/en/docs/training_manual/processing/index.html)
 
 ## Vector Menu
-The Vector menu provides access to many standard tools for interacting with vectors.  This menu is a convenient way to find common vector tools that have been organized into these categories: Geoprocessing, Geometry, Research, Analysis, and Data Management Tools.
-
-**Vector Menu Category | Examples**:
+The Vector menu provides access to many standard tools for interacting with vectors.  This menu is a convenient way to find common vector tools that have been organized into categories: Geoprocessing, Geometry, Research, Analysis, and Data Management Tools.<br>
+Vector Menu Category|Examples:
 
 1. Geoprocessing Tools
-    - Buffer, Clip, Dissolve, Intersection, Union
+    - Buffer, Clip,Intersection, Union
 2. Geometry Tools
-    - Calculate Centroids, Validate Geometry, Extract Vertices, Mulitpart to Singlepart, Simplify, Lines to Polygons
+    - Calculate Centroids, Validate Geometry, Mulitpart to Singlepart
 3. Research Tools
     - Create Grid, Select by Location, Create Random Points, Create Regular Points
 4. Analysis Tools
-    - Mean Coordinates, Nearest Neighbour Analysis, Field Statistics, Count Points in Polygon
+    - Mean Coordinates, Field Statistics, Count points in polygon
 5. Data Management Tools
-    - Merge Layers, Split Layers, Join Attributes by Location, Create Spatial Index, Reproject
+    - Merge Layers, Split Layers, Join attributes by Location
 
 ## Raster Menu
-The Raster menu provides access to many standard tools for interacting with raster data. This menu is a convenient way to access the Raster Calculator, the Align Rasters tool and other common raster tools that have been organized into these categories: Analysis, Projections, Miscellaneous, Extraction, and Conversion. It should be noted that the Raster Calculator accessed in this menu is slightly different than the raster calculator accessed in the Processing Panel ([more on Raster Calculator](raster-calculator.md)).
-
-**Raster Menu Category | Examples**:
+The Raster menu provides access to many standard tools for interacting with raster data. This menu is a convenient way to access Raster Calculator, Align Rasters tool and other common raster tools that have been organized into categories: Analysis, Projections, Miscellaneous, Extraction, and Conversion. It should be noted that the Raster Calculator accessed in this menu is slightly different than the raster calculator accessed in the processing panel ([more on raster calculator](raster-calculator.md)).<br>
+Raster Menu Category|Examples:
 
 1. Analysis
-    - Aspect, Slope, Hillshade, Proximity, Sieve
+    - Aspect, Slope, Hillshade
 2. Projections
-    - Assign Projection, Extract Projection, Warp (Reproject)
+    - Assign Projection, Extract Projection,Warp(reproject)
 3. Miscellaneous
-    - Merge, Build Virtual Raster, Tile Index, Build Overviews (Pyramids)
+    - Merge, Build Virtual Raster, Tile index
 4. Extraction
-    - Clip Raster, Create contours, Clip Raster By Mask Layer
+    - Clip Raster, Create contours
 5. Conversion
-    - Raster to Vector, Vector to Raster, Translate (Conversion)
+    - Raster to Vector, Vector to Raster, Translate (conversion)
+
+The Vector menu provides access to many standard tools for interacting with vectors.  This menu is a convenient way to find common vector tools that have been organized into these categories: Geoprocessing, Geometry, Research, Analysis, and Data Management Tools.
+
 
 ## Processing Panel
 The Processing Panel can be activated by using the Processing menu and clicking “Toolbox” or pressing **<ctr+Alt+T>**. This will start the processing toolbox panel. The contents can be searched using the Search dialog or by browsing the processing providers by category. 
 
 ![Processing Toolbox](../images/processing-toolbox.png)
+
 
 The QGIS Processing tools all follow a common layout that contains a Parameters tab and Log tab on the left and a collapsible information dialog screen on the right. Input data layers can be selected from a drop down of suitable existing map layers drawn from the table of contents or selected from a file using the ![select-file-icon](../images/select-file-icon.png) select file dialog. If the tool produces output datasets, the same dialog button can be clicked in the output section to designate an output. 
 
