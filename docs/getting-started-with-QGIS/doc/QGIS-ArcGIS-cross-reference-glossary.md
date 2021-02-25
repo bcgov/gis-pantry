@@ -1,4 +1,4 @@
-# QGIS/ArcGIS Cross Reference Glossary
+# ArcGIS to QGIS Cross Reference Glossary
 This cross reference glossary has been created as a way for users to quickly reference the difference between commonly used tools in both QGIS and ArcGIS. It is intended to help the user transition from ArcGIS to QGIS or vice versa.
 
 # Index
@@ -82,6 +82,7 @@ The **Labelling Toolbar** in ArcGIS *IS LIKE* the **Label Toolbar** in QGIS
 
 ## Menu Bar
 **Menu Bar**
+* See further information on the [Menu Bar and QGIS GUI](https://docs.qgis.org/testing/en/docs/user_manual/introduction/qgis_gui.html#menu-bar) 
 * QGIS:
 ![](../images/QGISMenuBar.gif)
 
@@ -107,4 +108,5 @@ The **Labelling Toolbar** in ArcGIS *IS LIKE* the **Label Toolbar** in QGIS
 * 27 Differences Between ArcGIS and QGIS: https://gisgeography.com/qgis-arcgis-differences/
 
 
-
+---
+[Back to top](#ArcGIS-to-QGIS-Cross-Reference-Glossary)
