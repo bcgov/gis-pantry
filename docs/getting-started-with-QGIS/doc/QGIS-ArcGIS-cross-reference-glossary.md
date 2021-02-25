@@ -104,6 +104,7 @@ The **Labelling Toolbar** in ArcGIS *IS LIKE* the **Label Toolbar** in QGIS
 
 ![](../images/LayersPanel.gif)
 
+
 # Additional Resources:
 * 27 Differences Between ArcGIS and QGIS: https://gisgeography.com/qgis-arcgis-differences/
 
