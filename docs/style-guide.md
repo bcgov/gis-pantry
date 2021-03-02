@@ -17,7 +17,7 @@ If there is a lot of information for a topic break it the topic down into smalle
 ## Image use
 The largest images should be 900x650 and used when building animated gifs showing workflow and annotating software components.
 
-## Gif Progress Bar
+## GIF Progress Bar
 When recording GIFs in Screen To GIF, please add a progress bar to make it easier to tell where the beginning and end are. 
 To do this, in the editing window, go to the image tab and select "Progress" from the ribbon.
 For consistency, use a 16pt bar in HEX: #589632 (Dark Green)
