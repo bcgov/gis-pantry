@@ -14,6 +14,7 @@ Index
 * [Create New Vector Layers](#create-new-vector-layers)
 * [Select by location](#select-by-location)
 * [Create grids and samples](#create-grids-and-samples)
+* [Joining Data](#joining-data)
 
 
 
@@ -75,7 +76,7 @@ SDO_ANYINTERACT (GEOMETRY,
 	)
 ) = 'TRUE'
 ```
->A handy tip for getting the extent of your analysis area - on the right, beside the coordinate box at the bottom of the QGIS window is a button that toggles the coordinate box between mouse coordinate location and map extent.  Toggle on the extent and click in the coordinates, cntrl-A, cntrl-C and paste it into your sql statement above.
+>A handy tip for getting the extent of your analysis area - on the right, beside the coordinate box at the bottom of the QGIS window is a button that toggles the coordinate box between mouse coordinate location and map extent.  Toggle on the extent and click in the coordinates, ctrl-A, ctrl-C and paste it into your sql statement above.
 ![Toggle map extent coordinates](../images/get_map_extent.gif "Get map extent")
 
 ## Create New Vector Layers
