@@ -2,7 +2,7 @@
 #  Using PostGIS and the Versioning Plugin
 
 ## Index
-* [home](../readme.md)
+* [home](../README.md)
 * [QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
 * [What is PostgreSQL](#What-is-PostgreSQL-/-PostGIS-and-why-do-you-need-it?)
 * [What is the Versioning Plugin](#What-is-the-Versioning-Plugin)
