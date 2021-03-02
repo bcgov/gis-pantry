@@ -21,11 +21,11 @@ This can be accessed via Print -> Layout Manager. Select Empty layout (or naviga
   
 To choose the appropriate page size and orientation right-click on the central part of the layout and click Page Properties. These page properties can be set in the Item Properties tab seen on the right of the window.
 
-![page_size](..images/page_size.gif)
+![page_size](../images/page_size.gif)
 
 To add a map to the layout use Add Item - > Add Map and click and drag a box on the layout page. From the Add Item menu a title can also be added using Add Label. The item properties such as font, colour and size can be set in the Item Properties tab on the right of the window.
 
-![add_map](..images/add_map.gif)
+![add_map](../images/add_map.gif)
 
 ## Map Elements
 		
