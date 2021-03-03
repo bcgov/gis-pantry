@@ -14,7 +14,8 @@ Index
 * [Create New Vector Layers](#create-new-vector-layers)
 * [Select by location](#select-by-location)
 * [Create grids and samples](#create-grids-and-samples)
-* [Joining Data](#joining-data)
+* [Joining Data by Attributes](#joining-data-by-attributes)
+* [Joining Data by Location](#joining-data-by-location)
 
 
 
@@ -93,7 +94,7 @@ Select by location tool isn't found with the other selction tools. You can find 
 You can find grid and sample creation tools in the Vector menu under Research Tools.
 ![Create Grid](../images/create_grid.gif "Create Grid ...")
 
-## Joining Data
+## Joining Data by Attributes
 [QGIS DOCS](https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/vector_properties.html#joins-properties)  
 QGIS allows joining data by a common field. The join field dialog is accessed through the layer properties under Joins. To add a join from this dialog click the ![Add Join Button](../images/joins_add_button.png "Add New Join Button" ) This will launch the Add Vector Join dialog where you can define your join with the properties:<br>
 1.  Join Layer - the layer or table to join to the current layer
@@ -107,3 +108,16 @@ Additional joins can be added from other layers/tables and joins can be edited w
 
 Example of creating a join:<br>
 ![Creat Join](../images/joins_adding_new.gif "Wowza")
+
+## Joining Data by Attributes
+QGIS allows spatial joins using the **Join Attributes by Location** tool. The tool is accessed through Vector->Data Management Tools->Join Attributes by Location. You can set the properties below for the join:
+1. Input Layer - The layer that the join layer will be joined to
+2. Join Layer - The layer to join to the input layer
+3. Geometric predicate - The spatial relationship(s) the tool creates the join on
+4. Fields to add - Select the fields you want to join to the input layer (default is all fields)
+5. Joined field prefix - Adds a prefix to joined fields (optional)
+
+The tool outputs a new file. 
+
+Example of creating a spatial join:<br>
+![spatialJoin](../images/spatialJoin.gif "Bowser")
