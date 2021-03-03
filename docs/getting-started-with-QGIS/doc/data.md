@@ -109,7 +109,7 @@ Additional joins can be added from other layers/tables and joins can be edited w
 Example of creating a join:<br>
 ![Creat Join](../images/joins_adding_new.gif "Wowza")
 
-## Joining Data by Attributes
+## Joining Data by Location
 QGIS allows spatial joins using the **Join Attributes by Location** tool. The tool is accessed through Vector->Data Management Tools->Join Attributes by Location. You can set the properties below for the join:
 1. Input Layer - The layer that the join layer will be joined to
 2. Join Layer - The layer to join to the input layer
