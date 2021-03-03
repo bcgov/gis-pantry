@@ -115,7 +115,8 @@ QGIS allows spatial joins using the **Join Attributes by Location** tool. The to
 2. Join Layer - The layer to join to the input layer
 3. Geometric predicate - The spatial relationship(s) the tool creates the join on
 4. Fields to add - Select the fields you want to join to the input layer (default is all fields)
-5. Joined field prefix - Adds a prefix to joined fields (optional)
+5. Join Type - Choose whether you require a one-to-many join or one-to-one join
+6. Joined field prefix - Adds a prefix to joined fields (optional)
 
 The tool outputs a new file. 
 
