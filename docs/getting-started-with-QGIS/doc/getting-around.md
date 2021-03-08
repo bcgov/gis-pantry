@@ -13,6 +13,6 @@ This is the overview of the QGIS GUI.  [Link](https://docs.qgis.org/testing/en/d
 
 ---
 ## Locator Widget
-The Locator widget can be used to quickly access everything in QGIS from layers to processing algorithms.
+The Locator widget (Lower left of the QGIS window) can be used to quickly access everything in QGIS from layers to processing algorithms.
 
 ![Locator Widget](../images/locator.gif)
