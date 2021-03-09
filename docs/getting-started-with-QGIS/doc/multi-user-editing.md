@@ -99,14 +99,14 @@ Stay tuned for more info and examples of branching.
 ![](../images/PostGISBranch.gif)
 
 ## Committing edits to the master
-1. Click the update button on the verisoning toolbar to ensure your version is up to date with the master
+1. Click the update button on the verisoning toolbar to ensure your version is up to date with the master.
 2. When you are ready to commit your edits to the master, click the commit button and write a commit message in the resulting text box window. Commit messages are saved to the layer's history and help to track the reason for the edits being made.
 
 
 ![](../images/PostGISCommit.gif)
 
 ## View historical changes and reverting.
-1. Select the group you want to see the history of
+1. Select the group you want to see the history of.
 2. Click the eyeball (view) button and a table will pop up showing all previous commits to the layers in the group.
 3. The table will also include information about braches and commits made to those branches.
 ![](../images/PostGISViewCommits.gif)
@@ -119,9 +119,9 @@ Stay tuned for more info and examples of branching.
 1. Install plugin error. You might get an error preventing you from installing the Versioning plugin.
 ![](../images/Install_Error.gif)
       ### Solution: 
-      Use compatiable version of QGIS (It seems that 3.10 is the problematic version to avoid)
+      Use compatiable version of QGIS (It seems that 3.10 is the problematic version to avoid).
 
-2. Historize error. If you get this error when trying to historize an unversioned schema..
+2. Historize error. If you get this error when trying to historize an unversioned schema;
 ![](../images/SQL_Error.gif)
 
       ### Solution: 
@@ -131,7 +131,7 @@ Stay tuned for more info and examples of branching.
       To this:
       <pre><code>SELECT array_agg(pg_get_expr(adef.adbin, adef.adrelid))</pre></code>
 
-3. PKEY Error. If you get this error when trying to historize an unversioned schema...
+3. PKEY Error. If you get this error when trying to historize an unversioned schema;
 ![](../images/PKEY_Error.gif)
 
       ### Solution: 
