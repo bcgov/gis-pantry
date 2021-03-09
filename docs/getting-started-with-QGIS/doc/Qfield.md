@@ -149,7 +149,8 @@ When you feel your QGIS project has all the data , theme, property controls and 
 # Using QField on your Mobile device
 
 ### Add QField package and app to your device
-- QField app can be added to your device from the Google play store and hopefully the Apple store in the future.
+- QField app can be added to your device from the Google play store and hopefully the Apple store in the future. 
+- https://play.google.com/store/apps/details?id=ch.opengis.qfield&utm_source=qgis.org  
 - Copy the exported folder to a location on your device you are familiar with and which you can can access.  
 ![QField_Open_Project](../images/QField_Open_Project.gif)
 

@@ -14,6 +14,7 @@ Index
 * [Create New Vector Layers](#create-new-vector-layers)
 * [Select by location](#select-by-location)
 * [Create grids and samples](#create-grids-and-samples)
+* [Joining Data](#joining-data)
 
 
 
@@ -46,7 +47,7 @@ Find your new connection and expand the contents so you can choose the table you
 ## Adding Oracle Data via DB Manager
 Once you have established your oracle connection you can start DB Manager from the Database menu.  Select and connect to your Oracle database from the ![Oracle](../images/oracle-browser-icon.PNG) provider section. When you are connected you can expand the table list and right-click and choose *Add to project...*
 
->**Some of bcgov oracle datasets perform poorly in QGIS**.  These seem to be those with both many records and large geometry objects.  Some examples are digital road atlas, parcel fabric, and forest vegetation polygons. **To avoid having to wait 15 hours for QGIS to unfreeze try creating a virtual SQL layer using DB Manager and a bounding box or other refining query** [QGIS Link](https://docs.qgis.org/testing/en/docs/user_manual/plugins/core_plugins/plugins_db_manager.html).
+ [QGIS Documentation](https://docs.qgis.org/testing/en/docs/user_manual/plugins/core_plugins/plugins_db_manager.html).
 
 To make an SQL layer from your oracle connection connect to your Oracle connnection as above, then click the ![SQL ICON](../images/db-manager-sql-window-icon.png) to edit your SQL.  Using a bounding box method shown below is one way to reduce the number of records and geometries and will significantly improve your oracle experience with QGIS.
 
@@ -75,7 +76,7 @@ SDO_ANYINTERACT (GEOMETRY,
 	)
 ) = 'TRUE'
 ```
->A handy tip for getting the extent of your analysis area - on the right, beside the coordinate box at the bottom of the QGIS window is a button that toggles the coordinate box between mouse coordinate location and map extent.  Toggle on the extent and click in the coordinates, cntrl-A, cntrl-C and paste it into your sql statement above.
+>A handy tip for getting the extent of your analysis area - on the right, beside the coordinate box at the bottom of the QGIS window is a button that toggles the coordinate box between mouse coordinate location and map extent.  Toggle on the extent and click in the coordinates, ctrl-A, ctrl-C and paste it into your sql statement above.
 ![Toggle map extent coordinates](../images/get_map_extent.gif "Get map extent")
 
 ## Create New Vector Layers
@@ -92,3 +93,17 @@ Select by location tool isn't found with the other selction tools. You can find 
 You can find grid and sample creation tools in the Vector menu under Research Tools.
 ![Create Grid](../images/create_grid.gif "Create Grid ...")
 
+## Joining Data
+[QGIS DOCS](https://docs.qgis.org/testing/en/docs/user_manual/working_with_vector/vector_properties.html#joins-properties)  
+QGIS allows joining data by a common field. The join field dialog is accessed through the layer properties under Joins. To add a join from this dialog click the ![Add Join Button](../images/joins_add_button.png "Add New Join Button" ) This will launch the Add Vector Join dialog where you can define your join with the properties:<br>
+1.  Join Layer - the layer or table to join to the current layer
+2.  Join Field - the join field from the layer or table defined in (1)
+3.  Target Field - the field from your source layer to which the attributes from (2) will be joined
+4. Toggle to cache the joined table in memory without geometry to speed up attribute lookups
+5. Toggle joined field to only join a select number of fields from a table
+6. Change the prefix for the joined fields
+
+Additional joins can be added from other layers/tables and joins can be edited with the edit button ![Edit Join Button](../images/joins_edit.png) or removed using the remove button ![Remove Join Button](../images/joins_remove_button.png)
+
+Example of creating a join:<br>
+![Creat Join](../images/joins_adding_new.gif "Wowza")

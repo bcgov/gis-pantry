@@ -3,7 +3,7 @@
 
 Index
 * [Raster Calculator](#raster-calculator)
-* [Raster Calculator Tool](#raster-menu)
+* [Raster Calculator Tool](#raster-calculator-tool)
 * [Examples](#examples)
 
 [Read the QGIS Docs](https://docs.qgis.org/testing/en/docs/user_manual/working_with_raster/raster_analysis.html)<br>

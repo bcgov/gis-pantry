@@ -14,6 +14,9 @@
 * [Moving and adding vertices](#Moving-and-adding-vertices)
 * [Snapping](#Snapping)
 * [Topological editing](#Topological-editing)
+* [Tracing](#tracing)
+* [Reshaping](#reshaping)
+* [Edit in place](#edit-features-in-place)
 
 ## Creating new features
 1. Enable editing on the desired layer
@@ -48,3 +51,15 @@ Topological editing allows you to easily maintain connections between nodes and 
 It can be enabled in the snapping toolbar.
 ![](../images/Topological_Editing.gif)
 
+## Tracing
+Tracing allows you to trace your feature against an active layer,all layers, or a custom selection of layers. Tracing also allows you to specify an offset should that be required.
+![Trace-o-ramma](../images/editing-tracing.gif)<br>
+
+## Reshaping
+Reshaping allows you to change the shape of an selected existing feature. With the desired feature selected and the reshape tool enabled start your reshape change on the same side of the feature you wish to finish. First digitize your reshape line before using right-click to finish.<br>
+![Reshape Magic](../images/editing-reshape.gif)
+
+## Edit features in-place
+Some prcessing tools can be used to edit features inplace. These processing tools can be run against all features or selected features in a layer with editing toggled on. Some of the tools that support this are: Buffer, Fix Geometries, Force right-hand-rule, Multipart to singleparts, Simplify, Smooth, Clip, Difference, Delete-holes, and others.<br>
+
+![Edit features in-place](../images/editing-inplace.gif)
