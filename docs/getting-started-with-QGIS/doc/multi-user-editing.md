@@ -111,10 +111,6 @@ Stay tuned for more info and examples of branching.
 3. The table will also include information about braches and commits made to those branches.
 ![](../images/PostGISViewCommits.gif)
 
-
-
-
-
 ## Troubleshooting
 1. Install plugin error. You might get an error preventing you from installing the Versioning plugin.
 ![](../images/Install_Error.gif)
@@ -138,3 +134,4 @@ Stay tuned for more info and examples of branching.
       Make sure to name layers in all lower case.
 ---
 [Back to top](#Multi-user-editing-in-QGIS:)
+
