@@ -2,7 +2,7 @@
 #  Using PostGIS and the Versioning Plugin
 
 ## Index
-* [home](../readme.md)
+* [home](../README.md)
 * [QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
 * [What is PostgreSQL](#What-is-PostgreSQL-/-PostGIS-and-why-do-you-need-it?)
 * [What is the Versioning Plugin](#What-is-the-Versioning-Plugin)
@@ -92,24 +92,49 @@ To tell if a table is already historized, open the attribute table and note if t
 ![](../images/PostGISEdits.gif)
 
 ## Branching
-Branching is an option in the Versioning process where a branch can be made of the schema and edits can be made in there before committing back up to the master, rather than checking out a working version every time edits are required. 
+Branching is an option in the versioning process where a branch can be made of the schema and edits can be made in there before committing back up to the master, rather than checking out a working version every time edits are required. Branches, like the master, allow you to checkout the data to perform edits to the branch.
+
+Stay tuned for more info and examples of branching.
  
 ![](../images/PostGISBranch.gif)
 
 ## Committing edits to the master
-1. Commit button
-2. Conflicts
-3. 
-4. 
+1. Click the update button on the verisoning toolbar to ensure your version is up to date with the master.
+2. When you are ready to commit your edits to the master, click the commit button and write a commit message in the resulting text box window. Commit messages are saved to the layer's history and help to track the reason for the edits being made.
+
 
 ![](../images/PostGISCommit.gif)
 
 ## View historical changes and reverting.
-1. 
-2. 
-3. 
+1. Select the group you want to see the history of.
+2. Click the eyeball (view) button and a table will pop up showing all previous commits to the layers in the group.
+3. The table will also include information about braches and commits made to those branches.
 ![](../images/PostGISViewCommits.gif)
 
 
+
+
+
+## Troubleshooting
+1. Install plugin error. You might get an error preventing you from installing the Versioning plugin.
+![](../images/Install_Error.gif)
+      ### Solution: 
+      Use compatiable version of QGIS (It seems that 3.10 is the problematic version to avoid).
+
+2. Historize error. If you get this error when trying to historize an unversioned schema;
+![](../images/SQL_Error.gif)
+
+      ### Solution: 
+      Go to ...\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\qgis_versioning\versioningDB\sql\historize.sql
+      Change line 20 of the historize.sql file from this:
+      <pre><code>SELECT array_agg(adef.adsrc)</pre></code>
+      To this:
+      <pre><code>SELECT array_agg(pg_get_expr(adef.adbin, adef.adrelid))</pre></code>
+
+3. PKEY Error. If you get this error when trying to historize an unversioned schema;
+![](../images/PKEY_Error.gif)
+
+      ### Solution: 
+      Make sure to name layers in all lower case.
 ---
 [Back to top](#Multi-user-editing-in-QGIS:)
