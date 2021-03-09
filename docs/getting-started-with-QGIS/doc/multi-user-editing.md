@@ -115,9 +115,9 @@ Stay tuned for more info and examples of branching.
 
 
 
-## Common Errors
-1. Install plugin error. If you get an error preventing you from installing the Versioning plugin, try the following
-  
+## Troubleshooting
+1. Install plugin error. You might get an error preventing you from installing the Versioning plugin.
+![](../images/Install_Error.gif)
       ### Solution: 
       Use compatiable version of QGIS (It seems that 3.10 is the problematic version to avoid)
 
