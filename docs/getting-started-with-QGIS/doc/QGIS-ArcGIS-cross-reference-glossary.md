@@ -28,7 +28,7 @@ This cross reference glossary has been created as a way for users to quickly ref
 ## Add-in Manager
 The **Add-in Manager** in ArcGIS *IS LIKE* the **Plugins** in QGIS.
 
- * See [Plugins Documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/plugins.md)
+ * See [Plugins Documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md)
 
 ![](../images/pluginIntro.gif)
 
@@ -43,7 +43,7 @@ The **Animation Toolbar** in ArcGIS *IS LIKE* the **Time Manager Plugin** in QGI
 
 ## ArcToolbox
 **ArcToolbox** in ArcGIS *IS LIKE* the **Processing Toolbox** in QGIS
- * See [Processing Documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/processing.md)
+ * See [Processing Documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-processing-tools.md)
 
 ![](../images/ProcessingToolbox.gif)
 
@@ -57,7 +57,7 @@ The **Animation Toolbar** in ArcGIS *IS LIKE* the **Time Manager Plugin** in QGI
 
 ## Data Driven Pages
 **Data Driven Pages** in ArcGIS *IS LIKE* the **QGIS Atlas** in QGIS
- * See  [QGIS Atlas Documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/atlas.md)
+ * See  [QGIS Atlas Documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-atlas-map-series.md)
  * More reference material: https://www.qgistutorials.com/en/docs/3/automating_map_creation.html
 
 ![](../images/QGISAtlas.gif)
@@ -98,7 +98,7 @@ The **Labelling Toolbar** in ArcGIS *IS LIKE* the **Label Toolbar** in QGIS
 
 ## Symbology Window
 **Symbology Window** in ArcGIS *IS LIKE* the **Layer Styling Panel** and the **Layer Properties and Symbology** in QGIS
- * See [Styling Documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/styling.md)
+ * See [Styling Documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/basic-layer-styling.md)
 
 ## Table of Contents
 **Table of Contents** in ArcGIS *IS LIKE* the **Layers Panel** in QGIS
