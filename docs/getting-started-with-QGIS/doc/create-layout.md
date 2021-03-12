@@ -28,4 +28,7 @@ To add a map to the layout use Add Item - > Add Map and click and drag a box on 
 
 ## Map Elements
 		
+Map elements can be added through the Add Items menu or the buttons along the left side of the layout. Some options include: North Arrow, Scale Bar, Tables, Labels, Shapes and Pictures.
 
+To add a **legend** to the layout also use Add Item -> Legend (or the shortcut button on the left). Click on the layout to place the legend. On the Item Properties tab the legend properties can be set. Legend items can be modified under the Legend Items group. To modify the legend items, uncheck Auto Update and make your changes. Legend items can be deleted, renamed or re-ordered.
+![add_legend](../images/add_legend.gif)
