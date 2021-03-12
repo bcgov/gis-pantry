@@ -69,4 +69,4 @@ If you are more advanced in QGIS and would like to build your own plugins there 
 
 8. With this you are now ready to start using your custom-made plugin within QGIS.
 
-Next: [Processing documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/processing.md)
+Next: [Processing documentation](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-processing-tools.md)
