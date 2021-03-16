@@ -26,7 +26,7 @@
 
 ## What is QFIELD
 
-QField is a mobile application built on QGIS open source software platform. The user makes a mapping project in QGIS then converts it to a QFIELD mobile project. The user can then assess or collect data in the field and then syncronize it back to the master QGIS data sources that the mapping project was created from. The Qfield interface is simple to use as most of the set up is completed in the QGIS project before exporting to a QField project.
+QField is a mobile application built on QGIS open source software platform. The user makes a mapping project (.qgs project) in QGIS then converts it to a QFIELD mobile project. The user can then assess or collect data in the field and then syncronize it back to the master QGIS data sources that the mapping project was created from. The Qfield interface is simple to use as most of the set up is completed in the QGIS project before exporting to a QField project.
 
 Currently Qfield is only built for Android operating systems, though Apple IOS is currently in development.
 
@@ -38,8 +38,8 @@ Currently Qfield is only built for Android operating systems, though Apple IOS i
  1. Create a new QGIS project in a project folder.
  2. Add features from data sources into QGIS and theme appropriately. Data generally should be in project folder to take application offline into the field.
  3. Load the Qsync plugin
- 4. Run the Package for Qfield. Selecting how you want layers to be used as offline or editable. Export the package to a new folder
- 5. Take the new package folder and move it to your mobile device
+ 4. Run Package for Qfield in the Plugin. Selecting how you want layers to be used as offline or editable. Export the package to a new folder
+ 5. Take the new QField package folder and move it to your mobile device
  6. Open Qfield on your tablet and open the .qgs file in the package folder
  7. Collect field work data then copy Qfield package from field device to computer
  8. Syncronize field data back to Master data set that was used to make QField package
@@ -56,13 +56,13 @@ QField is an effective mobile mapping solution, however there are some best prac
 # QField Sync Plugin overview
 
 ### Configure Current Project (QField Sync Project Properties)
-Allows the user to control how data will be used when packaged for QField
+Allows the user to control how data will be used when packaged for QField.  
 Choices include:
 1. Lock Geometry for data copied to Qfield
 2. Action: (Copy) data for use in QField
 3. Action: (Offline Editing) Allow user to edit data in QField
 4. Action: (Remove) Do not Package data for use in QField
-5. Action: (Keep Existent) If data is already in a previous QField package then keep the existing data.
+5. Action: (Keep Existent) If data is already in a previous QField package then keep existing data.  
 ![QField Configure](../images/QField_Configure.JPG)
 6. Base Map. An image basemap can be created from an image layer. **This may require the image to be in the same projection as the data or it may not work.
 7. Offline editing. Only copy features in the Map Area of Interest Window.
@@ -83,7 +83,7 @@ Where you can set your default import and export directories
 
 
 # Making a QGIS project for QField
-### For this example data has been placed in a GeoDataPackage. "new_geodatapackage.gpkg". Data in the project include.
+### For this example data has been placed in a GeoDataPackage. "new_geodatapackage.gpkg". Data in the project includes.
 - Local city data (Property, Street) EPSG:3157 - NAD83(CSRS) / UTM zone 10N - Projected
 - Province of BC Data (Wells or(WLS...), Crown_Polygon, FWA_Streams) EPSG:4326 - WGS 84 - Geographic
 - New Empty Layers to collect field data and will be used for offline editing. (Field_Lines, Field_Polygons, Field_Points)
@@ -158,7 +158,7 @@ When you feel your QGIS project has all the data , theme, property controls and 
 #### Upper Left (Three Dashes) Map Legend
 - Highlight Layer and hold to access new window for layer. 
    - Show on map. (Turns layer on or off)
-   - Zoom to extent. (Zoomes to full extent or layer)
+   - Zoom to extent. (Zoomes to full extent of layer)
    - Show feature list. (Will open data list)
    - Start Tracking. 
       - Set interval you want data collected as you walk
@@ -183,7 +183,7 @@ When you feel your QGIS project has all the data , theme, property controls and 
 #### Click on Map features in main window to look at attribute tables.
 - All features identified at that point will display in pop up window.  
 - Left and Right Arrow through records.  
-- A (Pencil) ewill allow editing of attributes.  
+- A (Pencil) will allow editing of attributes.  
 - Line (Pencil) edits geometry ofthe feature identified.  
 - Geometry will not be editable if specified in initial QGIS set up.  
 ![QField_Search_Features](../images/QField_Search_Features.gif)  
@@ -204,6 +204,13 @@ https://qfield.org/docs/fieldwork/digitize.html
 - Then using the original .qgs project used to make the QField package and syncronize. (QField plugin-> Syncronize from QField).  
 - All data from the field that was changed or added will be copied into the original data source.  
 ![QField_Syncronize](../images/QField_Syncronize.gif)
+
+# The Future
+
+- QFIELD and cloud syncronizing of data. Spring 2021
+https://qfield.cloud/
+
+- Stay tuned for potential IOS development
 
 ### License
     Copyright 2019 BC Provincial Government
