@@ -69,7 +69,7 @@ The processing history dialog will list executed processes with respective param
 
 ![processing-history-graphic](../images/processing-history.png)
 
-Some processing tools can be used in conjunction with layer editing to modify features in place. To use this feature start editing a layer and activate edit in place using the icon ![edit-in-place-icon](../images/processing-edit-in-place-icon.png). This is powerful way of [editing](editing.md) some or all features in a layer without duplicating data. Some examples of useful tools that can be used in this mode are:
+Some processing tools can be used in conjunction with layer editing to modify features in place. To use this feature start editing a layer and activate edit in place using the icon ![edit-in-place-icon](../images/processing-edit-in-place-icon.png). This is powerful way of [editing](editing-data.md) some or all features in a layer without duplicating data. Some examples of useful tools that can be used in this mode are:
 - fix geometries
 - simplify
 - smooth
@@ -77,7 +77,7 @@ Some processing tools can be used in conjunction with layer editing to modify fe
 
 ## Advanced topics
 [Graphical Modeler](graphical-modeler.md)  
-[Processing with python](advanced-processing.md)
+[Processing with python](advanced-automation-with-python.md)
 
 
 ---
