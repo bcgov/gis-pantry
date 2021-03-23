@@ -134,5 +134,5 @@ Stay tuned for more info and examples of branching.
       ### Solution: 
       Make sure to name layers in all lower case.
 ---
-[Back to top](# Multi-user editing in QGIS:)
+[Back to top](#Multi-user-editing-in-QGIS:)
 
