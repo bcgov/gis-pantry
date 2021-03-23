@@ -42,7 +42,8 @@ With the Browser panel open right-click the ![Oracle Icon](../images/oracle-brow
 
 ![New Connection Animation](../images/new_oracle_connection_sm.gif "New Oracle Connection ...")
 
-Find your new connection and expand the contents so you can choose the table you want to add to your map.
+Find your new connection and expand the contents so you can choose the table you want to add to your map.  
+Please note: The Oracle connection can be quite slow sometimes taking a few minutes to display all the data and tables in the system. Be patient.  
 
 ## Adding Oracle Data via DB Manager
 Once you have established your oracle connection you can start DB Manager from the Database menu.  Select and connect to your Oracle database from the ![Oracle](../images/oracle-browser-icon.PNG) provider section. When you are connected you can expand the table list and right-click and choose *Add to project...*
@@ -82,7 +83,12 @@ SDO_ANYINTERACT (GEOMETRY,
 ## Create New Vector Layers
 [QGIS Documentation Link](https://docs.qgis.org/testing/en/docs/user_manual/managing_data_source/create_layers.html#id10)
 
-Be sure to check out:
+Be sure to check out:  
+
+GIS-Pantry Documentation
+* [Scratch and Virtual Layers](Geodatapackage_and_otherformats.md)  
+
+QGIS Documentation  
 * [Temporary Scratch layer](https://docs.qgis.org/testing/en/docs/user_manual/managing_data_source/create_layers.html#id15)
 * [Virtual layers](https://docs.qgis.org/testing/en/docs/user_manual/managing_data_source/create_layers.html#id22)
 

@@ -44,7 +44,7 @@ In QGIS data can be accessed either through local data sources on your computer 
 
 ## Quick Map Services Plugin
 
-   For instructions on how to load Plugins in QGIS please refer to: [Loading Plugins](plugins.md)
+   For instructions on how to load Plugins in QGIS please refer to: [Loading Plugins](QGIS-plugins.md)
    
    QGIS has a helpful plugin called Quick Map Services (QMS) that assists users in finding webservices through pre-defined plugin links. 
 

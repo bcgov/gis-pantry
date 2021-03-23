@@ -35,7 +35,7 @@ These are some extra links to browse through for those interested in learning mo
   * https://readthedocs.org/projects/qgis-versioning/downloads/pdf/latest/
  
 
-See our documentation on plugins for more information too: https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/plugins.md
+See our documentation on plugins for more information too: https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md
 
 ## Installing the Versioning Plugin
 How to load the Versioining Plugin into QGIS:
