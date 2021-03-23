@@ -15,6 +15,7 @@
 * [Branching](#Branching)
 * [Committing edits to the master](#Committing-edits-to-the-master)
 * [View historical changes and reverting](#View-historical-changes-and-reverting)
+* [Troubleshooting](#Troubleshooting)
 
 
 ## What is PostgreSQL / PostGIS and why do you need it?
@@ -133,5 +134,5 @@ Stay tuned for more info and examples of branching.
       ### Solution: 
       Make sure to name layers in all lower case.
 ---
-[Back to top](#Multi-user-editing-in-QGIS:)
+[Back to top](#Using-PostGIS-and-the-Versioning-Plugin)
 

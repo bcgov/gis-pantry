@@ -113,3 +113,5 @@ Additional joins can be added from other layers/tables and joins can be edited w
 
 Example of creating a join:<br>
 ![Creat Join](../images/joins_adding_new.gif "Wowza")
+
+[Back to Top](#Working-with-data-in-QGIS)
