@@ -15,6 +15,7 @@
 * [Branching](#Branching)
 * [Committing edits to the master](#Committing-edits-to-the-master)
 * [View historical changes and reverting](#View-historical-changes-and-reverting)
+* [Troubleshooting](#Troubleshooting)
 
 
 ## What is PostgreSQL / PostGIS and why do you need it?
