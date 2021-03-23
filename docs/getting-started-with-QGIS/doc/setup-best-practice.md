@@ -3,14 +3,16 @@
 [home](../README.md)
 
 ## Set your default CRS to 3005
+
 The default projection QGIS CRS is WGS 84 (4326).  BC Government geographic standard CRS is BC Government Albers (3005). 
 
 Go to Settings -> Options -> CRS
 ![Set QGIS default CRS](../images/set_projection_defaults_sm.gif "Set QGIS default CRS")
 
 ## Set your attribute table to show only Selected records
-Some datasets are very large.  Changing your default settings for your attribute table from "Show all features" to "Show selected features" or "Show features visible on map" will help you avoid waiting a very long time to load all 5.1 million records from a table, for example. 
+Some datasets are very large.  Changing your default settings for your attribute table from "Show all features" to "Show selected features" or "Show features visible on map" will help you avoid waiting a very long time to load all 5.1 million records from a table, for example. If set QGIS will only load the first 1500 records. 
 
+Go to Settings -> Options -> Data Sources -> Attribute Table Behaviour
 ![Set QGIS attribute table behaviour](../images/set_attribute_table_behaviour_sm.gif "Set QGIS attribute table behaviour")
 
 
@@ -33,7 +35,7 @@ To run code in Python console:
 2. Copy code and paste into lower window
 3. Run code will appear in window above
 
-![](../images/Console_XYS_Connections.gif)
+![Set QGIS XYZ console connections](../images/Console_XYS_Connections.gif "Set QGIS XYZ Tile connections")
 
 ---
 [Back to top](#Setup-and-Best-Practice)
