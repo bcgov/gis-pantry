@@ -1,6 +1,6 @@
 ## QGIS Templates
 
-Please download the template file for use (.q ) 
+Please download the template file (.qpt) for use 
 
 The provided templates do not behave analagous to ArcMap templates. 
 
