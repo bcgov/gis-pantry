@@ -227,4 +227,4 @@ https://qfield.cloud/
     See the License for the specific language governing permissions and
     limitations under the License.
     
-[Back to Top] (#Index)
+[Back to Top](#Index)
