@@ -1,5 +1,7 @@
 ## QGIS Templates
 
+Please download the template file for use (.q ) 
+
 The provided templates do not behave analagous to ArcMap templates. 
 
 Map frames and scale bars will not update with addition of your data. 
