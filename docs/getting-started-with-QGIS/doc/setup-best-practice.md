@@ -32,3 +32,5 @@ To run code in Python console.
 
 Console_XYS_Connections
 ![Set QGIS XYZ console connections](../images/Console_XYS_Connections.gif "Set QGIS XYZ Tile connections")
+
+[Back to Top](#Setup-and-Best-Practice)
