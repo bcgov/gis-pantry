@@ -48,3 +48,5 @@ Every great GIS can measure map distance and area. QGIS is no exception!
 The Locator widget (Lower left of the QGIS window) can be used to quickly access everything in QGIS from layers to processing algorithms.
 
 ![Locator Widget](../images/locator.gif)
+
+[Back to Top](#Getting-started-with-QGIS)

@@ -63,3 +63,6 @@ Reshaping allows you to change the shape of an selected existing feature. With t
 Some prcessing tools can be used to edit features inplace. These processing tools can be run against all features or selected features in a layer with editing toggled on. Some of the tools that support this are: Buffer, Fix Geometries, Force right-hand-rule, Multipart to singleparts, Simplify, Smooth, Clip, Difference, Delete-holes, and others.<br>
 
 ![Edit features in-place](../images/editing-inplace.gif)
+
+
+[Back to Top](#Index)
