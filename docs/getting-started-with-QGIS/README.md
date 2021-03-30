@@ -32,6 +32,10 @@ We encourage contributions. Please see our [CONTRIBUTING](https://github.com/bcg
 * Contribute tools and plugins into tools, standalone scripts and modules to scripts, and small snips and script examples to recipes.
 * Please do your best to document your scripts and provide tool documentation 
 
+## Searching Content
+To assist in finding QGIS content quicker. You can use the search function in the upper left of GitHub. With the GIS-Pantry open as the main page enter your search term in the search window, then select In this repository. This will just search for the term in the Current GIS Repository.  
+
+![Search GitHub](./images/Search_GitHub_Repository.gif)
 
 ## License
     Copyright 2019 BC Provincial Government

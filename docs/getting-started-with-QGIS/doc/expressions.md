@@ -26,11 +26,11 @@
 ## Definition Query / Filter
 
 ### Basic queries
-
-* open QGIS and add the [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees)
-* double click the layer in the layer tree to open its properties menu
-* click the **Query Builder** button to open the menu to add a new query
-* enter the following Query:
+Creating a basic definition query on a layer is simple, in this example we will show you how to perform queries on the publicly avaliable [City of Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees):
+1. Open QGIS and add the [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees). To download the layer and add it to a blank project follow the steps in [Working with Data in QGIS](working-with-data-in-QGIS.md)
+2. Double click the layer in the layer tree to open its Properties menu
+3. Click the **Query Builder** button to open the menu to add a new query
+4. Enter the following Query:
 
 ```sql
 "SPECIES" IN ('apple','arborvitae')
@@ -104,7 +104,7 @@ For example, using the BC_MAJOR_CITIES_POINTS_500M layer you could use the follo
 
 ## Select by geometry query
 
-Selecting features by an geometry can be accessed through the layer's attribute table by clicking the *Select features using an expression* button in the top bar of the attribute table. This uses standard SQL syntax and can be written like a WHERE statement.
+Selecting features by a geometry can be accessed through the layer's attribute table by clicking the *Select features using an expression* button in the top bar of the attribute table. This uses standard SQL syntax and can be written like a WHERE statement.
 
 For example, using the BC_MAJOR_WATERSHEDS layer you could use the following expression:
 
@@ -129,7 +129,7 @@ intersects(
 )
 ```
 
-The latter example would more commonly be accomplished using the *Select by location* tool but it is worth noting that everything that can be done using the *Select by location* tool can be done with a text expression as well and a single text expression can contain multiple queries using the AND and OR operators.
+The latter example would more commonly be accomplished using the *Select by location* tool but it is worth noting that everything that can be done using the *Select by location* tool can be done with a text expression as well, and that a single text expression can contain multiple queries using the AND and OR operators.
 
 ## Geometry Expressions
 
@@ -143,7 +143,7 @@ More information on these can be found in the [QGIS documentation](https://docs.
 
 QGIS allows feature data types to be changed without creating a new layer through the geometry generator.
 
-[The following examples use the layers below:](#adding-data-from-layer-library)
+The following examples use the layers below, (to add these to QGIS see [Adding data from layer library](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/working-with-data-in-QGIS.md#adding-data-from-layer-library)):
 * [WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP](https://catalogue.data.gov.bc.ca/dataset/fire-perimeters-historical#edc-pow)
 * [WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SP](https://catalogue.data.gov.bc.ca/dataset/natural-resource-nr-district#edc-pow)
 
