@@ -38,15 +38,15 @@ To add a **legend** to the layout also use Add Item > Legend (or the shortcut bu
 
 
 To add a **scale bar** and **north arrow** to the layout use the Add Item menu or shortcut buttons on the left. Click and drag on the layout to place the element. Properties can be set in the Item Properties tab. 
-![add_scalebar_northarrow](.../images/add_scalebar_northarrow.gif)
+![add_scalebar_northarrow](../images/add_scalebar_northarrow.gif)
 
 
 To add a **table** to the layout use Add Item > Add Attribute Table. Click and drag on the layout where you would like to place the table. From the Item Properties tab the table can be modified. The number of rows, fields and style elements can be edited.
-![add_attributetable](.../images/add_attributetable.gif)
+![add_attributetable](../images/add_attributetable.gif)
 
 
 To add a **picture or logo** to the layout use Add Item > Add Picture or the shortcut button on the left. Click and drag where you would like to place the picture. Navigate to the image source location on the Properties tab to load your picture.
-![add_logo](.../images/add_logo.gif)
+![add_logo](../images/add_logo.gif)
 
 
 To add **dynamic date** to the layout create a label box and all the following formula:
@@ -54,11 +54,11 @@ To add **dynamic date** to the layout create a label box and all the following f
 [% day( $now) %]/[% month( $now)%]/[% year( $now)%]
 ```
 Further dynamic text can be added to your layout using Variables. Please refer to the [QGIS Documentation](https://docs.qgis.org/3.16/en/docs/training_manual/map_composer/dynamic_layout.html?highlight=dynamic%20date) for more detailed information on creating dynamic text.
-![add_dynamicdate}(.../images/add_dynamicdate.gif)
+![add_dynamicdate](../images/add_dynamicdate.gif)
 
 
 To add an **inset map** to the layout, first make sure to check the Lock Layers and Lock Layer Styles map item boxes for Map 1 in the Item Properties tab. This will ensure that the view for the main map will not change. In the main QGIS window adjust the map to the view you would like for the inset map. Switch to the Layout window and use Add Map to add a new map frame.  
-![add_insetmap](...images/add_insetmap.gif)
+![add_insetmap](../images/add_insetmap.gif)
 
 
 ## Export a Layout 
