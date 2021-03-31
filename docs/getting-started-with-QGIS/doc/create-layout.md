@@ -1,5 +1,6 @@
 # Create a Map Layout
-		
+[Home](../README.md)
+
 QGIS uses a tool called Print Layout that allows you to create maps that can be exported and/or printed.
 
 Check out the [QGIS Documentation](https://docs.qgis.org/3.16/en/docs/user_manual/print_composer/overview_composer.html) for more detailed information

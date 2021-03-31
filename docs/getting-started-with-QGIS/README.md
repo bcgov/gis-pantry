@@ -3,7 +3,7 @@
 ![QGIS](https://github.com/qgis/QGIS/blob/master/images/icons/qgis-icon-60x60.png) [Link to QGIS](https://qgis.org/en/site/)
 
 
-This is a set of documents to help experienced GIS users with best practices, tips/tricks and quick reference information for implementing QGIS within the BC government. To reduce redundancy, linkage to existing material will be provided when possible and custom content will be used to expand on topics that can improve your experience in using QGIS with corporate datasources inside the enterprise environment. This is a living document and is intended to be user maintained. Please add content and make corrections where needed
+This is a set of documents to help experienced GIS users with best practices, tips/tricks and quick reference information for implementing QGIS within the BC government. To reduce redundancy, linkage to existing material will be provided when possible and custom content will be used to expand on topics that can improve your experience in using QGIS with corporate datasources inside the enterprise environment. This is a living document and is intended to be user maintained. Please add content and make corrections where needed.
 
 1. [Where to go for help](./doc/getting-help.md)
 2. [What can you do to improve the project](./doc/improve-qgis.md)
@@ -24,7 +24,8 @@ This is a set of documents to help experienced GIS users with best practices, ti
 17. [Multi-user editing using PostGIS](./doc/multi-user-editing-in-postgis.md)
 18. [QGIS and mobile field application QField](./doc/Qfield.md)
 
-
+## QGIS/ArcGIS Cross Reference Glossary
+See the [QGIS/ArcGIS Cross Reference Glossary](./doc/QGIS-ArcGIS-cross-reference-glossary.md) for a list of common tools and windows used in ArcGIS and what their equivalent tools/windows are called in QGIS.
 
 
 ## Contributing

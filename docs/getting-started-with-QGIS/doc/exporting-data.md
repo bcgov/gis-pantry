@@ -1,7 +1,7 @@
 
 # Exporting data in QGIS
 
-[home](../README.md)
+[Home](../README.md)
 
 [QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
 
@@ -43,4 +43,5 @@ Coming soon..
 ## Exporting from virtual layers
 Coming soon..
 
+---
 [Back to Top](#Index)

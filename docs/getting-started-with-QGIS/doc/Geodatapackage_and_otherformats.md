@@ -1,6 +1,6 @@
 # GeoDataPackage's in QGIS and other data formats
 
-[home](../README.md)
+[Home](../README.md)
 
 Within QGIS there are many ways to access data creation in a variety of different formats. This section will focus on the creation of local data formats like geodatapackages or shapefiles.
 
@@ -110,5 +110,5 @@ QGIS can create scratch layers which are temporary working data layers that are 
     See the License for the specific language governing permissions and
     limitations under the License.
 
-
+---
 [Back to Top](#Index)

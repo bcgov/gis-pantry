@@ -1,4 +1,7 @@
 # QGIS/ArcGIS Cross Reference Glossary
+
+[Home](../README.md)
+
 This cross reference glossary has been created as a way for users to quickly reference the difference between commonly used tools in both QGIS and ArcGIS. It is intended to help the user transition from ArcGIS to QGIS or vice versa.
 
 # Index
@@ -108,5 +111,6 @@ The **Labelling Toolbar** in ArcGIS *IS LIKE* the **Label Toolbar** in QGIS
 # Additional Resources:
 * 27 Differences Between ArcGIS and QGIS: https://gisgeography.com/qgis-arcgis-differences/
 
+---
 [Back to top](#ArcGIS-to-QGIS-Cross-Reference-Glossary)
 

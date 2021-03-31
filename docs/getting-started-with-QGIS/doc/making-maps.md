@@ -1,6 +1,6 @@
 # Making Maps with QGIS
 
-[home](../README.md)
+[Home](../README.md)
 
  - [Basic styling](basic-layer-styling.md)
  - [Labels](labels.md)
