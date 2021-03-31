@@ -1,6 +1,6 @@
 # Expressions and Filter Queries
 
-[home](../readme.md)
+[Home](../readme.md)
 
 ## Index
 * [Definition Query / Filter](#Definition-Query--Filter)
@@ -26,11 +26,11 @@
 ## Definition Query / Filter
 
 ### Basic queries
-
-* open QGIS and add the [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees)
-* double click the layer in the layer tree to open its properties menu
-* click the **Query Builder** button to open the menu to add a new query
-* enter the following Query:
+Creating a basic definition query on a layer is simple, in this example we will show you how to perform queries on the publicly avaliable [City of Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees):
+1. Open QGIS and add the [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees). To download the layer and add it to a blank project follow the steps in [Working with Data in QGIS](working-with-data-in-QGIS.md)
+2. Double click the layer in the layer tree to open its Properties menu
+3. Click the **Query Builder** button to open the menu to add a new query
+4. Enter the following Query:
 
 ```sql
 "SPECIES" IN ('apple','arborvitae')
@@ -104,7 +104,7 @@ For example, using the BC_MAJOR_CITIES_POINTS_500M layer you could use the follo
 
 ## Select by geometry query
 
-Selecting features by an geometry can be accessed through the layer's attribute table by clicking the *Select features using an expression* button in the top bar of the attribute table. This uses standard SQL syntax and can be written like a WHERE statement.
+Selecting features by a geometry can be accessed through the layer's attribute table by clicking the *Select features using an expression* button in the top bar of the attribute table. This uses standard SQL syntax and can be written like a WHERE statement.
 
 For example, using the BC_MAJOR_WATERSHEDS layer you could use the following expression:
 
@@ -129,7 +129,7 @@ intersects(
 )
 ```
 
-The latter example would more commonly be accomplished using the *Select by location* tool but it is worth noting that everything that can be done using the *Select by location* tool can be done with a text expression as well and a single text expression can contain multiple queries using the AND and OR operators.
+The latter example would more commonly be accomplished using the *Select by location* tool but it is worth noting that everything that can be done using the *Select by location* tool can be done with a text expression as well, and that a single text expression can contain multiple queries using the AND and OR operators.
 
 ## Geometry Expressions
 
@@ -143,7 +143,7 @@ More information on these can be found in the [QGIS documentation](https://docs.
 
 QGIS allows feature data types to be changed without creating a new layer through the geometry generator.
 
-[The following examples use the layers below:](#adding-data-from-layer-library)
+The following examples use the layers below, (to add these to QGIS see [Adding data from layer library](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/working-with-data-in-QGIS.md#adding-data-from-layer-library)):
 * [WHSE_LAND_AND_NATURAL_RESOURCE.PROT_HISTORICAL_FIRE_POLYS_SP](https://catalogue.data.gov.bc.ca/dataset/fire-perimeters-historical#edc-pow)
 * [WHSE_ADMIN_BOUNDARIES.ADM_NR_DISTRICTS_SP](https://catalogue.data.gov.bc.ca/dataset/natural-resource-nr-district#edc-pow)
 
@@ -300,7 +300,7 @@ if using the Oracle database layer:
 ```
 
 * add a new label to the print layout
-* navigat back to the **Insert an Expression...** dialogue
+* navigate back to the **Insert an Expression...** dialogue
 * add the following expression to print the road's Forest File ID (FFID):
 
 if using the shapefile downloaded from the BC government data directory:
@@ -319,7 +319,7 @@ replace layer_name with your layer's name which can be found in the Map Layers m
 
 * Click OK 
 
-Your label should now show the road's FFID - R23206
+Your label should now show the road's FFID - R23206.
 
 ### Aggregating the length of multiple road sections
 
@@ -387,9 +387,9 @@ Again, replace [layer_name] with your layer's name.
 
 The result you should see in the label is a list of numbers similar to:
 
-Max: 5997.0419
-Min: 461.0144
-Sum: 10222.712800000001
+* Max: 5997.0419
+* Min: 461.0144
+* Sum: 10222.712800000001
 
 You'll notice the significant digits for the sum are very long. You can fix this by changing the code to:
 
@@ -427,7 +427,7 @@ to_string(
 
 Sometimes, rather than aggregating all the rows of data, you will need to show information from each individual row of data. 
 In QGIS, this can be done by aggregating the data with the concatenate attribute.
-The below code is an example of the farmatting used to accomplish this:
+The below code is an example of the formatting used to accomplish this:
 
 ```sql
 aggregate(
@@ -437,7 +437,7 @@ aggregate(
 )
 ```
 
-where [your_expression] is an sql expression without the brackets.
+where [your_expression] is a sql expression without the brackets.
 
 * add a new label anywhere on the print layout
 * navigate to the **Insert Label Expression...** window
@@ -463,10 +463,10 @@ aggregate(
 
 ### Start and End Points and Coordinate System Transformations
 
-The previous example is a simple starting point but it gets more complicated when you want to show start and end points of a line in a different coordinate system than the data is stored in. Luckily, QGIS allows you to perform data transformations within your label expression so you don't have to make copies of your data in separate files.
+The previous example is a simple starting point, but it gets more complicated when you want to show start and end points of a line in a different coordinate system than what the data is stored in. Luckily, QGIS allows you to perform data transformations within your label expression so you don't have to make copies of your data in separate files.
 
 QGIS allows you to print coordinates in different coordinate systems.
-Here we will print the start and end points of our road lines in UTM coordinates.
+Here we will print the start and end points of our road lines in UTM coordinates instead of BC Albers decimal degrees.
 
 * open the properties of the previous label you created to iterate through the road data
 * navigate to the **Insert Label Expression...** window
@@ -571,3 +571,6 @@ aggregate(
 ```
 
 In this case we only printed the x coordinates but by replacing x with y in this code we could print the y coordinates instead.
+
+---
+[Back to top](#Expressions-and-Filter-Queries)

@@ -1,4 +1,5 @@
 # Labels
+[Home](../README.md)
 
 This section describes the basics of creating basic labels for features on your map
 
@@ -59,3 +60,6 @@ The label bar contains several tools to help you edit your labels. From left to 
 - Move Label: Allows moving of labels and diagrams
 - Rotate Label: Rotate label or diagram
 - Change Label Properties: Change the properties (font weight, buffer, font size, etc) of individual labels on a map
+
+---
+[Back to Top](#Labels)

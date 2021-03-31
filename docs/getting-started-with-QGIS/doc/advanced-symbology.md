@@ -1,6 +1,6 @@
 # Advanced symbology in QGIS
 
-[home](readme.md)
+[Home](readme.md)
 
 Index
 * [Getting Started](#getting-started)
@@ -28,7 +28,7 @@ For this exercise you will need three layers:
 * [The Digital Road Atlas](https://catalogue.data.gov.bc.ca/dataset/digital-road-atlas-dra-master-partially-attributed-roads#edc-pow)
 * [The Local and Regional Greenspaces Polygons](https://catalogue.data.gov.bc.ca/dataset/local-and-regional-greenspaces)
 
-Download the three layers and follow the steps in [Working with Data in QGIS](data.md) to add the data to a blank map.
+Download the three layers and follow the steps in [Working with Data in QGIS](working-with-data-in-QGIS.md) to add the data to a blank map.
 
 Once you’ve loaded the layers you will want to zoom in to an area in Kamloops with some parks. I chose the area surrounding of Valleyview Nature Park in Kamloops but any area in Kamloops will work.
 
@@ -255,3 +255,6 @@ DEMs can be converted to hillshades very easily in QGIS
 * change **Oversampling** to *40*
 
 ![Turn on Labels](../images/adv_sym_dem_hillshade.gif "Wow!")
+
+---
+[Back to Top](Advanced-sybmology-in-QGIS)

@@ -1,5 +1,5 @@
 # Graphical Modeler
-[home](../README.md)
+[Home](../README.md)
 
 Index
 * [Start Up](#start-up)

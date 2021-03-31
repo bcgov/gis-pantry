@@ -1,6 +1,6 @@
 # Web Based Data Access in QGIS
 
-[home](../README.md)
+[Home](../README.md)
 
 Within QGIS there are many ways to access data. This sections focus is on accessing data through web mapping services that the BC government and many other organizations are making more available every year.
 

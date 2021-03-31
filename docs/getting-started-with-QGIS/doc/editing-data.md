@@ -1,6 +1,6 @@
 # Editing in QGIS
 
-[home](../README.md)
+[Home](../README.md)
 
 
 [QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
@@ -64,5 +64,5 @@ Some prcessing tools can be used to edit features inplace. These processing tool
 
 ![Edit features in-place](../images/editing-inplace.gif)
 
-
+---
 [Back to Top](#Index)

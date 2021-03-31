@@ -1,5 +1,5 @@
 # GIS Processing
-[home](../README.md)
+[Home](../README.md)
 
 Index
 * [Raster Calculator](#raster-calculator)
