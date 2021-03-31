@@ -1,6 +1,6 @@
 # Expressions and Filter Queries
 
-[home](../readme.md)
+[Home](../readme.md)
 
 ## Index
 * [Definition Query / Filter](#Definition-Query--Filter)
@@ -300,7 +300,7 @@ if using the Oracle database layer:
 ```
 
 * add a new label to the print layout
-* navigat back to the **Insert an Expression...** dialogue
+* navigate back to the **Insert an Expression...** dialogue
 * add the following expression to print the road's Forest File ID (FFID):
 
 if using the shapefile downloaded from the BC government data directory:
@@ -319,7 +319,7 @@ replace layer_name with your layer's name which can be found in the Map Layers m
 
 * Click OK 
 
-Your label should now show the road's FFID - R23206
+Your label should now show the road's FFID - R23206.
 
 ### Aggregating the length of multiple road sections
 
@@ -387,9 +387,9 @@ Again, replace [layer_name] with your layer's name.
 
 The result you should see in the label is a list of numbers similar to:
 
-Max: 5997.0419
-Min: 461.0144
-Sum: 10222.712800000001
+* Max: 5997.0419
+* Min: 461.0144
+* Sum: 10222.712800000001
 
 You'll notice the significant digits for the sum are very long. You can fix this by changing the code to:
 
@@ -427,7 +427,7 @@ to_string(
 
 Sometimes, rather than aggregating all the rows of data, you will need to show information from each individual row of data. 
 In QGIS, this can be done by aggregating the data with the concatenate attribute.
-The below code is an example of the farmatting used to accomplish this:
+The below code is an example of the formatting used to accomplish this:
 
 ```sql
 aggregate(
@@ -437,7 +437,7 @@ aggregate(
 )
 ```
 
-where [your_expression] is an sql expression without the brackets.
+where [your_expression] is a sql expression without the brackets.
 
 * add a new label anywhere on the print layout
 * navigate to the **Insert Label Expression...** window
@@ -463,10 +463,10 @@ aggregate(
 
 ### Start and End Points and Coordinate System Transformations
 
-The previous example is a simple starting point but it gets more complicated when you want to show start and end points of a line in a different coordinate system than the data is stored in. Luckily, QGIS allows you to perform data transformations within your label expression so you don't have to make copies of your data in separate files.
+The previous example is a simple starting point, but it gets more complicated when you want to show start and end points of a line in a different coordinate system than what the data is stored in. Luckily, QGIS allows you to perform data transformations within your label expression so you don't have to make copies of your data in separate files.
 
 QGIS allows you to print coordinates in different coordinate systems.
-Here we will print the start and end points of our road lines in UTM coordinates.
+Here we will print the start and end points of our road lines in UTM coordinates instead of BC Albers decimal degrees.
 
 * open the properties of the previous label you created to iterate through the road data
 * navigate to the **Insert Label Expression...** window
@@ -571,3 +571,6 @@ aggregate(
 ```
 
 In this case we only printed the x coordinates but by replacing x with y in this code we could print the y coordinates instead.
+
+---
+[Back to top](#Expressions-and-Filter-Queries)

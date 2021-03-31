@@ -1,8 +1,9 @@
 #  Multi-user editing in QGIS:
 #  Using PostGIS and the Versioning Plugin
 
+[Home](../README.md)
+
 ## Index
-* [home](../README.md)
 * [QGIS Documentation](https://docs.qgis.org/testing/en/docs/gentle_gis_introduction/data_capture.html)
 * [What is PostgreSQL](#What-is-PostgreSQL-/-PostGIS-and-why-do-you-need-it?)
 * [What is the Versioning Plugin](#What-is-the-Versioning-Plugin)

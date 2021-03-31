@@ -1,6 +1,6 @@
 # Advanced automation with python and QGIS (PyQGIS)
 
-[home](../README.md)
+[Home](../README.md)
 
 QGIS is a powerful tool to solve more complex and custom analysis problems using python scripting. QGIS uses a 64-bit Python 3 interepreter that is included with the software.
 
@@ -48,3 +48,5 @@ Some tools have been created to help create templates that will expediate plugin
 * [Plugin Builder Plugin](https://github.com/g-sherman/Qgis-Plugin-Builder)
 * [Minimalist Plugin Template](https://github.com/wonder-sk/qgis-minimal-plugin)
 
+---
+[Back to Top](Advanced-automation-with-python-and-QGIS-(PyQGIS))

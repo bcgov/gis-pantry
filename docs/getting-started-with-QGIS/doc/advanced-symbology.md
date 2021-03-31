@@ -1,6 +1,6 @@
 # Advanced symbology in QGIS
 
-[home](readme.md)
+[Home](readme.md)
 
 Index
 * [Getting Started](#getting-started)
@@ -255,3 +255,6 @@ DEMs can be converted to hillshades very easily in QGIS
 * change **Oversampling** to *40*
 
 ![Turn on Labels](../images/adv_sym_dem_hillshade.gif "Wow!")
+
+---
+[Back to Top](Advanced-sybmology-in-QGIS)

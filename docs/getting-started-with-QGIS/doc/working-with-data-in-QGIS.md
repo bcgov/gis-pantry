@@ -1,6 +1,6 @@
 # Working with data in QGIS
 
-[home](../README.md)
+[Home](../README.md)
 
 QGIS supports many types of data.  The native format for QGIS is the Geopackage(.gpkg).  A Geopackage is just a SQLite database container with a standard schema governed by the OGC [Specification](http://docs.opengeospatial.org/is/18-000/18-000.html).  QGIS also provides excellent support of the Shapefile format.
 
@@ -114,4 +114,5 @@ Additional joins can be added from other layers/tables and joins can be edited w
 Example of creating a join:<br>
 ![Creat Join](../images/joins_adding_new.gif "Wowza")
 
+---
 [Back to Top](#Working-with-data-in-QGIS)

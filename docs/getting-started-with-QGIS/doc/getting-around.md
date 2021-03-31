@@ -1,6 +1,6 @@
 # Getting started with QGIS
 
-[home](../README.md)
+[Home](../README.md)
 
 This is the overview of the QGIS GUI.  [Link](https://docs.qgis.org/testing/en/docs/user_manual/introduction/qgis_gui.html)
 
@@ -49,4 +49,5 @@ The Locator widget (Lower left of the QGIS window) can be used to quickly access
 
 ![Locator Widget](../images/locator.gif)
 
+---
 [Back to Top](#Getting-started-with-QGIS)

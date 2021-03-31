@@ -1,4 +1,7 @@
 # QGIS Atlas: Map Series Generation
+
+[Home](../README.md)
+
 Atlas is the automated map series generator for QGIS. Point, line, and polygon features can be used to generate and export a series of maps derived from the input feature geometery.
 
 The QGIS documentation provides detailed usage and some ideas for advanced features such as changing page orientation, attribute driven table generation, and combining atlas with expressions.
@@ -41,4 +44,5 @@ To export or print your map use the appropriate named Print Atlas or Export Atla
 ![](../images/atlas-export.gif)
 
 
-
+---
+[Back to Top](QGIS-Atlas:-Map-Series-Generation)
