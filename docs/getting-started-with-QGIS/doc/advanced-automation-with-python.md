@@ -49,4 +49,5 @@ Some tools have been created to help create templates that will expediate plugin
 * [Minimalist Plugin Template](https://github.com/wonder-sk/qgis-minimal-plugin)
 
 ---
-[Back to Top](Advanced-automation-with-python-and-QGIS-(PyQGIS))
+[Back to Top](#Advanced-automation-with-python-and-QGIS-(PyQGIS))
+
