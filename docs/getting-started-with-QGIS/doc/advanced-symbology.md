@@ -254,7 +254,9 @@ DEMs can be converted to hillshades very easily in QGIS
 * change **Zoomed out** to *Cubic*
 * change **Oversampling** to *40*
 
+
 ![Turn on Labels](../images/adv_sym_dem_hillshade.gif "Turn on Labels")
 
 ---
 [Back to Top](#Advanced-sybmology-in-QGIS)
+

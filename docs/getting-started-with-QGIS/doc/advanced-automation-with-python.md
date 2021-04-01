@@ -50,3 +50,4 @@ Some tools have been created to help create templates that will expediate plugin
 
 ---
 [Back to Top](#Advanced-automation-with-python-and-QGIS-(PyQGIS))
+
