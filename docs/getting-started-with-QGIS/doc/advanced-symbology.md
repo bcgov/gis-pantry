@@ -1,6 +1,6 @@
 # Advanced symbology in QGIS
 
-[Home](readme.md)
+[Home](../README.md)
 
 Index
 * [Getting Started](#getting-started)
@@ -25,8 +25,8 @@ Index
 For this exercise you will need three layers:
 
 * [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees)
-* [The Digital Road Atlas](https://catalogue.data.gov.bc.ca/dataset/digital-road-atlas-dra-master-partially-attributed-roads#edc-pow)
-* [The Local and Regional Greenspaces Polygons](https://catalogue.data.gov.bc.ca/dataset/local-and-regional-greenspaces)
+* [The Digital Road Atlas](https://catalogue.data.gov.bc.ca/dataset/bb060417-b6e6-4548-b837-f9060d94743e)
+* [The Local and Regional Greenspaces Polygons](https://catalogue.data.gov.bc.ca/dataset/6a2fea1b-0cc4-4fc2-8017-eaf755d516da)
 
 Download the three layers and follow the steps in [Working with Data in QGIS](working-with-data-in-QGIS.md) to add the data to a blank map.
 
@@ -59,7 +59,7 @@ or
 * highlight the layer in the layer tree
 * press the **Open the Layer Styling panel** button at the top left of the layer tree
 
-![layer styling panel2](../images/layerStylingPanel2.png "layer styling panel2")
+![layer styling panel2](../images/layerStylingPanel2.png "layer styling panel")
 
 or
 
@@ -79,7 +79,7 @@ or
 * change the **Symbol type** to *Categorized* and the **Column** to *ROAD_CLASS*
 * click *Classify* to get a list of all the unique values from the *ROAD_CLASS* field
 
-![Categorize the Line Layer](../images/categorize_line_layer.gif "Wow!")
+![Categorize the Line Layer](../images/categorize_line_layer.gif "Categorize the Line Layer")
 
 ### Change the highway symbol
 
@@ -89,7 +89,7 @@ or
 * change the size of the lower line to 1.0 mm and change its colour to black
 * click OK to exit the Symbol selector menu and OK to exit the Layer properties
 
-![Change the Highway Symbology](../images/highway-symbology.gif "Wow!")
+![Change the Highway Symbology](../images/highway-symbology.gif "Change the Highway Symbology")
 
 ### Turn on symbol levels
 
@@ -97,7 +97,7 @@ or
 * ensure the **Enable symbol levels** checkbox is checked to enforce symbol levels for the layer
 * click OK to save your changes and exit
 
-![Turn on Symbol Levels](../images/turn-on-symbol-levels.gif "Wow!")
+![Turn on Symbol Levels](../images/turn-on-symbol-levels.gif "Turn on Symbol Levels")
 
 ### Change the other road symbols
 
@@ -115,7 +115,7 @@ or
 * set the second marker line as a brown dashed line with size 1.0
 * turn off rotation in the hiking person marker line
 
-![Marker Lines](../images/marker-line.gif "Wow!")
+![Marker Lines](../images/marker-line.gif "Marker Lines")
 
 ## Symbolizing the Parks Layer
 
@@ -125,7 +125,7 @@ or
 * set the second colour as a lighter green
 * change the **Shading type** from *Whole shape* to *Set distance* and make it 50 Meters at scale
 
-![Shapeburst Fill](../images/adv_sym_shapeburstFill.gif "Wow!")
+![Shapeburst Fill](../images/adv_sym_shapeburstFill.gif "Shapeburst Fill")
 
 ## Label the parks
 
@@ -145,7 +145,7 @@ or
 * navigate to the **Placement tab**
 * set the **Mode** to *Free (Angled)*
 
-![Turn on Labels](../images/adv_sym_labels.gif "Wow!")
+![Turn on Labels](../images/adv_sym_labels.gif "Turn on Labels")
 
 ## Symbolizing the Trees Layer
 The trees layer is points that show the location of trees within Kamloops. QGIS offers several ways to display points that can be useful.
@@ -160,7 +160,7 @@ The trees layer is points that show the location of trees within Kamloops. QGIS 
 * pick a symbol and try experimenting with different fills and strokes
 * other options include font markers, vector symbols, and filled markers which you can experiment with or find more information on in the [QGIS documentation](https://docs.qgis.org/3.16/en/docs/user_manual/style_library/symbol_selector.html)
 
-![Turn on Labels](../images/adv_sym_simpleMarker.gif "Wow!")
+![Turn on Labels](../images/adv_sym_simpleMarker.gif "Turn on Labels")
 
 ## Categorized symbology
 
@@ -170,7 +170,7 @@ The trees layer is points that show the location of trees within Kamloops. QGIS 
 * adjust the symbology for each tree type as you see fit
 * save your changes and exit the menu
 
-![Turn on Labels](../images/adv_sym_categorized.gif "Wow!")
+![Turn on Labels](../images/adv_sym_categorized.gif "Turn on Labels")
 
 ## Graduated symbology
 
@@ -181,7 +181,7 @@ The trees layer is points that show the location of trees within Kamloops. QGIS 
 * adjust the **Size from** and **to** values until you are happy with how they look on the map
 * leave the classification mode to default or explore other classification modes in the [QGIS documentation](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=equal%20count) section 14.1.3.1.4. Graduated Renderer
 
-![Turn on Labels](../images/adv_sym_graduated.gif "Wow!")
+![Turn on Labels](../images/adv_sym_graduated.gif "Turn on Labels")
 
 ## Rule-based symbology
 
@@ -203,7 +203,7 @@ The trees layer is points that show the location of trees within Kamloops. QGIS 
 * enter *Other trees* as the **Description**
 * save your changes and exit the properties menu
 
-![Turn on Labels](../images/adv_sym_ruleBased.gif "Wow!")
+![Turn on Labels](../images/adv_sym_ruleBased.gif "Turn on Labels")
 
 ## Opacity
 
@@ -223,21 +223,21 @@ If you want to change the opacity of part of a layer (e.g. the fill of a polygon
 * double click the **Fill color**
 * set the **Opacity** using the slider or the text box
 
-![layer part opacity](../images/layerPartOpacity.png "layer part opacity!")
+![layer part opacity](../images/layerPartOpacity.png "layer part opacity")
 
 ## Symbolizing a DEM
 
 Digital Elevation Models (DEMs) are raster data where an area is divided into grids with each grid representing an elevation value.
 
 * Download a DEM from (the BC Government data catalogue)[https://pub.data.gov.bc.ca/datasets/175624/92c/]
-* Load the DEM into QGIS by following the instructions in the [Working with data in QGIS](data.md) page
+* Load the DEM into QGIS by following the instructions in the [Working with data in QGIS](working-with-data-in-QGIS.md) page
 * highlight the DEM and click the **Open the layer styling panel** button above the layer tree
 * change the dropdown set to *Singleband grey* to *Singleband pseudocolor*
 * scroll down the menu and adjust the **contrast**, **brightness**, **Zoomed in**, **Zoomed out**, and **Oversampling** values until you are happy with the result
 * for more information on these options, see the [QGIS Documentation](https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_configuration.html?highlight=oversampling) section 9.1.6. Rendering Settings but a brief explanation is higher oversampling means a crisper image but slower load times  whereas brightness and contrast would work similarly to these settings on a computer monitor
 * Zoom in and out on the DEM
 
-![Turn on Labels](../images/adv_sym_dem.gif "Wow!")
+![Turn on Labels](../images/adv_sym_dem.gif "Turn on Labels")
 
 ## Overlaying a DEM over a Hillshade
 
@@ -254,7 +254,9 @@ DEMs can be converted to hillshades very easily in QGIS
 * change **Zoomed out** to *Cubic*
 * change **Oversampling** to *40*
 
-![Turn on Labels](../images/adv_sym_dem_hillshade.gif "Wow!")
+
+![Turn on Labels](../images/adv_sym_dem_hillshade.gif "Turn on Labels")
 
 ---
-[Back to Top](Advanced-sybmology-in-QGIS)
+[Back to Top](#Advanced-sybmology-in-QGIS)
+

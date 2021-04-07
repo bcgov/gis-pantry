@@ -15,7 +15,7 @@ This document will discuss the standard tools available from QGIS. Access to pro
 
 [QGIS docs - algorithm guide](https://docs.qgis.org/testing/en/docs/user_manual/processing_algs/index.html)
 
-[QGIS Processing Guide]( https://docs.qgis.org/testing/en/docs/training_manual/processing/index.html)
+[QGIS Processing Guide](https://docs.qgis.org/testing/en/docs/training_manual/processing/index.html)
 
 ## Vector Menu
 The Vector menu provides access to many standard tools for interacting with vectors.  This menu is a convenient way to find common vector tools that have been organized into categories: Geoprocessing, Geometry, Research, Analysis, and Data Management Tools.<br>
