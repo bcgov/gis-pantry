@@ -27,11 +27,14 @@ This is a set of documents to help experienced GIS users with best practices, ti
 ## QGIS/ArcGIS Cross Reference Glossary
 See the [QGIS/ArcGIS Cross Reference Glossary](./doc/QGIS-ArcGIS-cross-reference-glossary.md) for a list of common tools and windows used in ArcGIS and what their equivalent tools/windows are called in QGIS.
 
-
 ## Contributing
 We encourage contributions. Please see our [CONTRIBUTING](https://github.com/bcgov/gis-pantry/blob/master/CONTRIBUTING.md) guidelines. BC Government employees should also ensure they review [BC Open Source Development Employee Guide](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/README.md) 
 * Contribute tools and plugins into tools, standalone scripts and modules to scripts, and small snips and script examples to recipes.
-* Please do your best to document your scripts and provide tool documentation 
+* Please do your best to document your scripts and provide tool documentation
+
+## Help on Using GitHub
+For help in learning how to use GitHub please reference.
+[Help Using GitHub](../Using-GitHub.md)
 
 ## Searching Content
 To assist in finding QGIS content quicker. You can use the search function in the upper left of GitHub. With the GIS-Pantry open as the main page enter your search term in the search window, then select In this repository. This will just search for the term in the Current GIS Repository.  
