@@ -6,7 +6,7 @@
 
 Sign up for a GitHub account at <https://github.com/>
 
-- In your seetings it is a good idea to set up 2 factor authentication. This provides an extra level of security for your account. Once logged into your account this can be found under settings and account security.
+- In your settings it is a good idea to set up 2 factor authentication. This provides an extra level of security for your account. Once logged into your account this can be found under settings and account security.
 
 -It is also useful to have GitHub desktop on your computer to transition Push and Pull requests from code edited on your computer to updating the fork on GitHub.
 
@@ -16,7 +16,7 @@ Sign up for a GitHub account at <https://github.com/>
 
 2. Navigate to the repository you want to contribute to <https://github.com/bcgov/gis-pantry>
 
-3. In the upper right click on Fork. This will create a copy of the Repository under your name.
+3. In the upper right click on Fork. This will create a copy of the repository under your name.
 
 4. You should have a copy under your name called. (username/GIS-Pantry)
 
@@ -39,7 +39,7 @@ Using MS Visual Studio Code or GitHub for desktop should have this functionality
 
 3. Edit the document (note the edit file and Preview tab are handy for checking your markdown syntax)
 
-4. Scroll to the bottom Add a short description as to what your updating and click commit changes. This will commit changes to your Master Fork.
+4. Scroll to the bottom and add a short description as to what your updating and click commit changes. This will commit changes to your Master Fork.
 
 5. Repeat editing files until you are done a milestone that you feel needs to go back to the source "Upstream/Master" repository
 
@@ -62,10 +62,10 @@ Example: Edit Fork on GitHub
 
 For Option 1 above you do not have to push edits up to your fork cause that is where you did the edits. See further below on creating a pull request.
 
-For Option 2 you would need to get your edits copied from your computer up to your fork on GitHub. See example Below.
+For Option 2 you would need to get your edits copied from your computer up to your fork on GitHub. See example below.
 
 1. Make sure you have correct repository selected in GitHub Desktop
-2. Fetch Origin if any code is missing
+2. Fetch origin if any code is missing
 3. Commit edits up to forked master
 4. Push committed edits up to GitHub fork.
 
