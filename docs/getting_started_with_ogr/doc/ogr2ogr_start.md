@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-fbgdfs
-=======
 
->>>>>>> 914a8a9b9673b25c5a9409bff5fa61639b9103da
 # Getting started in command line: ogr2ogr
 
 
