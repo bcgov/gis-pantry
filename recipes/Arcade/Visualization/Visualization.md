@@ -1,4 +1,4 @@
-# Arcade Calculations
+# Arcade Visualisation
 Sample Arcade expressions that perform modified visualization within AGOL
 
 ## Examples

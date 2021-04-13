@@ -1,6 +1,6 @@
 # Getting help with QGIS
 
-[home](../README.md)
+[Home](../README.md)
 
 ## Where to go to get help with QGIS
 * [QGIS Poject Documentation](https://docs.qgis.org/testing/en/docs/index.html)

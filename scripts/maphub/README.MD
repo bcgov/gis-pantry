@@ -1,5 +1,5 @@
 # maphub_services.py
-This module has a few methods for working with ArcGIS online featureclasses from python 3.x. This may also work with python 2.7 although it is untested.
+This module has a few methods for working with ArcGIS online featureclasses from python 3.x. This may also work with python 2.7 although it is untested. This is still a work in progress and some features may not work correctly in any/all cases.
 
 # usage
 create maphub services object with 

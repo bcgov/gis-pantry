@@ -1,161 +1,262 @@
 # Advanced symbology in QGIS
 
-[home](readme.md)
+[Home](../README.md)
 
 Index
 * [Getting Started](#getting-started)
+* [Accessing Symbology Options](#accessing-symbology-options)
+  * [The Properties Menu](#the-properties-menu)
+  * [The Layer Styling Panel](#the-layer-styling-panel)
 * [Symbolizing the Road Layer](#symbolizing-the-road-layer)
 * [Symbolizing the Parks Layer](#symbolizing-the-parks-layer)
 * [Symbolizing the Trees Layer](#symbolizing-the-trees-layer)
+  * [Single Symbol Symbology](#single-symbol-symbology)
+  * [Categorized symbology](#categorized-symbology)
+  * [Graduated symbology](#graduated_symbology)
+  * [Rule-Based symbology](#rule-based-symbology)
+* [Opacity](#opacity)
+  * [Layer Opacity](#layer-opacity)
+  * [Layer Part Opacity](#layer-part-opacity)
+* [Symbolizing a DEM](#symbolizing-a-dem)
+* [Overlaying a DEM over a Hillshade](#overlaying-a-dem-over-a-hillshade)
 
 ## Getting Started
 
-The type of symbology you should use on a map is dependent on many factors but the main factors are geometry type (point, line, or polygon), scale, and density.
-
-Point Symbols
-Point symbols are features that cannot be represented by their true geometry or features where the true geometry has not been captured. Examples include trees, windmills, and even houses at small scales. Point symbols can be divided into three symbology classes:
-1) Plan symbols are the most common and simply show features as a dot, square, or other shape that doesn’t give any information about the feature.
-2) Profile symbols give 2D representations of flattened features that show a rough depiction of the feature
-3) Functional symbols show an action taking place. These are commonly used on park maps where a square with a person fishing, cycling, or swimming depicts that these activities are allowed at the park.
-
-Line Symbols
-Line symbols are features that have 1 dimension: length. They can have a width attribute but it is not inherent to their geometry as it would be with a polygon. Lines are sometimes depicted as a single line but are more commonly depicted as multiple lines wherein a train track would have a thin black centre line and cross hatches running through it at a set interval.
-
-Polygon Symbols
-Polygons are 2D shapes that have a length and a width attribute. In terms of symbology they usually are depicted with a light coloured fill and a slightly darker outline around their perimeter.
-
-Symbology on Your Map
 For this exercise you will need three layers:
 
 * [Kamloops Trees Point Layer](https://mydata-kamloops.opendata.arcgis.com/datasets/trees)
-* [The Digital Road Atlas](https://catalogue.data.gov.bc.ca/dataset/digital-road-atlas-dra-master-partially-attributed-roads#edc-pow)
-* [The Local and Regional Greenspaces Polygons](https://catalogue.data.gov.bc.ca/dataset/local-and-regional-greenspaces)
+* [The Digital Road Atlas](https://catalogue.data.gov.bc.ca/dataset/bb060417-b6e6-4548-b837-f9060d94743e)
+* [The Local and Regional Greenspaces Polygons](https://catalogue.data.gov.bc.ca/dataset/6a2fea1b-0cc4-4fc2-8017-eaf755d516da)
 
-Load the three layers listed above to a blank map and ensure the Coordinate System is set to BC Albers (EPSG: 3005).
+Download the three layers and follow the steps in [Working with Data in QGIS](working-with-data-in-QGIS.md) to add the data to a blank map.
 
 Once you’ve loaded the layers you will want to zoom in to an area in Kamloops with some parks. I chose the area surrounding of Valleyview Nature Park in Kamloops but any area in Kamloops will work.
 
-## Symbolizing the Road Layer
-When you first load the Digital Road Atlas you will notice that all the lines look more or less the same. The highways are recognizable because they have double lines but, other than that, every road type is symbolized identically.
+## Accessing Symbology Options
 
-* Right click the road layer and enter its Properties menu
-* navigate to the Source tab
-* Open the Query Builder and add the following Definition Query:
+There are two main ways to access symbology options for a layer. These options are listed in the section below.
+
+## The Properties Menu
+
+* highlight the layer in the layer tree
+* right-click and select **Properties** from the popup menu
+* navigate to the **Symbology** tab in the *Layer Properties* box
+
+or
+
+* double click the layer in the layer tree
+* navigate to the **Symbology** tab in the *Layer Properties* box
+
+## The Layer Styling Panel
+
+There are several ways to access the layer styling panel:
+
+* highlight the layer in the layer tree
+* press F7 on your keyboard
+
+or
+
+* highlight the layer in the layer tree
+* press the **Open the Layer Styling panel** button at the top left of the layer tree
+
+![layer styling panel2](../images/layerStylingPanel2.png "layer styling panel")
+
+or
+
+* turn on **Layer Styling** in *View* -> *Panels*
+
+![layer styling panel](../images/layerStylingPanel.png "layer styling panel")
+
+## Symbolizing the Road Layer
+
+* open the Query Builder and follow the steps in [Expressions and Filter Queries](expressions.md) to add the following Definition Query to the roads layer:
 
 ```sql
 "ROAD_CLASS" IN ('arterial','collector','highway','local','unclassified','yield')
 ```
 
-* Click Apply
-* navigate to the Symbology tab
-* Change the Symbol type to Categorized and the Column to ROAD_CLASS
-* Click Classify to get a list of all possible values
+* navigate to the Symbology tab in the road layer's properties menu
+* change the **Symbol type** to *Categorized* and the **Column** to *ROAD_CLASS*
+* click *Classify* to get a list of all the unique values from the *ROAD_CLASS* field
 
-![Categorize the Line Layer](../images/categorize_line_layer.gif "Wow!")
+![Categorize the Line Layer](../images/categorize_line_layer.gif "Categorize the Line Layer")
 
-With the layer categorized you can start changing the line symbols.
-* Double click the highway symbol to open its Symbol selector
-* Click the green + button to add a new line
-* Make the top line size 0.8 and yellow
-* Make the lower line size 1.0 and black
-* Click OK to exit the Symbol selector and OK to exit the Layer properties
+### Change the highway symbol
 
-![Change the Highway Symbology](../images/highway-symbology.gif "Wow!")
+* double click the highway symbol to open its Symbol selector menu
+* click the green + button to add a new line symbol to the feature
+* change the size of the upper line to 0.8 mm and change its colour to yellow
+* change the size of the lower line to 1.0 mm and change its colour to black
+* click OK to exit the Symbol selector menu and OK to exit the Layer properties
 
-You'll notice that the line caps still show up at each section of the highway line. You can remove these in the Advanced section of the layer symbology properties by turning on Symbol levels.
+![Change the Highway Symbology](../images/highway-symbology.gif "Change the Highway Symbology")
 
-* Click the Advanced button at the bottom right of the symbology window and from the drop down select Symbol levels...
-* Ensure the Enable Symbol Levels checkbox is checked to turn enforce symbol levels for the layer
-* Click OK in the box to leave everything as default
+### Turn on symbol levels
 
-![Turn on Symbol Levels](../images/turn-on-symbol-levels.gif "Wow!")
+* click the **Advanced** button at the bottom right of the symbology window and from the drop down select *Symbol levels...*
+* ensure the **Enable symbol levels** checkbox is checked to enforce symbol levels for the layer
+* click OK to save your changes and exit
 
-* Make the yield roads the same as highways but slightly thinner with the yellow line as 0.5 and the black line as 0.7
-* Make Collector roads solid black 0.4 and arterial roads solid black 0.3. Make local roads medium grey 0.3.
+![Turn on Symbol Levels](../images/turn-on-symbol-levels.gif "Turn on Symbol Levels")
 
-Unclassified roads on this map are trails. So you'll want to make their symbol smaller and less eye catching than the roads and with some indication that they are trails.
-* Open the symbol properties for Unclassified roads and create two lines using the + button
-* Set the Symbol layer type property to Marker line for both lines
-* Set the interval of the upper line to 30
-* In the lowest, third, symbol in the symbology tree, set the Symbol layer type to SVG marker
-* Set the SVG as an image of a person hiking and increase the size to 3.0
-* Set the second marker line as a brown dashed line with size 1.0
-* Turn off rotation in the hiking person marker line
+### Change the other road symbols
 
-![Marker Lines](../images/marker-line.gif "Wow!")
+* style the yield roads the same as highways but thinner with the yellow line 0.5 mm thick and the black line 0.7 mm thick
+* style the Collector roads as solid black lines 0.4 mm thick
+* style the arterial roads as solid black lines 0.3 mm thick
+* style the local roads as medium grey 0.3 mm thick
+
+### Symbolize the trails with SVG images
+* open the symbol properties for Unclassified roads and create two lines using the + button
+* set the Symbol layer type property to Marker line for both lines
+* set the interval of the upper line to 30
+* in the lowest, third, symbol in the symbology tree, set the Symbol layer type to SVG marker
+* set the SVG as an image of a person hiking and increase the size to 3.0
+* set the second marker line as a brown dashed line with size 1.0
+* turn off rotation in the hiking person marker line
+
+![Marker Lines](../images/marker-line.gif "Marker Lines")
 
 ## Symbolizing the Parks Layer
-The parks layer contains polygons that show the locations and areas of parks within BC. The default symbology is a basic solid fill that doesn't have any indication of what the layer is symbolizing.
 
-* Open the layer properties for the parks layer and navigate to the symbology tab
-* Set the Fill type to Shapeburst Fill
-* Set the first colour as dark green
-* Set the second colour as a lighter green
-* Change the Shading type from Whole shape to Set distance and make it 50 Meters at scale
+* open the layer properties for the parks layer and navigate to the symbology tab
+* set the **Fill type** to *Shapeburst Fill*
+* set the first colour as dark green
+* set the second colour as a lighter green
+* change the **Shading type** from *Whole shape* to *Set distance* and make it 50 Meters at scale
 
-![Shapeburst Fill](../images/adv_sym_shapeburstFill.gif "Wow!")
+![Shapeburst Fill](../images/adv_sym_shapeburstFill.gif "Shapeburst Fill")
 
-Now you can tell by the layer's symbology that it is likely a park but you can't see any information about the park. So, let's add a label with the park name.
-* Open the layer's properties and navigate to the Labels tab
-* Turn on Single Labels
-* Set the Value as PARK_NAME
-* Select a font you like and set the size to between 7 and 9 points
-* Set the font colour to the same light green used for the area fill
-* Navigate to the Buffer tab and add a dark green buffer around the text (size: 0.7 mm)
-* Ensure Draw text buffer is checked in the buffer tab
-* Navigate to the Formatting tab and set Wrap lines to 7 characters
-* Navigate to the Rendering tab and at the bottom of the menu check Only draw labels which fit completely within the feature
-* Navigate to the placement tab and set the Mode to Free (Angled)
+## Label the parks
 
-![Turn on Labels](../images/adv_sym_labels.gif "Wow!")
+* open the layer's Properties and navigate to the **Labels** tab
+* set the **Label type** to *Single labels*
+* set the **Value** as *PARK_NAME*
+* select a **Font** and set the **Size** to a value between 7 and 9 points
+* select a **Color** similar to the light green used for the area fill
+* navigate to the **Buffer** tab
+* check the box beside **Draw text buffer**
+* set the **Size** to *0.7 mm*
+* select a dark green as the **Color**
+* navigate to the **Formatting** tab
+* set **Wrap lines to** to *7 characters*
+* navigate to the **Rendering** tab
+* at the bottom of the menu check the box beside **Only draw labels which fit completely within the feature**
+* navigate to the **Placement tab**
+* set the **Mode** to *Free (Angled)*
+
+![Turn on Labels](../images/adv_sym_labels.gif "Turn on Labels")
 
 ## Symbolizing the Trees Layer
 The trees layer is points that show the location of trees within Kamloops. QGIS offers several ways to display points that can be useful.
 
-###### Single Symbol symbology
-The first type of symbology we will analyze is the default style, Single Symbol, where one symbol shows all of the layers. This symbology is pretty basic but deserves some discussion.
-Enter the layer properties for the Trees layer and try changing the Simple Marker drop down to SVG symbol, Vector symbol, and Font Marker and play with the colours and sizes. You'll notice that you can generally find a symbol that works well for large clusters of points while still working for individual points. Here, I will use an Simple marker of a dot to show each point and reduce it's size to .80 points.
+## Single Symbol symbology
+* double click the trees layer to enter its Properties menu and navigate to the **Symbology** tab
+* click the text labelled *Simple marker* in the white box
+* you will see options to change the **Fill color**, **Stroke color**, and other attributes as well as an area with different shapes to choose from
+* experiment with the different colours and stroke and size settings
+* change the **Symbol layer type** to *SVG marker*
+* in the **SVG Groups** list at the bottom of the menu select *symbol*
+* pick a symbol and try experimenting with different fills and strokes
+* other options include font markers, vector symbols, and filled markers which you can experiment with or find more information on in the [QGIS documentation](https://docs.qgis.org/3.16/en/docs/user_manual/style_library/symbol_selector.html)
 
-![Turn on Labels](../images/adv_sym_simpleMarker.gif "Wow!")
+![Turn on Labels](../images/adv_sym_simpleMarker.gif "Turn on Labels")
 
-You can also change the stroke width (the size of the outline around the point), x (left-right) and y (up-down) offset of the point, and stroke style of point. You can experiment with these settings throughout this guide as you see fit but, like colouring, they are very subjective and thus will not explicitly be covered. However, it is important that you know these settings exist.
+## Categorized symbology
 
-###### Categorized symbology
-Another useful symbol style for points is Categorized. This allows you to display different symbols for different categories of points and you will probably find that you use this more often than most others. Here we will symbolize the trees based on their TYPE field.
+* double click the trees layer to enter its Properties menu and navigate to the **Symbology** tab
+* change the top dropdown to *Categorized*
+* set the **Value** to *TYPE* and click Classify
+* adjust the symbology for each tree type as you see fit
+* save your changes and exit the menu
 
-* Open the Properties dialog for the Trees layer and change the top dropdown to Categorized.
-* Set the value to TYPE and then click classify.
-* Adjust the symbology for each type of tree as you see fit.
-* Click Apply or OK to see your changes.
+![Turn on Labels](../images/adv_sym_categorized.gif "Turn on Labels")
 
-![Turn on Labels](../images/adv_sym_categorized.gif "Wow!")
+## Graduated symbology
 
-###### Graduated symbology
-The graduated symbology style is very useful when you want to display points based on a meaningful numeric attribute such as buffer size, area, or height. In this case we know the spread of the tree from the SPREAD field and can use this as our graduated attribute.
+* double click the trees layer to enter its Properties menu and navigate to the **Symbology** tab
+* change the top dropdown to *Graduated*
+* change the **Value** to *SPREAD*
+* change the **Method** to *Size*
+* adjust the **Size from** and **to** values until you are happy with how they look on the map
+* leave the classification mode to default or explore other classification modes in the [QGIS documentation](https://docs.qgis.org/3.16/en/docs/user_manual/working_with_vector/vector_properties.html?highlight=equal%20count) section 14.1.3.1.4. Graduated Renderer
 
-* Enter the properties menu and change the top menu to Graduated.
-* Change the value to SPREAD and the Method to Size.
-* You can adjust the Symbol and Size from and To values as you see fit.
-* You can adjust the classification Mode and change the number of classes to fit the data when appropriate.
-* Click Apply or OK to view the symbols.
+![Turn on Labels](../images/adv_sym_graduated.gif "Turn on Labels")
 
-![Turn on Labels](../images/adv_sym_graduated.gif "Wow!")
+## Rule-based symbology
 
-###### Rule-based symbology
-The last type of symbology in QGIS to be discussed in this section is Rule-Based. This is similar to Categorized except you can define your own categories using SQL code. This is the most advanced and most powerful classification technique.
+* double click the trees layer to enter its Properties menu and navigate to the **Symbology** tab
+* change the top dropdown to *Rule Based*
+* click the + button to add a rule
+* in the **Label** textbox enter *Coniferous Trees > 7*
+* ensure the radio button beside **Filter** is checked and in the textbox enter *"TYPE" LIKE  'CONIFEROUS' AND  "SPREAD" > 7*
+* in the **Description** textbox enter *Coniferous trees with greater than 7m spread*
+* click OK to save your changes and exit the rule menu
+* click the + button to add another rule
+* in the **Label** textbox enter *Deciduous Trees > 1*
+* in the **Filter** textbox enter *"TYPE" LIKE  'DECIDUOUS' AND  "SPREAD" > 1*
+* in the **Description** textbox enter *Deciduous trees with greater than 1m spread*
+* click OK
+* click the + button to enter another rule
+* enter *Other* as the **Label**
+* check the radio button beside **Else** (this will create a symbol for everything not caught in the previous two expressions)
+* enter *Other trees* as the **Description**
+* save your changes and exit the properties menu
 
-* Enter the properties menu and change the top menu to Rule Based.
-* Click the + button to add a rule.
-* Label the rule as "Coniferous Trees > 7"
-* Enter the expression:  "TYPE" LIKE  'CONIFEROUS' AND  "SPREAD" > 7
-* Enter "Coniferous trees with greater than 7m spread" in the description
-* Click OK
-* Add another rule but this time label it as "Deciduous Trees > 1"
-* Enter the expression:  "TYPE" LIKE  'DECIDUOUS' AND  "SPREAD" > 1
-* Enter "Deciduous trees with greater than 1m spread in the description"
-* Click OK
-* Add another rule but this time select Else rather than entering an expression
-* Label it as "other"
-* Click OK
+![Turn on Labels](../images/adv_sym_ruleBased.gif "Turn on Labels")
 
-![Turn on Labels](../images/adv_sym_ruleBased.gif "Wow!")
+## Opacity
+
+Opacity of a layer (how transparent it is) can be set on the layer itself or on a particular symbol of a layer.
+
+## Layer Opacity
+
+* navigate to the **Symbology** tab of the layer
+* in the main section set the **Opacity** value either numerically in the text box or using the slider
+
+## Layer Part Opacity
+
+If you want to change the opacity of part of a layer (e.g. the fill of a polygon but not the stroke or one symbol layer in the symbol tree) you can follow the steps below:
+
+* navigate to the **Symbology** tab of the layer
+* highlight the layer item you want to change the opacity of
+* double click the **Fill color**
+* set the **Opacity** using the slider or the text box
+
+![layer part opacity](../images/layerPartOpacity.png "layer part opacity")
+
+## Symbolizing a DEM
+
+Digital Elevation Models (DEMs) are raster data where an area is divided into grids with each grid representing an elevation value.
+
+* Download a DEM from (the BC Government data catalogue)[https://pub.data.gov.bc.ca/datasets/175624/92c/]
+* Load the DEM into QGIS by following the instructions in the [Working with data in QGIS](working-with-data-in-QGIS.md) page
+* highlight the DEM and click the **Open the layer styling panel** button above the layer tree
+* change the dropdown set to *Singleband grey* to *Singleband pseudocolor*
+* scroll down the menu and adjust the **contrast**, **brightness**, **Zoomed in**, **Zoomed out**, and **Oversampling** values until you are happy with the result
+* for more information on these options, see the [QGIS Documentation](https://docs.qgis.org/3.16/en/docs/user_manual/introduction/qgis_configuration.html?highlight=oversampling) section 9.1.6. Rendering Settings but a brief explanation is higher oversampling means a crisper image but slower load times  whereas brightness and contrast would work similarly to these settings on a computer monitor
+* Zoom in and out on the DEM
+
+![Turn on Labels](../images/adv_sym_dem.gif "Turn on Labels")
+
+## Overlaying a DEM over a Hillshade
+
+DEMs can be converted to hillshades very easily in QGIS
+
+* if you don't already have a DEM loaded from the last step, download a DEM from (the BC Government data catalogue)[https://pub.data.gov.bc.ca/datasets/175624/92c/] and complete the Symbolizing a DEM step from above
+* right click the DEM and copy the layer then paste it so you have two copies of the DEM in your layer tree
+* Rename the uppermost DEM *DEM* and the lowermost copy *hillshade*
+* open the layer styling panel for the DEM and enter the **Transparency** tab by clicking the small map icon in the upper left of the panel
+* set the **Global opacity** to *40%*
+* highlight the hillshade in the layer tree to view its styling panel
+* change the dropdown that is set to *Singleband pseudocolor* to *Hillshade*
+* change **Zoomed in** to *Cubic*
+* change **Zoomed out** to *Cubic*
+* change **Oversampling** to *40*
+
+
+![Turn on Labels](../images/adv_sym_dem_hillshade.gif "Turn on Labels")
+
+---
+[Back to Top](#Advanced-sybmology-in-QGIS)
+
