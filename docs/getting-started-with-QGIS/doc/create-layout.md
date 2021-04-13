@@ -15,7 +15,7 @@ Check out the [QGIS Documentation](https://docs.qgis.org/3.16/en/docs/user_manua
 
 Once you have created a map and are ready to export and/or print the Print Layout tool can be used to begin creating your layout. This can be accessed via Project > New Print Layout		
 
-QGIS allows multiple map print layouts to be created using the same map file and the Layout Manager tool can be used to access these or load a template. There are several simple templates by page size available to download [here](./resouces/templates).
+QGIS allows multiple map print layouts to be created using the same map file and the Layout Manager tool can be used to access these or load a template. There are several simple templates by page size available to download [here](https://github.com/bcgov/gis-pantry/tree/master/docs/getting-started-with-QGIS/resource/templates).
 
 This can be accessed via Print > Layout Manager. Select Empty layout (or navigate to template location) and click Create. Name the layout, click OK and the Print Layout window will open.
 ![create_layout](../images/create_layout.gif "Lets make a map!")
