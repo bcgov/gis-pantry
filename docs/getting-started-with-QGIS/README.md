@@ -12,6 +12,17 @@ This is a set of documents to help experienced GIS users with best practices, ti
 5. [Adding and working with data](./doc/working-with-data-in-QGIS.md)
 6. [GeoDataPackages in QGIS and other data formats](./doc/Geodatapackage_and_otherformats.md)
 7. [Web mapping and other remote data](./doc/Web_mapping_and_other_remote_data.md)
+8. [Editing vector data](./doc/editing.md)
+9. [Exporting vector data](./doc/exporting-data.md)
+10. [Making a map](./doc/making-maps.md)
+11. [Plugins](./doc/plugins.md)
+12. [Expressions and Calculations](./doc/expressions.md)
+13. [Processing data](./doc/processing.md)
+14. [Processing with Graphical Modeler](./doc/graphical-modeler.md)
+15. [Advanced processing and plugin devlopement](./doc/advanced.md)
+16. [Multi-user editing using PostGIS](./doc/multi-user-editing.md)
+
+
 8. [Editing vector data](./doc/editing-data.md)
 9. [Exporting vector data](./doc/exporting-data.md)
 10. [Making a map](./doc/making-maps.md)

@@ -1,0 +1,26 @@
+paramName,paramDescription,outPath,outName,outType,sqlQuery,ogrReadTheseColumns
+3,Southeast fire polys - simple,H:\_temp,wildfire_Southeast_polys_SIMPLE,KML,"select FIRE_NUMBER, FIRE_YEAR, FIRE_STATUS, FIRE_SIZE_HECTARES, LOAD_DATE, SHAPE
+from WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP fires
+where fires.FIRE_NUMBER LIKE 'N%' -- 'N' denotes Southeast
+order by FIRE_YEAR desc, FIRE_SIZE_HECTARES desc, FIRE_STATUS desc","outPath,outName,sqlQuery , outType"
+1,Southeast fire polys,H:\_temp,wildfire_Southeast_polys,KML,"select FIRE_NUMBER, FIRE_YEAR, FIRE_STATUS, FIRE_SIZE_HECTARES, LOAD_DATE, SHAPE,
+case when FIRE_STATUS = 'Fire of Note' then 'PEN(c:#8B0000,w:5px)'
+  when FIRE_STATUS = 'Out of Control' then 'PEN(c:#FF0000,w:4px)'
+  when FIRE_STATUS = 'Being Held' then 'PEN(c:#FA8072,w:4px)'
+  when FIRE_STATUS = 'Under Control' then 'PEN(c:#0000ff,w:3px)'
+  when FIRE_STATUS = 'Out' then 'PEN(c:#7FFF00,w:2px)'
+  end as OGR_STYLE
+from WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP fires
+where fires.FIRE_NUMBER LIKE 'N%' -- 'N' denotes Southeast
+order by FIRE_YEAR desc, FIRE_SIZE_HECTARES desc, FIRE_STATUS desc","outPath,outName,sqlQuery , outType"
+2,Southeast fire points,H:\_temp,wildfire_Southeast_points,KML,"select FIRE_NUMBER, GEOGRAPHIC_DESCRIPTION, FIRE_YEAR, FIRE_STATUS, FIRE_CAUSE, CURRENT_SIZE,
+IGNITION_DATE, SHAPE,
+case when FIRE_STATUS = 'Fire of Note' then 'SYMBOL(c:#8B0000,id:ogr-sym-5)' 
+  when FIRE_STATUS = 'Out of Control' then 'SYMBOL(c:#FF0000,id:ogr-sym-5)'
+  when FIRE_STATUS = 'Being Held' then 'SYMBOL(c:#FA8072,id:ogr-sym-5)'
+  when FIRE_STATUS = 'Under Control' then 'SYMBOL(c:#0000ff,id:ogr-sym-5)'
+  when FIRE_STATUS = 'Out' then 'SYMBOL(c:#7FFF00,id:ogr-sym-5)'
+  end as OGR_STYLE -- for KML symbology
+from WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_PNTS_SP firePt
+where FIRE_NUMBER LIKE 'N%' -- 'N' denotes Southeast
+order by FIRE_YEAR desc, CURRENT_SIZE desc, FIRE_STATUS desc","outPath,outName,sqlQuery , outType"

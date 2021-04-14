@@ -2,23 +2,19 @@
 
 ![GDAL](https://www.osgeo.org/wp-content/themes/roots/assets/img/logo-osgeo.svg "GDAL")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ![OGR](https://gdal.org/_static/gdalicon.png "OGR")&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![BCGOV](https://catalogue.data.gov.bc.ca/assets/gov/images/gov3_bc_logo.png "BCGOV")
-
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src=./images/BCID_H_rgb_pos.jpg width="150" height="80" />
 
 __ogr__ is an open-source Python package and command line interface (CLI) for geospatial data. It's used to easily transform data between 90+ different geospatial formats, and can be used pull Oracle queries off the BCGW and transform datasets into almost any type of spatial file.
 
 
 ogr is part of the GDAL package, and is easiest to use in a command line environment. On the DTS Geospatial Desktop, the OSGeo4W shell sets up the correct environments to try out ogr commands. It can be found easily using the Windows 10 start menu:
  
-<<<<<<< HEAD
-<img src=./Images/osgeo4wshell_where2.jpg width="300" height="80" />
-=======
-<img src=./images/osgeo4wshell_where2.jpg width="300" height="80"/>
-
->>>>>>> 914a8a9b9673b25c5a9409bff5fa61639b9103da
+<img src=./images/osgeo4wshell_where2.jpg width="300" height="80" />
 
 
 1. [Getting started in command line: ogr2ogr](./doc/ogr2ogr_start.md)
+2. [Using ogr to retrieve data from BCGOV databases](./doc/ogrFromDB.md)
 
 
 ## Contributing
