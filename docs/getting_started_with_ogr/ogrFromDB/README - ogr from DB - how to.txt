@@ -1,14 +1,8 @@
-
-# Using ogr to retrieve data from BCGOV databases
+README - ogr from DB - how to
+==============================
 Last updated: March 23, 2021
 
-__ogrFromDB__ is a Python script package to create and execute multiple ogr2ogr CLI strings. You can find the script and parameters .csv file
-[here](../ogrFromDB/).
-
-
-[try this too](./ogrFromDB/).
-
-[or this](./ogrFromDB/ogrFromDB_csv.py).
+ogrFromDB is a script package to create and execute multiple ogr2ogr CLI strings.
 
 It is an easy and fast way to convert spatial data from any BC Government Oracle database (i.e. BCGW and more)
 and save it in a variety of output formats:
@@ -17,10 +11,10 @@ and save it in a variety of output formats:
 The script works on the GTS Kamloops Desktop - Geospatial, but may not work on other GTS Desktops
 
 (The info below is all written in Lines 12 - 72 of ogrFromDB_csv.py)
+# This script takes all user input via the ogrParams.csv file,
+# which is pre-loaded with an example SQL query on a BCGW table (current year fire polygons in Southeast Fire Centre)
 
-This script takes all user input via the ogrParams.csv file, which is pre-loaded with an example SQL query on a BCGW table (current year fire polygons in Southeast Fire Centre)
-
-CHECK/BE AWARE OF THESE THINGS BEFORE RUNNING SCRIPT:
+"""CHECK/BE AWARE OF THESE THINGS BEFORE RUNNING SCRIPT:
 --------------------------------------------------------------------------------------
 IT'S VERY IMPORTANT THAT THESE FILES ARE IN THE SAME FOLDER WHEN RUNNING THIS SCRIPT:
 1. ogrFromDB_csv.py
@@ -76,6 +70,5 @@ with a maximum default length of 30 characters, and all spaces replaced by under
 To increase or decrease the maximum characters length, change the 'nameLengthMax' variable (Line ~470 in this script)
 
 10. If outputting an ESRI Shapefile, it's normal to see 'Warning 6: Normalized/laundered field name:' This reducess field names to 10 characters long, which is the max length for a shapefile field.
-
 
 
