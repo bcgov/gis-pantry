@@ -5,11 +5,6 @@ Last updated: March 23, 2021
 __ogrFromDB__ is a Python script package to create and execute multiple ogr2ogr CLI strings. You can find the script and parameters .csv file
 [here](../ogrFromDB/).
 
-
-[try this too](./ogrFromDB/).
-
-[or this](./ogrFromDB/ogrFromDB_csv.py).
-
 It is an easy and fast way to convert spatial data from any BC Government Oracle database (i.e. BCGW and more)
 and save it in a variety of output formats:
 ['GeoJSON', 'KML', 'LIBKML', 'ESRI Shapefile', 'GPKG', 'CSV']
