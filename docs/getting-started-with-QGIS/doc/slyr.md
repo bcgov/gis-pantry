@@ -54,3 +54,6 @@ To install make sure you have an established QGIS profile by starting and closin
 P:\corp\script_whse\python\Utility_Misc\Published\install_slyr\install_QGIS_SLYR.bat
 ![Install](../images/slyr-install.gif)
 
+---
+[Back to top](#SLYR-Plugin)
+

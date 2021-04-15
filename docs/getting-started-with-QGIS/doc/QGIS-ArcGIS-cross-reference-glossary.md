@@ -21,6 +21,7 @@ This cross reference glossary has been created as a way for users to quickly ref
   * [Results Panel | Log Messages Panel and Results Viewer Panel](#Results-Panel)
   * [Symbology Window | Layer Styling Planel and Layer Properties and Symbology](#Symbology-Window)
   * [Table of Contents | Layers Panel](#Table-Of-Contents)
+* [Tool References](#tool-references)
 * [Additional Resources](#Additional-Resources)
 
 
@@ -107,6 +108,12 @@ The **Labelling Toolbar** in ArcGIS *IS LIKE* the **Label Toolbar** in QGIS
 **Table of Contents** in ArcGIS *IS LIKE* the **Layers Panel** in QGIS
 
 ![](../images/LayersPanel.gif)
+
+# Tool References
+* **Tools** in ArcGIS *IS LIKE* **Algorithms** in QGIS
+* By default QGIS Algorithms will produce a temperary **Temporary Layer** in memory as the result
+* **Erase Tool** in ArcGIS *IS LIKE* the **Difference Algorithm** in QGIS
+* **Explode Tool** in ArcGIS Editing Toolbar *IS LIKE* the **Multi-part to Singlepart** tool in the QGIS Editing Toolbar
 
 # Additional Resources:
 * 27 Differences Between ArcGIS and QGIS: https://gisgeography.com/qgis-arcgis-differences/
