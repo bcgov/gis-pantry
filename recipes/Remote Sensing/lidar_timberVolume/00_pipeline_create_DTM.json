@@ -1,0 +1,36 @@
+{
+    "pipeline":[
+         "C:/pdal_tests/GLA_1544_532_BCAlbers_SP000-2606_v2.laz",
+        {
+          "type":"filters.assign",
+          "assignment":"Classification[:]=0"
+        },
+        {
+          "type":"filters.elm"
+        },
+        {
+          "type":"filters.outlier"
+        },
+        {
+
+          "type":"filters.smrf",
+          "ignore":"Classification[7:7]",
+          "slope":0.2,
+          "window":16,
+          "threshold":0.45,
+          "scalar":1.2
+        },
+        {
+          "type": "writers.gdal",
+          "filename":"C:/pdal_tests/dtm.tif",
+          "output_type":"idw",
+          "gdaldriver":"GTiff",
+          "resolution": 0.5,
+          "radius": 1
+        },
+        {
+          "type":"filters.range",
+          "limits":"Classification[2:2]"
+        }
+    ]
+}
