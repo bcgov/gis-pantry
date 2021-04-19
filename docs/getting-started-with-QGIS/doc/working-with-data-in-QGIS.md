@@ -30,10 +30,10 @@ In the browser panel right click on the Add ESRI Feature service and create new
 
 
 ## Adding data from layer library
-The BCGOV QGIS layer library provides standardized style and data definitions for corporate datasets. Add the location of the QGIS Layer Library to your favorites, navigate through the folder categories, right click the layer and choose *Add selected layer(s) to project*
+The BCGOV layer library provides standardized style and data definitions for corporate datasets. Once [SLYR is installed](slyr.md), add the location of the BCGov Corporate Layer Library to your favorites, navigate through the folder categories, right click the layer and choose *Add selected layer(s) to project*
 
 
-![Add Layer to project](../images/layer_library.gif "Add Layer to project")
+![Add Layer to project](../images/slyr-add-lyr.gif "Add ESRI Layer to project")
 
 
 ## Adding Oracle data via browser panel
