@@ -69,7 +69,7 @@ To request an output file from the user labelled 'output file':
 
 There are many more options like fields from a file, rasters, vectors, etc. that can be found in the [QGIS documentation](https://docs.qgis.org/3.4/en/docs/training_manual/processing/r_intro.html)
 
-##First Sample Script
+## First Sample Script
 
 Now that you have R set up and know the basics of how code differs between R in QGIS and the R terminal we can start writing a simple script. This script will simply read a file and output it as a new file without any processing but will let you see how the GUI elements in QGIS work with R.
 
