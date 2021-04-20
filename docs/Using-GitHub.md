@@ -37,7 +37,7 @@ Using GitHub desktop to compare fork to upstream master and update fork with mis
 - Select Branch -> Compare to Branch
 - Merge into Master to update your fork with all missing files
 
-![Fork GitHub Repository](./getting-started-with-QGIS/images/Fork_GitHub_Repository.gif)
+![Compare GitHub Repository](./getting-started-with-QGIS/images/GitHub_compare_or_merge_upstream_branch.gif)
 
 ### Option 1: Make edits directly on GitHub
 
