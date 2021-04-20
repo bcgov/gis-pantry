@@ -71,7 +71,7 @@ There are many more options like fields from a file, rasters, vectors, etc. that
 
 ## First Sample Script
 
-Now that you have R set up and know the basics of how code differs between R in QGIS and the R terminal we can start writing a simple script. This script will simply read a file and output it as a new file without any processing but will let you see how the GUI elements in QGIS work with R.
+Now that you have R set up in QGIS and know the basics of how code differs between R in QGIS and the R terminal we can start writing a simple script. This script will simply read a file and write it back out without any changes.
 
 1) Click the 'R' symbol at the top of the Processing Toolbox and select Create New R Script...
 
