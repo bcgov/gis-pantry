@@ -113,7 +113,7 @@ lidR is a package for R that provides a set of tools for processing and displayi
 
 Be sure you have installed the R packages lidR, tictoc, rlas, and rgdal before starting this section.
 
-You will require an LAS (LiDaR point cloud) file to complete this section as well as a shapefile to clip the LAS file to. I used the LAS file from [Vancouver Open data available here](https://webtransfer.vancouver.ca/opendata/2018LiDAR/4890E_54610N.zip) and clipped it to a specified extent. However, in actual analysis I usually use a shapefile to clip the data.
+You will require an LAS (LiDaR point cloud) file to complete this section. I used the LAS file from [Vancouver Open data available here](https://webtransfer.vancouver.ca/opendata/2018LiDAR/4890E_54610N.zip). If you use a different file you will need to change the clip extent in the code.
 
 Once you get the data and extract it to your computer, you can create a new R script in QGIS and enter the following code:
 
@@ -198,6 +198,7 @@ hulls  <- tree_hulls(trees, type = "concave", concavity = 2, func = .stdmetrics)
 
 writeOGR(hulls, Outs, Outs, driver="ESRI Shapefile")
 ```
+When running this script: (1) make sure the inupt has a .las extension; (2) make sure the Outs variable ends in the .shp extension.
 
 The code above has two sets of outputs.
 
