@@ -1,5 +1,7 @@
 # Using QGIS with R for Advanced Analysis
 
+[Home](../README.md)
+
 Unlike most closed source software: QGIS integrates with other open source systems to peroform much of its analysis.
 
 One example of this is the functionality of QGIS with the R project.
