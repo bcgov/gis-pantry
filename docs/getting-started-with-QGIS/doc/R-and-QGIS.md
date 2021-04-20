@@ -15,7 +15,7 @@ One example of this is the functionality of QGIS with the R project.
 
 ## Setting up R in QGIS
 
-R is very easy to set up in QGIS. In most cases: you can simply (1) install R on your host machine (already installed on the DTS servers); and, (2) install the 'Processing R Provided' plugin from the official repository in QGIS (not sure how ot install a plugin in QGIS? See the documentation [here](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md)).
+R is very easy to set up in QGIS. In most cases: you can simply (1) install R on your host machine (already installed on the DTS servers); and, (2) install the 'Processing R Provider' plugin from the official repository in QGIS (not sure how ot install a plugin in QGIS? See the documentation [here](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md)).
 
 If you have issues with either of these steps: review the documentation for [R](https://cran.r-project.org/mirrors.html) and/or [QGIS](https://north-road.github.io/qgis-processing-r/).
 
