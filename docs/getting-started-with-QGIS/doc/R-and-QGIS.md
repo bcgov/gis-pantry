@@ -37,7 +37,7 @@ library("BiocManager")
 BiocManager::install( c( "BiocManager" ) )
 ```
 
-Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
+*Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05*
 
 ## Installing Packages in R
 
@@ -49,7 +49,7 @@ install.packages("package-name", dependencies=TRUE)
 
 To access the R terminal simply type R into the search box in your start menu and open it.
 
-Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
+*Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05*
 
 ## Accessing R in QGIS
 
@@ -62,7 +62,7 @@ To create a new R script in QGIS:
 
 3. Here you can write R code that will run in QGIS like a normal R script
 
-Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
+*Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05*
 
 ## R in QGIS Code
 
@@ -225,7 +225,7 @@ writeOGR(hulls, Outs, Outs, driver="ESRI Shapefile")
 ```
 When running this script: (1) make sure the inupt has a .las extension; (2) make sure the Outs variable ends in the .shp extension.
 
-Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
+*Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05*
 
 The code above has two sets of outputs.
 
