@@ -37,7 +37,7 @@ library("BiocManager")
 BiocManager::install( c( "BiocManager" ) )
 ```
 
-If you have issues with either of these steps: review the documentation for [R](https://cran.r-project.org/mirrors.html) and/or [QGIS](https://north-road.github.io/qgis-processing-r/).
+Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
 
 ## Installing Packages in R
 
@@ -49,6 +49,8 @@ install.packages("package-name", dependencies=TRUE)
 
 To access the R terminal simply type R into the search box in your start menu and open it.
 
+Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
+
 ## Accessing R in QGIS
 
 To create a new R script in QGIS:
@@ -59,6 +61,8 @@ To create a new R script in QGIS:
 ![accessing r in qgis](../images/rInQgis1.gif "r in qgis")
 
 3. Here you can write R code that will run in QGIS like a normal R script
+
+Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
 
 ## R in QGIS Code
 
@@ -124,6 +128,7 @@ And, lastly, we load our libraries using library(library_name).
 
 Next, we can move on to a more complicated but more useful script.
 
+Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
 
 ## lidR and Analysis Using Point Clouds
 
@@ -219,6 +224,8 @@ hulls  <- tree_hulls(trees, type = "concave", concavity = 2, func = .stdmetrics)
 writeOGR(hulls, Outs, Outs, driver="ESRI Shapefile")
 ```
 When running this script: (1) make sure the inupt has a .las extension; (2) make sure the Outs variable ends in the .shp extension.
+
+Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
 
 The code above has two sets of outputs.
 
