@@ -29,11 +29,11 @@ R is very easy to set up in QGIS. In most cases: you can simply:
 
 (4) make sure you have checked the *Use 64 bit version* box and set your *user library folder* and *R scripts folder* to a folder you have write permissions on;
 
-and, (5) (Windows specific) replace all occurences of '/' and '\' with '//' to escape the string (ex/ change W:/yourProfile/R to W://yourProfile//R)
+and, (5) (Windows specific) replace all occurences of '/' and '\' with '//' to escape the string in the General and R sections of Settings->Processing (ex/ change W:/yourProfile/R to W://yourProfile//R)
 
 ![setup QGIS in R](../images/rInQgis6.gif "setup QGIS in R")
 
-On the DTS, your final settings should look like this (replace W:/FOR/RSI/DMH/General_User_Data/DavidsonJoe/rPackages with a folder of your choosing where you can read/write files):
+On the DTS, your final settings should look like this (replace W://FOR//RSI//DMH//General_User_Data//DavidsonJoe//rPackages with a folder of your choosing where you can read/write files):
 
 ![settings](../images/rInQGIS7.PNG "setup QGIS in R")
 
