@@ -8,18 +8,45 @@ One example of this is the functionality of QGIS with the R project.
 
 ## Index
 
-* [Setting up R in QGIS](setting-up-r-in-qgis)
-* [Installing Packages](installing-packages)
-* [Accessing R in QGIS](accessing-r-in-qgis)
-* [R in QGIS Code](r-in-qgis-code)
-* [First Sample Script](first-sample-script)
-* [lidR and Analysis Using Point Clouds](lidr-and-analysis-using-point-clouds)
+* [Setting up R in QGIS](#setting-up-r-in-qgis)
+* [Installing Packages](#installing-packages)
+* [Accessing R in QGIS](#accessing-r-in-qgis)
+* [R in QGIS Code](#r-in-qgis-code)
+* [First Sample Script](#first-sample-script)
+* [lidR and Analysis Using Point Clouds](#lidr-and-analysis-using-point-clouds)
 
 ## Setting up R in QGIS
 
-R is very easy to set up in QGIS. In most cases: you can simply (1) install R on your host machine (already installed on the DTS servers); and, (2) install the 'Processing R Provider' plugin from the official repository in QGIS (not sure how ot install a plugin in QGIS? See the documentation [here](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md)).
+*NOTE: R will not work in QGIS without running the code below.*
 
-If you have issues with either of these steps: review the documentation for [R](https://cran.r-project.org/mirrors.html) and/or [QGIS](https://north-road.github.io/qgis-processing-r/).
+R is very easy to set up in QGIS. In most cases: you can simply: 
+
+(1) install R on your host machine (already installed on the DTS servers); 
+
+(2) install the 'Processing R Provider' plugin from the official repository in QGIS (not sure how ot install a plugin in QGIS? See the documentation [here](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md)); 
+
+(3) set your R folder to E://sw_nt//R//R-3.6.3; 
+
+(4) make sure you have checked the *Use 64 bit version* box and set your *user library folder* and *R scripts folder* to a folder you have write permissions on;
+
+and, (5) (Windows specific) replace all occurences of '/' and '\' with '//' to escape the string in the General and R sections of Settings->Processing (ex/ change W:/yourProfile/R to W://yourProfile//R)
+
+![setup QGIS in R](../images/rInQgis6.gif "setup QGIS in R")
+
+On the DTS, your final settings should look like this (replace W://FOR//RSI//DMH//General_User_Data//DavidsonJoe//rPackages with a folder of your choosing where you can read/write files):
+
+![settings](../images/rInQGIS7.PNG "setup QGIS in R")
+
+You will also need to install BiocManager and install the EBImage package to work with LiDaR data. You can do this by running the below code (replace "W:\\path\\to\\your\\user\\library\\folder" with your *User library path* from your QGIS settings in line 1) in R x64 3.6.3:
+
+```R
+.libPaths( c("W:\\path\\to\\your\\user\\library\\folder", .libPaths() ) )
+install.packages("BiocManager", dependencies=TRUE)
+library("BiocManager")
+BiocManager::install( c( "BiocManager" ) )
+```
+
+*Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05*
 
 ## Installing Packages in R
 
@@ -31,6 +58,8 @@ install.packages("package-name", dependencies=TRUE)
 
 To access the R terminal simply type R into the search box in your start menu and open it.
 
+*Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05*
+
 ## Accessing R in QGIS
 
 To create a new R script in QGIS:
@@ -41,6 +70,8 @@ To create a new R script in QGIS:
 ![accessing r in qgis](../images/rInQgis1.gif "r in qgis")
 
 3. Here you can write R code that will run in QGIS like a normal R script
+
+*Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05*
 
 ## R in QGIS Code
 
@@ -73,7 +104,7 @@ There are many more options like fields from a file, rasters, vectors, etc. that
 
 ## First Sample Script
 
-Now that you have R set up in QGIS and know the basics of how code differs between R in QGIS and the R terminal we can start writing a simple script. This script will simply read a file and write it back out without any changes.
+Now that you have R set up in QGIS and know the basics of how code differs between R in QGIS and the R terminal we can start writing a simple script. This script will simply read a file and write the first object in the file back out as a new shape.
 
 1) Click the 'R' symbol at the top of the Processing Toolbox and select Create New R Script...
 
@@ -106,6 +137,7 @@ And, lastly, we load our libraries using library(library_name).
 
 Next, we can move on to a more complicated but more useful script.
 
+Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05
 
 ## lidR and Analysis Using Point Clouds
 
@@ -201,6 +233,8 @@ hulls  <- tree_hulls(trees, type = "concave", concavity = 2, func = .stdmetrics)
 writeOGR(hulls, Outs, Outs, driver="ESRI Shapefile")
 ```
 When running this script: (1) make sure the inupt has a .las extension; (2) make sure the Outs variable ends in the .shp extension.
+
+*Having an issue with this code or have a suggestion on how to make it better? Submit an [issue report](https://github.com/bcgov/gis-pantry/issues/new) and be sure to tag @jdavid05*
 
 The code above has two sets of outputs.
 
