@@ -37,13 +37,10 @@ On the DTS, your final settings should look like this (replace W://FOR//RSI//DMH
 
 ![settings](../images/rInQGIS7.PNG "setup QGIS in R")
 
-```R
-.libPaths( c("path\\to\\your\\folder", .libPaths() ) )
-```
-
-You will also need to install BiocManager and install the EBImage package to work with LiDaR data. You can do this by:
+You will also need to install BiocManager and install the EBImage package to work with LiDaR data. You can do this by running the below code (replace "W:\\path\\to\\your\\user\\library\\folder" with your *User library path* from your QGIS settings in line 1) in R x64 3.6.3:
 
 ```R
+.libPaths( c("W:\\path\\to\\your\\user\\library\\folder", .libPaths() ) )
 install.packages("BiocManager", dependencies=TRUE)
 library("BiocManager")
 BiocManager::install( c( "BiocManager" ) )
@@ -152,16 +149,13 @@ Be sure you have installed the R packages lidR, tictoc, rlas, and rgdal before s
 
 You will require an LAS (LiDaR point cloud) file to complete this section. I used the LAS file from [Vancouver Open data available here](https://webtransfer.vancouver.ca/opendata/2018LiDAR/4890E_54610N.zip). If you use a different file you will need to change the clip extent in the code.
 
-Once you get the data and extract it to your computer, you can create a new R script in QGIS and enter the following code (change the .libPaths directory on line 7 to your R scripts directory or the script will fail):
+Once you get the data and extract it to your computer, you can create a new R script in QGIS and enter the following code:
 
 ```r
 ##LIDAR Processing=group
 ##LAS_file=file
 ##Out_folder_for_models=folder
 ##Outs=output file
-
-# Set the library paths
-.libPaths( c("W:\\path\\to\\your\\library", .libPaths() ) )
 
 # Load required libraries
 library(rgl)
