@@ -19,7 +19,17 @@ One example of this is the functionality of QGIS with the R project.
 
 *NOTE: R will not work in QGIS without running the code below.*
 
-R is very easy to set up in QGIS. In most cases: you can simply (1) install R on your host machine (already installed on the DTS servers); (2) install the 'Processing R Provider' plugin from the official repository in QGIS (not sure how ot install a plugin in QGIS? See the documentation [here](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md)); (3) Set your R folder to E:/sw_nt/R/R-3.6.3; and, (4) make sure you have checked the *Use 64 bit version* box and set your *user library folder* and *R scripts folder* to a folder you have write permissions on.
+R is very easy to set up in QGIS. In most cases: you can simply: 
+
+(1) install R on your host machine (already installed on the DTS servers); 
+
+(2) install the 'Processing R Provider' plugin from the official repository in QGIS (not sure how ot install a plugin in QGIS? See the documentation [here](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md)); 
+
+(3) set your R folder to E://sw_nt//R//R-3.6.3; 
+
+(4) make sure you have checked the *Use 64 bit version* box and set your *user library folder* and *R scripts folder* to a folder you have write permissions on;
+
+and, (5) (Windows specific) replace all occurences of '/' and '\' with '//' to escape the string (ex/ change W:/yourProfile/R to W://yourProfile//R)
 
 ![setup QGIS in R](../images/rInQgis6.gif "setup QGIS in R")
 
