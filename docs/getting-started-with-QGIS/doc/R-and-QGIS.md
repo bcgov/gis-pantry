@@ -19,9 +19,11 @@ One example of this is the functionality of QGIS with the R project.
 
 *NOTE: R will not work in QGIS without running the code below.*
 
-R is very easy to set up in QGIS. In most cases: you can simply (1) install R on your host machine (already installed on the DTS servers); and, (2) install the 'Processing R Provider' plugin from the official repository in QGIS (not sure how ot install a plugin in QGIS? See the documentation [here](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md)).
+R is very easy to set up in QGIS. In most cases: you can simply (1) install R on your host machine (already installed on the DTS servers); (2) install the 'Processing R Provider' plugin from the official repository in QGIS (not sure how ot install a plugin in QGIS? See the documentation [here](https://github.com/bcgov/gis-pantry/blob/master/docs/getting-started-with-QGIS/doc/QGIS-plugins.md)); (3) Set your R folder to E:/sw_nt/R/R-3.6.3 (you will also find your *R Scripts folder* here). 
 
-On the DTS, you will need to run some code at the start of every script to ensure that allows you to save R packages to a folder you have write permission to and load the packages you have already installed:
+![setup QGIS in R](../images/rInQgis6.gif "setup QGIS in R")
+
+On the DTS, you will need to run some code at the start of every script to ensure that allows you to save R packages to a folder you have write permission to and load the packages you have already installed (this should be the same as your *R Scripts folder* in QGIS):
 
 ```R
 .libPaths( c("path\\to\\your\\folder", .libPaths() ) )
