@@ -107,7 +107,7 @@ There are many more options like fields from a file, rasters, vectors, etc. that
 
 ## First Sample Script
 
-Now that you have R set up in QGIS and know the basics of how code differs between R in QGIS and the R terminal we can start writing a simple script. This script will simply read a file and write it back out without any changes.
+Now that you have R set up in QGIS and know the basics of how code differs between R in QGIS and the R terminal we can start writing a simple script. This script will simply read a file and write the first object in the file back out as a new shape.
 
 1) Click the 'R' symbol at the top of the Processing Toolbox and select Create New R Script...
 
@@ -152,13 +152,16 @@ Be sure you have installed the R packages lidR, tictoc, rlas, and rgdal before s
 
 You will require an LAS (LiDaR point cloud) file to complete this section. I used the LAS file from [Vancouver Open data available here](https://webtransfer.vancouver.ca/opendata/2018LiDAR/4890E_54610N.zip). If you use a different file you will need to change the clip extent in the code.
 
-Once you get the data and extract it to your computer, you can create a new R script in QGIS and enter the following code:
+Once you get the data and extract it to your computer, you can create a new R script in QGIS and enter the following code (change the .libPaths directory on line 7 to your R scripts directory or the script will fail):
 
 ```r
 ##LIDAR Processing=group
 ##LAS_file=file
 ##Out_folder_for_models=folder
 ##Outs=output file
+
+# Set the library paths
+.libPaths( c("W:\\path\\to\\your\\library", .libPaths() ) )
 
 # Load required libraries
 library(rgl)
