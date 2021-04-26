@@ -8,12 +8,12 @@ One example of this is the functionality of QGIS with the R project.
 
 ## Index
 
-* [Setting up R in QGIS](setting-up-r-in-qgis)
-* [Installing Packages](installing-packages)
-* [Accessing R in QGIS](accessing-r-in-qgis)
-* [R in QGIS Code](r-in-qgis-code)
-* [First Sample Script](first-sample-script)
-* [lidR and Analysis Using Point Clouds](lidr-and-analysis-using-point-clouds)
+* [Setting up R in QGIS](#setting-up-r-in-qgis)
+* [Installing Packages](#installing-packages)
+* [Accessing R in QGIS](#accessing-r-in-qgis)
+* [R in QGIS Code](#r-in-qgis-code)
+* [First Sample Script](#first-sample-script)
+* [lidR and Analysis Using Point Clouds](#lidr-and-analysis-using-point-clouds)
 
 ## Setting up R in QGIS
 
