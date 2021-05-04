@@ -31,11 +31,11 @@ NOTES:
 * os
 
 ## parameters 
-# provide the default parameters for expirary, endpoint, and bucketname for the S3 Object
+### provide the default parameters for expirary, endpoint, and bucketname for the S3 Object
 * expiration = 3600 # default is 1 hour
 * endpoint_url='https://nrs.objectstore.gov.bc.ca:443/' # endpoint for S3 Object Storage -- if this isn't specified it will try and go to Amazon S3
 * bucketname = 'nrs-iit'
 
-# this script requires access to secret/secure information store as environment variables that are picked up at runtime
+### this script requires access to secret/secure information store as environment variables that are picked up at runtime
 * AWS_SERVER_PUBLIC_KEY = os.environ.get('AWS_ACCESS_KEY_ID')  # access key for s3 object storage 
 * AWS_SERVER_SECRET_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY') # secret ky for S3 object storage
