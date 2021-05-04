@@ -15,9 +15,9 @@ python create_presigned_url_for_s3_objects.py
 ```
 
 NOTES:
-* currently there are no command line configs, 
-* the script looks for env vars for AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY, 
-* there are script variables for endpoint URL, expiration (seconds) and bucket name with defaults)
+* currently there are no command line configs 
+* the script looks for env vars for AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY 
+* there are script variables for endpoint URL, expiration (seconds) and bucket name (all with defaults)
 * This script returns a read only URL that provides access to a S3 object for a pre-determined amount of time (expiration)
 * example url: https://nrs.objectstore.gov.bc.ca/nrs-iit/test.txt?AWSAccessKeyId=nrs-iit-user&Signature=K0RNRj84b3IR8uYwdShwFcbbCmY%3D&Expires=1620086854 .. 
 * this is a time based access key (3600s = 1 hr) expires Mon May 03 2021 17:07:34 GMT-0700 (Pacific Daylight Time) 
