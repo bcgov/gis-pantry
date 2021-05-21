@@ -19,9 +19,6 @@ Link to sample markdown or Jupyter Notebooks
 
 -->
 
-* [Update AGOL Feature Service with FGDB feature](Update_AGOL_Featureservice_with_FGDB_Feature.ipynb)  
-
-
 ### License
     Copyright 2019 BC Provincial Government
 

@@ -29,15 +29,7 @@ Forking GitHub Repository
 
 NOTE BEFORE EDITING: Always do a fetch on bcgov/gis-pantry before pushing your own changes. Git fetch checks for any changes in the Upstream Master. If there are changes then git pull is needed to get those changes synced. See git fetch vs git pull. This can be done by adding a remote to point to bcgov/gis-pantry. The reason for this is if another user has made a pull request since you forked and cloned copy was made it will create a merge conflict because your copy will be out of sync with bcgov/gis-pantry.
 
-Using MS Visual Studio Code or GitHub for desktop should have this functionality built in. The main thing to remember is that the update on the remote bcgov/gis-pantry will integrate into your local copy before making push and pull requests to your forked version.  
-
-Using GitHub desktop to compare fork to upstream master and update fork with missing edits.  
-
-- Select appropriate repository
-- Select Branch -> Compare to Branch
-- Merge into Master to update your fork with all missing files
-
-![Compare GitHub Repository](./getting-started-with-QGIS/images/GitHub_compare_or_merge_upstream_branch.gif)
+Using MS Visual Studio Code or GitHub for desktop should have this functionality built in. The main thing to remember is that the update on the remote bcgov/gis-pantry will integrate into your local copy before making push and pull requests to your forked version.
 
 ### Option 1: Make edits directly on GitHub
 
