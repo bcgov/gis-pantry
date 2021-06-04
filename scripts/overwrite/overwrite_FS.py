@@ -2,7 +2,7 @@
 # https://community.esri.com/t5/arcgis-online-documents/overwrite-arcgis-online-feature-service-using-truncate-and/ta-p/904457
 # Original script author: Jake Skinner, ESRI
 # Modified to allow calling overwrite function outside of this script
-# 06-04-21 rrydvans, FLNR:EX
+
 
 
 import time
