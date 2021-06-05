@@ -6,7 +6,7 @@
 
 
 import time
-print("Importing modules: arcpy, os, getpass, zipfile, arcgis")
+print("Importing modules: arcpy, os, zipfile, arcgis")
 import arcpy, os
 from zipfile import ZipFile
 from arcgis.gis import GIS
