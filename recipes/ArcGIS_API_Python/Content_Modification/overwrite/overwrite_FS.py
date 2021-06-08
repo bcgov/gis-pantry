@@ -6,8 +6,8 @@
 
 
 import time
-print("Importing modules: arcpy, os, zipfile, arcgis")
-import arcpy, os
+print("Importing modules: arcpy, os, getpass, zipfile, arcgis")
+import arcpy, os, getpass
 from zipfile import ZipFile
 from arcgis.gis import GIS
 
@@ -16,7 +16,7 @@ class AGO(object):
     This class can be used to overwrite existing Feature Services/Feature Layers in ArcGIS Online
     Steps:
     0.Log into AGO, create GIS object that allows us to communicate with AGO (in __init__ method)
-    1.export the feature class to a temporary File Geodatabase
+    1.export the feature class to a temporary File Geodatabase/assign the type of input
     2.zip the File Geodatabase
     3.upload the zipped File Geodatabase to AGOL
     4.truncate the feature service
@@ -25,16 +25,33 @@ class AGO(object):
     7.delete the local zipped File Geodatabase
     8.delete the temporary File Geodatabase
     """
-    def __init__(self,username):
+    def __init__(self,username,password):
         self.username=username.upper()
         # Create GIS object
-        self.gis = GIS("https://www.arcgis.com", self.username)
+        self.gis = GIS("https://www.arcgis.com", self.username,password)
 
     def overwrite(self, featureclass_path, featurelayer_id):
         arcpy.env.overwriteOutput = True
         print(f"Overwrite of {featureclass_path} start time: \n"+ time.ctime())
         startTime = time.time()
         
+        premiseLayer = self.gis.content.get(featurelayer_id)
+        
+        def inputType(featureclass_path):
+            desc = arcpy.Describe(featureclass_path)
+            fcDataType = desc.dataType 
+            print("datatype: ", fcDataType)
+            if fcDataType not in ("FeatureClass", "Table"):
+                print('Input is not a feature class nor a table. Go over the overwrite_FS module to see if this input can be run using the feature class way')
+            
+            if fcDataType == "FeatureClass":
+                arcpy.conversion.FeatureClassToFeatureClass(featureclass_path, os.path.join(arcpy.env.scratchFolder, "TempGDB.gdb"), fcName)
+                self.fLyr = premiseLayer.layers[0]
+            
+            if fcDataType == "Table":
+                arcpy.conversion.TableToTable(featureclass_path, os.path.join(arcpy.env.scratchFolder, "TempGDB.gdb"), fcName)
+                self.fLyr = premiseLayer.tables[0]
+
         # Function to Zip FGD
         def zipDir(dirPath, zipPath):
             zipf = ZipFile(zipPath , mode='w')
@@ -53,7 +70,9 @@ class AGO(object):
         fcName = os.path.basename(featureclass_path)
         fcName = fcName.split('.')[-1]
         print(f"Exporting {fcName} to temp FGD")
-        arcpy.conversion.FeatureClassToFeatureClass(featureclass_path, os.path.join(arcpy.env.scratchFolder, "TempGDB.gdb"), fcName)
+        
+        #check the input type, convert to FGD and assign appropriate call for online lyr
+        inputType(featureclass_path)
 
         # Zip temp FGD
         print("Zipping temp FGD")
@@ -72,13 +91,11 @@ class AGO(object):
 
         # Truncate Feature Service
         print("Truncating Feature Service")
-        premiseLayer = self.gis.content.get(featurelayer_id)
-        fLyr = premiseLayer.layers[0]
-        fLyr.manager.truncate()
+        self.fLyr.manager.truncate()
 
         # Append features from feature class
         print("Appending features")
-        fLyr.append(item_id=fgd_item.id, upload_format="filegdb", upsert=False, field_mappings=[])
+        self.fLyr.append(item_id=fgd_item.id, upload_format="filegdb", upsert=False, field_mappings=[])
 
         # Delete Uploaded File Geodatabase
         print("Deleting uploaded File Geodatabase")
@@ -100,9 +117,10 @@ if __name__ == "__main__":
     #itemid of the online feature class to overwrite e.g. "5e3e867ebf4940c4b100cc4dc977b011"
     featurelayer_id ="" 
 
-    username=input("AGO Username: ")
+    username = input("AGO Username: ")
+    password = getpass.getpass()
     #instantiate class with your username; you will be prompted to enter password
-    ago_obj=AGO(username)
+    ago_obj=AGO(username,password)
     
     ago_obj.overwrite(featureclass_path,featurelayer_id)
 

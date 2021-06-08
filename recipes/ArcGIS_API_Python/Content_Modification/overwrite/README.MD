@@ -8,11 +8,12 @@ This script can be used independetly (i.e. run at ```__name__ == __main__``` tow
 1. Instantiate AGO object using your ArcGIS Online username. You will be prompted to enter your password.
 ```
 import overwrite_FS
-username=input("AGO Username: ")
-ago_obj = overwrite_FS.AGO(username)
+username = input("AGO Username: ")
+password = getpass.getpass()
+ago_obj = overwrite_FS.AGO(username,getpass)
 ```
 
-2. Now you can use the ```ago_obj``` instantiated above to call the ```overwrite()``` method to overwrite online feature layer. It takes two positional arguments: ```featureclass_path``` and  ```featurelayer_id```.
+2. Now you can use the ```ago_obj``` instantiated above to call the ```overwrite()``` method to overwrite online feature layer (or a table). It takes two positional arguments: ```featureclass_path``` and  ```featurelayer_id```.
 
 ```
 featureclass_path = r'W:\data\test.gdb\test_featureclass'
