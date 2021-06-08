@@ -6,8 +6,8 @@
 
 
 import time
-print("Importing modules: arcpy, os, zipfile, arcgis")
-import arcpy, os
+print("Importing modules: arcpy, os, sys getpass, zipfile, arcgis")
+import arcpy, os, sys, getpass
 from zipfile import ZipFile
 from arcgis.gis import GIS
 
@@ -16,7 +16,7 @@ class AGO(object):
     This class can be used to overwrite existing Feature Services/Feature Layers in ArcGIS Online
     Steps:
     0.Log into AGO, create GIS object that allows us to communicate with AGO (in __init__ method)
-    1.export the feature class to a temporary File Geodatabase
+    1.export the feature class to a temporary File Geodatabase/assign the type of input
     2.zip the File Geodatabase
     3.upload the zipped File Geodatabase to AGOL
     4.truncate the feature service
@@ -25,16 +25,34 @@ class AGO(object):
     7.delete the local zipped File Geodatabase
     8.delete the temporary File Geodatabase
     """
-    def __init__(self,username):
+    def __init__(self,username,password):
         self.username=username.upper()
         # Create GIS object
-        self.gis = GIS("https://www.arcgis.com", self.username)
+        self.gis = GIS("https://www.arcgis.com", self.username,password)
 
-    def overwrite(self, featureclass_path, featurelayer_id):
+    def overwrite(self, input_path, featurelayer_id):
         arcpy.env.overwriteOutput = True
-        print(f"Overwrite of {featureclass_path} start time: \n"+ time.ctime())
+        print(f"Overwrite of {input_path} start time: \n"+ time.ctime())
         startTime = time.time()
         
+        premiseLayer = self.gis.content.get(featurelayer_id)
+        
+        def inputType(input_path):
+            desc = arcpy.Describe(input_path)
+            fcDataType = desc.dataType 
+            print("Data type: ", fcDataType) 
+            
+            if fcDataType in ("FeatureClass","ShapeFile"):
+                arcpy.conversion.FeatureClassToFeatureClass(input_path, os.path.join(arcpy.env.scratchFolder, "TempGDB.gdb"), fcName)
+                self.fLyr = premiseLayer.layers[0]
+            
+            elif fcDataType == "Table":
+                arcpy.conversion.TableToTable(input_path, os.path.join(arcpy.env.scratchFolder, "TempGDB.gdb"), fcName)
+                self.fLyr = premiseLayer.tables[0]
+            else:
+                print('Input is not a feature class, shapefile or a table. This script is not going to work on this input! Or maybe it will if you change it :)')
+                sys.exit(1)
+
         # Function to Zip FGD
         def zipDir(dirPath, zipPath):
             zipf = ZipFile(zipPath , mode='w')
@@ -50,10 +68,12 @@ class AGO(object):
         arcpy.CreateFileGDB_management(arcpy.env.scratchFolder, "TempGDB")
 
         # Export feature classes to temporary File Geodatabase
-        fcName = os.path.basename(featureclass_path)
+        fcName = os.path.basename(input_path)
         fcName = fcName.split('.')[-1]
         print(f"Exporting {fcName} to temp FGD")
-        arcpy.conversion.FeatureClassToFeatureClass(featureclass_path, os.path.join(arcpy.env.scratchFolder, "TempGDB.gdb"), fcName)
+        
+        #check the input type, convert to FGD and assign appropriate call for online lyr
+        inputType(input_path)
 
         # Zip temp FGD
         print("Zipping temp FGD")
@@ -72,13 +92,11 @@ class AGO(object):
 
         # Truncate Feature Service
         print("Truncating Feature Service")
-        premiseLayer = self.gis.content.get(featurelayer_id)
-        fLyr = premiseLayer.layers[0]
-        fLyr.manager.truncate()
+        self.fLyr.manager.truncate()
 
         # Append features from feature class
         print("Appending features")
-        fLyr.append(item_id=fgd_item.id, upload_format="filegdb", upsert=False, field_mappings=[])
+        self.fLyr.append(item_id=fgd_item.id, upload_format="filegdb", upsert=False, field_mappings=[])
 
         # Delete Uploaded File Geodatabase
         print("Deleting uploaded File Geodatabase")
@@ -90,19 +108,20 @@ class AGO(object):
         os.remove(os.path.join(arcpy.env.scratchFolder, "TempGDB.gdb.zip"))
 
         elapsedTime = round((time.time() - startTime) / 60, 2)
-        print(f"Overwrite using {featureclass_path} finished in {elapsedTime} minutes")
+        print(f"Overwrite using {input_path} finished in {elapsedTime} minutes")
 
 
 
 if __name__ == "__main__":
     #path to the feature class to be used to overwrite online feature service
-    featureclass_path="" 
+    input_path="" 
     #itemid of the online feature class to overwrite e.g. "5e3e867ebf4940c4b100cc4dc977b011"
     featurelayer_id ="" 
 
-    username=input("AGO Username: ")
+    username = input("AGO Username: ")
+    password = getpass.getpass()
     #instantiate class with your username; you will be prompted to enter password
-    ago_obj=AGO(username)
+    ago_obj=AGO(username,password)
     
-    ago_obj.overwrite(featureclass_path,featurelayer_id)
+    ago_obj.overwrite(input_path,featurelayer_id)
 
