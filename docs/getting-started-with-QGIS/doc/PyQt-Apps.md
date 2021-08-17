@@ -1,4 +1,4 @@
-# PyQt Apss
+# PyQt Apps
 
 [Home](../README.md)
 
