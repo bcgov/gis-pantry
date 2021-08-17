@@ -9,7 +9,7 @@
 * [Adding User Inputs](#adding-user-inputs)
 * [Adding Buttons](#adding-buttons)
 * [Adding Functions](#adding-functions)
-* [PIP3, QGIS, and the BCGW](#pip3,-qgis,-and-the-BCGW)
+* [PIP3, QGIS, and the BCGW](#pip3-qgis-and-the-BCGW)
 
 ## Accessing Python 3 in the GTS
 
