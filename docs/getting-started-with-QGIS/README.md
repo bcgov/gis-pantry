@@ -37,6 +37,7 @@ This is a set of documents to help experienced GIS users with best practices, ti
 19. [SLYR Plugin](./doc/slyr.md)
 20. [R and QGIS](./doc/R-and-QGIS.md)
 21. [Web Maps with QGIS, R, and GitHub](./doc/web-maps-with-r-qgis-github.md)
+22. [Creating Applications with PyQt](./doc/PyQt-Apps.md)
 
 ## QGIS/ArcGIS Cross Reference Glossary
 See the [QGIS/ArcGIS Cross Reference Glossary](./doc/QGIS-ArcGIS-cross-reference-glossary.md) for a list of common tools and windows used in ArcGIS and what their equivalent tools/windows are called in QGIS.
