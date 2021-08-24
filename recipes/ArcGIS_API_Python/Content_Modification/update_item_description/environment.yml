@@ -5,6 +5,7 @@ channels:
   - https://conda.anaconda.org/conda-forge/
   - defaults
 dependencies:
+  - python=3.8
   - arcgis=1.9.0=py38_2172
   - argon2-cffi=20.1.0=py38h294d835_2
   - attrs=21.2.0=pyhd8ed1ab_0
