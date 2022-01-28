@@ -65,7 +65,7 @@ FROM WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY
 WHERE ORG_UNIT_CODE = 'DSE';
 ```
 
->For more tips on limiting the number of records returned check "Adding Oracle Data via DB Manager" in the [working with data in QGIS](./working-with-data-in-QGIS.md) doc.
+>For more tips on limiting the number of records returned check "Adding Oracle Data via DB Manager" in the [working with data in QGIS](./working-with-data-in-QGIS.md#adding-oracle-data-via-db-manager) doc.
 
 ### Combining layers and/or tables from multiple providers
 
@@ -100,7 +100,7 @@ Results of queries can be loaded as a virtual layer into your QGIS project.
 Since virtual layers don't actually contain data, but function like a view, it's sometimes better to export layers that are the result of complex queries or ones that return large datasets to a different data format (e.g. geopackage layer) to improve performance. 
 
 Virtual layers are exported the same way as any other feature export, by right-clicking the layer in the **Layers** pane and selecting **Export** --> **Save features as**. 
-See [exporting data in QGIS](./exporting-data.md#adding-oracle-data-via-db-manager) for more detail.
+See [exporting data in QGIS](./exporting-data.md) for more detail.
 
 >More on virtual layers (including other ways of building them): [QGIS Documentation](https://docs.qgis.org/3.16/en/docs/user_manual/managing_data_source/create_layers.html#creating-virtual-layers).
 
