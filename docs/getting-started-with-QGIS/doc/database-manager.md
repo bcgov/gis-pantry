@@ -17,10 +17,10 @@ To open DB manager, navigate to the Database menu and choose DB Manager from the
 
 ![](../images/start_db_manager.gif)
 
-### Connect to a "Provider"
+### Connect to a Provider
 Through database manager you can work with layers/tables from within an Oracle (or other, e.g. Spatiallite) database, a geopackage, or from multiple locations if they are loaded into the project's layer pane.
 
-You can access these through the **Providers** menu on the left side of the db manager screen.
+You can access these through the **Providers** menu on the left side of the DB Manager screen.
 
 #### **To add and connect to geopackage:**
 * Right click the **GeoPackage** provider and select "New Connection"
