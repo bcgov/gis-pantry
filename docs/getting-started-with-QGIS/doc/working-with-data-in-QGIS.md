@@ -49,6 +49,8 @@ Please note: The Oracle connection can be quite slow sometimes taking a few minu
 Once you have established your oracle connection you can start DB Manager from the Database menu.  Select and connect to your Oracle database from the ![Oracle](../images/oracle-browser-icon.PNG) provider section. When you are connected you can expand the table list and right-click and choose *Add to project...*
 
  [QGIS Documentation](https://docs.qgis.org/testing/en/docs/user_manual/plugins/core_plugins/plugins_db_manager.html).
+ 
+ More on [DB Manager](./database-manager.md).
 
 To make an SQL layer from your oracle connection connect to your Oracle connnection as above, then click the ![SQL ICON](../images/db-manager-sql-window-icon.png) to edit your SQL.  Using a bounding box method shown below is one way to reduce the number of records and geometries and will significantly improve your oracle experience with QGIS.
 
