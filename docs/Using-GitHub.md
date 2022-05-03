@@ -20,7 +20,7 @@ Sign up for a GitHub account at <https://github.com/>
 
 4. You should have a copy under your name called. (username/GIS-Pantry)
 
-5. When you are in the forked copy this is called "Master" the main Repository it was created from would be called the "Upstream/Master"
+5. When you are in the forked copy this is called "Master". The main repository it was created from would be called the "Upstream/Master".
 
 Forking GitHub Repository
 ![Fork GitHub Repository](./getting-started-with-QGIS/images/Fork_GitHub_Repository.gif)
