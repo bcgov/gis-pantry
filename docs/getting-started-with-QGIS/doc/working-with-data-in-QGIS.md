@@ -39,11 +39,15 @@ The BCGOV layer library provides standardized style and data definitions for cor
 ## Adding Oracle data via browser panel
 With the Browser panel open right-click the ![Oracle Icon](../images/oracle-browser-icon.PNG "Oracle Browser Icon") and click *New Connection....*
 
+Chances are you will want to add the BCGW database. From the GTS, enter the following:
+- Database: idwprod1.bcgov
+- Host: bcgw.bcgov
 
 ![New Connection Animation](../images/new_oracle_connection_sm.gif "New Oracle Connection ...")
 
 Find your new connection and expand the contents so you can choose the table you want to add to your map.  
-Please note: The Oracle connection can be quite slow sometimes taking a few minutes to display all the data and tables in the system. Be patient.  
+
+> **_NOTE:_** The Oracle connection can be quite slow sometimes taking a few minutes to display all the data and tables in the system. Be patient. <br> <br> To avoid retrieving tables each time you open QGIS, load tables from the **Data Source Manager** (CTRL+SHIFT+O). This also allows for choosing a primary key, as QGIS will occasionally default to the wrong column when loading from the browsler panel, producing a "Layer is not valid" error.
 
 ## Adding Oracle Data via DB Manager
 Once you have established your oracle connection you can start DB Manager from the Database menu.  Select and connect to your Oracle database from the ![Oracle](../images/oracle-browser-icon.PNG) provider section. When you are connected you can expand the table list and right-click and choose *Add to project...*
