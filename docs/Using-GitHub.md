@@ -1,4 +1,4 @@
-# Using Git Hub to Contribute to GIS Pantry
+# Using Git Hub to Contribute to GIS Pantry (My Change)
 
 [Home](./getting-started-with-QGIS/README.md)
 
