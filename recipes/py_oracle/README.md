@@ -25,7 +25,7 @@ and external shapes (AOI).
   
   
 The query used in this recipe is looking for Active Aqua Crown Tenures
-intersecting with an AOI (SPATIAL JOIN). Customize the "sql" parameter 
+intersecting with an AOI. Customize the "sql" parameter 
 for other  Query types.
 
 
