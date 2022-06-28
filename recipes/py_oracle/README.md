@@ -2,7 +2,7 @@ This Python recipe runs SQL Queries against BCGW Spatial tables/views
 and external shapes (AOI).
 
 
-**User Inputs:**
+##User Inputs:
     1) AOI - ESRI shp and featureclass/gdb are supported.
     2) bcgw_user - BCGW/idwprod1 username
     3) bcgw_pwd -  BCGW/idwprod1 password
