@@ -118,7 +118,7 @@ def generate_report (workspace, df_list, sheet_list, filename):
 
 
 def main ():
-    aoi= r"\\spatialfiles.bcgov\Work\...\local_data.gdb\Admin\Aqua_finFish_Broughton_zone"
+    aoi = input("Enter the location of your AOI file (shp or featureclass):")
     
     hostname = 'bcgw.bcgov/idwprod1.bcgov'
     bcgw_user = os.getenv('bcgw_user')
@@ -156,7 +156,7 @@ def main ():
             keys.append(k)  
     
     print ('\nExporting Query Results...')
-    out_loc = r'\\spatialfiles.bcgov\Work\...\outputs'
+    out_loc = input("Enter an output location (folder):")
     sheets = ['Intersect ' + k for k in keys]
     generate_report (out_loc, dfs, sheets, 'Query_Results')
 
