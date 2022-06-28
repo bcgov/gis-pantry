@@ -58,13 +58,15 @@ def get_wkt_srid (gdf):
             wkt_dict [f] = wkt
             
         else:
-            print ('{} - Geometry will be Simplified: Oracle VARCHAR limit exceeded'.format(f))
-            for s in range (10, 10000, 10):
+            print ('Geometry will be Simplified for {} - beyond Oracle VARCHAR limit'.format (f))
+            s = 50
+            wkt_sim = row['geometry'].simplify(s).wkt
+
+            while len(wkt_sim) > 4000:
+                s += 10
                 wkt_sim = row['geometry'].simplify(s).wkt
-                if len(wkt_sim) < 4000:
-                    break
-                
-            print ('Geometry Simplified - Tolerance {} m'.format (s))            
+
+            print ('Geometry Simplified with Tolerance {} m'.format (s))            
             wkt_dict [f] = wkt_sim 
                 
             #Option B: just generate an Envelope Geometry
