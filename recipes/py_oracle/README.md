@@ -3,16 +3,16 @@ and external shapes (AOI).
 
 
 **User Inputs:**
-    1.AOI - ESRI shp and featureclass/gdb are supported.
-    2.bcgw_user - BCGW/idwprod1 username
-    3.bcgw_pwd -  BCGW/idwprod1 password
-    4.SQL - query to execute.
-    5.out_loc - Output location
+    1) AOI - ESRI shp and featureclass/gdb are supported.
+    2) bcgw_user - BCGW/idwprod1 username
+    3) bcgw_pwd -  BCGW/idwprod1 password
+    4) SQL - query to execute.
+    5) out_loc - Output location
 
 
 **Workflow:**
-    1. Connect to Database (BCGW).
-    2. Convert ESRI format shape to Geopandas format. 
+    - Connect to Database (BCGW).
+    - Convert ESRI format shape to Geopandas format. 
     3. Retireve Geometry WKT string and Spatial ref. for each feature.
     4. Run the SQL Query.
     5. Export Query Results to an Excel file.
