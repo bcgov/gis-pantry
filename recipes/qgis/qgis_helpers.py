@@ -22,6 +22,9 @@ def create_oracle_layer(layer_name,user_name,user_pass,db_table,geom_column_name
             else:
                 table = f"(select * from {db_table} WHERE {sql} )"
                 uri.setDataSource("", table, geom_column_name,"",key)
+    else:
+        uri.setDataSource(schema, table, geom_column_name,key)
+    
     uri.setSrid('EPSG:3005')
     
     uri.setUseEstimatedMetadata(True)
@@ -35,7 +38,7 @@ def create_oracle_layer(layer_name,user_name,user_pass,db_table,geom_column_name
         uri.setWkbType(QgsWkbTypes.LineString)
     elif geom_type == 'MultiPolygon':
         uri.setWkbType(QgsWkbTypes.MultiPolygon)
-    elif geom_type == 'MultiLine':
+    elif geom_type == 'MultiLineString':
         uri.setWkbType(QgsWkbTypes.MultiLineString)
     elif geom_type == 'MulitPoint':
         uri.setWkbType(QgsWkbTypes.MulitPoint)
@@ -81,7 +84,7 @@ def get_bcgw_table_geomtype(db_table,geom_column_name,user_name,user_pass):
     elif type_num ==5:
         geom_t = 'MulitPoint'
     elif type_num ==6:
-        geom_t = 'MultiLineString '
+        geom_t = 'MultiLineString'
     else:
         db.close()
         raise TypeError

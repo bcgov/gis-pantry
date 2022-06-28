@@ -1,4 +1,4 @@
-![QGIS](https://www.qgis.org/en/_downloads/qgis-icon64.svg "QGIS")
+![QGIS](https://github.com/qgis/QGIS/blob/master/images/icons/qgis-icon-60x60.png "QGIS")
 # qgis-recipes
 These are some basic recipes designed to help create python automations using qgis.
 
