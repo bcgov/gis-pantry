@@ -3,7 +3,7 @@
 A quick recipe area to add ArcGIS API Python expressions within the BC government
 
 
-## Recipe Format Template for .md file
+## Recipe Format Template for .md
 
 1. Code Name and Description
 2. Use Cases
