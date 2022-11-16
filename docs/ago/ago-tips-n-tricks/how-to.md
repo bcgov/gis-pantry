@@ -1,7 +1,7 @@
 7 Hacks to Level Up your AGO Game - ESRI Developers Hate This! <!-- omit in toc -->
 ===
-<!-- table in GitHub Markdown -->
 |Supporting Docs for GIS CoP Presentation|Prepared by: South Coast GIS Team|Date: Nov 2022|
+|---|---|---|
 
 - [Emoji and Icons in AGO Apps](#emoji-and-icons-in-ago-apps)
 
