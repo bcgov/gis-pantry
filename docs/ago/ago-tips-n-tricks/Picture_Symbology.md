@@ -1,7 +1,4 @@
-Using pictures to symbolize points and polygons in AGO <!-- omit in toc -->
-===
-Prepared by: South Coast GIS Team\
-Date: Nov 2022
+# Using pictures to symbolize points and polygons in AGO
 
 The built-in symbology options in ArcGIS Online can be somewhat limited depending on the application. In particular, the options for hatching or a pattern fill is very limited.
 An alternative is to create your own image tile in a program like GIMP or Inkscape to have greater flexibility on symbology. You can create tiles to fill in polygons or create custom point symbology.
