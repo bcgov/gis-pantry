@@ -10,7 +10,7 @@ If getting a tile from online, be aware of any potential licensing, copyright, o
 
 Useful for experimenting with adding symbology and generating functional code that can be moved to a webmap.
 
-[https://assistant.esri-ps.com/content](https://assistant.esri-ps.com/content): 
+[https://ago-assistant.esri.com/](https://ago-assistant.esri.com/): 
 
 Used to modify JSON files. Allows for the webmap symbology to be modified beyond what is supported in the GUI
 
