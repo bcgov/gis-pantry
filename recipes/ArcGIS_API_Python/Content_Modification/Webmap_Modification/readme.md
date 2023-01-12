@@ -29,6 +29,7 @@ Example: [https://governmentofbc.maps.arcgis.com/home/item.html?id=8aab32af2c4d4
 
 ```python
 map_1 = derived_map(
+    gis,
     "8aab32af2c4d48b091dadb55592f723b", # The original map id
     "33b382a5fda74641a658128f7c3513b4", # The derived map id
     ["182cc61d735-layer-4"], # List of layers to turn on visibility
