@@ -1,3 +1,12 @@
+'''
+Author:     Wes Smith (with borrowed code from Jing Zhang)
+Date:       Feb 2023
+
+Overview:  this script generates a Excel workbook of AGO items and their usage details 
+based on 8 user inputs captured with a tkinter gui. 
+'''
+
+
 from arcgis.gis import GIS
 import datetime
 import time
