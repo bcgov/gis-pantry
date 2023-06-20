@@ -19,6 +19,6 @@ COLUMN HEADERS and the VALUES are the column values for the current row.
  continues for all rows...]
 ```
 
-##PYTHON VERSION COMPATIBILITY
+## PYTHON VERSION COMPATIBILITY
 
 This code contains a version check for Python 2.x or 3.x and selects the appropriate formatting
