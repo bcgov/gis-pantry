@@ -18,7 +18,7 @@ from bisect import bisect
 
 
 arcpy.env.overwriteOutput = True
-mxd = arcpy.mapping.MapDocument(r"\\spatialfiles.bcgov\work\em\vic\mtb\Local\MTB_Scripts\Testing_Area\kdesouza\StatusMapping\map_templates\NW\NorthWest_StatusTemplate_TEST.mxd")
+mxd = arcpy.mapping.MapDocument(r"\\path\to\map_templates\NW\NorthWest_StatusTemplate_TEST.mxd")
 
 
 mine_name = arcpy.GetParameterAsText(0)
@@ -34,21 +34,21 @@ def login(username, bcgwpassword):
     create database connections for each and log into the databases
     '''
     arcpy.AddMessage("Checking to see if database directory directory exists")
-    if os.path.exists(os.path.join(r"\\spatialfiles.bcgov\work\em\vic\mtb\Local\MTB_Scripts\MTB_Tools\Production_Tools\Mines_Statusing\Map_Automation\scratchDB", getuser())):
+    if os.path.exists(os.path.join(r"\\path\to\scratchDB", getuser())):
         arcpy.AddMessage("Directory Exists")
         pass
 
     else:
         arcpy.AddMessage("Directory didn't exist")
-        os.makedirs(os.path.join(r"\path\to\scratchDB", getuser()))
-        arcpy.AddMessage(os.path.join(r"\path\to\scratchDB", getuser()))
+        os.makedirs(os.path.join(r"\\path\to\scratchDB", getuser()))
+        arcpy.AddMessage(os.path.join(r"\\path\to\scratchDB", getuser()))
     
     arcpy.AddMessage("Passed directory check")
-    arcpy.AddMessage(os.path.join(r"\path\to\scratchDB", getuser()))
+    arcpy.AddMessage(os.path.join(r"\\path\to\scratchDB", getuser()))
 
     try:
         arcpy.AddMessage("Logging into BCGW...")
-        arcpy.management.CreateDatabaseConnection(os.path.join(r"\path\to\scratchDB", getuser()),
+        arcpy.management.CreateDatabaseConnection(os.path.join(r"\\path\to\scratchDB", getuser()),
                                                   "BCGW.sde",
                                                   "ORACLE",
                                                   "bcgw.bcgov/idwprod1.bcgov",
@@ -59,13 +59,13 @@ def login(username, bcgwpassword):
     except arcpy.ExecuteError:
         print(arcpy.GetMessages())
         arcpy.AddMessage("Entered Exception")
-        if os.path.exists(os.path.join(r"\path\to\scratchDB", getuser())):
-            arcpy.Delete_management(r"\path\to\scratchDB" + '\\' + getuser())
+        if os.path.exists(os.path.join(r"\\path\to\scratchDB", getuser())):
+            arcpy.Delete_management(r"\\path\to\scratchDB" + '\\' + getuser())
         else:
             pass
         
     arcpy.env.overwriteOutput = True
-    env.workspace = os.path.join(r"\path\to\scratchDB", getuser(), "BCGW.sde")
+    env.workspace = os.path.join(r"\\path\to\scratchDB", getuser(), "BCGW.sde")
         
 
 def addStatusLayer():
@@ -74,7 +74,7 @@ def addStatusLayer():
 
     """
 
-    mxd = arcpy.mapping.MapDocument(r"\path\to\map_templates\NW\NorthWest_StatusTemplate.mxd")
+    mxd = arcpy.mapping.MapDocument(r"\\path\to\map_templates\NW\NorthWest_StatusTemplate.mxd")
     dataframe = arcpy.mapping.ListDataFrames(mxd)[0]
     maplayers = arcpy.mapping.ListLayers(dataframe)
 
@@ -89,7 +89,7 @@ def addStatusLayer():
 
      
     
-    mxd.saveACopy(r"\path\to\map_templates\NW\NorthWest_StatusTemplateCOPY.mxd")
+    mxd.saveACopy(r"\\path\to\map_templates\NW\NorthWest_StatusTemplateCOPY.mxd")
     del mxd 
 
 
@@ -104,7 +104,7 @@ def MakeMaps(pdf_path, mine_name, NoWID):
 
     today = datetime.date.today()
     stripped_NOW = NoWID.replace("-","")
-    mxd = arcpy.mapping.MapDocument(r"\path\to\map_templates\NW\NorthWest_StatusTemplateCOPY.mxd")
+    mxd = arcpy.mapping.MapDocument(r"\\path\to\map_templates\NW\NorthWest_StatusTemplateCOPY.mxd")
     dataframe = arcpy.mapping.ListDataFrames(mxd)[0]
     layers = arcpy.mapping.ListLayers(dataframe)
     mxd.activeView = "PAGE_LAYOUT"
@@ -267,8 +267,8 @@ def logout():
     A logout prompt to delete the database connections created in the 'login' function
     '''
     arcpy.AddMessage("Logging out of BCGW...")
-    if os.path.exists(os.path.join(r"path\to\scratchDB", getuser())):
-        rmtree(os.path.join(r"path\to\scratchDB", getuser()))
+    if os.path.exists(os.path.join(r"\\path\to\scratchDB", getuser())):
+        rmtree(os.path.join(r"\\path\to\scratchDB", getuser()))
     else:
         pass
 
