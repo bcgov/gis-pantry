@@ -13,9 +13,11 @@ COLUMN HEADERS and the VALUES are the column values for the current row.
 
 ## Dictionary List Example
 
-```[{COL1 HEADER: ROW1 VALUE1, COL2 HEADER: ROW1 VALUE2, etc},
+```
+[{COL1 HEADER: ROW1 VALUE1, COL2 HEADER: ROW1 VALUE2, etc},
  {COL1 HEADER: ROW2 VALUE2, COL2 HEADER: ROW2 VALUE2, etc},
- continues for all rows...]```
+ continues for all rows...]
+```
 
 ##PYTHON VERSION COMPATIBILITY
 
