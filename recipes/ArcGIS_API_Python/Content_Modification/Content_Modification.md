@@ -13,7 +13,7 @@ A quick recipe area to add ArcGIS API Python expressions within the BC governmen
 
 Link to sample markdown or Jupyter Notebooks
 
-<!-- *Remarked out sample of how to provide a link to programming folders or markdownn
+<!-- *Remarked out sample of how to provide a link to programming folders or markdown
 
 * [HTML Popup Customization](HTML_Popup_Customization.md)
 
