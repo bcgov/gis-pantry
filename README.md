@@ -3,7 +3,7 @@
 # gis-pantry
 The gis-pantry is a repository for GIS related scripts, tools and recipes. The intent of this repository is to aid BC Government employees in sharing and continual improvement of tools, stand-alone scripts, and recipes (script snippets). Contribute to the bin you think best matches your code.
 
-* **Recipes** are small scripts/snipits or instructions that don't nessesarrly do anything on their own but can be copied, changed and pieced together to make something more complete. SQL, Python, Arcade, QGIS Expressions, PGSQL, R, bash/shell, etc. 
+* **Recipes** are small scripts/snippets or instructions that may not do anything on their own but can be copied, changed and pieced together to make something more complete. SQL, Python, Arcade, QGIS Expressions, PGSQL, R, bash/shell, etc. 
 * **Scripts** could be a tool that isn't fully developed yet or a library of useful methods or classes that can be reused.  This is agreat spot to share scripts that perform a purpose-built task that can be re-configured for another persons purposes.
 * **Tools** are developed to do a specific job and often come with a user-interface and documentation that non-scripting users might be able to figure out enough to use.
 
