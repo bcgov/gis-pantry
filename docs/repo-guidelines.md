@@ -1,4 +1,4 @@
-# 
+# Repository Guidelines
 
 ## When to make a new repo
 1. You are making a standalone script or documentation
@@ -6,7 +6,7 @@
 3. Security requires you have ownership and control of your project
 4. Different contribution guidelines
 
-## When to make a community contribution: [Guidelines]()
+## When to make a community contribution: 
 1. You have methods to demonstrate
 2. You have generic utilities to share
 3. Static project
@@ -23,7 +23,7 @@
     - create the minimum content requirements; README.md,CONTRIBUTING.mb,and license files
     - Create a CODE_OF_CONDUCT.md for contributors
 
-4. # CREATE TAG? to enable GIS Repo Index
+4. CREATE TAG 'bcgov-gis' tag to enable GIS Repo Indexing
     - bcgov-gis
     - bcgov-gis-ce
     - bcgov-gis-wildfire
@@ -60,7 +60,3 @@
 	- [Content Approval Check List](/ref-docs/Open-Content-Assessment-Checklist.pdf)
 
 
-[]()
-[]()
-[]()
-[]()

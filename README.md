@@ -14,10 +14,10 @@ We encourage contributions. Please see our [CONTRIBUTING](https://github.com/bcg
 * Please do your best to document your scripts and provide tool documentation 
 
 ## When to make your own BCGOV repository
-If you have a large project that will have multiple contributors or has a complicated code base and documentation your project would be best served by its own repository. If you contribute to this repository you can always move out when things grow.
+If you have a large project that will have multiple contributors or has a complicated code base and documentation your project would be best served by its own repository. If you contribute to this repository you can always move out when things grow. More guidance on this is found [here](docs/repo-guidelines.md)
 
 ## Getting Help or Reporting an Issue
-To report bugs,issues, or feature requests please file an [issue](https://github.com/bcgov/gis-pantry/blob/master/CONTRIBUTING.md)
+To report bugs,issues, or feature requests please file an [issue](CONTRIBUTING.md)
 
 ## License
     Copyright 2019 BC Provincial Government
