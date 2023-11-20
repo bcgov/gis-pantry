@@ -1,0 +1,15 @@
+{   
+// default formatter settings
+    "editor.defaultFormatter":"eeyore.yapf",
+
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#3d3d3d"
+        },
+        {
+            "column": 100,
+            "color": "#464646"
+        },
+    ]
+}
