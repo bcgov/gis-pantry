@@ -15,8 +15,8 @@ There are two primary ways to search GitHub: the search bar on the top of the we
 
 ## Basic Search
 If we search "GIS Pantry" in the search bar on the top of the GitHub website, first, we get thousands of pieces of code that include the word pantry. We can navigate to repositories using the filtering options on the left side and see the GIS Pantry repository. If we continue with the filters, we can see what issues, pull requests, commits and wikis are associated with a name or tag GIS Pantry
- ![Alt text](image-1.png)
+ ![Alt text](_media/Github_Search_image_1.png)
 
 ## Advanced Search
 To use the [advanced search](https://github.com/search/advanced), Fill in the fields, and it will create your search string.
-![Alt text](image-3.png)
+![Alt text](_media/GitHuB_Search_Image_3.png)
