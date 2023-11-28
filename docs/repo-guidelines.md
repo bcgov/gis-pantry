@@ -21,7 +21,7 @@
 3. Create your repo, ensuring you:
     - include a license
     - create the minimum content requirements; README.md,CONTRIBUTING.mb,and license files
-    - Create a CODE_OF_CONDUCT.md for contributors
+    - create a CODE_OF_CONDUCT.md for contributors
 
 4. CREATE TAG 'bcgov-gis' tag to enable GIS Repo Indexing
     - bcgov-gis
