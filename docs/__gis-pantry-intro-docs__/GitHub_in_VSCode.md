@@ -43,7 +43,7 @@ If you want more information about using Git and GitHub in VS Code, please see [
   </li>
   <br>
   <li><p>Use the 'Open Remote Repository' command</p>
-  <img src=_media/GitHub_VSCode_OpenRemoteRepository.PNG><img src=/_media/GitHub_VSCode_OpenRemoteRepository2.PNG>
+  <img src=_media/GitHub_VSCode_OpenRemoteRepository.PNG><img src=_media/GitHub_VSCode_OpenRemoteRepository2.PNG>
   <p>You should now have an Open Remote Repository option in your Explorer window. Click this button to be prompted to open a GitHub repository.</p>
   <p>You will now be prompted to sign in using GitHub, opening a web browser which will prompt you to enter your GitHub username and password.</p>
   </li>
@@ -60,7 +60,7 @@ If you want more information about using Git and GitHub in VS Code, please see [
 ### Clone an existing repository to a local folder
 <ol>
   <li><p>Use the 'Clone Repository' command</p>
-  <img src=_media/GitHub_VSCode_CloneRepo.PNG><img src=/_media/GitHub_VSCode_CloneRepo2.PNG>
+  <img src=_media/GitHub_VSCode_CloneRepo.PNG><img src=_media/GitHub_VSCode_CloneRepo2.PNG>
   <p>From the Explorer window click the Clone Repository button.</p>
   </li>
   <br>
