@@ -1,8 +1,5 @@
-| Status      | Draft             |
-|-------------|-------------------|
-| Last Update | 2023-07-21        |
-| Tags        | #GitHub, #account |
-| Improvements| yada yada  |
+***Last update: 2023-07-18***   
+***#Tags?***
 
 # Git Hub Account Set-up / Configuration
 If you want to contribute to the GIS Pantry, you will need a GitHub account. If you already have an account, then skip to [account configuration](#account-configuration). If you do not have an account then start below.
