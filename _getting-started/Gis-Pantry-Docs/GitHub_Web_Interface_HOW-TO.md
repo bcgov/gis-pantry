@@ -1,4 +1,4 @@
-***Draft: 2023-07-18***   
+***Last Update: 2023-07-18***   
 ***add description, tags?***
 
 # GitHub Web Interface HOW-TO
@@ -16,7 +16,7 @@ This document assumes you have a GitHub account ready for use. If not please see
 ## Introduction
 The GitHub web interface has a lot of useful functionality. The interface allows users to manage their accounts, search for content, browse projects and documentation, track issues, and much more. 
 
-In addition to this, it also offers a handy and simple way to contribute to the Pantry for one off occasions. Once one is familiarized with the web interface it is relatively easy to use. It doesn't require set-up or configuration, users don't need to install  a desktop application, or figure out extensions in VS Code, and there is no need for the Git command line. That said, it has clear limitations, and regular coders will want to graduate to more advanced options.
+In addition to this, it also offers **a handy and simple way to contribute to the Pantry for one off occasions that <ins>can work for both coders and non-coders</ins>**. Once one is familiarized with the web interface it is relatively easy to use. It doesn't require set-up or configuration, users don't need to install  a desktop application, or figure out extensions in VS Code, and there is no need for the Git command line. That said, it has clear limitations, and regular coders will want to graduate to more advanced options.
 
 If you are new to GitHub it may take some time to get used to. If your are stuck then ask a colleague or search the web as needed.
 
