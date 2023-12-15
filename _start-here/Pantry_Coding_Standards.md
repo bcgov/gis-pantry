@@ -21,7 +21,7 @@ The GIS Panty is a public repository so it is important to review your files for
 - Usernames and passwords
 
 ## General Formatting
-**First off >> [Here is a template file structure with template scripts](sample_project)**
+**First off >> [Here are some templates to consider...](samples-templates)**
 
 ### General Guidelines
 - Be mindful and consistent with whitespace 
@@ -139,4 +139,4 @@ def multiply_numbers(num1, num2):
 - Data stored separately from project and especially not in GitHub. 
 - Some examples of data files includes: geospatial data, spreadsheets, etc.
 
-**Again [here is a template file structure with template scripts](sample_project)**
+**Again [here is a template file structure with template scripts](samples-templates)**
