@@ -50,7 +50,7 @@ Best practice is to syncronize your fork with bcgov/gis-pantry before making or 
 
 * For those who want more flexibility and ease, and who are likely to make a number of contributions, consider GitHub Desktop, VS Code Extensions, etc...
 
-## When Ready > Pull Request!
+## When Your Edits Are Done > Make a Pull Request!
 
 Once you have completed your changes within your fork on GitHub, you will want to commit it to the main GIS Pantry repository (the upstream master). To do so you will need to make a pull request. A pull request notifies the admins that you have changes ready to commit.
 
