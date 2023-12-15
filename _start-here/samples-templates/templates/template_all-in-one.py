@@ -33,7 +33,7 @@ from pathlib import Path
 
 
 # *** DEBUG ***
-# debug and testing variables, decorators, and other script specific items...
+# debug and testing variables, and other script specific items...
 
 TESTING = False
 DEBUG = False
