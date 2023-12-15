@@ -36,7 +36,6 @@ from pathlib import Path
 # debug and testing variables, decorators, and other script specific items...
 
 TESTING = False
-DECORATOR = '+-'*50
 DEBUG = False
 
 
@@ -51,6 +50,8 @@ arcpy.env.overwriteOutput = True
 
 
 # derived / programmatic  parameters
+DECORATOR = '+-'*50
+
 NOW = datetime.datetime.now()
 NOW = now.strftime("%Y%m%d_%H%M%S")
 
