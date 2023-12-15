@@ -1,16 +1,16 @@
 # Repository Guidelines
 
-## When to make a new repo
-1. You are making a standalone script or documentation
-2. Project software or documentation that is non-generic and not easly repurposed by the geospatial community 
-3. Security requires you have ownership and control of your project
-4. Different contribution guidelines
-
 ## When to make a community contribution: 
 1. You have methods to demonstrate
 2. You have generic utilities to share
 3. Static project
 4. You want extra peer review
+
+## When to make a new repo
+1. You are making a standalone script or documentation
+2. Project software or documentation that is non-generic and not easly repurposed by the geospatial community 
+3. Security requires you have ownership and control of your project
+4. Different contribution guidelines
 
 ## Before you make a new repo
 

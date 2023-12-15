@@ -1,5 +1,5 @@
 ***Last update: 2023-07-18***   
-***#Tags?***
+***Tags: #account-setup***
 
 # Git Hub Account Set-up / Configuration
 If you want to contribute to the GIS Pantry, you will need a GitHub account. If you already have an account, then skip to [account configuration](#account-configuration). If you do not have an account then start below.
@@ -46,5 +46,8 @@ We recommend the following account changes before contributing to the GIS Pantry
 *You do not need to do this to contribute to the pantry. You can still contribute by forking the Pantry, and then submitting a pull request. Joining the org provides you additional permissions...*  
 
     [Instructions to join](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Joining-the-BCGov-on-GitHub.md)  
+
+**Optional:**  
+You may want to set up 2 factor authentication. In fact it is required if you decide to join the BCGov GitHub organization. It provides an extra level of security for your account. You can find these in settings, under account security.
 
 .... **Your account is ready to go!**

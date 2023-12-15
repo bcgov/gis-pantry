@@ -1,92 +1,71 @@
-This is an EDIT
+# Using Git Hub to Contribute to GIS Pantry
 
-# Using Git Hub to Contribute to GIS Pantry (My Change)
+## Create a Git Hub Account (Configure Existing Account)
 
-[Home](./getting-started-with-QGIS/README.md)
+You may need to create a new GitHub account or configure an existing account.  
+Please see our [GitHub Account Setup How-To](how-to/GitHub_Account_Set_Up.md)
 
-## Create a Git Hub Account
+## Contribute To The Repo
+Government employees, public and members of the private sector are encouraged to contribute to the repository by **<ins>forking and submitting a pull request</ins>**. 
 
-Sign up for a GitHub account at <https://github.com/>
+Pull requests will be evaluated by the repository guardians on a schedule and if deemed beneficial will be committed to the master.
 
-- In your settings it is a good idea to set up 2 factor authentication. This provides an extra level of security for your account. Once logged into your account this can be found under settings and account security.
+All contributors retain the original copyright to their stuff, but by contributing to this project, you grant a world-wide, royalty-free, perpetual, irrevocable, non-exclusive, transferable license to all users **under the terms of the license under which this project is distributed.**
 
--It is also useful to have GitHub desktop on your computer to transition Push and Pull requests from code edited on your computer to updating the fork on GitHub.
+### Basic Workflow
+1. Log into onto GitHub with your account
+1. Fork the GIS Pantry Repository
+1. Edit your fork (locally or remotely)
+1. Once your fork is updated on GitHub, then submit a pull request.
+    - This will merge your changes into the Pantry upon approval
 
-## Setting up and working with the Repository
+There are many ways to edit your fork. Here are several how-to documents that cover various methods:  
 
-1. Log into your GitHub Account
+- [Web Interface How-To](how-to/GitHub_Web_Interface.md)
+- [GitHub Desktop](how-to/GitHub_DesktopApplication.md)
+- [VS Code Extension](how-to/GitHub_in_VSCode.md)
 
-2. Navigate to the repository you want to contribute to <https://github.com/bcgov/gis-pantry>
+And if you really want to get under the hood, you can also use the [Git Command Line](https://help.github.com/articles/set-up-git) 
 
-3. In the upper right click on Fork. This will create a copy of the repository under your name.
+### Where to edit
+Essentially there are two locations where you can edit your fork.
 
-4. You should have a copy under your name called. (username/GIS-Pantry)
+1. Remotely -- i.e. directly on the GitHub platform
+    - Do this:
+        - via the web interface
+        - via a remote connection (GitHub Desktop, VS Code, etc.)
+1. Locally -- i.e. download and edit files locally
+    - Do this by:
+        - downloading directly from the web interface
+        - cloning your fork locally (GitHub Desktop, VS Code, etc.)
 
-5. When you are in the forked copy this is called "Master". The main repository it was created from would be called the "Upstream/Master".
+The how-to docs cover a number of the ways to do the above...
 
-Forking GitHub Repository
-![Fork GitHub Repository](./getting-started-with-QGIS/images/Fork_GitHub_Repository.gif)
+## Tips & Tricks
 
-## Making edits to the repository
+* BEFORE EDITING YOUR FORK  
+Best practice is to syncronize your fork with bcgov/gis-pantry before making or pushing your own changes. This way other users have made changes to the Pantry repository since you created your fork you may encounter merge conflicts. The how-docs above *should* cover this for each method.
 
-NOTE BEFORE EDITING: Always do a fetch on bcgov/gis-pantry before pushing your own changes. Git fetch checks for any changes in the Upstream Master. If there are changes then git pull is needed to get those changes synced. See git fetch vs git pull. This can be done by adding a remote to point to bcgov/gis-pantry. The reason for this is if another user has made a pull request since you forked and cloned copy was made it will create a merge conflict because your copy will be out of sync with bcgov/gis-pantry.
+* For small edits, or one-off contributions consider using the web interface approach.
 
-Using MS Visual Studio Code or GitHub for desktop should have this functionality built in. The main thing to remember is that the update on the remote bcgov/gis-pantry will integrate into your local copy before making push and pull requests to your forked version.  
+* For those who want more flexibility and ease, and who are likely to make a number of contributions, consider GitHub Desktop, VS Code Extensions, etc...
 
-Using GitHub desktop to compare fork to upstream master and update fork with missing edits.  
+## When Ready > Pull Request!
 
-- Select appropriate repository
-- Select Branch -> Compare to Branch
-- Merge into Master to update your fork with all missing files
+Once you have completed your changes within your fork on GitHub, you will want to commit it to the main GIS Pantry repository (the upstream master). To do so you will need to make a pull request. A pull request notifies the admins that you have changes ready to commit.
 
-![Compare GitHub Repository](./getting-started-with-QGIS/images/GitHub_compare_or_merge_upstream_branch.gif)
-
-### Option 1: Make edits directly on GitHub
-
-1. Navigate to the page you want to edit
-
-2. Click on the pencil in the top right corner  
-
-3. Edit the document (note the edit file and Preview tab are handy for checking your markdown syntax)
-
-4. Scroll to the bottom and add a short description as to what your updating and click commit changes. This will commit changes to your Master Fork.
-
-5. Repeat editing files until you are done a milestone that you feel needs to go back to the source "Upstream/Master" repository
-
-6. See below regarding creating a pull request to the "Upstream/Master"  
-
-Example: Edit Fork on GitHub
-![Edit GitHub Repository](./getting-started-with-QGIS/images/Edit_On_GitHub_Repository.gif)
-
-### Option 2: Download the Repo to your computer and edit
-
-1. Clone to your local directory - This can be done many ways either using something like Microsoft Visual Studio code, GitHub for Desktop, or even git command line. Just have a common area where you are storing code from GitHub
-
-2. Make edits to files, folder structure, add/delete files. It is useful to do this in VS Code.
-
-3. Push your changes back to github (your repository) when you feel you have accomplished something. This could be a few times a day. Git Hub desktop is useful for pushing the changes you made back up to your forked copy.
-
-4. Repeat until you are done a milestone you feel needs to go back to the source repository or Upstream Master.
-
-## Creating Pull request to update Upstream Master (Base repository) with Forked copy
-
-For Option 1 above you do not have to push edits up to your fork cause that is where you did the edits. See further below on creating a pull request.
-
-For Option 2 you would need to get your edits copied from your computer up to your fork on GitHub. See example below.
-
-1. Make sure you have correct repository selected in GitHub Desktop
-2. Fetch origin if any code is missing
-3. Commit edits up to forked master
-4. Push committed edits up to GitHub fork.
-
-Pushing edits up to forked copy through GitHub desktop
-![GitHub DeskTop push Repository](./getting-started-with-QGIS/images/GitHub_Desktop_fetch_push_Repository.gif)
-
-When your Fork has been updated with pushed edits of your code you need to get it transfered to the UpStream Master that the fork was created from. The example below shows how to do this on GitHub.
-
+### How To
+1. Log into GitHub with your account
 1. With your Fork as the active repository, select pull requests
-2. Select green button new pull request
-3. Enter in information describing the edits you did in the pull request
-4. Then click green button create pull request. This will send a pull request to the admin of the base repository to integrate into the master. Done!
+1. Select green button new pull request
+1. Enter in information describing the edits you did in the pull request
+1. Click green button create pull request. 
 
-![GitHub Create pull request](./getting-started-with-QGIS/images/GitHub_Pull_Request.gif)
+![GitHub Create pull request](_media/GitHub_Pull_Request.gif)
+
+FYI:  
+A more detailed guide about [pull requests](https://help.github.com/articles/using-pull-requests/)
+
+## Etc...
+* Wondering if your project should have it's own repo?
+    - See the [Repo Guidelines](Repo_Guidelines.md) for guidance.
