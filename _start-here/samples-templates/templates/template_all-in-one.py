@@ -5,22 +5,22 @@
 # Updated Date: 
 # Description:
 
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 # * SUMMARY
 
 # - INPUTS
 
 # - OUTPUTS
 
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 # * IMPROVEMENTS
 * Suggestions...
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 # * HISTORY
 
   Date      Initial/IDIR  Description
-| -------------------------------------------------------------------------------
-  yyyy-mm-dd    iii       Yada yada yayaya yada yayayay yada yada yada ya ya ya ya,
+| ------------------------------------------------------------------------------
+  yyyy-mm-dd    iii       Yada yada yayaya yada yayayay yada yada yada ya ya ya,
                           etc., etc.
   yyyy-mm-dd    iii       etc., etc.
 
@@ -42,11 +42,6 @@ DEBUG = False
 
 # *** ENVIRONMENTS ***
 # environment set up...
-
-from dotenv import load_dotenv # now on loaded in our clone...loads environment vars from file.
-
-env_path = r'path_to_your_env_file' # if you have one
-load_dotenv(env_path)
 
 arcpy.env.overwriteOutput = True
 
