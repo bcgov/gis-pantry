@@ -9,12 +9,22 @@ The gis-pantry is a repository for GIS related scripts, tools and recipes. The i
 
 
 ## Contributing
-We encourage contributions. Please see our [CONTRIBUTING](https://github.com/bcgov/gis-pantry/blob/master/CONTRIBUTING.md) guidelines. BC Government employees should also ensure they review [BC Open Source Development Employee Guide](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/README.md) 
-* Contribute tools and plugins into tools, standalone scripts and modules to scripts, and small snips and script examples to recipes.
-* Please do your best to document your scripts and provide tool documentation 
+We encourage contributions. Please see our [Quick Start Guide](<_start-here/QuickStart - BEGIN HERE.md>). BC Government employees should also ensure they review [BC Open Source Development Employee Guide](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/README.md)
+
+Remember to put things in the most sensible locations within the Pantry. For instance, please put:
+* Tools and plugins into tools
+* Standalone scripts and modules into scripts
+* Small snips and script examples into recipes
+
+### Coding Standards!
+***Please do your best to write legible code, document your scripts, and provide tool documentation.***  
+
+***Please see [Pantry Coding Standards](_start-here/Pantry_Coding_Standards.md)***
 
 ## When to make your own BCGOV repository
-If you have a large project that will have multiple contributors or has a complicated code base and documentation your project would be best served by its own repository. If you contribute to this repository you can always move out when things grow. More guidance on this is found [here](docs/repo-guidelines.md)
+If you have a large project that will have multiple contributors or has a complicated code base and documentation your project would be best served by its own repository. If you contribute to this repository you can always move out when things grow. 
+
+***More guidance on this is found [here](_start-here/Repo_Guidelines.md)***
 
 ## Getting Help or Reporting an Issue
 To report bugs,issues, or feature requests please file an [issue](CONTRIBUTING.md)
