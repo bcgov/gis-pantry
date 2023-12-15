@@ -5,22 +5,21 @@
 # Updated Date: 
 # Description:
 
------------------------------------------------------------------------------------------
-# *  SUMMARY
-A script template one use to write all (or even most) of the code in one .py file.
+---------------------------------------------------------------------------------
+# * SUMMARY
 
 # - INPUTS
 
 # - OUTPUTS
 
------------------------------------------------------------------------------------------
-# * SUGGEST IMPROVEMENTS
-* Suggestion...
------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+# * IMPROVEMENTS
+* Suggestions...
+---------------------------------------------------------------------------------
 # * HISTORY
 
   Date      Initial/IDIR  Description
------------------------------------------------------------------------------------------
+| -------------------------------------------------------------------------------
   yyyy-mm-dd    iii       Yada yada yayaya yada yayayay yada yada yada ya ya ya ya,
                           etc., etc.
   yyyy-mm-dd    iii       etc., etc.
@@ -33,7 +32,7 @@ import sys, os
 from pathlib import Path
 
 
-# *** SCRIPT PARAMETERS ***
+# *** DEBUG ***
 # debug and testing variables, decorators, and other script specific items...
 
 TESTING = False
@@ -49,7 +48,7 @@ from dotenv import load_dotenv # now on loaded in our clone...loads environment 
 env_path = r'path_to_your_env_file' # if you have one
 load_dotenv(env_path)
 
-arcpy.env.overwriteOutput = False
+arcpy.env.overwriteOutput = True
 
 
 # *** PARAMETERS ***
@@ -89,7 +88,7 @@ if __name__ == __main__:
     # main code here...
 
     # 1. SECTION TITLE
-    # +------------------------------------------------------------------------------
+    # +---------------------------------------------------------------------------------------------
 
     # SUBSECTION TITLE
 
@@ -111,7 +110,7 @@ if __name__ == __main__:
         that can wrap the entire script.
         '''
         # 1. SECTION TITLE
-        # +------------------------------------------------------------------------------
+        # +-----------------------------------------------------------------------------------------
 
         # SUBSECTION TITLE
 
