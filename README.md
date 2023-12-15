@@ -9,7 +9,7 @@ The gis-pantry is a repository for GIS related scripts, tools and recipes. The i
 
 
 ## Contributing
-We encourage contributions. Please see our [Quick Start Guide](_start-here/_QuickStart.md). BC Government employees should also ensure they review [BC Open Source Development Employee Guide](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/README.md)
+We encourage contributions. Please see our [Quick Start Guide](<_start-here/QuickStart - BEGIN HERE.md>). BC Government employees should also ensure they review [BC Open Source Development Employee Guide](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/README.md)
 
 Remember to put things in the most sensible locations within the Pantry. For instance, please put:
 * Tools and plugins into tools

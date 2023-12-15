@@ -63,7 +63,7 @@ f"{variable_name} is a variable" # use f-strings instead of concatenation
 ## Commenting
 
 - Use docstrings (triple quotes) for commenting functions (see Functions section below)
-- Use a new line for comments over 120 characters
+- Use a new line for comments over 100 characters
     - *pep8 recommends for 72-79 chars*
 - Use block comments for comments that span more than one line 
 - Use inline # comments for single lines of code sparingly 
