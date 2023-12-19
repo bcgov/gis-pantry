@@ -41,7 +41,10 @@ We recommend the following account changes before contributing to the GIS Pantry
         - Set Company to "Province of British Columbia"
         - You can also choose an email to display publicly...
         - You can make other changes as desired. Like adding a bio ![image](./_media/GitHub_account_BasicProfileInfoPNG.PNG)
-
+1. Additionally, continue to customize your account...
+   Set up two-factor authentication
+   1. Click >> "Password and authentication"
+      - Choose your authentictor method, through an authenticator app, SMS/Text message, Security keys, or GitHub Mobile 
 1. Join the BCGov GitHub organization (OPTIONAL)  
 *You do not need to do this to contribute to the pantry. You can still contribute by forking the Pantry, and then submitting a pull request. Joining the org provides you additional permissions...*  
 
