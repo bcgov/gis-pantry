@@ -6,11 +6,15 @@ This is an EDIT
 
 ## Create a Git Hub Account
 
-Sign up for a GitHub account at <https://github.com/>
+**Sign up for a [GitHub account](https://github.com/)**
 
 - In your settings it is a good idea to set up 2 factor authentication. This provides an extra level of security for your account. Once logged into your account this can be found under settings and account security.
+  
+    - Further help for GitHub Account sign up can be found at GitHub_Account_Set_Up under [Getting Started/Gis Pantry Docs](https://github.com/bcgov/gis-pantry/tree/master/_getting-started/Gis-Pantry-Docs)
 
--It is also useful to have GitHub desktop on your computer to transition Push and Pull requests from code edited on your computer to updating the fork on GitHub.
+**Install [GitHub desktop](https://desktop.github.com/)**
+
+- It is also useful to have GitHub desktop on your computer to transition Push and Pull requests from code edited on your computer to updating the fork on GitHub.
 
 ## Setting up and working with the Repository
 
