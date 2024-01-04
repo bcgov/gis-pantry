@@ -4,7 +4,7 @@ Name of script this readme is for
 
 # Author
 
-Author of script
+Author of scripts
 
 # Description
 
