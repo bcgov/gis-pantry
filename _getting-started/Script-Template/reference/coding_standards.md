@@ -1,18 +1,32 @@
 # Basic Coding Standards & Best Practices
 This document contains standards and guidelines for projects being shared to the GIS Pantry Github. These standards can also be used in all your projects. Many of these settings can be automatically applied to your VS Code projects using the project templates accompanying this read me. 
 
-## Read-Me Files
-Some stuff about readmes like this file right here. What should they include?
+## What Code Belongs in the GIS Pantry?
+If your script is one of following, it's a great candidate for the pantry:
+- Likely useful to many in BC Gov GIS
+- Solves a tricky problem
+- Represents a best practice
+- Is creative, elegent, covers new territory or just plain neat.
+
+Please also ensure that submissions offer unique value and are not repetitive in relation to the scripts already present in the pantry (unless yours is better).
 
 ## What NOT to Include in your Github Repository
 The GIS Panty is a public repository so it is important to review your files for any sensitive information before sharing your project.
-
 - Filepaths to government network drive locations
 - Employee names or contact information
 - Usernames and passwords
 
-## General Formatting
+## Generalization
+An attempt should be made to generalize submissions as much as is feasible.
+- References to specific data are parameterized where appropriate
+- Parameters are easy to find and alter
+- Variable names altered where necessary
+- Anything else that would be useful for a user jumping into the script
 
+## Read-Me Files
+All scripts in the pantry must have an accompanying readme. Please see readme.md in [gis-pantry/_getting-started/Script-Template/](https://github.com/bcgov/gis-pantry/edit/master/_getting-started/Script-Template/).
+
+## General Formatting
 - Be mindful and consistent with whitespace 
 - Max line length should be 120 characters 
 - Use UNC paths unless path is longer than 256 characters. On GitHub paths should be parameterized. (This is for working project files, remove all paths before sharing on Github!)  
