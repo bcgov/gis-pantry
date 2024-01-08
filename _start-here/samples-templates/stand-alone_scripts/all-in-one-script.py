@@ -30,6 +30,7 @@
 import arcpy
 import sys, os
 from pathlib import Path
+from datetime import datetime
 
 
 # *** DEBUG ***
@@ -53,7 +54,7 @@ arcpy.env.overwriteOutput = True
 DECORATOR = '+-'*50
 
 NOW = datetime.datetime.now()
-NOW = now.strftime("%Y%m%d_%H%M%S")
+NOW = NOW.strftime("%Y%m%d_%H%M%S")
 
 
 # *** FUNCTIONS / CLASSES ***
@@ -80,7 +81,7 @@ def function_name(num1, num2):
 
 
 # *** MAIN ***
-if __name__ == __main__:
+if __name__ == "__main__":
     # main code here...
 
     # 1. SECTION TITLE
@@ -91,7 +92,7 @@ if __name__ == __main__:
     # Minor Subsection Title
 
     # If statement with a verbose doc string. For when you need more than a couple lines using '#' 
-    if some_condition = True:
+    if some_condition == True:
         '''
         Function, Class, If, Loop, etc. comment block. Info about what the thing is all about...
         more to say 
@@ -113,6 +114,7 @@ if __name__ == __main__:
         # Minor Subsection Title
 
         try:
+            pass
         except ValueError as e:
             '''
             do something here to handle it... 
