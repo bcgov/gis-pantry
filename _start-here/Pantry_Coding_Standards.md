@@ -14,7 +14,7 @@ The link below is about readme files for repositories, but a lot of what it says
 [**GitHub Recommendations for read-me files**](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
 
 ## What <ins>**NOT**</ins> to Include in your Github Repository
-The GIS Panty is a public repository so it is important to review your files for any sensitive information before sharing your project.
+The GIS Pantry is a public repository so it is important to review your files for any sensitive information before sharing your project.
 
 - Filepaths to government network drive locations
 - Employee names or contact information
