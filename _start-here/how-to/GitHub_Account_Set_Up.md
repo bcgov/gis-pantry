@@ -11,7 +11,7 @@ Helpful Resources:
 ### Step By Step
 1. You can [sign up here](https://github.com/)
     - Click "Sign up" and enter your government email. 
-        ![image](./_media/GitHub_account_InitialSignupPage.PNG)  
+        ![image](../_media/GitHub_account_InitialSignupPage.PNG)  
         *You will be able to add additional emails later if you want.*
 1. Follow the prompts to create your new account.
     - You may name your account as you wish. The general recommendation is to use your name, however many use a handle. 
@@ -26,21 +26,21 @@ We recommend the following account changes before contributing to the GIS Pantry
 1. To Begin...  
     * First, log into your account
     * After you have logged in, go to your account icon in the upper right corner
-    * Then click settings. ![image](./_media/GitHub_account_OpenAccountMenu.PNG) ![image](./_media/GitHub_account_GoToAccountSettings.PNG)
+    * Then click settings. ![image](../_media/GitHub_account_OpenAccountMenu.PNG) ![image](../_media/GitHub_account_GoToAccountSettings.PNG)
 
 1. Now configure your emails...  
     1. Click >> Emails
         - Add any emails you want
             - Be sure to include your government email.    
         - You can also choose which email is your primary.
-        ![image](./_media/GitHub_account_EmailSettingsClarified.PNG)
+        ![image](../_media/GitHub_account_EmailSettingsClarified.PNG)
 1. Finally, set up your public profile...  
     1. Click >> "Public Profile"
         - Update your display name (optional)  
         *This helps if you signed up for your account with a handle, rather than your real name. Changing your display name allows your colleagues to easily recognize you. You may change this later.*
         - Set Company to "Province of British Columbia"
         - You can also choose an email to display publicly...
-        - You can make other changes as desired. Like adding a bio ![image](./_media/GitHub_account_BasicProfileInfoPNG.PNG)
+        - You can make other changes as desired. Like adding a bio ![image](../_media/GitHub_account_BasicProfileInfoPNG.PNG)
 
 1. Join the BCGov GitHub organization (OPTIONAL)  
 *You do not need to do this to contribute to the pantry. You can still contribute by forking the Pantry, and then submitting a pull request. Joining the org provides you additional permissions...*  
