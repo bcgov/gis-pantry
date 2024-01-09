@@ -20,8 +20,6 @@ The GIS Pantry is a public repository so it is important to review your files fo
 - Employee names or contact information
 - Usernames and passwords
 
-## General Formatting
-**First off >> [Here are some templates to consider...](samples-templates)**
 
 ## Generalization
 An attempt should be made to generalize submissions as much as is feasible.
@@ -32,6 +30,10 @@ An attempt should be made to generalize submissions as much as is feasible.
 
 ## Read-Me Files
 All scripts in the pantry must have an accompanying readme. Please see readme.md in [gis-pantry/_getting-started/Script-Template/](https://github.com/bcgov/gis-pantry/edit/master/_getting-started/Script-Template/).
+
+
+## General Formatting
+**First off >> [Here are some templates to consider...](samples-templates)**
 
 ### General Guidelines
 - Be mindful and consistent with whitespace 
