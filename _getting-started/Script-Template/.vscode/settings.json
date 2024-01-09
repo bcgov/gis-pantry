@@ -1,5 +1,5 @@
 {   
-// default formatter settings
+// add this to your settings.json to set useful rulers
     "editor.defaultFormatter":"eeyore.yapf",
 
     "editor.rulers": [
