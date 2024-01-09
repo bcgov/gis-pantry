@@ -8,5 +8,5 @@ Below are examples of important terminology from the GitHub glossary:
 -	Fork: A fork is a personal copy of another user's repository that lives on your account. Forks allow you to freely make changes to a project without affecting the original upstream repository. You can also open a pull request in the upstream repository and keep your fork synced with the latest changes since both repositories are still connected.
 ### The GitHub Docs page has links to further learning resources offered, like documentation on [Repositories](https://docs.github.com/en/repositories), and [Pull requests](https://docs.github.com/en/pull-requests). For a tutorial on using repositories, branches, commits and pull requests go to the [Hello World Tutorial](https://docs.github.com/en/get-started/quickstart/hello-world). 
 ## How to start working within the bcgov gis-pantry? 
-1. Go to the [getting started gis-pantry homepage](https://github.com/bcgov/gis-pantry/tree/master/_getting-started)
-- Start by reading **Using Git Hub to Contribute to GIS Pantry** located under the file name GIS_Pantry_QuickStart.md
+1. Review the content in the GIS Pantry [_start-here](../_start-here) folder.
+- Start by reading the [GIS_Pantry_QuickStart Doc](<QuickStart - BEGIN HERE.md>)
