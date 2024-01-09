@@ -13,16 +13,6 @@ If your script is one of following, it's a great candidate for the pantry:
 
 Please also ensure that submissions offer unique value and are not repetitive in relation to the scripts already present in the pantry (unless yours is better).
 
-## Generalization
-An attempt should be made to generalize submissions as much as is feasible.
-- References to specific data are parameterized
-- Parameters are easy to find and alter
-- Variable names altered where necessary
-- Anything else that would be useful for a user jumping into the script
-
-## Read-Me Files
-All scripts in the pantry must have an accompanying readme. Please see readme.md in [gis-pantry/_getting-started/Script-Template/](https://github.com/bcgov/gis-pantry/edit/master/_getting-started/Script-Template/).
-
 ## What <ins>**NOT**</ins> to Include in your Github Repository
 The GIS Pantry is a public repository so it is important to review your files for any sensitive information before sharing your project.
 
@@ -32,6 +22,16 @@ The GIS Pantry is a public repository so it is important to review your files fo
 
 ## General Formatting
 **First off >> [Here are some templates to consider...](samples-templates)**
+
+## Generalization
+An attempt should be made to generalize submissions as much as is feasible.
+- References to specific data are parameterized
+- Parameters are easy to find and alter
+- Variable names altered where necessary
+- Anything else that would be useful for a user jumping into the script
+
+## Read-Me Files
+All scripts in the pantry must have an accompanying readme. Please see readme.md in [gis-pantry/_getting-started/Script-Template/](https://github.com/bcgov/gis-pantry/edit/master/_getting-started/Script-Template/).
 
 ### General Guidelines
 - Be mindful and consistent with whitespace 
