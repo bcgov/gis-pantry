@@ -31,20 +31,20 @@ And if you really want to get under the hood, you can also use the [Git Command 
 Essentially there are two locations where you can edit your fork.
 
 1. Remotely -- i.e. directly on the GitHub platform
-    - Do this:
-        - via the web interface
-        - via a remote connection (GitHub Desktop, VS Code, etc.)
+    - Do this via:
+        1. the web interface
+        1. via a remote connection (GitHub Desktop, VS Code, etc.)
 1. Locally -- i.e. download and edit files locally
-    - Do this by:
-        - downloading directly from the web interface
-        - cloning your fork locally (GitHub Desktop, VS Code, etc.)
+    - Do this by either:
+        1. downloading directly from the web interface
+        1. cloning your fork locally (GitHub Desktop, VS Code, etc.)
 
-The how-to docs cover a number of the ways to do the above...
+The [how-to](how-to) docs cover a number of the ways to do the above...
 
 ## Tips & Tricks
 
 * BEFORE EDITING YOUR FORK  
-Best practice is to syncronize your fork with bcgov/gis-pantry before making or pushing your own changes. This way other users have made changes to the Pantry repository since you created your fork you may encounter merge conflicts. The how-docs above *should* cover this for each method.
+Best practice is to syncronize your fork with bcgov/gis-pantry before making, and pushing your own changes. You will also want to try to push your changes as efficiently as you can, or at least regularly synchronize your fork with the Pantry main branch to bring changes into your fork. Otherwise changes made to the Pantry main branch after you created your fork may cause merge conflicts.
 
 * For small edits, or one-off contributions consider using the web interface approach.
 
