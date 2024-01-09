@@ -4,14 +4,24 @@
 # Basic Coding Standards & Best Practices
 This document contains standards and guidelines for projects being shared to the GIS Pantry Github. These standards can also be used in all your projects. Many of these settings can be automatically applied to your VS Code projects using the project templates accompanying this read me. 
 
+## What Code Belongs in the GIS Pantry?
+If your script is one of following, it's a great candidate for the pantry:
+- Likely useful to many in BC Gov GIS
+- Solves a tricky problem
+- Represents a best practice
+- Is creative, elegent, new and interesting or just plain neat
+
+Please also ensure that submissions offer unique value and are not repetitive in relation to the scripts already present in the pantry (unless yours is better).
+
+## Generalization
+An attempt should be made to generalize submissions as much as is feasible.
+- References to specific data are parameterized
+- Parameters are easy to find and alter
+- Variable names altered where necessary
+- Anything else that would be useful for a user jumping into the script
+
 ## Read-Me Files
-Read-Me files are very helpful. GitHub will automatically display the contents of a readme file when a user views an folder.
-
-You can add a README file to your directory to tell other people why your code is useful, what they can do with it, and how they can use it.
-
-The link below is about readme files for repositories, but a lot of what it says easily translates to smaller entries.
-
-[**GitHub Recommendations for read-me files**](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
+All scripts in the pantry must have an accompanying readme. Please see readme.md in [gis-pantry/_getting-started/Script-Template/](https://github.com/bcgov/gis-pantry/edit/master/_getting-started/Script-Template/).
 
 ## What <ins>**NOT**</ins> to Include in your Github Repository
 The GIS Pantry is a public repository so it is important to review your files for any sensitive information before sharing your project.
@@ -25,10 +35,8 @@ The GIS Pantry is a public repository so it is important to review your files fo
 
 ### General Guidelines
 - Be mindful and consistent with whitespace 
-- Max line length should be 120 characters
-    - ***Pep8 recommends 79 characters because it makes it easier to have multiple files open next to each other.***
-- Use UNC paths unless the path is longer than 256 characters. On GitHub paths should be parameterized. 
-    - ***This is for working project files, please remove all paths before sharing on Github!***  
+- Max line length should be 99 characters
+- It is strongly recommended that before they are paramertized for github, UNC paths are 
 
 **Here is an excellent primer on coding standards:**  
 ["How to Write Beautiful Python Code With Pep8"](https://realpython.com/python-pep8/)
@@ -63,8 +71,7 @@ f"{variable_name} is a variable" # use f-strings instead of concatenation
 ## Commenting
 
 - Use docstrings (triple quotes) for commenting functions (see Functions section below)
-- Use a new line for comments over 100 characters
-    - *pep8 recommends for 72-79 chars*
+- Use a new line for comments over 99 characters
 - Use block comments for comments that span more than one line 
 - Use inline # comments for single lines of code sparingly 
 - Comments should describe the reasoning for your process if it is unusual and/or complex 
@@ -99,8 +106,7 @@ Use section headers to split up substantially different sections of the script f
 ~~~
 
 ## Functions
-- In general, it is better if functions are short and reusable but longer single use functions can be used if necessary
-- Try to organize repetitive tasks into functions. If multiple processes are similar enough, they should be implemented in a function with differences being handled by input variables.
+- In general, functions are relatively short and resuable. Try to organize repetitive tasks into functions. If multiple processes are similar enough, they should be implemented in a function with differences being handled by input variables.
 - Always have a docstring except for the most obvious of functions as described above. 
 ### Function Docstrings
 - Always have a docstring except for the most obvious of functions 
