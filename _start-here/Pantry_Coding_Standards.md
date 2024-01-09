@@ -36,7 +36,7 @@ All scripts in the pantry must have an accompanying readme. Please see readme.md
 ### General Guidelines
 - Be mindful and consistent with whitespace 
 - Max line length should be 99 characters
-- It is strongly recommended that before they are paramertized for github, UNC paths are 
+- It is strongly advised that before paths are paramertized for github, UNC paths rather than mapped drives are used. 
 
 **Here is an excellent primer on coding standards:**  
 ["How to Write Beautiful Python Code With Pep8"](https://realpython.com/python-pep8/)
