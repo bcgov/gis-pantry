@@ -35,6 +35,7 @@ if not arcpy.Exists(working_gbd):
 if not arcpy.Exists(final_gbd):
     arcpy.management.CreateFileGDB(data_folder, basename(final_gbd))
 
+
 # 2 - Data acquisition from BC Map Hub Feature Layer REST services
 # --------------------------------------------------------------------------------------------------
 print("Getting Data...")
@@ -45,6 +46,7 @@ get_data_from_rest(LANDSCAPE_UNITS_REST_URL, "landscape_units",
 
 get_data_from_rest(PROTECTED_AREAS_REST_URL, "protected_areas",
                    f"PROTECTED_LANDS_DESIGNATION in {protected_area_types}")
+
 
 # 3 - ArcGIS Data Analysis and Processing
 # --------------------------------------------------------------------------------------------------
@@ -67,6 +69,7 @@ arcpy.management.CalculateField("lus_w_protected_areas", "AREA_HA",
 # copy to final geodatabase
 arcpy.conversion.FeatureClassToFeatureClass("lus_w_protected_areas", final_gbd,
                                             "lus_w_protected_areas_final")
+
 
 # 4 - Pandas Data Analysis
 # --------------------------------------------------------------------------------------------------
