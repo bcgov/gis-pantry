@@ -48,7 +48,7 @@ All scripts in the pantry must have an accompanying readme. Please see template 
 - snake_case for file names, variables, and functions
 - TitleCase for classes
 - CAPITAL_CASE for constants
-- descriptive names for variables, functions, and classes
+- use descriptive names for variables, functions, and classes
 - in general, use f-strings instead of concatenation
 
 ~~~python
