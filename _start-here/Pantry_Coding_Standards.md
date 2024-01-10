@@ -49,7 +49,7 @@ All scripts in the pantry must have an accompanying readme. Please see template 
 - TitleCase for classes
 - CAPITAL_CASE for constants
 - descriptive names for variables, functions, and classes
-- f-strings instead of concatenation
+- in general, use f-strings instead of concatenation
 
 ~~~python
 # Example naming conventions
@@ -66,7 +66,7 @@ CONSTANT_NAME = 1 # CAPITAL_CASE for constants
 class ClassName: # TitleCase for classes
     pass
 
-f"{variable_name} is a variable" # use f-strings instead of concatenation
+f"{variable_name} is a variable" # generally try to use f-strings instead of concatenation
 ~~~
 
 
