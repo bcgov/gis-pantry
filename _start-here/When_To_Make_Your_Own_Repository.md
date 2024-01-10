@@ -1,4 +1,4 @@
-# Repository Guidelines
+# When and How to Make Your Own Repository for Your Project
 
 ## When to make a community contribution: 
 1. You have methods to demonstrate
