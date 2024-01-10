@@ -14,7 +14,7 @@
 
 ## Before you make a new repo
 
-1. Follow the [BC Open Source Developement Employee Guide] 
+1. Follow the BC Open Source Developement Employee Guide:  
 [BC-Open-Source-Developement-Employee-Guide - Initiating a new project](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Collaborating-Contributing.md)
 2. Join the BCGOV organization on github
 
@@ -34,29 +34,29 @@
 [How To Cheat Sheet](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Cheatsheet.md)
 
 [BC Open Source Development Employee Guide](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/tree/master/BC-Open-Source-Development-Employee-Guide)
-- [Principles for Participation](Principles.md)
-- [Browsing and Consuming Material in GitHub](browsing-consuming.md)
-- [Approval Requirements](Content-Approval-Checklist.md)
-- [Approaches to Collaborating/Contributing](Collaborating-Contributing.md)
-- [Appropriate Use](appropriate-use.md)
-- [Conflict of Interest, Privacy and Intellectual Property](COI-Priv-IP.md)
-- [Licenses](Licenses.md)
-- [Security](Security.md)
+- [Principles for Participation](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Principles.md)
+- [Browsing and Consuming Material in GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/browsing-consuming.md)
+- [Approval Requirements](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Content-Approval-Checklist.md)
+- [Approaches to Collaborating/Contributing](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Collaborating-Contributing.md)
+- [Appropriate Use](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/appropriate-use.md)
+- [Conflict of Interest, Privacy and Intellectual Property](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/COI-Priv-IP.md)
+- [Licenses](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Licenses.md)
+- [Security](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Security.md)
 
 [BCGov GitHub Organization "How To"](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/tree/master/BC-Gov-Org-HowTo)
 - Guidance
-    - [Joining the BCGov on GitHub](Joining-the-BCGov-on-GitHub.md )
+    - [Joining the BCGov on GitHub](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Joining-the-BCGov-on-GitHub.md)
     - [GitHub Basics Course](https://github.com/blog/2245-are-you-new-around-here-introducing-an-on-demand-course-in-github-basics)
-    - [Creating and Deleting Repos](Creating-Repos.md)
-    - [Forking repos in the bcgov org](Forking-Repos.md)
-    - [Naming Repos](Naming-Repos.md)
-    - [Using Licenses](using-licenses.md)
-    - [OCIO Open Source Software Guide](/ref-docs/96184_Open_Source_Guideline.pdf)
+    - [Creating and Deleting Repos](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Creating-Repos.md)
+    - [Forking repos in the bcgov org](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Forking-Repos.md)
+    - [Naming Repos](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/Naming-Repos.md)
+    - [Using Licenses](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/using-licenses.md)
+    - [OCIO Open Source Software Guide](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/31300dd4ac9b6b143c94b868dde9880bf5655bfc/ref-docs/96184_Open_Source_Guideline.pdf)
 - Templates
-	- [Sample Contributing File](SAMPLE-CONTRIBUTING.md)
-	- [Sample ReadMe File](SAMPLE-README.md)
-    - [Sample Contributor Code of Conduct](SAMPLE-CODE_OF_CONDUCT.md)
+	- [Sample Contributing File](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md)
+	- [Sample ReadMe File](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-README.md)
+    - [Sample Contributor Code of Conduct](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-CODE_OF_CONDUCT.md)
 - Check Lists
-	- [Content Approval Check List](/ref-docs/Open-Content-Assessment-Checklist.pdf)
+	- [Content Approval Check List](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/ref-docs/Open-Content-Assessment-Checklist.pdf)
 
 
