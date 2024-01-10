@@ -29,11 +29,11 @@ An attempt should be made to generalize submissions as much as is feasible.
 - Anything else that would be useful for a user jumping into the script
 
 ## Read-Me Files
-All scripts in the pantry must have an accompanying readme. Please see readme.md in [gis-pantry/_getting-started/Script-Template/](https://github.com/bcgov/gis-pantry/edit/master/_getting-started/Script-Template/).
+All scripts in the pantry must have an accompanying readme. Please see template readme.md in [gis-pantry/_getting-started/Script-Template/](https://github.com/bcgov/gis-pantry/tree/master/_start-here/samples-templates/template).
 
 
 ## General Formatting
-**First off >> [Here are some templates to consider...](samples-templates)**
+**First off >> [Here are some templates to consider...](https://github.com/bcgov/gis-pantry/tree/master/_start-here/samples-templates)**
 
 ### General Guidelines
 - Be mindful and consistent with whitespace 
@@ -147,4 +147,4 @@ def multiply_numbers(num1, num2):
 - Data stored separately from project and especially not in GitHub. 
 - Some examples of data files includes: geospatial data, spreadsheets, etc.
 
-**Again [here is a template file structure with template scripts](samples-templates)**
+**Again [here is a template file structure with template scripts](https://github.com/bcgov/gis-pantry/tree/master/_start-here/samples-templates)**
