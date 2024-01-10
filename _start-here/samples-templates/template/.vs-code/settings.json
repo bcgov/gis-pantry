@@ -4,11 +4,11 @@
 
     "editor.rulers": [
         {
-            "column": 80,
+            "column": 79,
             "color": "#3d3d3d"
         },
         {
-            "column": 100,
+            "column": 99,
             "color": "#464646"
         },
     ]

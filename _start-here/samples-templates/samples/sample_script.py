@@ -1,30 +1,32 @@
-'''
-# Author:
+
+# Author: 
 # Ministry, Division, Branch:
 # Created Date: 
 # Updated Date: 
 # Description:
+#     THIS IS A DEMO SCRIPT INTENDED TO DEMONSTRATE GIS PANTRY STANDARDS. There 
+#     are many ways to be in compliance with standards, your code need not look 
+#     exactly the same.
 
---------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------
 # * SUMMARY
 
 # - INPUTS
 
 # - OUTPUTS
 
---------------------------------------------------------------------------------
+# --------------------------------------------------------------------------------
 # * IMPROVEMENTS
-* Suggestions...
---------------------------------------------------------------------------------
+# * Suggestions...
+# --------------------------------------------------------------------------------
 # * HISTORY
 
-  Date      Initial/IDIR  Description
-| ------------------------------------------------------------------------------
-  yyyy-mm-dd    iii       Yada yada yayaya yada yayayay yada yada yada ya ya ya,
-                          etc., etc.
-  yyyy-mm-dd    iii       etc., etc.
+#   Date      Initial/IDIR  Description
+# | ------------------------------------------------------------------------------
+#   yyyy-mm-dd    iii       Yada yada yayaya yada yayayay yada yada yada ya ya ya,
+#                           etc., etc.
+#   yyyy-mm-dd    iii       etc., etc.
 
-'''
 
 # *** IMPORTS ***
 import arcpy
@@ -32,23 +34,18 @@ import sys, os
 from pathlib import Path
 from datetime import datetime
 
-
 # *** DEBUG ***
 # debug and testing variables, and other script specific items...
-
 TESTING = False
 DEBUG = False
 
-
 # *** ENVIRONMENTS ***
 # environment set up...
-
 arcpy.env.overwriteOutput = True
-
 
 # *** PARAMETERS ***
 # Script parameters, constants, environment variables...
-
+PATH = r""
 
 # derived / programmatic  parameters
 DECORATOR = '+-'*50
@@ -56,10 +53,7 @@ DECORATOR = '+-'*50
 NOW = datetime.datetime.now()
 NOW = NOW.strftime("%Y%m%d_%H%M%S")
 
-
 # *** FUNCTIONS / CLASSES ***
-# put functions and classes here...
-
 # example with doc string template
 def function_name(num1, num2):
     """
@@ -81,7 +75,7 @@ def function_name(num1, num2):
 
 
 # *** MAIN ***
-if __name__ == "__main__":
+if __name__ == "__main__": # necessary if script is ever imported as a module
     # main code here...
 
     # 1. SECTION TITLE
@@ -91,21 +85,20 @@ if __name__ == "__main__":
 
     # Minor Subsection Title
 
-    # If statement with a verbose doc string. For when you need more than a couple lines using '#' 
     if some_condition == True:
-        '''
-        Function, Class, If, Loop, etc. comment block. Info about what the thing is all about...
-        more to say 
-        more to say.... yada yada
-        '''
+        
+        # Function, Class, If, Loop, etc. comment block. Info about what the thing is all about...
+        # more to say 
+        # more to say.... yada yada
+        
 
     ## -- ANOTHER SUBSECTION
     # example showing how to wrap the substantial scripting in multiple try/except statements...
     try:
-        '''
-        Just showing the use of the above, but within an over-arching try statement
-        that can wrap the entire script.
-        '''
+        
+        # Just showing the use of the above, but within an over-arching try statement
+        # that can wrap the entire script.
+        
         # 1. SECTION TITLE
         # +-----------------------------------------------------------------------------------------
 
@@ -116,21 +109,20 @@ if __name__ == "__main__":
         try:
             pass
         except ValueError as e:
-            '''
-            do something here to handle it... 
-                    OR
-            re-raise to catch it in the higher level except
-            '''
+            
+            # do something here to handle it... 
+            #         OR
+            # re-raise to catch it in the higher level except
+            
             raise ValueError('message here if you want')
 
     except ValueError:
-        '''example of catching a specific type of error'''
+        # example of catching a specific type of error
 
     except Exception as e:
-        '''catch-all exception'''
+        # catch-all exception
 
     finally:
-        '''
-        closeout code
-        often good to have, but not always needed
-        '''
+        # closeout code
+        # often good to have, but not always needed
+        
