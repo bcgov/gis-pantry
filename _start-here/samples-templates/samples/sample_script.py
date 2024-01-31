@@ -119,9 +119,6 @@ if __name__ == "__main__": # necessary if script is ever imported as a module
     except ValueError:
         # example of catching a specific type of error
 
-    except Exception as e:
-        # catch-all exception
-
     finally:
         # closeout code
         # often good to have, but not always needed
