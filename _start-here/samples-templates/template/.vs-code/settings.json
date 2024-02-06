@@ -1,0 +1,15 @@
+{   
+// add this to your settings.json to set useful rulers
+    "editor.defaultFormatter":"eeyore.yapf",
+
+    "editor.rulers": [
+        {
+            "column": 79,
+            "color": "#3d3d3d"
+        },
+        {
+            "column": 99,
+            "color": "#464646"
+        },
+    ]
+}

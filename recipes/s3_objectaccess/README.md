@@ -3,8 +3,11 @@
 ## create_presigned_url_for_s3_objects.py
 
 This script is an example of using the BOTO3 python client libraries for generating a token based expiry URL to access objects in S3 Storage buckets.
-
-   Data: 2021-05-03
+NOTE: If your s3 bucket is public, you do not need to use pre-signed url generation script - (ie just go to something like this url - https://nrs.objectstore.gov.bc.ca/<bucket name>/<object name>)
+   IDIR authentication link for more information - https://apps.nrs.gov.bc.ca/int/confluence/display/OPTIMIZE/NRM+Object+Storage+Service
+    •specifici to BC Object Storage solution - ECS Rest API Reference http://doc.isilon.com/ECS/3.6/API/index.html
+ 
+      Data: 2021-05-03
    Author: michelle.douville@gov.bc.ca
    
    usage: python create_presigned_url_for_s3_objects.py
