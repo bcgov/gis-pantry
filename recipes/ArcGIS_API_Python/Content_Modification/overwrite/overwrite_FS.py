@@ -2,6 +2,7 @@
 # https://community.esri.com/t5/arcgis-online-documents/overwrite-arcgis-online-feature-service-using-truncate-and/ta-p/904457
 # Original script author: Jake Skinner, ESRI
 # Modified to allow calling overwrite function outside of this script
+# 2024-04-03 - Updated script to include Jake Skinner's edits
 
 
 
