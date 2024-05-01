@@ -44,10 +44,10 @@ DEBUG = False
 arcpy.env.overwriteOutput = True
 
 # *** PARAMETERS ***
-# Script parameters, constants, environment variables...
+# User Parameters
 PATH = r""
 
-# derived / programmatic  parameters
+# Programmatic / Derived / Hard Coded
 DECORATOR = '+-'*50
 
 NOW = datetime.datetime.now()
