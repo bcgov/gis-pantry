@@ -11,7 +11,6 @@
 import geopandas as gpd
 import pandas as pd
 import oracledb
-from sqlalchemy import create_engine
 from getpass import getpass
 import logging
 
@@ -45,8 +44,7 @@ class bcgw2gdf:
 
         conn=oracledb.connect(user=self.user_nm, password= self.bcgw_pass, host=self.host_nm, port=1521,
                             service_name=self.service_nm)
-        self.engine= create_engine('oracle+oracledb://', creator=lambda: conn)
-        print("oracle engine created")        
+          
         # get layers function
         # +-------------------------------------------------------------------------------------------------
     #function to turn sql query into geodataframe 
