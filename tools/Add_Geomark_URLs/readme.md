@@ -18,9 +18,13 @@ To use the tool in ArcGIS Desktop, download the two files in the ArcGISDesktop f
 
 To use the tool in ArcGIS Pro, download the file Add_Geomark_URLs_ArcGISPro.atbx in the ArcGISPro folder above, and save it in a folder on your local drive or a network drive that you have write access to. (This file has the Python code embedded in it, so you do not need to download the other file, add_geomark_py3.py - it is only provided for reference.) In an ArcGIS Pro project, in the Catalog pane under the Project tab, connect to the folder where you saved the file, then browse to that folder and expand the file. You should see a script tool named Add_Geomark_URLs. Double-click that tool to start it. You will be prompted to select a map layer; select one and click OK to run. 
 
+After running, if no error messages are received, open the attribute table of the layer you specified (or if you already had it open, close it and open it again). You should see a newly-added field named Geomark_URL and it should contain a URL for each feature.
+
+If a feature has null geometry, the field will contain the text "Null geometry" instead of a URL. If any other problem occurred, you may see the text "Could not create Geomark URL for this geometry"; if you see this in the output, please contact the author.
+
 # Dependencies/Requirements/Environments
 
-These scripts have been tested in the GTS desktops named "Kamloops Desktop - Geospatial" (with ArcGIS Pro 3.2.2) and "Kamloops Desktop - ArcGIS 10-8" (with ArcGIS Desktop 10.8).
+These scripts have been tested in the GTS desktop environments named "Kamloops Desktop - Geospatial" (with ArcGIS Pro 3.2.2) and "Kamloops Desktop - ArcGIS 10-8" (with ArcGIS Desktop 10.8).
 
 Executing the tool in the ArcGIS Pro environment requires the Python "requests" module, which should have been installed by default with any installation of ArcGIS Pro and Python 3.x.
 
