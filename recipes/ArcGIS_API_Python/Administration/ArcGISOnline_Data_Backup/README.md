@@ -1,5 +1,5 @@
 # ArcGIS Online Dependency Checker
-Emma Armitage
+Emma Armitage\
 August 29, 2024
 
 ## Overview
