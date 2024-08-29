@@ -3,7 +3,8 @@ Emma Armitage\
 August 29, 2024
 
 ## Overview
-This script downloads data and associated attachments from ArcGIS Online as a GeoJSON file to Amazon S3 object storage.
+This script downloads data and associated attachments from ArcGIS Online as a GeoJSON file to Amazon S3 object storage.\
+The script is currently written to backup two feature layers 
 
 ## Usage
 You will need to configure the script with the following parameters:
@@ -26,10 +27,7 @@ In the `Backup Data` class:\
 `self.bucket`: Object Storage bucket\
 `self.bucket_prefix`: Object Storage "folder name"
 
-There may be a number of relevant limitations. The script may not find all usages in all cases.
-> ### Limitations
-
-
-## Details of output
+> ### Execution
+GitHub Actions is used to automate the running of the script. ArcGIS Online and Object Storage credentials are stored as Action secrets. 
 
 
