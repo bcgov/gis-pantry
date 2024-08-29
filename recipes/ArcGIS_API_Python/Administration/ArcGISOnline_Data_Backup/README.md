@@ -8,13 +8,13 @@ This script downloads data and associated attachments from ArcGIS Online as a Ge
 ## Usage
 You will need to configure the script with the following parameters:
 
-> ### Parameters\
-####In the function get_input_parameters():\
-'ago_user:' ArcGIS Online username\
-'ago_pass:' ArcGIS Online password\
-'obj_store_user:' Object Storage user id\
-'obj_store_api_key:' Object Storage api key\
->> 'obj_store_host:' Object Storage url\
+> ### Parameters
+In the function `get_input_parameters()`:\
+`ago_user`: ArcGIS Online username\
+`ago_pass`: ArcGIS Online password\
+`obj_store_user`: Object Storage user id\
+`obj_store_api_key`: Object Storage api key\
+`obj_store_host`: Object Storage url\
 > portal_url: MapHub or other AGO portal url\
 > bucket: Object Storage bucket\
 > bucket_prefix: Object Storage "folder name"\
