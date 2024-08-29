@@ -8,8 +8,8 @@ This script downloads data and associated attachments from ArcGIS Online as a Ge
 ## Usage
 You will need to configure the script with the following parameters:
 
-> ### Parameters
-> In the function get_input_parameters():\
+> ### Parameters\
+####In the function get_input_parameters():\
 'ago_user:' ArcGIS Online username\
 'ago_pass:' ArcGIS Online password\
 'obj_store_user:' Object Storage user id\
