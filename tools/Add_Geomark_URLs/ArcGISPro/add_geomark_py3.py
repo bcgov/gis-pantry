@@ -7,7 +7,7 @@ Created on:
 
 Purpose:
 This script creates Geomark URLs for each feature in an input dataset, and 
-writes them to a new field named Geomark_URL. It can be run at the command
+writes them to a new field named GeomarkURL. It can be run at the command
 prompt on a system with ArcGIS Pro installed, or directly in ArcGIS Pro in a 
 script tool named Add_Geomark_URL in a toolbox named Add_Geomark_URL.atbx.
 
@@ -28,6 +28,8 @@ History
 2024-11-04 (JK): Updated to use http.client instead of requests module to make 
                  API calls; requests module seems to have issues when run in a 
                  GTS session.
+2024-11-08 (JK): Creates the new field with name GeomarkURL instead of 
+                 Geomark_URL to fit in shapefile 10-character field name limit.
 """
 
 import arcpy
@@ -42,20 +44,20 @@ def add_geomark_url(in_fc):
     srid = arcpy.da.Describe(in_fc)["spatialReference"].factoryCode
     arcpy.AddMessage(time.strftime('%Y-%m-%d %H:%M:%S : ') + f"Spatial reference code of input dataset: {srid}")
 
-    # Add Geomark_URL field if it doesn't already exist
+    # Add GeomarkURL field if it doesn't already exist
     flist = [f.name for f in arcpy.ListFields(in_fc)]
-    if "Geomark_URL" not in flist:
-        arcpy.management.AddField(in_table=in_fc, field_name="Geomark_URL", field_type="TEXT", field_length=100)
-        arcpy.AddMessage(time.strftime('%Y-%m-%d %H:%M:%S : ') + "Added Geomark_URL field to input layer")
+    if "GeomarkURL" not in flist:
+        arcpy.management.AddField(in_table=in_fc, field_name="GeomarkURL", field_type="TEXT", field_length=100)
+        arcpy.AddMessage(time.strftime('%Y-%m-%d %H:%M:%S : ') + "Added GeomarkURL field to input layer")
     else:
-        arcpy.AddMessage(time.strftime('%Y-%m-%d %H:%M:%S : ') + "Geomark_URL field already exists in input layer")
+        arcpy.AddMessage(time.strftime('%Y-%m-%d %H:%M:%S : ') + "GeomarkURL field already exists in input layer")
 
-    # Read each record, send API request to create Geomark URL, write the returned URL to the Geomark_URL field
+    # Read each record, send API request to create Geomark URL, write the returned URL to the GeomarkURL field
     row_total = int(arcpy.GetCount_management(in_fc).getOutput(0))
     read_count = 0
     update_count = 0
     arcpy.AddMessage(time.strftime('%Y-%m-%d %H:%M:%S : ') + f"Processing {row_total} feature(s) of input dataset")
-    with arcpy.da.UpdateCursor(in_fc, ["Geomark_URL", "SHAPE@"]) as cursor:
+    with arcpy.da.UpdateCursor(in_fc, ["GeomarkURL", "SHAPE@"]) as cursor:
         for row in cursor:
             read_count += 1
             exist_url = row[0]
