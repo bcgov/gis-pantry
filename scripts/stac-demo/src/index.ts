@@ -1,6 +1,6 @@
 import './style.scss';
 
-import * as L from 'leaflet';
+import L from 'leaflet';
 
 // Function to fetch STAC items from Planetary Computer
 async function fetchSTACItems(limit: number = 10) {
@@ -25,21 +25,20 @@ async function fetchSTACItems(limit: number = 10) {
     return await response.json();
 }
 
-// Function to create a Leaflet layer from STAC GeoJSON
-type STACFeature = {
-    id: string | number;
-    properties: any;
-    geometry: any;
-};
+// Function to create a Leaflet layer for a single selected STAC feature
+function createSTACLayerForFeature(feature: any): L.GeoJSON {
+    // Check if the feature has the necessary properties before proceeding
+    if (!feature || !feature.geometry || !feature.properties) {
+        throw new Error("Invalid feature data");
+    }
 
-function createSTACLayer(stacData: any): L.GeoJSON {
-    return L.geoJSON(stacData, {
+    const props = feature.properties;
+    const id = feature.id?.toString() || "Unknown";
+    const collection = "nrcan-landcover";
+    const tileurl = feature.assets?.landcover?.href || "#";
+
+    return L.geoJSON(feature, {
         onEachFeature: (feature: any, layer: L.Layer) => {
-            const props = feature.properties;
-            const id = feature.id?.toString() || "Unknown";
-            const collection = "nrcan-landcover";
-            const tileurl = feature.assets.rendered_preview.href
-
             layer.bindPopup(`
                 <b>ID:</b> ${id}<br>
                 <b>Collection:</b> ${collection}<br>
@@ -51,40 +50,87 @@ function createSTACLayer(stacData: any): L.GeoJSON {
 }
 
 // Function to add STAC imagery to Leaflet map
-function addSTACImagery(map: L.Map, stacData: any) {
-    stacData.features.forEach((feature: any) => {
-        const assets = feature.assets;
+function addSTACImageryLayer(map: L.Map, feature: any) {
+    const assets = feature.assets;
+    const corner1 = L.latLng(feature.bbox[1], feature.bbox[0]);
+    const corner2 = L.latLng(feature.bbox[3], feature.bbox[2]);
+    const feat_bounds = L.latLngBounds(corner1, corner2);
 
-        const corner1 = L.latLng(feature.bbox[1], feature.bbox[0]);
-        const corner2 = L.latLng(feature.bbox[3], feature.bbox[2]);
+    if (assets && assets.rendered_preview) {
+        const tileUrl = assets.rendered_preview.href;
+        L.imageOverlay(tileUrl, feat_bounds).addTo(map);
+    }
+}
+
+// Function to handle feature selection from dropdown
+function handleFeatureSelection(map: L.Map, selectedFeatureId: string, stacData: any) {
+    const selectedFeature = stacData.features.find((feature: any) => feature.id === selectedFeatureId);
+    
+    if (selectedFeature) {
+        const assets = selectedFeature.assets;
+        const corner1 = L.latLng(selectedFeature.bbox[1], selectedFeature.bbox[0]);
+        const corner2 = L.latLng(selectedFeature.bbox[3], selectedFeature.bbox[2]);
         const feat_bounds = L.latLngBounds(corner1, corner2);
 
-        console.log(feat_bounds)
-        if (assets) {
-            const tileUrl = assets.rendered_preview.href;
-            L.tileLayer(tileUrl, {
-                bounds: feat_bounds,
-                attribution: "&copy; NRCan Landcover via Microsoft Planetary Computer"
-            }).addTo(map);
-        }
+        // Clear existing imagery overlays
+        map.eachLayer((layer) => {
+            if (layer instanceof L.ImageOverlay) {
+                map.removeLayer(layer);
+            }
+        });
+
+        // Clear existing polygons
+        map.eachLayer((layer) => {
+            if (layer instanceof L.GeoJSON) {
+                map.removeLayer(layer);
+            }
+        });
+
+        const stacLayer = createSTACLayerForFeature(selectedFeature);
+        stacLayer.addTo(map);
+
+        addSTACImageryLayer(map,selectedFeature)
+
+        // if (assets && assets.rendered_preview) {
+        //     const tileUrl = assets.rendered_preview.href;
+        //     L.imageOverlay(tileUrl, feat_bounds).addTo(map);
+        // }
+
+        map.fitBounds(feat_bounds); // Zoom to the selected feature
+    }
+}
+
+// Function to populate the dropdown with STAC feature options
+function populateDropdown(stacData: any) {
+    const dropdown = document.getElementById('stac-dropdown') as HTMLSelectElement;
+
+    stacData.features.forEach((feature: any) => {
+        const option = document.createElement('option');
+        option.value = feature.id;
+        option.textContent = `${feature.id} - ${feature.properties?.datetime || 'N/A'}`;
+        dropdown.appendChild(option);
+    });
+
+    // Add event listener for dropdown selection
+    dropdown.addEventListener('change', (event) => {
+        const selectedFeatureId = (event.target as HTMLSelectElement).value;
+        handleFeatureSelection(map, selectedFeatureId, stacData);
     });
 }
 
-
 // Function to add STAC data to Leaflet map
-async function addSTACLayer(map: L.Map) {
+async function addSTACDataToMap(map: L.Map) {
     try {
-        const stacData = await fetchSTACItems(1);
+        const stacData = await fetchSTACItems(500);
+        console.log(stacData);
 
         if (stacData.features.length === 0) {
             console.warn("No STAC items found in this region.");
             return;
         }
 
-        const stacLayer = createSTACLayer(stacData);
-        stacLayer.addTo(map);
-
-        addSTACImagery(map, stacData);
+        // Populate the dropdown with features after adding them to the map
+        populateDropdown(stacData);
     } catch (error) {
         console.error(error);
     }
@@ -97,4 +143,4 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Add NRCAN Landcover STAC Data
-addSTACLayer(map);
+addSTACDataToMap(map);
