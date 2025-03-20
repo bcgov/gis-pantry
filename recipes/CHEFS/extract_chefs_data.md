@@ -17,5 +17,5 @@ Once you've saved your form, you can find the form ID and the version ID:
 1. Navigate to **My Forms**, find the form for which you want to enable the API key. Select **Manage**
 2. Click on the desired form version
 3. You can find the IDs in the url:
-    https://submit.digital.gov.bc.ca/app/form/preview?f=**{Form ID will be here}**&d=**{Version ID will be here}**
+    submit.digital.gov.bc.ca/app/form/preview?f=**{Form ID will be here}**&d=**{Version ID will be here}**
     
