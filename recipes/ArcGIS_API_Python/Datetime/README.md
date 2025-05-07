@@ -150,7 +150,11 @@ df[COLUMN_NAME] = df[COLUMN_NAME].dt.tz_convert('UTC')
 Features added to an existing AGOL feature layer follow json format below. Replace the fields, values, and coordinates with data from the dataframe. I often loop through the dataframe to do so.  
 ```json
 {
-  "geometry": {"x": longitude, "y": latitude},
+  "geometry": {
+    "x": longitude, 
+    "y": latitude,
+    "spatialReference": {"wkid": 4326}
+    },
 
   "attributes": {
     "FIELD1": "Value1",
