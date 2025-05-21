@@ -251,3 +251,4 @@ with rasterio.open(dem_url) as src:
 - More about [STAC](https://stacspec.org/en)
 - [Microsoft Planatary Computer STAC](https://planetarycomputer.microsoft.com/docs/quickstarts/reading-stac/)
 - Natural Resources Canada STAC API:[https://datacube.services.geo.ca/stac/api/](https://datacube.services.geo.ca/stac/api/)
+- Earth Search including Sentinel, Copernicus, NAIP and other COG Collections:[Earth Search API](https://earth-search.aws.element84.com/v1)
