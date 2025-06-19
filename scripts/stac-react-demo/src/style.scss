@@ -1,0 +1,173 @@
+@import '~leaflet/dist/leaflet.css';
+
+html,body {
+	margin: 0;
+	height: 100%;
+	min-height: 100%;
+	background: #f5f5f5;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+header,
+footer {
+  flex: none;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 0;
+	font-weight: 900;
+}
+
+#pantry-link {
+	display: flex;
+	padding: 5px 20px;
+	background: #25292E;
+	border-radius: 50px;
+	box-shadow: 0px 4px 8px rgba(26, 26, 26, 0.2);
+	color: #fff;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+#pantry-link:hover {
+	background: #494a4b;
+}
+
+#pantry-link svg{
+	margin-right: 10px;
+	color: #fff;
+}
+
+#app {
+	overflow-y: hidden;
+	flex: auto;
+}
+
+#app-container {
+	display: flex;
+	height: 100%;
+}
+
+.leaflet-control-container .leaflet-top .leaflet-control-zoom {
+	border: none;
+}
+
+.leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-in { 
+	margin-bottom: 5px;
+	border-radius: 50px;
+	background: #003366;
+	color: #FCB918; 
+}
+
+.leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-out { 
+	border-radius: 50px;
+	background: #003366;
+	color: #FCB918;  
+}
+
+.leaflet-bar a.leaflet-disabled {
+	background: #BBBBBB !important;
+	color: #666666 !important; 
+}
+
+#selector-panel {
+	width: 300px;
+	margin: 5px;
+	border: 2px solid #003366;
+	border-radius: 10px;
+	padding: 10px;
+	background: #fff;
+	color: #000;
+}
+
+#selector-panel h3{
+	text-align: center;
+	font-size: 26px;
+}
+
+#map-container {
+	flex-grow: 1;
+	margin: 5px;
+	border: 2px solid #003366;
+	border-radius: 10px;
+}
+
+.leaflet-container {
+	border-radius: 10px;
+}
+
+#info-panel {
+	width: 300px;
+	margin: 5px;
+	border: 2px solid #003366;
+	border-radius: 10px;
+	padding: 10px;
+	background: #fff;
+	color: #000;
+}
+
+#image-preview {
+	width: 100%;
+}
+
+#image-preview img {
+	border: 2px solid #525252;
+	width: 100%;
+}
+
+#feature-info {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 20px;
+	background: #f7f7f7;
+	border: 1px solid #000;
+	border-radius: 20px;
+	color: #000;
+}
+
+#feature-info  h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: 26px;
+}
+
+#feature-info  p {
+	margin: 10px 0;
+}
+
+#feature-info  a {
+	display: flex;
+	margin: 10px auto;
+	padding: 5px 40px;
+	background-color: #003366;
+	color: #fff;
+	border-radius: 50px;
+	text-decoration: none;
+	box-shadow: 0px 4px 8px rgba(26, 26, 26, 0.2);
+}
+
+#feature-info  a:hover {
+	background-color: #215283;
+}
+
+button {
+	margin-top: 20px;
+	padding: 8px;
+	width: 100%;
+	border: none;
+	border-radius: 50px;
+	background: #003366;
+	color: white;
+	cursor: pointer;
+	box-shadow: 0px 4px 8px rgba(26, 26, 26, 0.2);
+}
+
+button:hover {
+	background: #215283;
+}
