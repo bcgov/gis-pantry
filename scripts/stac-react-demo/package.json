@@ -1,0 +1,46 @@
+{
+  "name": "stac-react-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve"
+  },
+  "keywords": [],
+  "author": "Michael Dykes",
+  "license": "Apache-2.0",
+  "description": "STAC React Demo for BC Gov GIS",
+  "devDependencies": {
+    "@types/leaflet": "^1.9.16",
+    "@types/leaflet-draw": "^1.0.11",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@types/react-leaflet": "^2.8.3",
+    "@types/turf": "^3.5.32",
+    "@webpack-cli/generators": "^3.0.7",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "@bcgov/design-system-react-components": "^0.5.1",
+    "@turf/turf": "^7.2.0",
+    "bootstrap": "^5.3.3",
+    "leaflet": "^1.9.4",
+    "leaflet-draw": "^1.0.4",
+    "node-sass": "^9.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-leaflet": "^5.0.0"
+  }
+}
