@@ -1,44 +1,80 @@
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\20230118_BRFN IA Final_.pdf
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb
-	BRFN: In feature class name: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_CivilClaimArea
-	BRFN: Attribute in \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\PNG_Zones
-	BRFN: In feature class name: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_Traplines
-	HV1: In feature class name: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_HV1
-	HV1: Attribute in \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_HV1
-	BRFN: In feature class name: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_HV1
-	BRFN: In feature class name: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_Traplines_Numbered
-	BRFN: Attribute in \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\Pending_Permits_Schedule_O.gdb\BCTS_blocks
-	BRFN: Attribute in \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\Schedule_O.gdb\BCTS_blocks
-	BRFN: In feature class name: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\Schedule_O.gdb\MOTI_Peace_projects_BRFN
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\KML\BRFNAgreement_All.kmz
-HV1: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.CPG
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.CPG
-HV1: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.dbf
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.dbf
-HV1: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.prj
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.prj
-HV1: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.qix
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.qix
-HV1: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp
-	HV1: Attribute in \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp
-HV1: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp.xml
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp.xml
-HV1: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shx
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shx
-HV1: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.zip
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.zip
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.CPG
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.dbf
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.prj
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.sbn
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.sbx
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.shp
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.shp.xml
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.shx
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.zip
-	BRFN: Attribute in \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\PNG_Zones.shp
-HV1: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles_NAD83CSRS\BRFN_HV1_NAD83.zip
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles_NAD83CSRS\BRFN_HV1_NAD83.zip
-BRFN: \\spatialfiles.bcgov\work\srm\nr\NEGSS\NEDD\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles_NAD83CSRS\BRFN_Trapln_NAD83.zip
+BRFN: <path>\ArcPro_BRFN Community Selected Areas.lyrx
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016
+	BRFN: In feature class name: <path>\BlueberryRiverFirstNations\From_BRFN_2016.gdb\BRFN_CriticalAreas_06May2015
+	BRFN: Attribute in <path>\BlueberryRiverFirstNations\From_BRFN_2016.gdb\BRFN_CriticalAreas_06May2015
+	BRFN: In feature class name: <path>\BlueberryRiverFirstNations\From_BRFN_2016.gdb\BRFN_CriticalAreaPortions_27June2016
+	BRFN: Attribute in <path>\BlueberryRiverFirstNations\From_BRFN_2016.gdb\BRFN_CriticalAreaPortions_27June2016
+	BRFN: In feature class name: <path>\BlueberryRiverFirstNations\From_BRFN_2016.gdb\BRFN_TraditionalTerritory
+	BRFN: Attribute in <path>\BlueberryRiverFirstNations\From_BRFN_2016.gdb\BRFN_TraditionalTerritory
+HV1: <path>\BlueberryRiverFirstNations\HV1_Planning_DevelopmentZones
+	BRFN: Text in <path>\BlueberryRiverFirstNations\!README.txt
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\KMZ\BRFN_CivilClaim_Area.kmz
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\KMZ\BRFN_PIP_Areas.kmz
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\Shapefile\BRFN_TraditionalTerritory.CPG
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\Shapefile\BRFN_TraditionalTerritory.dbf
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\Shapefile\BRFN_TraditionalTerritory.prj
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\Shapefile\BRFN_TraditionalTerritory.sbn
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\Shapefile\BRFN_TraditionalTerritory.sbx
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\Shapefile\BRFN_TraditionalTerritory.shp
+	BRFN: Attribute in <path>\BlueberryRiverFirstNations\From_BRFN_2016\Shapefile\BRFN_TraditionalTerritory.shp
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\Shapefile\BRFN_TraditionalTerritory.shp.xml
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016\Shapefile\BRFN_TraditionalTerritory.shx
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016.gdb\BRFN_TraditionalTerritory.HEZE.1016.37120.sr.lock
+BRFN: <path>\BlueberryRiverFirstNations\From_BRFN_2016.gdb\BRFN_TraditionalTerritory.INTERCRUS.7744.36652.sr.lock
+	HV1: Attribute in <path>\BlueberryRiverFirstNations\HV1_Planning_DevelopmentZones\DraftDevelopmentZones_Merge_2025-03-27.shp
+BRFN: <path>\BlueberryRiverFirstNations\KMZ\BRFN_CivilClaim_Area.kmz
+BRFN: <path>\BlueberryRiverFirstNations\KMZ\BRFN_PIP_Areas.kmz
+BRFN: <path>\BlueberryRiverFirstNations\Layers\BRFN_PIP.lyr
+BRFN: <path>\BlueberryRiverFirstNations\Layers\BRFN_PIP_Areas.lyrx
+BRFN: <path>\BlueberryRiverFirstNations\Layers\BRFN_Traditional_Territory.lyr
+	HV1: Attribute in <path>\BlueberryRiverFirstNations\Layers\HV_Merged_Sept13_2021.shp
+BRFN: <path>\BlueberryRiverFirstNations\ScriptsTools\BRFN Boundaries.tbx
+BRFN: <path>\BlueberryRiverFirstNations\ScriptsTools\BRFN.py
+	BRFN: Text in <path>\BlueberryRiverFirstNations\ScriptsTools\ProCheck.txt
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\20230118_BRFN IA Final_.pdf
+	BRFN: In feature class name: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_CivilClaimArea
+	BRFN: Attribute in <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\PNG_Zones
+	BRFN: In feature class name: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_Traplines
+	HV1: In feature class name: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_HV1
+	HV1: Attribute in <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_HV1
+	BRFN: In feature class name: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_HV1
+	BRFN: In feature class name: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\BRFNAgreement.gdb\BRFN_Traplines_Numbered
+	BRFN: Attribute in <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\Pending_Permits_Schedule_O.gdb\BCTS_blocks
+	BRFN: Attribute in <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\Schedule_O.gdb\BCTS_blocks
+	BRFN: In feature class name: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\FileGeodatabase\Schedule_O.gdb\MOTI_Peace_projects_BRFN
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\KML\BRFNAgreement_All.kmz
+HV1: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.CPG
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.CPG
+HV1: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.dbf
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.dbf
+HV1: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.prj
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.prj
+HV1: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.qix
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.qix
+HV1: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp
+	HV1: Attribute in <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp
+HV1: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp.xml
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shp.xml
+HV1: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shx
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.shx
+HV1: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.zip
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_HV1.zip
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.CPG
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.dbf
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.prj
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.sbn
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.sbx
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.shp
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.shp.xml
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.shx
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\BRFN_Trapln.zip
+	BRFN: Attribute in <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles\PNG_Zones.shp
+HV1: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles_NAD83CSRS\BRFN_HV1_NAD83.zip
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles_NAD83CSRS\BRFN_HV1_NAD83.zip
+BRFN: <path>\First_Nations_Agreements\BRFN_Implementation_Agreement\Shapefiles_NAD83CSRS\BRFN_Trapln_NAD83.zip
+	BRFN: Text in <path>\First_Nations_Significant_Areas\README.txt
+	BRFN: Text in <path>\First_Nations_Significant_Areas\HRFN\Readme - AMPP.txt
+	BRFN: Attribute in <path>\PRRD_911\PRRD_Data_20180531.gdb\PRRD_Roads_20180531
+	BRFN: Attribute in <path>\RRA\RRA_TLE_Dec2018.gdb\FN_RRA_13dec2018
