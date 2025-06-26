@@ -13,7 +13,7 @@ SELECT AVG(SITE_INDEX), MAX(SITE_INDEX), MIN(SITE_INDEX), STDDEV(SITE_INDEX)
 FROM WHSE_FOREST_VEGETATION.VEG_COMP_LYR_R1_POLY 
     WHERE SPECIES_CD_1 = 'CW'
 ```
-<b>Result:</b>
+**Result:**
 |AVG(SITE_INDEX)|MAX(SITE_INDEX)|MIN(SITE_INDEX)|STDDEV(SITE_INDEX)|
 |---------------|---------------|---------------|------------------|
 |13.27|80.4|0|5.58|
@@ -38,12 +38,43 @@ SELECT r.forest_file_id, r.client_name, r.client_number, fire.EVENT_NAME, fire.O
   ORDER BY fire.ORDER_ALERT_STATUS desc;
 ```
 
----
-<br>
+**Result (2025-06-26):**
+
+|FOREST_FILE_ID|CLIENT_NAME|CLIENT_NUMBER|EVENT_NAME|ORDER_ALERT_STATUS|
+|--------------|-----------|-------------|----------|------------------|
+|RAN073731|STONE MOUNTAIN OUTFITTERS LTD|00198495|Summit Lake Wildfire|Alert|
+|RAN077452|STEAMBOAT MOUNTAIN OUTFITTERS LTD|00163797|Summit Lake Wildfire|Alert|
+|RAN077452|STEAMBOAT MOUNTAIN OUTFITTERS LTD|00163797|Summit Lake Wildfire|Alert|
+|RAN077451|[redacted]|00046119|Summit Lake Wildfire|Alert|
+|RAN075887|[redacted]|00120674|Summit Lake Wildfire|Alert|
+|RAN077793|[redacted]|00187446|Summit Lake Wildfire|Alert|
+|RAN075887|[redacted]|00120674|Summit Lake Wildfire|Alert|
+|RAN075887|[redacted]|00120674|Summit Lake Wildfire|Alert|
+|RAN075887|[redacted]|00120674|Summit Lake Wildfire|Alert|
+|RAN075887|[redacted]|00120674|Summit Lake Wildfire|Alert|
+|RAN075887|[redacted]|00120674|Summit Lake Wildfire|Alert|
+
+## Connecting to the BCGW
+
+To connect to the BCGW in DBeaver (IDIR restricted):
+
+1. Create a new Connection and choose Oracle
+
+2. Enter the following info:
+    - **Host**: bcgw.bcgov
+    - **Port**: 1521
+    - **Database**: idwprod1.bcgov
+    - On the dropdown next to Database, choose "Service Name"
+    - Make sure not to save your password
+    - At the bottom, there is a box to point to your Oracle client. It should be pre-installed with DBeaver if you used the default installation settings, but if not you can download from [Oracle](https://www.oracle.com/ca-en/database/technologies/instant-client/downloads.html), save on your PC and point to it here.
+
+3. With your connection active, click the SQL button on the top menu to open a new script. You can also explore all the schemas, tables and views in the BCGW. It helps if you add a filter on the schemas (right click > Filter) with "WHSE*" so only the ones that start with WHSE (and contain the data tables) display.
+
+## Embedded Leaflet Map
 
 DBeaver also has some interesting capabilities for viewing [spatial data](https://dbeaver.com/docs/dbeaver/Working-with-Spatial-GIS-data/) in a little Leaflet interactive map. Unfortunately, this is not supported for Oracle geometry. 
 
-I did figure out a little work-around where you can reproject the geometry to WGS 84 (EPSG:4326), convert to WKT and cast it as a VARCHAR2 string, then you can get DBeaver to recognize it as geometry and the Leaflet map will work. I have an example below. Note that this doesn't work with very complex geometry that spills over the character limit, and is very slow when retrieving lots of records. The simple query below ran for me in less than a second though.
+I did figure out a little work-around where you can reproject the geometry to WGS 84 (EPSG:4326), convert to WKT and cast it as a VARCHAR2 string, then you can get DBeaver to recognize it as geometry and the Leaflet map will work. I have an example below. Note that this doesn't work with very complex geometry that spills over the character limit, and is very slow when retrieving lots of records. The simple query below ran for me in less than a second though. 
 
 
 ```sql
