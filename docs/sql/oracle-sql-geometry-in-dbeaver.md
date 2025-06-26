@@ -55,6 +55,6 @@ SELECT TITLE_NUMBER_ID,
 ```
   - After running the above query, right-click on the Geometry column in the results and navigate to View/Format -> Set "GEOMETRY" transform -> Geometry, then push OK. The Leaflet map should appear. See screenshots below:
 
-![Screenshot showing how to set the field to a Geometry format](img\geometry-dbeaver-rightclick.png)
+![Screenshot showing how to set the field to a Geometry format](img/geometry-dbeaver-rightclick.png)
 
-![Screenshot of the results table and Leaflet map](img\geometry-dbeaver-fullresults.png)
+![Screenshot of the results table and Leaflet map](img/geometry-dbeaver-fullresults.png)
