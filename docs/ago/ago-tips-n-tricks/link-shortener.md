@@ -16,6 +16,6 @@ I figured out how to create a shorted "arcg.is" style link for putting on a PDF 
 For example, https://arcg.is/prod/shorten?longUrl=https://governmentofbc.maps.arcgis.com/apps/webappviewer/index.html?id=c33b4da00a774ff8927a77edcd598d4b will return:
 
 
-![Screenshot of the response to submitting a GET request to the ArcGIS Url shortener.](img\link-shortening-get-request.png)
+![Screenshot of the response to submitting a GET request to the ArcGIS Url shortener.](img/link-shortening-get-request.png)
 
 --North Ross
