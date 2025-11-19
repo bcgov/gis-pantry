@@ -153,7 +153,7 @@ The following are steps to sign into your bcgov organization github account from
 4. Extension wants to sign in using GitHub --> Allow
 <img src=../_media/GitHub_VSCode_Authentication_Extension_Signin_with_GitHub.png>
 
-5. If the popup comes up in internet explorer copy the complete URL and paste it into edge that runs on the same desktop as vscode. Complete your GitHub authorization.<img src=../_media/GitHub_VSCode_Authentication_GitHub_Web.png>Use 2-factor authentication<img src=../_media/GitHub_VSCode_Authentication_GitHub_2Factor.png>
+5. If the popup comes up in internet explorer copy the complete URL and paste it into edge that runs on the same desktop as vscode. Complete your GitHub authorization.<br><img src=../_media/GitHub_VSCode_Authentication_GitHub_Web.png><br>Use 2-factor authentication<br><img src=../_media/GitHub_VSCode_Authentication_GitHub_2Factor.png>
 
 
 6. Select USER
