@@ -141,3 +141,30 @@ If you want more information about using Git and GitHub in VS Code, please see [
 <img src=../_media/GitHub_VSCode_Source_Branches3.PNG>
 <p>If you are using a branch, the branch name will also be indicated in the bottom left of your VS Code window.</p>
 ---
+
+# Github Account Authentication - GTS VSCODE 1.96.3
+The following are steps to sign into your bcgov organization github account from vscode
+1. Clone a bcgov organization repository that are a contributor for
+2. Ensure you are not signed in with a unathenticated github account
+<img src=../_media/GitHub_VSCode_Authentication_Signed_Out.png>
+3. Push to trigger authentication and fill out the authentication popup
+<img src=../_media/GitHub_VSCode_Authentication_Signin.png> 
+
+4. Extension wants to sign in using GitHub --> Allow
+<img src=../_media/GitHub_VSCode_Authentication_Extension_Signin_with_GitHub.png>
+
+5. If the popup comes up in internet explorer copy the complete URL and paste it into edge that runs on the same desktop as vscode. Complete your GitHub authorization.<img src=../_media/GitHub_VSCode_Authentication_GitHub_Web.png>Use 2-factor authentication<img src=../_media/GitHub_VSCode_Authentication_GitHub_2Factor.png>
+
+
+6. Select USER
+<img src=../_media/GitHub_VSCode_Authentication_Select_User.png>
+
+7. Click the green authorize for bcgov.Follow your organization authorization process.
+<img src=../_media/GitHub_VSCode_Authentication_Org_Authorize.png>
+
+8. Follow your organization authorization process. When complete click continue if a checkmark is beside your authorized organization.
+<img src=../_media/GitHub_VSCode_Authentication_Org_Authorize_Complete.png>
+
+6. Click the Open using VS Code pop up to complete your authentication. <img src=../_media/GitHub_VSCode_Authentication_Open_Vscode.png>
+
+You should now be able to use your VSCode Github extension with your organization repositories that you have write privileges for.
