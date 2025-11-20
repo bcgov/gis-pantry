@@ -19,6 +19,8 @@ The GIS Pantry is a public repository so it is important to review your files fo
 - Filepaths to government network drive locations
 - Employee names or contact information
 - Usernames and passwords
+- .vscode project folder and any files it contains such as settings.json. This folder is sometimes created in the root folder of a project when working in VS Code. It contains your personal developer environment settings and does not need to be shared with your project. 
+- gitignore. If you were using git to track a project and you want to share that project to the pantry, make sure you remove the gitignore and other git tracking information from your project folder before submitting
 
 
 ## Generalization
