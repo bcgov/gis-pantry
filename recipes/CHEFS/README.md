@@ -1,5 +1,6 @@
 # How To Extract Data Submitted To CHEFS Forms
-[CHEFS API documentation](https://submit.digital.gov.bc.ca/app/api/v1/docs#tag/Submission/operation/exportWithFields)
+[CHEFS API documentation - export submission data](https://submit.digital.gov.bc.ca/app/api/v1/docs#tag/Submission/operation/exportWithFields)
+[CHEFS API documentation - attachments](https://submit.digital.gov.bc.ca/app/api/v1/docs#tag/Files/operation/fileGet)
 
 ## Input parameters:
 1. CHEFS API Key
@@ -25,4 +26,4 @@ When editing your form:
 1. Hover open a component and click the **gear** icon to open the component editing window
 2. Choose the **API** tab
 3. The field name is displayed within the **Property Name** box. You can edit the field name as required
-Add the field names as a comma-seperated list within the script. Ex: "field1, field2, field3"
+Add any hidden field names as a comma-seperated list within the script. Ex: "field1, field2, field3". The CHEFS API excludes hidden fields by default. 
