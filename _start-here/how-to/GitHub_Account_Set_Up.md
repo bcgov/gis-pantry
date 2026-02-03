@@ -1,4 +1,3 @@
-***Last update: 2023-07-18***   
 ***Tags: #account-setup***
 
 # Git Hub Account Set-up / Configuration
