@@ -1,0 +1,52 @@
+# ###########################
+# EXAMPLE ENVIRONMENT FILE FOR A TEAM
+# 
+# This is an example environment file. You can use this approach or a different approach to
+# organizing it. 
+
+# Notice the naming scheme that helps to keep it organzied. These names will show up in code
+# that calls them as well. The naming helps to make it clear what is getting accessed in the code.
+ 
+# All Cap section headers are helpful
+# ########################### 
+
+# OBJECT STORAGE
+# ------------------------------------------------------------------------------
+S3_BMRS_HOST = "https://web.address.ca"
+S3_BMRS_BUCKET_01 = "bucketid"
+S3_BMRS_ACCESS_KEY_ID = "access-key-code"
+S3_BMRS_SECRET_KEY = "secret-key"
+
+# AGO PROXY ACCTS
+# ------------------------------------------------------------------------------
+AGO_BM_CREATOR_UNAME = "user_name"
+AGO_BM_CREATOR_PASS = "password"
+
+AGO_BM_EDITOR_UNAME = "user_name"
+AGO_BM_EDITOR_PASS = "password"
+
+AGO_DSS_CREATOR_UNAME = "user-name"
+AGO_DSS_CREATOR_PASS = "password"
+
+# GIT HUB ACCOUNTS
+# ------------------------------------------------------------------------------
+GHUB_BM_ABMS_UNAME = "user-name"
+GHUB_BM_ABMS_PASS = "password"
+
+# PMBC ICD
+# ------------------------------------------------------------------------------
+PMBC_USR_NAME = "user-name"
+PMBC_PROD_PWD = "password"
+PMBC_TEST_PWD = "password"
+PMBC_PROD_URL = "https://URL..."
+PMBC_TEST_URL = "https://URL..."
+
+# JIRA...
+# ------------------------------------------------------------------------------
+
+# Items...
+
+# ANOTHER CATEGORY
+# ------------------------------------------------------------------------------
+
+# etc...
