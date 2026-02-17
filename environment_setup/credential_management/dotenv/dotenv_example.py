@@ -4,16 +4,18 @@
 ## -------------------------------------------------------------------------------------------------
 
 import dotenv
+import someDB
 
 # Put the credentials into a python dictionary...
-CREDS = dotenv.dotenv_values(
-    r"\\path\to\your\file...")
+CREDENTIALS_DICTIONARY = dotenv.dotenv_values(r"\\path\to\your\file...")
 
-# Set your param...
-CREDENTIAL_YOU_WANT = CREDS['NAME_OF_CREDENTIAL']
+# Set your params...
+DB_PASS = CREDENTIALS_DICTIONARY('DB_PASS')
+DB_USER_NAME = CREDENTIALS_DICTIONARY('DB_USER_NAME')
+DB_URL = CREDENTIALS_DICTIONARY('DB_URL')
 
 # Use it...
-print(CREDENTIAL_YOU_WANT)
+database_connection = someDB.connect(DB_USER_NAME, DB_PASS, DB_URL)
 
 ## -------------------------------------------------------------------------------------------------
 ## -------------------------------------------------------------------------------------------------
@@ -26,14 +28,13 @@ from dotenv import load_dotenv
 import os
 
 # Load environment variables from the .env file (if present)
-load_dotenv(
-    r"\\path\to\your\file..."
-)
+load_dotenv(r"\\path\to\your\file...")
 
 # Access environment variables using os.getenv()
-SECRET_KEY = os.getenv('SECRET_KEY')
-DATABASE_URL = os.getenv('DATABASE_URL')
+DB_PASS = os.getenv('DB_PASS')
+DB_USER_NAME = os.getenv('DB_USER_NAME')
+DB_URL = os.getenv('DB_URL')
+
 
 # Example usage
-print(f'SECRET_KEY: {SECRET_KEY}')
-print(f'DATABASE_URL: {DATABASE_URL}')
+database_connection = someDB.connect(DB_USER_NAME, DB_PASS, DB_URL)

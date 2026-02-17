@@ -5,8 +5,6 @@
 # Author:      gshevche
 #
 # Created:     05/02/2020
-# Copyright:   (c) gshevche 2020
-# Licence:     <your licence>
 # -------------------------------------------------------------------------------
 
 import arcpy
