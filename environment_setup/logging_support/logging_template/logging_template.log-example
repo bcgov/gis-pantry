@@ -1,0 +1,12 @@
+2025-05-08 18:15:31,471 - Logger.main - DEBUG - hello world (DEBUG)
+2025-05-08 18:15:31,483 - Logger.main - INFO - hello world (default - aka:INFO)
+2025-05-08 18:15:31,497 - Logger.main - WARNING - hello world (WARNING)
+2025-05-08 18:15:31,509 - Logger.main - ERROR - hello world (ERROR)
+2025-05-08 18:15:31,530 - Logger.main - CRITICAL - Hello world (CRITICAL)
+2025-05-08 18:15:31,543 - Logger.main - INFO - This is a debug message filtered using my_attribute
+2025-05-08 18:16:20,158 - Logger.main - DEBUG - hello world (DEBUG)
+2025-05-08 18:16:20,180 - Logger.main - INFO - hello world (default - aka:INFO)
+2025-05-08 18:16:20,196 - Logger.main - WARNING - hello world (WARNING)
+2025-05-08 18:16:20,207 - Logger.main - ERROR - hello world (ERROR)
+2025-05-08 18:16:20,219 - Logger.main - CRITICAL - Hello world (CRITICAL)
+2025-05-08 18:16:20,231 - Logger.main - INFO - This is a debug message filtered using my_attribute
