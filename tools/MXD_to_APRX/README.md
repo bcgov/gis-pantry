@@ -11,7 +11,7 @@ Batch_MXD_to_APRX_terminal_only.py is a standalone script that will run from ter
 ### Inputs
 Target folder path: Location where mxds are  
 Timeout: Time limit for converting an individual map before skipping  
-Exclude Folder List: Semicolon seperated list of folder names (case insensitive)  
+Exclude Folder List: Semicolon separated list of folder names (case insensitive)  
 BCGW User  
 BCGW Password
 
