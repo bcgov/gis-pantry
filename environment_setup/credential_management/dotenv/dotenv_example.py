@@ -20,7 +20,7 @@ database_connection = someDB.connect(DB_USER_NAME, DB_PASS, DB_URL)
 ## -------------------------------------------------------------------------------------------------
 ## -------------------------------------------------------------------------------------------------
 ## Alternatively one can use dotenv to load them into system environment variables
-# then use sys.argv[] to access them
+# then use sys.argv[] or os.getenv() to access them
 ## -------------------------------------------------------------------------------------------------
 
 # Import the necessary module
