@@ -1,0 +1,15 @@
+{
+    "terminal.integrated.profiles.windows": {
+        "QGIS Python 3.12": {
+            "path": "C:/Program Files/QGIS 3.40.7/apps/Python312/python.exe",
+            "args": ["-i"],
+            "env": {
+                "PYTHONHOME": "C:/Program Files/QGIS 3.40.7/apps/Python312",
+                "PYTHONPATH": "C:/Program Files/QGIS 3.40.7/apps/Python312/Lib;C:/Program Files/QGIS 3.40.7/apps/Python312/Lib/site-packages",
+                "PATH": "C:/Program Files/QGIS 3.40.7/apps/Python312;C:/Program Files/QGIS 3.40.7/bin;${env:PATH}"
+            }
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "python.defaultInterpreterPath": "C:/Program Files/QGIS 3.40.7/apps/Python312/python.exe"
+}
