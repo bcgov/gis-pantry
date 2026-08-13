@@ -1,4 +1,4 @@
-# Connecting VS Codium To The QGIS Python Environment In VDI
+# Connecting VS Codium to the QGIS Python Environment in any VDI
 
 This guide shows how to set up your Codium environment to write QGIS scripts in 
 Codium instead of using the QGIS Python console.
@@ -10,12 +10,12 @@ Codium instead of using the QGIS Python console.
 
 ## Setup
 ### Create A New VS Codium Profile
-- Navigate to the bottom left settings cog in Codium > Profile(current profile) > Profiles. <br>
+- Navigate to the bottom left Settings cog in Codium > Profile(current profile) > Profiles. <br>
 - Select New Profile. <br>
 - Update the profile Name and Icon if you like.<br>
-- To make set up easier when you are creating a new profile, 
-copy the extension from another profile you have already set up.
-Otherwise, the main extension you need is Python. 
+- Optional: If you have a profile with extentions you like to use regulary, such as Better Comments, Todo Tree, or autoDocstring, copy the extentions from that profile during setup so you do not have to reinstall them.
+- If you are not copying extentions from another profile, install the Python extention. It is the only extention required for this setup. 
+
 
 ### Edit The Profile Settings
 After you have created your new profile, make sure it is active and use
