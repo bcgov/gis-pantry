@@ -13,8 +13,8 @@ Codium instead of using the QGIS Python console.
 - Navigate to the bottom left Settings cog in Codium > Profile(current profile) > Profiles. <br>
 - Select New Profile. <br>
 - Update the profile Name and Icon if you like.<br>
-- Optional: If you have a profile with extentions you like to use regulary, such as Better Comments, Todo Tree, or autoDocstring, copy the extentions from that profile during setup so you do not have to reinstall them.
-- If you are not copying extentions from another profile, install the Python extention. It is the only extention required for this setup. 
+- Optional: If you have a profile with extensions you like to use regulary, such as Better Comments, Todo Tree, or autoDocstring, copy the extensions from that profile during setup so you do not have to reinstall them.
+- If you are not copying extensions from another profile, install the Python extension. It is the only extension required for this setup.
 
 
 ### Edit The Profile Settings
